@@ -1,10 +1,8 @@
 from pydantic import BaseModel, EmailStr
 from typing import Any
 
-
 class CrawlerRunRequest(BaseModel):
     site: str = "all"
-
 
 class CrawlerRunResponse(BaseModel):
     success: bool
@@ -13,6 +11,7 @@ class CrawlerRunResponse(BaseModel):
     data: list[dict[str, Any]] | None = None
     saved_file: str | None = None
     site_counts: dict[str, int] | None = None
+    errors: dict[str, str] | None = None
 
 
 class SummaryEmailRequest(BaseModel):

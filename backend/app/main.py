@@ -1,3 +1,4 @@
+import os
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -27,10 +28,15 @@ from app.services.mail_service import send_html_email
 
 app = FastAPI(title="News Crawler API", version="0.1.0")
 
+frontend_origin = os.getenv("FRONTEND_ORIGIN", "").strip()
+
 origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
+
+if frontend_origin:
+    origins.append(frontend_origin)
 
 app.add_middleware(
     CORSMiddleware,
@@ -39,7 +45,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 @app.get("/api/health")
 def health_check():
