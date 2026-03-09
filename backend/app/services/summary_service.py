@@ -7,7 +7,7 @@ from html import escape
 
 from openai import OpenAI
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 SITE_CONTEXT = """
 당사 생산거점:
@@ -27,7 +27,7 @@ SITE_CONTEXT = """
 
 
 def load_latest_crawled_articles() -> list[dict[str, Any]]:
-    data_dir = PROJECT_ROOT / "backend" / "data"
+    data_dir = PROJECT_ROOT / "data"
 
     if not data_dir.exists():
         return []
@@ -47,7 +47,7 @@ def load_latest_crawled_articles() -> list[dict[str, Any]]:
 
 
 def load_poc_shipping_candidates() -> list[dict[str, str]]:
-    data_dir = PROJECT_ROOT / "backend" / "data"
+    data_dir = PROJECT_ROOT / "data"
     file_path = data_dir / "poc_shipping_risk_candidates.csv"
 
     if not file_path.exists():
