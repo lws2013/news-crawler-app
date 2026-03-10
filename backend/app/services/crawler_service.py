@@ -17,17 +17,17 @@ from news_crawler.crawler_demo_busanpa import crawl_busanpa
 from news_crawler.crawler_demo_iata import crawl_iata
 
 # 나머지 사이트 크롤러가 있으면 같은 방식으로 추가
-# from news_crawler.crawler_demo_cargonews import crawl_cargonews
-# from news_crawler.crawler_demo_cello import crawl_cello
-# from news_crawler.crawler_demo_flexport import crawl_flexport
-# from news_crawler.crawler_demo_kita import crawl_kita
-# from news_crawler.crawler_demo_kotra import crawl_kotra
-# from news_crawler.crawler_demo_ksg import crawl_ksg
-# from news_crawler.crawler_demo_oceanpress import crawl_oceanpress
-# from news_crawler.crawler_demo_sea import crawl_sea
-# from news_crawler.crawler_demo_shippingnews import crawl_shippingnews
-# from news_crawler.crawler_demo_surff import crawl_surff
-# from news_crawler.crawler_demo_ulogistics import crawl_ulogistics
+from news_crawler.crawler_demo_cargonews import crawl_cargonews
+from news_crawler.crawler_demo_cello import crawl_cello
+from news_crawler.crawler_demo_flexport import crawl_flexport
+from news_crawler.crawler_demo_kita import crawl_kita
+from news_crawler.crawler_demo_kotra import crawl_kotra
+from news_crawler.crawler_demo_ksg import crawl_ksg
+from news_crawler.crawler_demo_oceanpress import crawl_oceanpress
+from news_crawler.crawler_demo_sea import crawl_sea
+from news_crawler.crawler_demo_shippingnews import crawl_shippingnews
+from news_crawler.crawler_demo_surff import crawl_surff
+from news_crawler.crawler_demo_ulogistics import crawl_ulogistics
 
 def get_site_map() -> dict[str, Callable[[], list[dict[str, Any]]]]:
     site_map: dict[str, Callable[[], list[dict[str, Any]]]] = {
@@ -36,17 +36,17 @@ def get_site_map() -> dict[str, Callable[[], list[dict[str, Any]]]]:
     }
 
     # 실제 구현된 사이트만 주석 해제해서 추가
-    # site_map["cargonews"] = crawl_cargonews
-    # site_map["cello"] = crawl_cello
-    # site_map["flexport"] = crawl_flexport
-    # site_map["kita"] = crawl_kita
-    # site_map["kotra"] = crawl_kotra
-    # site_map["ksg"] = crawl_ksg
-    # site_map["oceanpress"] = crawl_oceanpress
-    # site_map["sea"] = crawl_sea
-    # site_map["shippingnews"] = crawl_shippingnews
-    # site_map["surff"] = crawl_surff
-    # site_map["ulogistics"] = crawl_ulogistics
+    site_map["cargonews"] = crawl_cargonews
+    site_map["cello"] = crawl_cello
+    site_map["flexport"] = crawl_flexport
+    site_map["kita"] = crawl_kita
+    site_map["kotra"] = crawl_kotra
+    site_map["ksg"] = crawl_ksg
+    site_map["oceanpress"] = crawl_oceanpress
+    site_map["sea"] = crawl_sea
+    site_map["shippingnews"] = crawl_shippingnews
+    site_map["surff"] = crawl_surff
+    site_map["ulogistics"] = crawl_ulogistics
 
     return site_map
 

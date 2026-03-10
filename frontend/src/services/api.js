@@ -55,3 +55,64 @@ export async function generateRiskReport(payload) {
   });
   return handleResponse(response);
 }
+
+export const exportCrawledNews = async (payload) => {
+  const response = await fetch(`${API_BASE_URL}/api/export/crawled-news`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  if (!response.ok) {
+    throw new Error('Failed to export crawled news');
+  }
+  return response.json();
+};
+
+export const exportRiskEvents = async (payload) => {
+  const response = await fetch(`${API_BASE_URL}/api/export/risk-events`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  if (!response.ok) {
+    throw new Error('Failed to export risk events');
+  }
+  return response.json();
+};
+
+export const exportJsonToGcs = async (payload) => {
+  const response = await fetch(`${API_BASE_URL}/api/export/gcs`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  });
+
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(text || 'Failed to export JSON to GCS');
+  }
+
+  return response.json();
+};
+
+export const downloadCrawledNewsFile = (date) => {
+  const params = new URLSearchParams();
+  if (date) params.set('date', date);
+
+  const url = `${API_BASE_URL}/api/export/crawled-news/download${
+    params.toString() ? `?${params.toString()}` : ''
+  }`;
+
+  window.open(url, '_blank');
+};
+
+export const downloadRiskEventsFile = (date, llmModel = 'gemini-flash') => {
+  const params = new URLSearchParams();
+  if (date) params.set('date', date);
+  if (llmModel) params.set('llm_model', llmModel);
+
+  const url = `${API_BASE_URL}/api/export/risk-events/download?${params.toString()}`;
+  window.open(url, '_blank');
+};

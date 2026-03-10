@@ -1,0 +1,136 @@
+[
+  {
+    "event_id": "E1",
+    "event_name": "미국 고관세 회피성 Frontloading 급증 및 항공 스페이스 부족",
+    "severity": "HIGH",
+    "summary": "미국 관세율이 17%대로 급등함에 따라 이를 회피하기 위한 조기 선적(Frontloading) 수요가 항공으로 몰리며 1분기 미주 항공 수입액이 전년 대비 81% 폭증함",
+    "impact_modes": [
+      "AIR"
+    ],
+    "impact_regions": [
+      "North America",
+      "Trans-Pacific",
+      "East Asia"
+    ],
+    "impact_keywords": [
+      "US Tariff",
+      "Frontloading",
+      "Capacity Shortage",
+      "Air Freight Rate"
+    ],
+    "relevant_sites": [
+      "USA_GEORGIA",
+      "KOREA_SEOSAN"
+    ],
+    "selection_hint": "미주행 자재의 급격한 운임 상승 및 스페이스 확보난에 대비해야 함",
+    "why_it_matters": "조지아 거점의 인바운드 자재 및 한국발 미주향 완제품의 물류비 급증 및 적기 조달 차질 가능성 상존"
+  },
+  {
+    "event_id": "E2",
+    "event_name": "중동 분쟁에 따른 항공 공역 폐쇄 및 운영 복잡성 심화",
+    "severity": "HIGH",
+    "summary": "중동 내 적대 행위 지속으로 인한 공역 제한이 항공 노선 우회와 운영상 복잡성을 가중시키며 리드타임과 비용 증가 유발",
+    "impact_modes": [
+      "AIR"
+    ],
+    "impact_regions": [
+      "Middle East",
+      "Europe",
+      "Asia"
+    ],
+    "impact_keywords": [
+      "Airspace Closure",
+      "Rerouting",
+      "Lead Time",
+      "Operational Complexity"
+    ],
+    "relevant_sites": [
+      "HUNGARY_KOMAROM",
+      "HUNGARY_IVANCSA",
+      "KOREA_SEOSAN"
+    ],
+    "selection_hint": "유럽 거점행 동아시아발 항공 자재의 경로 우회 및 도착 지연 점검 필요",
+    "why_it_matters": "헝가리 생산 거점으로 향하는 핵심 부품의 항공 공급망이 중동 리스크에 직접 노출되어 생산 일정 차질 우려"
+  },
+  {
+    "event_id": "E3",
+    "event_name": "관세 노출 회피를 위한 글로벌 공급망 경로 재편(Restructuring)",
+    "severity": "MEDIUM",
+    "summary": "미국 수입업체들이 고관세 파트너사로부터 소싱처를 변경함에 따라 기존 무역 항로의 물동량 변화 및 새로운 병목 지점 발생 가능성 대두",
+    "impact_modes": [
+      "SEA",
+      "AIR"
+    ],
+    "impact_regions": [
+      "Global",
+      "USA",
+      "Southeast Asia"
+    ],
+    "impact_keywords": [
+      "Trade Lane Restructuring",
+      "Sourcing Shift",
+      "Supply Chain Resilience"
+    ],
+    "relevant_sites": [
+      "USA_GEORGIA",
+      "KOREA_SEOSAN",
+      "HUNGARY_KOMAROM",
+      "HUNGARY_IVANCSA"
+    ],
+    "selection_hint": "기존 소싱 루트 외 대안 경로 및 신규 병목 구간에 대한 사전 모니터링 필요",
+    "why_it_matters": "공급망 재편 과정에서 발생하는 일시적 물동량 쏠림 현상이 내륙 운송 및 항만 혼잡으로 이어질 수 있음"
+  },
+  {
+    "event_id": "E4",
+    "event_name": "AI 관련 화물의 항공 스페이스 독점 및 일반 화물 오프로딩 리스크",
+    "severity": "MEDIUM",
+    "summary": "전 세계 AI 관련 화물의 2/3 이상이 항공으로 운송되면서 고부가가치 하이테크 화물이 항공 캐파를 선점하여 일반 자재의 스페이스 확보가 어려워짐",
+    "impact_modes": [
+      "AIR"
+    ],
+    "impact_regions": [
+      "Global",
+      "East Asia",
+      "USA"
+    ],
+    "impact_keywords": [
+      "AI Goods",
+      "Capacity Competition",
+      "Space Priority",
+      "High-tech Logistics"
+    ],
+    "relevant_sites": [
+      "KOREA_SEOSAN",
+      "USA_GEORGIA",
+      "HUNGARY_KOMAROM"
+    ],
+    "selection_hint": "반도체 및 배터리 핵심 부품 등 하이테크 자재의 항공 스페이스 우선순위 밀림 현상 주의",
+    "why_it_matters": "AI 산업 성장에 따른 항공 화물 수요 편중이 당사 핵심 전자 부품의 운송 지연으로 전이될 가능성"
+  },
+  {
+    "event_id": "E5",
+    "event_name": "항공 화물 디지털 표준 'ONE Record' 전환 및 통관 데이터 준수 요구",
+    "severity": "LOW",
+    "summary": "2026년 1월부터 IATA ONE Record가 표준 데이터 교환 방식으로 채택됨에 따라 항공사 및 포워더의 데이터 정합성 관리 및 규제 준수 중요성 증대",
+    "impact_modes": [
+      "AIR"
+    ],
+    "impact_regions": [
+      "Global"
+    ],
+    "impact_keywords": [
+      "ONE Record",
+      "Digitalization",
+      "Customs Compliance",
+      "Data Sharing"
+    ],
+    "relevant_sites": [
+      "KOREA_SEOSAN",
+      "HUNGARY_KOMAROM",
+      "HUNGARY_IVANCSA",
+      "USA_GEORGIA"
+    ],
+    "selection_hint": "항공 선적 서류의 디지털 전환에 따른 통관 지연 방지 및 가시성 확보 점검",
+    "why_it_matters": "표준화되지 않은 데이터 시스템 사용 시 통관 거부나 서류 불일치로 인한 적기 도착 실패 리스크 존재"
+  }
+]

@@ -7,6 +7,9 @@ import {
   getCrawledJson,
   generateRiskEvents,
   generateRiskReport,
+  exportJsonToGcs,
+  downloadCrawledNewsFile,
+  downloadRiskEventsFile,
 } from './services/api';
 
 const SITE_OPTIONS = [
@@ -56,6 +59,7 @@ export default function App() {
   const [jsonLoading, setJsonLoading] = useState(false);
   const [riskEventsLoading, setRiskEventsLoading] = useState(false);
   const [riskReportLoading, setRiskReportLoading] = useState(false);
+  const [exportLoading, setExportLoading] = useState(false);
 
   const [status, setStatus] = useState({ type: 'info', title: '', message: '' });
   const [articles, setArticles] = useState([]);
@@ -235,6 +239,41 @@ export default function App() {
     }
   }
 
+  function onDownloadCrawledNews() {
+    downloadCrawledNewsFile(date);
+  }
+
+  function onDownloadRiskEvents() {
+    downloadRiskEventsFile(date, llmModel);
+  }
+
+  async function onExportToGcs() {
+    try {
+      setExportLoading(true);
+
+      const result = await exportJsonToGcs({
+        date,
+        llm_model: llmModel,
+      });
+
+      setStatus({
+        type: 'success',
+        title: 'JSON saved to GCS',
+        message:
+          `Crawled News: ${result.crawled_news?.gcs_path || ''}\n` +
+          `Risk Events: ${result.risk_events?.gcs_path || ''}`,
+      });
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        title: 'Error saving JSON to GCS',
+        message: error.message || 'GCS 저장 실패',
+      });
+    } finally {
+      setExportLoading(false);
+    }
+  }
+
   return (
     <main className="page">
       <div className="hero">
@@ -311,6 +350,31 @@ export default function App() {
         <button className="secondary-button summary-button" onClick={onGenerateRiskEvents} disabled={riskEventsLoading}>
           {riskEventsLoading ? 'Generating...' : '오늘의 물류 이벤트 분석'}
         </button>
+      </SectionCard>
+
+      <SectionCard>
+        <div className="section-header">JSON Export</div>
+        <p className="section-description">
+          외부 인터넷 환경에서 생성된 뉴스 원문 JSON과 이벤트 JSON을 다운로드하거나 GCS에 저장할 수 있습니다.
+        </p>
+
+        <div className="row responsive-row" style={{ gap: 12, flexWrap: 'wrap' }}>
+          <button className="secondary-button summary-button" onClick={onDownloadCrawledNews}>
+            Crawled News JSON 다운로드
+          </button>
+
+          <button className="secondary-button summary-button" onClick={onDownloadRiskEvents}>
+            Risk Events JSON 다운로드
+          </button>
+
+          <button
+            className="secondary-button summary-button"
+            onClick={onExportToGcs}
+            disabled={exportLoading}
+          >
+            {exportLoading ? 'Saving...' : '두 JSON을 GCS에 저장'}
+          </button>
+        </div>
       </SectionCard>
 
       {riskEvents.length > 0 && (

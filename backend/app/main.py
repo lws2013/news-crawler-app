@@ -26,6 +26,14 @@ from app.services.summary_service import (
 )
 from app.services.mail_service import send_html_email
 
+from fastapi.responses import FileResponse
+from app.schemas import ExportGenerateRequest, ExportJsonResponse, ExportGcsResponse
+from app.services.export_service import (
+    build_crawled_news_export,
+    build_risk_events_export,
+    export_and_upload_to_gcs,
+)
+
 app = FastAPI(title="News Crawler API", version="0.1.0")
 
 frontend_origin = os.getenv("FRONTEND_ORIGIN", "").strip()
@@ -118,4 +126,53 @@ def generate_risk_report(payload: RiskReportRequest):
         message=f"Risk report generated using {payload.llm_model}",
         report_text=result["report_text"],
         html=result.get("html"),
+    )
+
+@app.post("/api/export/crawled-news", response_model=ExportJsonResponse)
+def export_crawled_news(payload: ExportGenerateRequest):
+    result = build_crawled_news_export(payload.date)
+    return ExportJsonResponse(
+        success=True,
+        filename=result["filename"],
+        count=result["count"],
+        saved_path=result["saved_path"],
+    )
+
+@app.get("/api/export/crawled-news/download")
+def download_crawled_news(date: str | None = None):
+    result = build_crawled_news_export(date)
+    return FileResponse(
+        path=result["saved_path"],
+        filename=result["filename"],
+        media_type="application/json",
+    )
+
+@app.post("/api/export/risk-events", response_model=ExportJsonResponse)
+def export_risk_events(payload: ExportGenerateRequest):
+    result = build_risk_events_export(payload.date, payload.llm_model)
+    return ExportJsonResponse(
+        success=True,
+        filename=result["filename"],
+        count=result["count"],
+        saved_path=result["saved_path"],
+    )
+
+@app.get("/api/export/risk-events/download")
+def download_risk_events(date: str | None = None, llm_model: str = "gemini-flash"):
+    result = build_risk_events_export(date, llm_model)
+    return FileResponse(
+        path=result["saved_path"],
+        filename=result["filename"],
+        media_type="application/json",
+    )
+
+@app.post("/api/export/gcs", response_model=ExportGcsResponse)
+def export_json_to_gcs(payload: ExportGenerateRequest):
+    result = export_and_upload_to_gcs(payload.date, payload.llm_model)
+    return ExportGcsResponse(
+        success=True,
+        date=result["date"],
+        bucket_name=result["bucket_name"],
+        crawled_news=result["crawled_news"],
+        risk_events=result["risk_events"],
     )

@@ -63,3 +63,20 @@ class RiskReportResponse(BaseModel):
     message: str
     report_text: str
     html: str | None = None
+
+class ExportGenerateRequest(BaseModel):
+    date: str | None = None
+    llm_model: str = "gemini-flash"
+
+class ExportJsonResponse(BaseModel):
+    success: bool
+    filename: str
+    count: int
+    saved_path: str | None = None
+
+class ExportGcsResponse(BaseModel):
+    success: bool
+    date: str
+    bucket_name: str
+    crawled_news: dict[str, Any]
+    risk_events: dict[str, Any]
