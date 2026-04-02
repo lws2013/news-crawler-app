@@ -34,7 +34,7 @@ OUTPUT_DIR = Path("pipeline/output")
 
 SEARCH_THEMES = {
     "운송지연_항만적체": {
-        "engine": "both",
+        "engine": "brave",
         "keywords": [
             "글로벌 해운 지연",
             "항만 적체 컨테이너",
@@ -60,7 +60,7 @@ SEARCH_THEMES = {
         ],
     },
     "운임_유가": {
-        "engine": "google",    # 전문 사이트에 정확한 데이터
+        "engine": "brave",    # 전문 사이트에 정확한 데이터
         "keywords": [
             "해상운임 동향",
             "항공운임 변동 물류",
