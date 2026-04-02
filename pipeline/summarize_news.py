@@ -101,6 +101,9 @@ def call_gemini(news_text: str) -> str:
         json=payload,
         timeout=60,
     )
+    if resp.status_code != 200:
+        print(f"  🔍 Gemini 응답 코드: {resp.status_code}")
+        print(f"  🔍 Gemini 응답 본문: {resp.text[:500]}")
     resp.raise_for_status()
 
     data = resp.json()
