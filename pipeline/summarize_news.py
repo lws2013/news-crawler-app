@@ -19,10 +19,10 @@ import requests
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 OUTPUT_DIR = Path("pipeline/output")
 
-# Gemini Flash 2.0 (무료 tier)
+# gemini-2.5-flash (무료 tier)
 GEMINI_URL = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
-    "gemini-2.0-flash:generateContent"
+    "gemini-2.5-flash:generateContent"
 )
 
 SYSTEM_PROMPT = """당신은 배터리/전자부품 제조기업의 SCM 본부 물류 전문 분석가입니다.
