@@ -4,3 +4,5 @@ python-dotenv
 openai
 pydantic[email]
 playwright
+google-api-python-client
+requests
