@@ -26,9 +26,9 @@ CRAWLER_MAP = {
     "kita":          ("backend.news_crawler.crawler_demo_kita",         "crawl_kita"),
     "kotra":         ("backend.news_crawler.crawler_demo_kotra",        "crawl_kotra"),
     "ksg":           ("backend.news_crawler.crawler_demo_ksg",          "crawl_ksg"),
-    "oceanpress":    ("backend.news_crawler.crawler_demo_oceanpres",    "crawl_oceanpres"),
+    "oceanpress":    ("backend.news_crawler.crawler_demo_oceanpress",    "crawl_oceanpress"),
     "sea":           ("backend.news_crawler.crawler_demo_sea",          "crawl_sea"),
-    "shippingnews":  ("backend.news_crawler.crawler_demo_shippingne",   "crawl_shippingne"),
+    "shippingnews":  ("backend.news_crawler.crawler_demo_shippingnews",   "crawl_shippingnews"),
     "surff":         ("backend.news_crawler.crawler_demo_surff",        "crawl_surff"),
     "ulogistics":    ("backend.news_crawler.crawler_demo_ulogistics",   "crawl_ulogistics"),
 }
