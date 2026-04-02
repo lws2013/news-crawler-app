@@ -92,6 +92,8 @@ def google_search(query: str, num_results: int = 3) -> list[dict]:
 
     try:
         resp = requests.get(url, params=params, timeout=10)
+        if resp.status_code != 200:
+            print(f"  🔍 Google CSE 응답: {resp.text[:300]}")
         resp.raise_for_status()
         data = resp.json()
 
