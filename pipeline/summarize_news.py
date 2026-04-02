@@ -91,7 +91,7 @@ def call_gemini(news_text: str) -> str:
         ],
         "generationConfig": {
             "temperature": 0.2,
-            "maxOutputTokens": 4096,
+            "maxOutputTokens": 8192,
         },
     }
 
