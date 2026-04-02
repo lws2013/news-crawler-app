@@ -9,6 +9,7 @@ Gemini Flash API로 물류 뉴스 요약·분류·영향도 판단
 
 import json
 import os
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -135,8 +136,11 @@ def summarize_news(articles: list[dict]) -> list[dict]:
 
     news_text = "\n".join(news_lines)
 
-    # 뉴스가 많으면 배치로 나눠서 처리 (Gemini 토큰 제한 고려)
-    BATCH_SIZE = 30
+    # 뉴스가 많으면 배치로 나눠서 처리
+    # ⚠️ Gemini 무료 tier: 15 RPM, 100만 토큰/일
+    #    → 배치를 작게 나누고 요청 사이에 대기 시간 추가
+    BATCH_SIZE = 10  # 작게 나눠서 rate limit 회피
+    MAX_RETRIES = 3
     all_summaries = []
 
     for batch_start in range(0, len(news_lines), BATCH_SIZE):
@@ -146,13 +150,30 @@ def summarize_news(articles: list[dict]) -> list[dict]:
 
         print(f"🤖 Gemini 요약 중... (배치 {batch_num}, {len(batch)}건)")
 
-        try:
-            response = call_gemini(batch_text)
-            summaries = parse_gemini_response(response)
-            all_summaries.extend(summaries)
-            print(f"  ✅ {len(summaries)}건 요약 완료")
-        except Exception as e:
-            print(f"  ❌ 배치 {batch_num} 실패: {e}")
+        # 재시도 로직 (429 대응)
+        for attempt in range(1, MAX_RETRIES + 1):
+            try:
+                response = call_gemini(batch_text)
+                summaries = parse_gemini_response(response)
+                all_summaries.extend(summaries)
+                print(f"  ✅ {len(summaries)}건 요약 완료")
+                break  # 성공하면 다음 배치로
+            except requests.exceptions.HTTPError as e:
+                if e.response is not None and e.response.status_code == 429:
+                    wait_time = 15 * attempt  # 15초, 30초, 45초
+                    print(f"  ⏳ Rate limit 도달. {wait_time}초 대기 후 재시도 ({attempt}/{MAX_RETRIES})")
+                    time.sleep(wait_time)
+                else:
+                    print(f"  ❌ 배치 {batch_num} 실패: {e}")
+                    break
+            except Exception as e:
+                print(f"  ❌ 배치 {batch_num} 실패: {e}")
+                break
+
+        # 배치 사이 대기 (rate limit 예방)
+        if batch_start + BATCH_SIZE < len(news_lines):
+            print(f"  ⏳ 다음 배치 전 5초 대기...")
+            time.sleep(5)
 
     return all_summaries
 
