@@ -1,0 +1,91 @@
+name: SCM Logistics News Agent
+
+on:
+  schedule:
+    # 하루 3회 실행 (UTC 기준 → KST 변환)
+    # KST 08:00 (출근 전), KST 13:00 (점심 후), KST 18:00 (퇴근 전)
+    - cron: '0 23 * * 0-4'   # UTC 23:00 = KST 08:00 (월~금)
+    - cron: '0 4 * * 1-5'    # UTC 04:00 = KST 13:00 (월~금)
+    - cron: '0 9 * * 1-5'    # UTC 09:00 = KST 18:00 (월~금)
+  workflow_dispatch:           # 수동 실행 가능
+
+env:
+  TZ: Asia/Seoul
+
+jobs:
+  crawl-search-summarize-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write          # repo에 결과 커밋하기 위해 필요
+
+    steps:
+      # ── 0. 체크아웃 ──
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 1. Python 환경 설정 ──
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r backend/requirements.txt
+          pip install google-api-python-client requests
+
+      # ── 1-b. Playwright 설치 (기존 크롤러가 Playwright 사용) ──
+      - name: Install Playwright browsers
+        run: |
+          pip install playwright
+          playwright install chromium
+          playwright install-deps chromium
+
+      # ── 2. 기존 크롤러 실행 (14개 사이트) ──
+      - name: Run existing crawlers
+        continue-on-error: true  # 일부 크롤러 실패해도 나머지 파이프라인 계속 진행
+        run: python pipeline/run_crawlers.py
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+
+      # ── 3. 테마별 웹검색 (Google CSE + Brave Search 듀얼) ──
+      - name: Run web search by themes
+        run: python pipeline/search_news.py
+        env:
+          GOOGLE_CSE_API_KEY: ${{ secrets.GOOGLE_CSE_API_KEY }}
+          GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+          PYTHONPATH: ${{ github.workspace }}
+
+      # ── 4. 데이터 병합 + 중복제거 ──
+      - name: Merge and deduplicate
+        run: python pipeline/merge_news.py
+
+      # ── 5. Gemini Flash로 요약·분류 ──
+      - name: Summarize with Gemini Flash
+        run: python pipeline/summarize_news.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      # ── 6. 텔레그램 푸시 ──
+      - name: Push to Telegram
+        run: python pipeline/send_telegram.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      # ── 7. 결과를 repo에 저장 ──
+      - name: Save results to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # data 폴더에 날짜별로 저장
+          mkdir -p data/$(date +%Y/%m)
+          cp pipeline/output/*.json data/$(date +%Y/%m)/
+          
+          git add data/
+          git diff --staged --quiet || git commit -m "📰 뉴스 데이터 $(date +%Y-%m-%d_%H:%M)"
+          git push
