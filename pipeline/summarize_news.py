@@ -7,9 +7,10 @@ Gemini 2.5 Flash API로 물류 뉴스 요약·분류·영향도 판단
 - 20 RPD (일 20회)
 
 [최적화 전략]
-- 배치 크기 20건 → 60건 기준 3~4회 호출
+- 배치 크기 15건 → 60건 기준 4회 호출
 - 하루 2회 실행 → 최대 8회/일 (RPD 20 이내)
 - 배치 간 15초 대기 → RPM 5 이내
+- 429/503 에러 시 재시도 (30초/60초/90초)
 ─────────────────────────────────────────────────
 """
 
@@ -67,19 +68,10 @@ def clean_text(text: str) -> str:
     """base64 이미지 데이터, HTML 태그 등 불필요한 데이터를 제거"""
     if not text:
         return ""
-
-    # base64 이미지 데이터 제거 (data:image/png;base64,... 패턴)
     text = re.sub(r'data:image/[^;]+;base64,[A-Za-z0-9+/=]+', '[이미지]', text)
-
-    # 혹시 남은 매우 긴 base64 문자열 제거 (100자 이상 연속 영숫자)
     text = re.sub(r'[A-Za-z0-9+/=]{100,}', '[데이터 생략]', text)
-
-    # HTML 태그 제거
     text = re.sub(r'<[^>]+>', '', text)
-
-    # 연속 공백/줄바꿈 정리
     text = re.sub(r'\s+', ' ', text).strip()
-
     return text
 
 
@@ -97,7 +89,7 @@ def call_gemini(news_text: str) -> str:
         ],
         "generationConfig": {
             "temperature": 0.2,
-            "maxOutputTokens": 8192,
+            "maxOutputTokens": 16384,
         },
     }
 
@@ -121,7 +113,6 @@ def parse_gemini_response(response_text: str) -> list[dict]:
     """Gemini 응답에서 JSON 파싱 (마크다운 코드블록 제거)"""
     cleaned = response_text.strip()
 
-    # ```json ... ``` 블록 제거
     if cleaned.startswith("```"):
         lines = cleaned.split("\n")
         lines = [l for l in lines if not l.strip().startswith("```")]
@@ -155,7 +146,6 @@ def summarize_news(articles: list[dict]) -> list[dict]:
         if a.get("category"):
             line += f" ({a['category']})"
 
-        # snippet 우선, 없으면 content 앞부분 사용 (300자 제한)
         body = a.get("snippet") or (a.get("content", "")[:300] if a.get("content") else "")
         body = clean_text(body)
         if body:
@@ -168,15 +158,14 @@ def summarize_news(articles: list[dict]) -> list[dict]:
 
         news_lines.append(line)
 
-    # 총 텍스트 크기 확인 (디버깅용)
     total_chars = sum(len(l) for l in news_lines)
     print(f"📝 Gemini에 전송할 텍스트: {total_chars:,}자 ({len(news_lines)}건)")
 
     # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     # 배치 처리 (Gemini 2.5 Flash 무료 tier 최적화)
-    # 5 RPM / 20 RPD → 배치 크게, 대기 길게
+    # 5 RPM / 20 RPD → 배치 적당히, 대기 길게
     # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    BATCH_SIZE = 20   # 20건씩 → 60건 기준 3회 호출
+    BATCH_SIZE = 15
     MAX_RETRIES = 3
     all_summaries = []
 
@@ -187,7 +176,7 @@ def summarize_news(articles: list[dict]) -> list[dict]:
 
         print(f"🤖 Gemini 요약 중... (배치 {batch_num}, {len(batch)}건, {len(batch_text):,}자)")
 
-        # 재시도 로직 (429 Too Many Requests 대응)
+        # 재시도 로직 (429 + 503 대응)
         for attempt in range(1, MAX_RETRIES + 1):
             try:
                 response = call_gemini(batch_text)
@@ -196,9 +185,11 @@ def summarize_news(articles: list[dict]) -> list[dict]:
                 print(f"  ✅ {len(summaries)}건 요약 완료")
                 break
             except requests.exceptions.HTTPError as e:
-                if e.response is not None and e.response.status_code == 429:
-                    wait_time = 30 * attempt  # 30초, 60초, 90초
-                    print(f"  ⏳ Rate limit 도달. {wait_time}초 대기 후 재시도 ({attempt}/{MAX_RETRIES})")
+                status = e.response.status_code if e.response is not None else 0
+                if status in (429, 503):
+                    wait_time = 30 * attempt
+                    reason = "Rate limit" if status == 429 else "서버 과부하"
+                    print(f"  ⏳ {reason} ({status}). {wait_time}초 대기 후 재시도 ({attempt}/{MAX_RETRIES})")
                     time.sleep(wait_time)
                 else:
                     print(f"  ❌ 배치 {batch_num} 실패: {e}")
@@ -216,7 +207,6 @@ def summarize_news(articles: list[dict]) -> list[dict]:
 
 
 def main():
-    # 병합된 뉴스 데이터 로드
     input_path = OUTPUT_DIR / "all_news.json"
     if not input_path.exists():
         print(f"❌ {input_path} 파일이 없습니다. merge_news.py를 먼저 실행하세요.")
@@ -227,14 +217,12 @@ def main():
 
     print(f"📥 {len(articles)}건 뉴스 로드")
 
-    # 요약 실행
     summaries = summarize_news(articles)
 
     # 영향도별 정렬 (🔴 → 🟡 → 🟢)
     impact_order = {"🔴높음": 0, "🟡모니터링": 1, "🟢낮음": 2}
     summaries.sort(key=lambda x: impact_order.get(x.get("impact", ""), 99))
 
-    # 저장
     output_path = OUTPUT_DIR / "summary.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(
@@ -249,7 +237,6 @@ def main():
             indent=2,
         )
 
-    # 통계 출력
     theme_counts = {}
     impact_counts = {}
     for s in summaries:
