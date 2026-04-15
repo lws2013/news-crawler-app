@@ -10,6 +10,8 @@ import os
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
 from datetime import datetime
 from pathlib import Path
 
@@ -121,20 +123,31 @@ def build_html(summary_data: dict) -> str:
     return html
 
 
-def send_email(subject: str, html_body: str):
-    """Gmail SMTP로 메일 발송"""
+def send_email(subject: str, html_body: str, attachment_path: str = None):
+    """Gmail SMTP로 메일 발송 (첨부파일 지원)"""
     if not GMAIL_USER or not GMAIL_APP_PASSWORD or not NOTIFY_EMAIL_TO:
         print("❌ Gmail 설정이 없습니다. GMAIL_USER, GMAIL_APP_PASSWORD, NOTIFY_EMAIL_TO를 확인하세요.")
         return
 
     recipients = [addr.strip() for addr in NOTIFY_EMAIL_TO.split(",")]
 
-    msg = MIMEMultipart("alternative")
+    msg = MIMEMultipart("mixed")
     msg["Subject"] = subject
     msg["From"] = f"SCM 물류 브리핑 <{GMAIL_USER}>"
     msg["To"] = ", ".join(recipients)
 
     msg.attach(MIMEText(html_body, "html", "utf-8"))
+
+    # 첨부파일
+    if attachment_path and Path(attachment_path).exists():
+        with open(attachment_path, "rb") as f:
+            part = MIMEBase("application", "octet-stream")
+            part.set_payload(f.read())
+        encoders.encode_base64(part)
+        filename = Path(attachment_path).name
+        part.add_header("Content-Disposition", f"attachment; filename={filename}")
+        msg.attach(part)
+        print(f"📎 첨부파일: {filename}")
 
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
@@ -175,7 +188,15 @@ def main():
 
     # HTML 생성 및 발송
     html = build_html(summary_data)
-    send_email(subject, html)
+
+    # all_news.json을 txt로 복사하여 첨부
+    all_news_path = OUTPUT_DIR / "all_news.json"
+    attach_path = OUTPUT_DIR / "all_news.txt"
+    if all_news_path.exists():
+        import shutil
+        shutil.copy(all_news_path, attach_path)
+
+    send_email(subject, html, str(attach_path) if attach_path.exists() else None)
 
 
 if __name__ == "__main__":
