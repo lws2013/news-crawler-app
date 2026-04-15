@@ -1,10 +1,16 @@
 """
-Gemini Flash API로 물류 뉴스 요약·분류·영향도 판단
+Gemini 2.5 Flash API로 물류 뉴스 요약·분류·영향도 판단
 ─────────────────────────────────────────────────
-본부장님 요구사항:
-- 테마별 분류 (운송지연, SHE규제, 지정학, 운임)
-- "우리 영향도" 판단 (🔴높음 / 🟡모니터링 / 🟢낮음)
-- 경영층이 바로 읽을 수 있는 요약
+[Gemini 2.5 Flash 무료 tier 한도]
+- 5 RPM (분당 5회)
+- 250,000 TPM (분당 25만 토큰)
+- 20 RPD (일 20회)
+
+[최적화 전략]
+- 배치 크기 20건 → 60건 기준 3~4회 호출
+- 하루 2회 실행 → 최대 8회/일 (RPD 20 이내)
+- 배치 간 15초 대기 → RPM 5 이내
+─────────────────────────────────────────────────
 """
 
 import json
@@ -19,7 +25,7 @@ import requests
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 OUTPUT_DIR = Path("pipeline/output")
 
-# gemini-2.5-flash (무료 tier)
+# Gemini 2.5 Flash
 GEMINI_URL = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
     "gemini-2.5-flash:generateContent"
@@ -78,7 +84,7 @@ def clean_text(text: str) -> str:
 
 
 def call_gemini(news_text: str) -> str:
-    """Gemini Flash API 호출"""
+    """Gemini 2.5 Flash API 호출"""
     headers = {"Content-Type": "application/json"}
     payload = {
         "contents": [
@@ -99,7 +105,7 @@ def call_gemini(news_text: str) -> str:
         f"{GEMINI_URL}?key={GEMINI_API_KEY}",
         headers=headers,
         json=payload,
-        timeout=60,
+        timeout=120,
     )
     if resp.status_code != 200:
         print(f"  🔍 Gemini 응답 코드: {resp.status_code}")
@@ -166,9 +172,11 @@ def summarize_news(articles: list[dict]) -> list[dict]:
     total_chars = sum(len(l) for l in news_lines)
     print(f"📝 Gemini에 전송할 텍스트: {total_chars:,}자 ({len(news_lines)}건)")
 
-    # 배치 처리
-    # Gemini 무료 tier: 15 RPM, 100만 토큰/일
-    BATCH_SIZE = 10
+    # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    # 배치 처리 (Gemini 2.5 Flash 무료 tier 최적화)
+    # 5 RPM / 20 RPD → 배치 크게, 대기 길게
+    # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    BATCH_SIZE = 20   # 20건씩 → 60건 기준 3회 호출
     MAX_RETRIES = 3
     all_summaries = []
 
@@ -189,7 +197,7 @@ def summarize_news(articles: list[dict]) -> list[dict]:
                 break
             except requests.exceptions.HTTPError as e:
                 if e.response is not None and e.response.status_code == 429:
-                    wait_time = 15 * attempt
+                    wait_time = 30 * attempt  # 30초, 60초, 90초
                     print(f"  ⏳ Rate limit 도달. {wait_time}초 대기 후 재시도 ({attempt}/{MAX_RETRIES})")
                     time.sleep(wait_time)
                 else:
@@ -199,10 +207,10 @@ def summarize_news(articles: list[dict]) -> list[dict]:
                 print(f"  ❌ 배치 {batch_num} 실패: {e}")
                 break
 
-        # 배치 사이 대기 (rate limit 예방)
+        # 배치 사이 15초 대기 (RPM 5 제한 대응)
         if batch_start + BATCH_SIZE < len(news_lines):
-            print(f"  ⏳ 다음 배치 전 5초 대기...")
-            time.sleep(5)
+            print(f"  ⏳ 다음 배치 전 15초 대기 (RPM 제한 대응)...")
+            time.sleep(15)
 
     return all_summaries
 
