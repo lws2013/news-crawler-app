@@ -198,15 +198,8 @@ def main():
         sent_count += len(yellow_items)
 
     if green_items:
-        # 🟢는 제목만 간략히 (공간 절약)
-        brief_blocks = []
-        for s in green_items:
-            emoji = THEME_EMOJI.get(s.get("theme", ""), "📌")
-            brief_blocks.append(f"{emoji} {s.get('title', '')}")
-
-        brief_text = "🟢 <b>참고</b>\n\n" + "\n".join(brief_blocks)
-        send_long_message(brief_text)
-        sent_count += len(green_items)
+        # 🟢는 텔레그램에서 제외 (메일에서만 확인)
+        print(f"ℹ️ 🟢 참고 {len(green_items)}건은 메일에서만 발송 (텔레그램 생략)")
 
     print(f"✅ 텔레그램 전송 완료 ({sent_count}건)")
 
