@@ -50,6 +50,9 @@ def send_message(text: str, parse_mode: str = "HTML") -> bool:
         return True
     except requests.RequestException as e:
         print(f"❌ 텔레그램 전송 실패: {e}")
+        if hasattr(e, 'response') and e.response is not None:
+            print(f"  🔍 응답 본문: {e.response.text[:300]}")
+        print(f"  🔍 메시지 길이: {len(text)}자")
         return False
 
 
