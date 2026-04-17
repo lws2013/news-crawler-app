@@ -144,8 +144,9 @@ def send_email(subject: str, html_body: str, attachment_path: str = None):
             part = MIMEBase("application", "octet-stream")
             part.set_payload(f.read())
         encoders.encode_base64(part)
-        filename = Path(attachment_path).name
-        part.add_header("Content-Disposition", f"attachment; filename={filename}")
+        today_str = datetime.now().strftime("%Y%m%d")
+        filename = f"scm_news_{today_str}.txt"
+        part.add_header("Content-Disposition", "attachment", filename=("utf-8", "", filename))
         msg.attach(part)
         print(f"📎 첨부파일: {filename}")
 
