@@ -1,12 +1,14 @@
 """
 Gmail SMTP로 물류 뉴스 브리핑 메일 발송
 ─────────────────────────────────────────────────
-텔레그램과 동일한 요약 내용을 HTML 메일로 발송합니다.
-Gmail 앱 비밀번호가 필요합니다.
+- 뉴스 요약 (🔴🟡🟢)
+- 운임지수 차트 (SCFI/KCCI SVG 인라인)
+- all_news.txt 첨부
 """
 
 import json
 import os
+import shutil
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -14,6 +16,17 @@ from email.mime.base import MIMEBase
 from email import encoders
 from datetime import datetime
 from pathlib import Path
+
+# freight_formatter는 같은 pipeline 폴더에 있으므로 sys.path 추가
+import sys
+sys.path.insert(0, str(Path(__file__).parent))
+
+try:
+    from freight_formatter import load_latest, load_history, build_email_charts
+    FREIGHT_AVAILABLE = True
+except ImportError:
+    FREIGHT_AVAILABLE = False
+    print("ℹ️ freight_formatter 모듈 없음. 운임지수 차트 생략.")
 
 GMAIL_USER = os.environ.get("GMAIL_USER", "")
 GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "")
@@ -79,6 +92,19 @@ def build_html(summary_data: dict) -> str:
     </div>
     """
 
+    # ── 운임지수 차트 (뉴스 섹션 위에 배치) ──
+    if FREIGHT_AVAILABLE:
+        try:
+            freight_latest = load_latest()
+            freight_history = load_history()
+            if freight_latest:
+                charts_html = build_email_charts(freight_latest, freight_history)
+                html += f'<div style="padding: 10px 25px;">{charts_html}</div>'
+                print("📊 운임지수 차트 삽입 완료")
+        except Exception as e:
+            print(f"⚠️ 운임지수 차트 생성 실패: {e}")
+
+    # ── 뉴스 섹션 ──
     for level, css, title in [
         ("🔴", "red", "🔴 즉시 확인 필요"),
         ("🟡", "yellow", "🟡 모니터링 필요"),
@@ -187,16 +213,16 @@ def main():
     else:
         subject = f"[SCM 물류 브리핑] {total}건 요약 - {today_str}"
 
-    # HTML 생성 및 발송
+    # HTML 생성
     html = build_html(summary_data)
 
     # all_news.json을 txt로 복사하여 첨부
     all_news_path = OUTPUT_DIR / "all_news.json"
     attach_path = OUTPUT_DIR / "all_news.txt"
     if all_news_path.exists():
-        import shutil
         shutil.copy(all_news_path, attach_path)
 
+    # 메일 발송
     send_email(subject, html, str(attach_path) if attach_path.exists() else None)
 
 
