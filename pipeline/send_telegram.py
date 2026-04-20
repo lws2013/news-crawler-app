@@ -185,6 +185,14 @@ def main():
     send_message(header)
     sent_count += 1
 
+    # ── 1-b. 운임지수 표 전송 ──
+    from freight_formatter import load_latest, build_simple_telegram_table
+    freight_latest = load_latest()
+    if freight_latest:
+        freight_table = build_simple_telegram_table(freight_latest)
+        if freight_table:
+            send_message(freight_table)
+    
     # ── 2. 영향도별 전송 (🔴 → 🟡 → 🟢) ──
     # 각 섹션 내에서 4,096자 초과 시 자동 분할
 
