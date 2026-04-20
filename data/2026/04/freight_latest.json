@@ -1,0 +1,12 @@
+{
+  "scfi": null,
+  "kcci": {
+    "index": "KCCI",
+    "current_value": 2193.0,
+    "current_date": "2026-04-20",
+    "previous_value": 2186.0,
+    "previous_date": "2026-04-13",
+    "crawled_at": "2026-04-20T17:02:36.294410"
+  },
+  "updated_at": "2026-04-20T17:02:36.295710"
+}
