@@ -209,21 +209,44 @@ def build_svg_chart(index_name: str, history: list, current_val: float = None,
         if points:
             svg += f'<polyline points="{" ".join(points)}" fill="none" stroke="#0ECB81" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>'
 
+    # 전년 동기 값 찾기
+    yoy_val = None
+    if current_date and last_year_data:
+        try:
+            cur_dt = datetime.strptime(current_date, "%Y-%m-%d")
+            cur_week = cur_dt.isocalendar()[1]
+            # 전년도 데이터에서 같은 주차 또는 가장 가까운 주차 찾기
+            best_match = None
+            best_diff = 999
+            for date_str, val in last_year_data:
+                try:
+                    wk = datetime.strptime(date_str, "%Y-%m-%d").isocalendar()[1]
+                    diff = abs(wk - cur_week)
+                    if diff < best_diff:
+                        best_diff = diff
+                        best_match = val
+                except:
+                    continue
+            if best_match and best_diff <= 2:
+                yoy_val = best_match
+        except:
+            pass
+
     # 범례 + 현재값 (좌상단)
     legend_y = 18
     svg += f'<circle cx="{pad_left + 5}" cy="{legend_y}" r="5" fill="#0ECB81"/>'
-    cur_text = f"금주 {current_val:,.0f}" if current_val else "금주 -"
+    cur_text = f"현재 {current_val:,.0f}" if current_val else "현재 -"
     svg += f'<text x="{pad_left + 15}" y="{legend_y + 4}" font-size="12" font-weight="bold" fill="#333">{cur_text}</text>'
 
     svg += f'<circle cx="{pad_left + 130}" cy="{legend_y}" r="5" fill="#4285F4"/>'
-    prev_text = f"전주 {previous_val:,.0f}" if previous_val else "전주 -"
-    svg += f'<text x="{pad_left + 140}" y="{legend_y + 4}" font-size="12" font-weight="bold" fill="#333">{prev_text}</text>'
+    yoy_text = f"전년동기 {yoy_val:,.0f}" if yoy_val else "전년동기 -"
+    svg += f'<text x="{pad_left + 140}" y="{legend_y + 4}" font-size="12" font-weight="bold" fill="#333">{yoy_text}</text>'
 
-    # 변동폭
-    if current_val and previous_val:
-        chg = format_change(current_val, previous_val)
-        color = "#D32F2F" if current_val > previous_val else "#388E3C" if current_val < previous_val else "#888"
-        svg += f'<text x="{w - pad_right}" y="{legend_y + 4}" text-anchor="end" font-size="13" font-weight="bold" fill="{color}">{chg}</text>'
+    # 전년 동기 대비 변동폭
+    if current_val and yoy_val:
+        chg = format_change(current_val, yoy_val)
+        color = "#D32F2F" if current_val > yoy_val else "#388E3C" if current_val < yoy_val else "#888"
+        svg += f'<text x="{w - pad_right}" y="{legend_y + 4}" text-anchor="end" font-size="13" font-weight="bold" fill="{color}">YoY {chg}</text>'
 
     # 제목
     svg += f'<text x="{pad_left}" y="{legend_y + 22}" font-size="11" fill="#888">{index_name} ({current_date or ""})</text>'
