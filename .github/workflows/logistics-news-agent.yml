@@ -49,6 +49,16 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}
 
+      # ── 2-b. 운임지수 크롤링 (SCFI / KCCI) ──  ★ 추가
+      #   신규 값이 있으면 data/freight_index.json 에 누적 저장
+      #   GITHUB_TOKEN 은 Actions 가 자동 제공 (별도 Secrets 등록 불필요)
+      - name: Crawl SCFI & KCCI freight indices
+        continue-on-error: true
+        run: python pipeline/crawler_scfi_kcci.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PYTHONPATH: ${{ github.workspace }}
+
       # ── 3. 테마별 웹검색 (Google CSE + Brave Search 듀얼) ──
       - name: Run web search by themes
         run: python pipeline/search_news.py
@@ -74,7 +84,8 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # ★ 추가: 운임지수 GitHub 저장용
+
       # ── 6-b. 메일 발송 ──
       - name: Send Email Briefing
         run: python pipeline/send_email.py
@@ -82,7 +93,8 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           NOTIFY_EMAIL_TO: ${{ secrets.NOTIFY_EMAIL_TO }}
-          
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # ★ 추가: 운임지수 GitHub 저장용
+
       # ── 7. 결과를 repo에 저장 ──
       - name: Save results to repo
         run: |
