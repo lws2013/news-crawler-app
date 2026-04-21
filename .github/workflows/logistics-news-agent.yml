@@ -2,8 +2,8 @@ name: SCM Logistics News Agent
 
 on:
   schedule:
-    # 하루 3회 실행 (UTC 기준 → KST 변환)
-    # KST 08:00 (출근 전), KST 13:00 (점심 후), KST 18:00 (퇴근 전)
+    # 하루 2회 실행 (UTC 기준 → KST 변환)
+    # KST 08:00 (출근 전), KST 16:00 (오후)
     - cron: '0 23 * * 0-4'   # UTC 23:00 = KST 08:00 (월~금)
     - cron: '0 7 * * 1-5'    # UTC 07:00 = KST 16:00 (월~금)
   workflow_dispatch:           # 수동 실행 가능
@@ -30,12 +30,15 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install Korean fonts
+        run: sudo apt-get install -y fonts-nanum
+
       - name: Install dependencies
         run: |
           pip install -r backend/requirements.txt
           pip install google-api-python-client requests beautifulsoup4 matplotlib
 
-      # ── 1-b. Playwright 설치 (기존 크롤러가 Playwright 사용) ──
+      # ── 1-b. Playwright 설치 (기존 크롤러 + SCFI가 Playwright 사용) ──
       - name: Install Playwright browsers
         run: |
           pip install playwright
@@ -44,23 +47,22 @@ jobs:
 
       # ── 2. 기존 크롤러 실행 (14개 사이트) ──
       - name: Run existing crawlers
-        continue-on-error: true  # 일부 크롤러 실패해도 나머지 파이프라인 계속 진행
+        continue-on-error: true
         run: python pipeline/run_crawlers.py
         env:
           PYTHONPATH: ${{ github.workspace }}
 
       # ── 2-b. 운임지수 크롤링 (SCFI + KCCI) ──
       - name: Crawl freight indices
+        continue-on-error: true
         run: python pipeline/crawl_freight_indices.py
         env:
           PYTHONPATH: ${{ github.workspace }}
 
-      # ── 3. 테마별 웹검색 (Google CSE + Brave Search 듀얼) ──
+      # ── 3. 테마별 웹검색 (Brave Search) ──
       - name: Run web search by themes
         run: python pipeline/search_news.py
         env:
-          GOOGLE_CSE_API_KEY: ${{ secrets.GOOGLE_CSE_API_KEY }}
-          GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           PYTHONPATH: ${{ github.workspace }}
 
@@ -88,6 +90,7 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           NOTIFY_EMAIL_TO: ${{ secrets.NOTIFY_EMAIL_TO }}
+          PYTHONPATH: ${{ github.workspace }}
 
       # ── 7. 결과를 repo에 저장 ──
       - name: Save results to repo
