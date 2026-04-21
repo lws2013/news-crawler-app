@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r backend/requirements.txt
-          pip install google-api-python-client requests beautifulsoup4
+          pip install google-api-python-client requests beautifulsoup4 matplotlib
 
       # ── 1-b. Playwright 설치 (기존 크롤러가 Playwright 사용) ──
       - name: Install Playwright browsers
