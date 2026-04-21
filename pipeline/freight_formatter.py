@@ -131,6 +131,25 @@ def build_png_chart(index_name: str, history: list, current_val: float = None,
         matplotlib.use("Agg")
         import matplotlib.pyplot as plt
         import matplotlib.ticker as ticker
+        import matplotlib.font_manager as fm
+
+        # 한글 폰트 설정
+        font_path = None
+        for candidate in [
+            "/usr/share/fonts/truetype/nanum/NanumGothic.ttf",
+            "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+        ]:
+            if Path(candidate).exists():
+                font_path = candidate
+                break
+
+        if font_path:
+            font_prop = fm.FontProperties(fname=font_path)
+            plt.rcParams["font.family"] = font_prop.get_name()
+        else:
+            plt.rcParams["font.family"] = "DejaVu Sans"
+
+        plt.rcParams["axes.unicode_minus"] = False
     except ImportError:
         print("  ❌ matplotlib가 설치되지 않았습니다.")
         return None
