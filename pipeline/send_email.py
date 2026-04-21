@@ -2,7 +2,7 @@
 Gmail SMTP로 물류 뉴스 브리핑 메일 발송
 ─────────────────────────────────────────────────
 - 뉴스 요약 (🔴🟡🟢)
-- 운임지수 차트 (SCFI/KCCI SVG 인라인)
+- 운임지수 차트 (PNG 인라인 CID 임베드 - Outlook 호환)
 - all_news.txt 첨부
 """
 
@@ -13,11 +13,11 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
+from email.mime.image import MIMEImage
 from email import encoders
 from datetime import datetime
 from pathlib import Path
 
-# freight_formatter는 같은 pipeline 폴더에 있으므로 sys.path 추가
 import sys
 sys.path.insert(0, str(Path(__file__).parent))
 
@@ -43,8 +43,8 @@ THEME_EMOJI = {
 }
 
 
-def build_html(summary_data: dict) -> str:
-    """브리핑 HTML 메일 본문 생성"""
+def build_html(summary_data: dict, chart_cids: list[str] = None) -> str:
+    """브리핑 HTML 메일 본문 생성 (차트는 CID 이미지로 삽입)"""
     summaries = summary_data.get("summaries", [])
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
     total = summary_data.get("total_summaries", 0)
@@ -77,6 +77,8 @@ def build_html(summary_data: dict) -> str:
         .card-detail a {{ color: #2E75B6; }}
         .label {{ color: #888; }}
         .highlight {{ color: #D32F2F; font-weight: bold; }}
+        .chart-section {{ padding: 10px 25px; }}
+        .chart-title {{ font-size: 16px; font-weight: bold; color: #1B3A5C; border-bottom: 2px solid #2E75B6; padding-bottom: 5px; margin-bottom: 10px; }}
         .footer {{ padding: 15px 25px; color: #999; font-size: 11px; border-top: 1px solid #E0E0E0; margin-top: 20px; }}
     </style>
     </head>
@@ -92,17 +94,13 @@ def build_html(summary_data: dict) -> str:
     </div>
     """
 
-    # ── 운임지수 차트 (뉴스 섹션 위에 배치) ──
-    if FREIGHT_AVAILABLE:
-        try:
-            freight_latest = load_latest()
-            freight_history = load_history()
-            if freight_latest:
-                charts_html = build_email_charts(freight_latest, freight_history)
-                html += f'<div style="padding: 10px 25px;">{charts_html}</div>'
-                print("📊 운임지수 차트 삽입 완료")
-        except Exception as e:
-            print(f"⚠️ 운임지수 차트 생성 실패: {e}")
+    # ── 운임지수 차트 (PNG CID 이미지) ──
+    if chart_cids:
+        html += '<div class="chart-section">'
+        html += '<div class="chart-title">📊 주간 운임지수</div>'
+        for cid in chart_cids:
+            html += f'<img src="cid:{cid}" style="max-width:100%;height:auto;margin:5px 0;" />'
+        html += '</div>'
 
     # ── 뉴스 섹션 ──
     for level, css, title in [
@@ -149,22 +147,41 @@ def build_html(summary_data: dict) -> str:
     return html
 
 
-def send_email(subject: str, html_body: str, attachment_path: str = None):
-    """Gmail SMTP로 메일 발송 (첨부파일 지원)"""
+def send_email(subject: str, html_body: str, chart_paths: list[str] = None,
+               chart_cids: list[str] = None, attachment_path: str = None):
+    """Gmail SMTP로 메일 발송 (인라인 이미지 + 첨부파일)"""
     if not GMAIL_USER or not GMAIL_APP_PASSWORD or not NOTIFY_EMAIL_TO:
-        print("❌ Gmail 설정이 없습니다. GMAIL_USER, GMAIL_APP_PASSWORD, NOTIFY_EMAIL_TO를 확인하세요.")
+        print("❌ Gmail 설정이 없습니다.")
         return
 
     recipients = [addr.strip() for addr in NOTIFY_EMAIL_TO.split(",")]
 
+    # mixed > related > alternative 구조 (첨부파일 + 인라인이미지 + HTML)
     msg = MIMEMultipart("mixed")
     msg["Subject"] = subject
     msg["From"] = f"SCM 물류 브리핑 <{GMAIL_USER}>"
     msg["To"] = ", ".join(recipients)
 
-    msg.attach(MIMEText(html_body, "html", "utf-8"))
+    # related 파트 (HTML + 인라인 이미지)
+    msg_related = MIMEMultipart("related")
+    msg_related.attach(MIMEText(html_body, "html", "utf-8"))
 
-    # 첨부파일
+    # 차트 PNG를 인라인 이미지로 첨부 (CID 방식)
+    if chart_paths and chart_cids:
+        for path, cid in zip(chart_paths, chart_cids):
+            try:
+                with open(path, "rb") as f:
+                    img = MIMEImage(f.read(), _subtype="png")
+                img.add_header("Content-ID", f"<{cid}>")
+                img.add_header("Content-Disposition", "inline", filename=Path(path).name)
+                msg_related.attach(img)
+                print(f"  🖼️ 인라인 이미지: {cid} ({Path(path).name})")
+            except Exception as e:
+                print(f"  ⚠️ 이미지 첨부 실패 ({path}): {e}")
+
+    msg.attach(msg_related)
+
+    # all_news.txt 첨부
     if attachment_path and Path(attachment_path).exists():
         with open(attachment_path, "rb") as f:
             part = MIMEBase("application", "octet-stream")
@@ -174,7 +191,7 @@ def send_email(subject: str, html_body: str, attachment_path: str = None):
         filename = f"scm_news_{today_str}.txt"
         part.add_header("Content-Disposition", "attachment", filename=("utf-8", "", filename))
         msg.attach(part)
-        print(f"📎 첨부파일: {filename}")
+        print(f"  📎 첨부파일: {filename}")
 
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
@@ -188,7 +205,6 @@ def send_email(subject: str, html_body: str, attachment_path: str = None):
 
 
 def main():
-    # 요약 데이터 로드
     input_path = OUTPUT_DIR / "summary.json"
     if not input_path.exists():
         print(f"❌ {input_path} 파일이 없습니다.")
@@ -213,17 +229,38 @@ def main():
     else:
         subject = f"[SCM 물류 브리핑] {total}건 요약 - {today_str}"
 
-    # HTML 생성
-    html = build_html(summary_data)
+    # 운임지수 차트 생성 (PNG)
+    chart_paths = []
+    chart_cids = []
 
-    # all_news.json을 txt로 복사하여 첨부
+    if FREIGHT_AVAILABLE:
+        try:
+            freight_latest = load_latest()
+            freight_history = load_history()
+            if freight_latest:
+                chart_paths = build_email_charts(freight_latest, freight_history)
+                chart_cids = [f"chart_{i}" for i in range(len(chart_paths))]
+                print(f"📊 운임지수 차트 {len(chart_paths)}개 생성 완료")
+        except Exception as e:
+            print(f"⚠️ 운임지수 차트 생성 실패: {e}")
+
+    # HTML 생성 (차트 CID 전달)
+    html = build_html(summary_data, chart_cids)
+
+    # all_news.txt 첨부 준비
     all_news_path = OUTPUT_DIR / "all_news.json"
     attach_path = OUTPUT_DIR / "all_news.txt"
     if all_news_path.exists():
         shutil.copy(all_news_path, attach_path)
 
     # 메일 발송
-    send_email(subject, html, str(attach_path) if attach_path.exists() else None)
+    send_email(
+        subject,
+        html,
+        chart_paths=chart_paths,
+        chart_cids=chart_cids,
+        attachment_path=str(attach_path) if attach_path.exists() else None,
+    )
 
 
 if __name__ == "__main__":
