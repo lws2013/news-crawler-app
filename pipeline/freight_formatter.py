@@ -139,7 +139,6 @@ def build_svg_chart(index_name: str, history: list, current_val: float = None,
     current_year = datetime.now().year
     prev_year = current_year - 1
 
-    # 연도별 분리
     this_year_data = [(e["date"], e["value"]) for e in history
                       if e.get("date", "").startswith(str(current_year))]
     last_year_data = [(e["date"], e["value"]) for e in history
@@ -148,28 +147,38 @@ def build_svg_chart(index_name: str, history: list, current_val: float = None,
     if not this_year_data and not last_year_data:
         return f"<p><i>{index_name} 차트 데이터 없음</i></p>"
 
-    # 차트 크기
     w, h = 500, 250
     pad_left, pad_right, pad_top, pad_bottom = 60, 20, 60, 30
-
     chart_w = w - pad_left - pad_right
     chart_h = h - pad_top - pad_bottom
 
-    # Y축 범위
     all_values = [v for _, v in this_year_data + last_year_data]
-    if current_val:
+    if current_val is not None:
         all_values.append(current_val)
-    if previous_val:
+    if previous_val is not None:
         all_values.append(previous_val)
 
     y_min = min(all_values) * 0.9
     y_max = max(all_values) * 1.1
 
-    def week_of_year(date_str: str) -> int:
+    def chart_week(date_str: str) -> int:
+        """
+        차트 표시용 주차
+        - 일반적으로 ISO week 사용
+        - 단, 12월 말인데 ISO week가 1로 넘어가는 경우는 53으로 보정
+          예: 2025-12-29 -> ISO week 1 이지만 차트에선 연말 점으로 표시
+        """
         try:
             dt = datetime.strptime(date_str, "%Y-%m-%d")
-            return dt.isocalendar()[1]
-        except:
+            wk = dt.isocalendar()[1]
+
+            if dt.month == 12 and wk == 1:
+                return 53
+            if dt.month == 1 and wk >= 52:
+                return 0
+
+            return wk
+        except Exception:
             return 0
 
     def y_pos(val: float) -> float:
@@ -178,12 +187,47 @@ def build_svg_chart(index_name: str, history: list, current_val: float = None,
         return pad_top + chart_h - (val - y_min) / (y_max - y_min) * chart_h
 
     def x_pos(week: int) -> float:
-        return pad_left + (week - 1) / 52 * chart_w
+        # 0~53 범위를 허용
+        week = max(0, min(53, week))
+        return pad_left + (week / 53) * chart_w
 
-    # SVG 시작
+    def build_polylines(year_data: list, color: str) -> str:
+        """
+        주차가 뒤로 꺾이는 경우(예: 52 -> 1) 새 선분으로 분리
+        """
+        if not year_data:
+            return ""
+
+        segments = []
+        current_segment = []
+        prev_wk = None
+
+        for date_str, val in sorted(year_data, key=lambda x: x[0]):
+            wk = chart_week(date_str)
+            point = f"{x_pos(wk):.1f},{y_pos(val):.1f}"
+
+            if prev_wk is not None and wk < prev_wk:
+                if len(current_segment) >= 2:
+                    segments.append(current_segment)
+                current_segment = [point]
+            else:
+                current_segment.append(point)
+
+            prev_wk = wk
+
+        if len(current_segment) >= 2:
+            segments.append(current_segment)
+
+        svg_lines = []
+        for seg in segments:
+            svg_lines.append(
+                f'<polyline points="{" ".join(seg)}" fill="none" stroke="{color}" '
+                f'stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>'
+            )
+        return "".join(svg_lines)
+
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" style="max-width:500px;width:100%;background:#fff;border:1px solid #e0e0e0;border-radius:8px;margin:10px 0;">'
 
-    # Y축 그리드
     y_steps = 5
     for i in range(y_steps + 1):
         val = y_min + (y_max - y_min) * i / y_steps
@@ -191,48 +235,29 @@ def build_svg_chart(index_name: str, history: list, current_val: float = None,
         svg += f'<line x1="{pad_left}" y1="{y:.0f}" x2="{w - pad_right}" y2="{y:.0f}" stroke="#eee" stroke-width="1"/>'
         svg += f'<text x="{pad_left - 5}" y="{y:.0f}" text-anchor="end" font-size="10" fill="#888" dominant-baseline="middle">{val:,.0f}</text>'
 
-    # 전년도 선 (파란색)
-    if last_year_data:
-        points = []
-        for date_str, val in sorted(last_year_data, key=lambda x: x[0]):
-            wk = week_of_year(date_str)
-            points.append(f"{x_pos(wk):.1f},{y_pos(val):.1f}")
-        if points:
-            svg += f'<polyline points="{" ".join(points)}" fill="none" stroke="#4285F4" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>'
+    # 전년도 / 당해년도
+    svg += build_polylines(last_year_data, "#4285F4")
+    svg += build_polylines(this_year_data, "#0ECB81")
 
-    # 당해년도 선 (초록색)
-    if this_year_data:
-        points = []
-        for date_str, val in sorted(this_year_data, key=lambda x: x[0]):
-            wk = week_of_year(date_str)
-            points.append(f"{x_pos(wk):.1f},{y_pos(val):.1f}")
-        if points:
-            svg += f'<polyline points="{" ".join(points)}" fill="none" stroke="#0ECB81" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>'
-
-    # 전년 동기 값 찾기
     yoy_val = None
     if current_date and last_year_data:
         try:
-            cur_dt = datetime.strptime(current_date, "%Y-%m-%d")
-            cur_week = cur_dt.isocalendar()[1]
-            # 전년도 데이터에서 같은 주차 또는 가장 가까운 주차 찾기
+            cur_week = chart_week(current_date)
             best_match = None
             best_diff = 999
+
             for date_str, val in last_year_data:
-                try:
-                    wk = datetime.strptime(date_str, "%Y-%m-%d").isocalendar()[1]
-                    diff = abs(wk - cur_week)
-                    if diff < best_diff:
-                        best_diff = diff
-                        best_match = val
-                except:
-                    continue
-            if best_match and best_diff <= 2:
+                wk = chart_week(date_str)
+                diff = abs(wk - cur_week)
+                if diff < best_diff:
+                    best_diff = diff
+                    best_match = val
+
+            if best_match is not None and best_diff <= 2:
                 yoy_val = best_match
-        except:
+        except Exception:
             pass
 
-    # 범례 + 현재값 (좌상단)
     legend_y = 18
     svg += f'<circle cx="{pad_left + 5}" cy="{legend_y}" r="5" fill="#0ECB81"/>'
     cur_text = f"현재 {current_val:,.0f}" if current_val else "현재 -"
@@ -242,16 +267,12 @@ def build_svg_chart(index_name: str, history: list, current_val: float = None,
     yoy_text = f"전년동기 {yoy_val:,.0f}" if yoy_val else "전년동기 -"
     svg += f'<text x="{pad_left + 140}" y="{legend_y + 4}" font-size="12" font-weight="bold" fill="#333">{yoy_text}</text>'
 
-    # 전년 동기 대비 변동폭
     if current_val and yoy_val:
         chg = format_change(current_val, yoy_val)
         color = "#D32F2F" if current_val > yoy_val else "#388E3C" if current_val < yoy_val else "#888"
         svg += f'<text x="{w - pad_right}" y="{legend_y + 4}" text-anchor="end" font-size="13" font-weight="bold" fill="{color}">YoY {chg}</text>'
 
-    # 제목
     svg += f'<text x="{pad_left}" y="{legend_y + 22}" font-size="11" fill="#888">{index_name} ({current_date or ""})</text>'
-
-    # 연도 범례
     svg += f'<text x="{w - pad_right}" y="{legend_y + 22}" text-anchor="end" font-size="10" fill="#888">'
     svg += f'<tspan fill="#0ECB81">● {current_year}</tspan>  <tspan fill="#4285F4">● {prev_year}</tspan></text>'
 
