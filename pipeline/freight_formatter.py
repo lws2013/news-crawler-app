@@ -1,10 +1,10 @@
 """
-운임지수 포맷터 - 텔레그램 표 + 이메일 HTML 차트
+운임지수 포맷터 - 텔레그램 표 + 이메일 PNG 차트
 ─────────────────────────────────────────────────
-crawl_freight_indices.py가 생성한 freight_latest.json과
-freight_indices.json을 읽어서:
-1. 텔레그램용 표 텍스트 생성
-2. 이메일용 HTML 인라인 차트 생성 (SVG)
+- 텔레그램: 간결한 텍스트 표
+- 이메일: matplotlib PNG 차트 (Outlook 호환)
+  당해년도 초록 실선, 전년도 파란 실선
+  좌상단: 현재값, 전년동기값, YoY 변동폭
 """
 
 import json
@@ -14,19 +14,17 @@ from pathlib import Path
 OUTPUT_DIR = Path("pipeline/output")
 DATA_DIR = Path("data")
 INDICES_FILE = DATA_DIR / "freight_indices.json"
-LATEST_FILE = OUTPUT_DIR / "freight_latest.json"
 
 
 def load_latest() -> dict | None:
-    """최신 크롤링 데이터 로드"""
-    if LATEST_FILE.exists():
-        with open(LATEST_FILE, "r", encoding="utf-8") as f:
+    latest_path = OUTPUT_DIR / "freight_latest.json"
+    if latest_path.exists():
+        with open(latest_path, "r", encoding="utf-8") as f:
             return json.load(f)
     return None
 
 
 def load_history() -> dict:
-    """이력 데이터 로드"""
     if INDICES_FILE.exists():
         with open(INDICES_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -34,7 +32,6 @@ def load_history() -> dict:
 
 
 def format_change(current: float, previous: float) -> str:
-    """변동폭 포맷 (▲▼)"""
     if previous is None or previous == 0:
         return "-"
     diff = current - previous
@@ -48,7 +45,6 @@ def format_change(current: float, previous: float) -> str:
 
 
 def has_new_data(latest: dict) -> bool:
-    """갱신된 데이터가 있는지 확인"""
     if not latest:
         return False
     scfi = latest.get("scfi")
@@ -57,51 +53,7 @@ def has_new_data(latest: dict) -> bool:
            (kcci is not None and kcci.get("current_value"))
 
 
-def build_telegram_table(latest: dict) -> str | None:
-    """텔레그램용 운임지수 표 생성 (HTML 포맷)"""
-    if not has_new_data(latest):
-        return None
-
-    scfi = latest.get("scfi") or {}
-    kcci = latest.get("kcci") or {}
-
-    lines = [
-        "\n📊 <b>주간 운임지수</b>\n",
-        "┌──────┬──────┬──────┬──────────┐",
-        "│ 지수     │ 금주     │ 전주     │ 변동폭              │",
-        "├──────┼──────┼──────┼──────────┤",
-    ]
-
-    if scfi.get("current_value"):
-        s_cur = f"{scfi['current_value']:,.0f}"
-        s_prev = f"{scfi.get('previous_value', 0):,.0f}" if scfi.get("previous_value") else "-"
-        s_chg = format_change(scfi["current_value"], scfi.get("previous_value"))
-        lines.append(f"│ SCFI  │ {s_cur:>6} │ {s_prev:>6} │ {s_chg:>10} │")
-
-    if kcci.get("current_value"):
-        k_cur = f"{kcci['current_value']:,.0f}"
-        k_prev = f"{kcci.get('previous_value', 0):,.0f}" if kcci.get("previous_value") else "-"
-        k_chg = format_change(kcci["current_value"], kcci.get("previous_value"))
-        if scfi.get("current_value"):
-            lines.append("├──────┼──────┼──────┼──────────┤")
-        lines.append(f"│ KCCI  │ {k_cur:>6} │ {k_prev:>6} │ {k_chg:>10} │")
-
-    lines.append("└──────┴──────┴──────┴──────────┘")
-
-    # 기준일
-    dates = []
-    if scfi.get("current_date"):
-        dates.append(f"SCFI: {scfi['current_date']}")
-    if kcci.get("current_date"):
-        dates.append(f"KCCI: {kcci['current_date']}")
-    if dates:
-        lines.append(f"<i>기준: {', '.join(dates)}</i>")
-
-    return "\n".join(lines)
-
-
 def build_simple_telegram_table(latest: dict) -> str | None:
-    """텔레그램용 간결한 운임지수 표"""
     if not has_new_data(latest):
         return None
 
@@ -125,16 +77,63 @@ def build_simple_telegram_table(latest: dict) -> str | None:
     return "\n".join(lines)
 
 
-def build_svg_chart(index_name: str, history: list, current_val: float = None,
-                    previous_val: float = None, current_date: str = None) -> str:
+def chart_week(date_str: str) -> int:
+    """차트용 주차 계산 (12월말 ISO week 1 보정)"""
+    try:
+        dt = datetime.strptime(date_str, "%Y-%m-%d")
+        wk = dt.isocalendar()[1]
+        if dt.month == 12 and wk == 1:
+            return 53
+        if dt.month == 1 and wk >= 52:
+            return 0
+        return wk
+    except Exception:
+        return 0
+
+
+def find_yoy_value(current_date: str, last_year_data: list) -> float | None:
+    """전년 동기 값 찾기"""
+    if not current_date or not last_year_data:
+        return None
+    try:
+        cur_week = chart_week(current_date)
+        best_match = None
+        best_diff = 999
+        for date_str, val in last_year_data:
+            wk = chart_week(date_str)
+            diff = abs(wk - cur_week)
+            if diff < best_diff:
+                best_diff = diff
+                best_match = val
+        if best_match is not None and best_diff <= 2:
+            return best_match
+    except Exception:
+        pass
+    return None
+
+
+def build_png_chart(index_name: str, history: list, current_val: float = None,
+                    previous_val: float = None, current_date: str = None,
+                    output_path: str = None) -> str | None:
     """
-    SVG 인라인 차트 생성
+    matplotlib로 PNG 차트 생성 (Outlook 호환)
     - 당해년도: 초록색 실선
     - 전년도: 파란색 실선
-    - 좌상단: 금주/전주 값 + 변동폭
+    - 좌상단: 현재값, 전년동기값, YoY 변동폭
+    반환: 생성된 PNG 파일 경로
     """
     if not history or len(history) < 2:
-        return f"<p><i>{index_name} 이력 데이터 부족 (차트 생성 불가)</i></p>"
+        print(f"  ⚠️ {index_name} 이력 부족, 차트 생략")
+        return None
+
+    try:
+        import matplotlib
+        matplotlib.use("Agg")
+        import matplotlib.pyplot as plt
+        import matplotlib.ticker as ticker
+    except ImportError:
+        print("  ❌ matplotlib가 설치되지 않았습니다.")
+        return None
 
     current_year = datetime.now().year
     prev_year = current_year - 1
@@ -145,166 +144,126 @@ def build_svg_chart(index_name: str, history: list, current_val: float = None,
                       if e.get("date", "").startswith(str(prev_year))]
 
     if not this_year_data and not last_year_data:
-        return f"<p><i>{index_name} 차트 데이터 없음</i></p>"
+        return None
 
-    w, h = 500, 250
-    pad_left, pad_right, pad_top, pad_bottom = 60, 20, 60, 30
-    chart_w = w - pad_left - pad_right
-    chart_h = h - pad_top - pad_bottom
+    # 주차 기준으로 변환
+    this_year_weeks = sorted([(chart_week(d), v) for d, v in this_year_data], key=lambda x: x[0])
+    last_year_weeks = sorted([(chart_week(d), v) for d, v in last_year_data], key=lambda x: x[0])
 
-    all_values = [v for _, v in this_year_data + last_year_data]
+    # 전년 동기 값
+    yoy_val = find_yoy_value(current_date, last_year_data)
+
+    # 차트 생성
+    fig, ax = plt.subplots(figsize=(7, 3.5), dpi=130)
+    fig.patch.set_facecolor("white")
+    ax.set_facecolor("white")
+
+    # 전년도 (파란색)
+    if last_year_weeks:
+        weeks_l = [w for w, _ in last_year_weeks]
+        vals_l = [v for _, v in last_year_weeks]
+        ax.plot(weeks_l, vals_l, color="#1a53a8", linewidth=2, label=str(prev_year), zorder=2)
+
+    # 당해년도 (초록색)
+    if this_year_weeks:
+        weeks_t = [w for w, _ in this_year_weeks]
+        vals_t = [v for _, v in this_year_weeks]
+        ax.plot(weeks_t, vals_t, color="#0a8f3f", linewidth=2.5, label=str(current_year), zorder=3)
+
+    # 그리드
+    ax.grid(True, axis="y", color="#eeeeee", linewidth=0.8)
+    ax.set_axisbelow(True)
+
+    # X축
+    ax.set_xlim(1, 53)
+    ax.set_xlabel("")
+    month_ticks = [1, 5, 9, 14, 18, 22, 27, 31, 35, 40, 44, 48]
+    month_labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    ax.set_xticks(month_ticks)
+    ax.set_xticklabels(month_labels, fontsize=8, color="#888888")
+
+    # Y축 포맷
+    ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda x, p: f"{x:,.0f}"))
+    ax.tick_params(axis="y", labelsize=9, colors="#888888")
+
+    # 테두리 제거
+    for spine in ["top", "right"]:
+        ax.spines[spine].set_visible(False)
+    for spine in ["bottom", "left"]:
+        ax.spines[spine].set_color("#dddddd")
+
+    # 범례 (우상단)
+    legend = ax.legend(loc="upper right", fontsize=9, frameon=True,
+                       fancybox=True, shadow=False, edgecolor="#dddddd")
+    legend.get_frame().set_facecolor("white")
+
+    # 좌상단 텍스트: 현재값 + 전년동기 + YoY
+    info_lines = []
     if current_val is not None:
-        all_values.append(current_val)
-    if previous_val is not None:
-        all_values.append(previous_val)
-
-    y_min = min(all_values) * 0.9
-    y_max = max(all_values) * 1.1
-
-    def chart_week(date_str: str) -> int:
-        """
-        차트 표시용 주차
-        - 일반적으로 ISO week 사용
-        - 단, 12월 말인데 ISO week가 1로 넘어가는 경우는 53으로 보정
-          예: 2025-12-29 -> ISO week 1 이지만 차트에선 연말 점으로 표시
-        """
-        try:
-            dt = datetime.strptime(date_str, "%Y-%m-%d")
-            wk = dt.isocalendar()[1]
-
-            if dt.month == 12 and wk == 1:
-                return 53
-            if dt.month == 1 and wk >= 52:
-                return 0
-
-            return wk
-        except Exception:
-            return 0
-
-    def y_pos(val: float) -> float:
-        if y_max == y_min:
-            return pad_top + chart_h / 2
-        return pad_top + chart_h - (val - y_min) / (y_max - y_min) * chart_h
-
-    def x_pos(week: int) -> float:
-        # 0~53 범위를 허용
-        week = max(0, min(53, week))
-        return pad_left + (week / 53) * chart_w
-
-    def build_polylines(year_data: list, color: str) -> str:
-        """
-        주차가 뒤로 꺾이는 경우(예: 52 -> 1) 새 선분으로 분리
-        """
-        if not year_data:
-            return ""
-
-        segments = []
-        current_segment = []
-        prev_wk = None
-
-        for date_str, val in sorted(year_data, key=lambda x: x[0]):
-            wk = chart_week(date_str)
-            point = f"{x_pos(wk):.1f},{y_pos(val):.1f}"
-
-            if prev_wk is not None and wk < prev_wk:
-                if len(current_segment) >= 2:
-                    segments.append(current_segment)
-                current_segment = [point]
-            else:
-                current_segment.append(point)
-
-            prev_wk = wk
-
-        if len(current_segment) >= 2:
-            segments.append(current_segment)
-
-        svg_lines = []
-        for seg in segments:
-            svg_lines.append(
-                f'<polyline points="{" ".join(seg)}" fill="none" stroke="{color}" '
-                f'stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>'
-            )
-        return "".join(svg_lines)
-
-    svg = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" style="max-width:500px;width:100%;background:#fff;border:1px solid #e0e0e0;border-radius:8px;margin:10px 0;">'
-
-    y_steps = 5
-    for i in range(y_steps + 1):
-        val = y_min + (y_max - y_min) * i / y_steps
-        y = y_pos(val)
-        svg += f'<line x1="{pad_left}" y1="{y:.0f}" x2="{w - pad_right}" y2="{y:.0f}" stroke="#eee" stroke-width="1"/>'
-        svg += f'<text x="{pad_left - 5}" y="{y:.0f}" text-anchor="end" font-size="10" fill="#888" dominant-baseline="middle">{val:,.0f}</text>'
-
-    # 전년도 / 당해년도
-    svg += build_polylines(last_year_data, "#4285F4")
-    svg += build_polylines(this_year_data, "#0ECB81")
-
-    yoy_val = None
-    if current_date and last_year_data:
-        try:
-            cur_week = chart_week(current_date)
-            best_match = None
-            best_diff = 999
-
-            for date_str, val in last_year_data:
-                wk = chart_week(date_str)
-                diff = abs(wk - cur_week)
-                if diff < best_diff:
-                    best_diff = diff
-                    best_match = val
-
-            if best_match is not None and best_diff <= 2:
-                yoy_val = best_match
-        except Exception:
-            pass
-
-    legend_y = 18
-    svg += f'<circle cx="{pad_left + 5}" cy="{legend_y}" r="5" fill="#0ECB81"/>'
-    cur_text = f"현재 {current_val:,.0f}" if current_val else "현재 -"
-    svg += f'<text x="{pad_left + 15}" y="{legend_y + 4}" font-size="12" font-weight="bold" fill="#333">{cur_text}</text>'
-
-    svg += f'<circle cx="{pad_left + 130}" cy="{legend_y}" r="5" fill="#4285F4"/>'
-    yoy_text = f"전년동기 {yoy_val:,.0f}" if yoy_val else "전년동기 -"
-    svg += f'<text x="{pad_left + 140}" y="{legend_y + 4}" font-size="12" font-weight="bold" fill="#333">{yoy_text}</text>'
-
-    if current_val and yoy_val:
+        info_lines.append(f"● 현재  {current_val:,.0f}")
+    if yoy_val is not None:
+        info_lines.append(f"● 전년동기  {yoy_val:,.0f}")
+    if current_val is not None and yoy_val is not None:
         chg = format_change(current_val, yoy_val)
-        color = "#D32F2F" if current_val > yoy_val else "#388E3C" if current_val < yoy_val else "#888"
-        svg += f'<text x="{w - pad_right}" y="{legend_y + 4}" text-anchor="end" font-size="13" font-weight="bold" fill="{color}">YoY {chg}</text>'
+        info_lines.append(f"  YoY  {chg}")
 
-    svg += f'<text x="{pad_left}" y="{legend_y + 22}" font-size="11" fill="#888">{index_name} ({current_date or ""})</text>'
-    svg += f'<text x="{w - pad_right}" y="{legend_y + 22}" text-anchor="end" font-size="10" fill="#888">'
-    svg += f'<tspan fill="#0ECB81">● {current_year}</tspan>  <tspan fill="#4285F4">● {prev_year}</tspan></text>'
+    info_text = "\n".join(info_lines)
+    if info_text:
+        ax.text(0.02, 0.97, info_text, transform=ax.transAxes,
+                fontsize=9, verticalalignment="top", fontfamily="monospace",
+                bbox=dict(boxstyle="round,pad=0.4", facecolor="white",
+                          edgecolor="#dddddd", alpha=0.9))
 
-    svg += '</svg>'
-    return svg
+    # 제목
+    title_date = f" ({current_date})" if current_date else ""
+    ax.set_title(f"{index_name}{title_date}", fontsize=11, fontweight="bold",
+                 color="#333333", loc="left", pad=10)
+
+    # 저장
+    if output_path is None:
+        safe_name = index_name.lower().replace(" ", "_").replace("(", "").replace(")", "")
+        output_path = str(OUTPUT_DIR / f"chart_{safe_name}.png")
+
+    plt.tight_layout()
+    fig.savefig(output_path, dpi=130, bbox_inches="tight", facecolor="white")
+    plt.close(fig)
+
+    print(f"  📊 차트 저장: {output_path}")
+    return output_path
 
 
-def build_email_charts(latest: dict, history: dict) -> str:
-    """이메일 HTML에 삽입할 운임지수 차트 생성"""
-    html = '<div style="margin: 20px 0;">'
-    html += '<h2 style="color:#1B3A5C;font-size:18px;border-bottom:2px solid #2E75B6;padding-bottom:5px;">📊 주간 운임지수</h2>'
+def build_email_charts(latest: dict, history: dict) -> list[str]:
+    """
+    이메일용 PNG 차트 생성
+    반환: 생성된 PNG 파일 경로 리스트
+    """
+    chart_paths = []
 
     scfi = latest.get("scfi") or {}
     kcci = latest.get("kcci") or {}
 
     if scfi.get("current_value"):
-        html += build_svg_chart(
-            "SCFI (Shanghai Containerized Freight Index)",
+        path = build_png_chart(
+            "SCFI",
             history.get("scfi", []),
             scfi.get("current_value"),
             scfi.get("previous_value"),
             scfi.get("current_date"),
+            str(OUTPUT_DIR / "chart_scfi.png"),
         )
+        if path:
+            chart_paths.append(path)
 
     if kcci.get("current_value"):
-        html += build_svg_chart(
-            "KCCI (KOBC Container Composite Index)",
+        path = build_png_chart(
+            "KCCI",
             history.get("kcci", []),
             kcci.get("current_value"),
             kcci.get("previous_value"),
             kcci.get("current_date"),
+            str(OUTPUT_DIR / "chart_kcci.png"),
         )
+        if path:
+            chart_paths.append(path)
 
-    html += '</div>'
-    return html
+    return chart_paths
