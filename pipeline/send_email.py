@@ -98,8 +98,10 @@ def build_html(summary_data: dict, chart_cids: list[str] = None) -> str:
     if chart_cids:
         html += '<div class="chart-section">'
         html += '<div class="chart-title">📊 주간 운임지수</div>'
+        html += '<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr>'
         for cid in chart_cids:
-            html += f'<img src="cid:{cid}" style="max-width:100%;height:auto;margin:5px 0;" />'
+            html += f'<td width="50%" valign="top"><img src="cid:{cid}" style="width:100%;height:auto;" /></td>'
+        html += '</tr></table>'
         html += '</div>'
 
     # ── 뉴스 섹션 ──
