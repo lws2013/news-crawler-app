@@ -5,15 +5,15 @@
     "current_date": "2026-04-24",
     "previous_value": 1886.54,
     "previous_date": "2026-04-17",
-    "crawled_at": "2026-04-27T08:39:30.081919"
+    "crawled_at": "2026-04-27T18:25:12.759646"
   },
   "kcci": {
     "index": "KCCI",
-    "current_value": 2193.0,
-    "current_date": "2026-04-20",
-    "previous_value": 2186.0,
-    "previous_date": "2026-04-13",
-    "crawled_at": "2026-04-27T08:39:32.012700"
+    "current_value": 2192.0,
+    "current_date": "2026-04-27",
+    "previous_value": 2193.0,
+    "previous_date": "2026-04-20",
+    "crawled_at": "2026-04-27T18:25:14.936684"
   },
-  "updated_at": "2026-04-27T08:39:32.014594"
+  "updated_at": "2026-04-27T18:25:14.938413"
 }
