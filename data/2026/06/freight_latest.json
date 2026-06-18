@@ -1,11 +1,11 @@
 {
   "scfi": {
     "index": "SCFI",
-    "current_value": 2985.22,
-    "current_date": "2026-06-12",
-    "previous_value": 2726.48,
-    "previous_date": "2026-06-05",
-    "crawled_at": "2026-06-18T09:15:54.132740"
+    "current_value": 3121.69,
+    "current_date": "2026-06-18",
+    "previous_value": 2985.22,
+    "previous_date": "2026-06-12",
+    "crawled_at": "2026-06-18T20:14:02.209381"
   },
   "kcci": {
     "index": "KCCI",
@@ -13,7 +13,7 @@
     "current_date": "2026-06-15",
     "previous_value": 3042.0,
     "previous_date": "2026-06-08",
-    "crawled_at": "2026-06-18T09:15:55.764753"
+    "crawled_at": "2026-06-18T20:14:03.277024"
   },
-  "updated_at": "2026-06-18T09:15:55.766747"
+  "updated_at": "2026-06-18T20:14:03.278865"
 }
