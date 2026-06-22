@@ -2,8 +2,8 @@
 Gmail SMTP로 물류 뉴스 브리핑 메일 발송
 ─────────────────────────────────────────────────
 - 뉴스 요약 (🔴🟡🟢)
-- 운임지수 차트 (PNG 인라인 CID 임베드 - Outlook 호환)
-- all_news.txt 첨부
+- 운임지수 차트 (PNG 인라인 CID - Outlook 호환)
+- SCM_물류_브리핑.xlsx 첨부 (SharePoint 업로드용)
 """
 
 import json
@@ -44,7 +44,6 @@ THEME_EMOJI = {
 
 
 def build_html(summary_data: dict, chart_cids: list[str] = None) -> str:
-    """브리핑 HTML 메일 본문 생성 (차트는 CID 이미지로 삽입)"""
     summaries = summary_data.get("summaries", [])
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
     total = summary_data.get("total_summaries", 0)
@@ -75,10 +74,9 @@ def build_html(summary_data: dict, chart_cids: list[str] = None) -> str:
         .card-title {{ font-weight: bold; font-size: 14px; margin-bottom: 4px; }}
         .card-detail {{ font-size: 13px; color: #555; }}
         .card-detail a {{ color: #2E75B6; }}
-        .label {{ color: #888; }}
-        .highlight {{ color: #D32F2F; font-weight: bold; }}
         .chart-section {{ padding: 10px 25px; }}
         .chart-title {{ font-size: 16px; font-weight: bold; color: #1B3A5C; border-bottom: 2px solid #2E75B6; padding-bottom: 5px; margin-bottom: 10px; }}
+        .attach-note {{ padding: 10px 25px; margin: 15px 25px; background: #E8F0FE; border-radius: 5px; font-size: 13px; color: #1B3A5C; }}
         .footer {{ padding: 15px 25px; color: #999; font-size: 11px; border-top: 1px solid #E0E0E0; margin-top: 20px; }}
     </style>
     </head>
@@ -94,7 +92,7 @@ def build_html(summary_data: dict, chart_cids: list[str] = None) -> str:
     </div>
     """
 
-    # ── 운임지수 차트 (PNG CID 이미지) ──
+    # ── 운임지수 차트 (PNG CID 이미지, 가로 배치) ──
     if chart_cids:
         html += '<div class="chart-section">'
         html += '<div class="chart-title">📊 주간 운임지수</div>'
@@ -137,6 +135,15 @@ def build_html(summary_data: dict, chart_cids: list[str] = None) -> str:
                 html += f'🔗 <a href="{url}">원문 보기</a>'
             html += '</div></div>'
 
+    # ── 첨부 안내 ──
+    html += """
+    <div class="attach-note">
+        📎 첨부파일: <b>SCM_물류_브리핑.xlsx</b><br>
+        뉴스브리핑 · 운임지수 · 리스크대장이 시트별로 누적됩니다.<br>
+        SharePoint에 업로드하여 팀 공유 및 이력 관리에 활용하세요.
+    </div>
+    """
+
     html += """
     <div class="footer">
         본 메일은 SCM 물류 뉴스 AI Agent에 의해 자동 생성·발송되었습니다.<br>
@@ -150,25 +157,23 @@ def build_html(summary_data: dict, chart_cids: list[str] = None) -> str:
 
 
 def send_email(subject: str, html_body: str, chart_paths: list[str] = None,
-               chart_cids: list[str] = None, attachment_path: str = None):
-    """Gmail SMTP로 메일 발송 (인라인 이미지 + 첨부파일)"""
+               chart_cids: list[str] = None, attachment_paths: list[str] = None):
     if not GMAIL_USER or not GMAIL_APP_PASSWORD or not NOTIFY_EMAIL_TO:
         print("❌ Gmail 설정이 없습니다.")
         return
 
     recipients = [addr.strip() for addr in NOTIFY_EMAIL_TO.split(",")]
 
-    # mixed > related > alternative 구조 (첨부파일 + 인라인이미지 + HTML)
     msg = MIMEMultipart("mixed")
     msg["Subject"] = subject
     msg["From"] = f"SCM 물류 브리핑 <{GMAIL_USER}>"
     msg["To"] = ", ".join(recipients)
 
-    # related 파트 (HTML + 인라인 이미지)
+    # related (HTML + 인라인 이미지)
     msg_related = MIMEMultipart("related")
     msg_related.attach(MIMEText(html_body, "html", "utf-8"))
 
-    # 차트 PNG를 인라인 이미지로 첨부 (CID 방식)
+    # 차트 PNG 인라인 첨부
     if chart_paths and chart_cids:
         for path, cid in zip(chart_paths, chart_cids):
             try:
@@ -177,23 +182,25 @@ def send_email(subject: str, html_body: str, chart_paths: list[str] = None,
                 img.add_header("Content-ID", f"<{cid}>")
                 img.add_header("Content-Disposition", "inline", filename=Path(path).name)
                 msg_related.attach(img)
-                print(f"  🖼️ 인라인 이미지: {cid} ({Path(path).name})")
+                print(f"  🖼️ 인라인 이미지: {cid}")
             except Exception as e:
                 print(f"  ⚠️ 이미지 첨부 실패 ({path}): {e}")
 
     msg.attach(msg_related)
 
-    # all_news.txt 첨부
-    if attachment_path and Path(attachment_path).exists():
-        with open(attachment_path, "rb") as f:
-            part = MIMEBase("application", "octet-stream")
-            part.set_payload(f.read())
-        encoders.encode_base64(part)
-        today_str = datetime.now().strftime("%Y%m%d")
-        filename = f"scm_news_{today_str}.txt"
-        part.add_header("Content-Disposition", "attachment", filename=("utf-8", "", filename))
-        msg.attach(part)
-        print(f"  📎 첨부파일: {filename}")
+    # 파일 첨부
+    if attachment_paths:
+        for att_path in attachment_paths:
+            if Path(att_path).exists():
+                with open(att_path, "rb") as f:
+                    part = MIMEBase("application", "octet-stream")
+                    part.set_payload(f.read())
+                encoders.encode_base64(part)
+                filename = Path(att_path).name
+                part.add_header("Content-Disposition", "attachment",
+                                filename=("utf-8", "", filename))
+                msg.attach(part)
+                print(f"  📎 첨부: {filename}")
 
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
@@ -216,25 +223,22 @@ def main():
         summary_data = json.load(f)
 
     summaries = summary_data.get("summaries", [])
-
     if not summaries:
         print("📰 요약된 뉴스가 없어 메일 미발송.")
         return
 
-    # 제목 생성
+    # 제목
     today_str = datetime.now().strftime("%Y.%m.%d")
     red = sum(1 for s in summaries if "🔴" in s.get("impact", ""))
-    total = len(summaries)
 
     if red > 0:
         subject = f"[SCM 물류 브리핑] 🔴 긴급 {red}건 포함 - {today_str}"
     else:
-        subject = f"[SCM 물류 브리핑] {total}건 요약 - {today_str}"
+        subject = f"[SCM 물류 브리핑] {len(summaries)}건 요약 - {today_str}"
 
-    # 운임지수 차트 생성 (PNG)
+    # 운임지수 차트 (PNG)
     chart_paths = []
     chart_cids = []
-
     if FREIGHT_AVAILABLE:
         try:
             freight_latest = load_latest()
@@ -242,18 +246,27 @@ def main():
             if freight_latest:
                 chart_paths = build_email_charts(freight_latest, freight_history)
                 chart_cids = [f"chart_{i}" for i in range(len(chart_paths))]
-                print(f"📊 운임지수 차트 {len(chart_paths)}개 생성 완료")
+                print(f"📊 차트 {len(chart_paths)}개 생성")
         except Exception as e:
-            print(f"⚠️ 운임지수 차트 생성 실패: {e}")
+            print(f"⚠️ 차트 생성 실패: {e}")
 
-    # HTML 생성 (차트 CID 전달)
+    # HTML 생성
     html = build_html(summary_data, chart_cids)
 
-    # all_news.txt 첨부 준비
+    # 첨부파일 목록
+    attachments = []
+
+    # Excel 브리핑 파일
+    excel_path = OUTPUT_DIR / "SCM_물류_브리핑.xlsx"
+    if excel_path.exists():
+        attachments.append(str(excel_path))
+
+    # all_news.txt (기존 유지)
     all_news_path = OUTPUT_DIR / "all_news.json"
-    attach_path = OUTPUT_DIR / "all_news.txt"
+    attach_txt = OUTPUT_DIR / "all_news.txt"
     if all_news_path.exists():
-        shutil.copy(all_news_path, attach_path)
+        shutil.copy(all_news_path, attach_txt)
+        attachments.append(str(attach_txt))
 
     # 메일 발송
     send_email(
@@ -261,7 +274,7 @@ def main():
         html,
         chart_paths=chart_paths,
         chart_cids=chart_cids,
-        attachment_path=str(attach_path) if attach_path.exists() else None,
+        attachment_paths=attachments if attachments else None,
     )
 
 
