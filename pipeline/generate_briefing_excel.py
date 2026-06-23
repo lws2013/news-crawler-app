@@ -54,9 +54,11 @@ NEWS_COLUMNS = [
 FREIGHT_COLUMNS = [
     ("날짜", 12),
     ("SCFI", 10),
+    ("SCFI_기준일", 13),
     ("SCFI_전주대비", 14),
     ("SCFI_YoY", 12),
     ("KCCI", 10),
+    ("KCCI_기준일", 13),
     ("KCCI_전주대비", 14),
     ("KCCI_YoY", 12),
 ]
@@ -258,7 +260,8 @@ def add_freight_data(wb: Workbook, latest: dict, history: dict):
     scfi_yoy = find_yoy("SCFI", scfi.get("current_date"))
     kcci_yoy = find_yoy("KCCI", kcci.get("current_date"))
 
-    row = [today, scfi_cur, scfi_wow, scfi_yoy, kcci_cur, kcci_wow, kcci_yoy]
+    row = [today, scfi_cur, scfi.get("current_date", ""), scfi_wow, scfi_yoy,
+           kcci_cur, kcci.get("current_date", ""), kcci_wow, kcci_yoy]
     ws.append(row)
 
     last_row = ws.max_row
