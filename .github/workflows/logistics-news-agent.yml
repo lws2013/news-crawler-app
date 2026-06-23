@@ -106,11 +106,6 @@ jobs:
           mkdir -p data/$(date +%Y/%m)
           cp pipeline/output/*.json data/$(date +%Y/%m)/
           
-          # Excel 브리핑 파일도 data 루트에 저장 (누적용)
-          if [ -f "data/SCM_물류_브리핑.xlsx" ]; then
-            cp data/SCM_물류_브리핑.xlsx data/SCM_물류_브리핑.xlsx
-          fi
-          
           git add data/
           git diff --staged --quiet || git commit -m "📰 뉴스 데이터 $(date +%Y-%m-%d_%H:%M)"
           git push
