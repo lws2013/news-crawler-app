@@ -10,8 +10,78 @@
       "https://cdn.cargonews.co.kr/news/photo/202607/60438_56985_227.png"
     ],
     "source": "cargonews",
-    "crawled_at": "2026-07-03T08:56:08.797731",
+    "crawled_at": "2026-07-03T18:53:55.711176",
     "snippet": "CX, RUH 화물 주1편 재개 ‘여객도 정상화’\n\n중동사태가 진전기미를 보이면서 주요 항공사들이 중동노선 재개를 서두르고 있다.\n\n최근 홍콩 캐세이퍼시픽항공(CX)운 중동노선 운항을 재개한다고 밝혔다. 이 항공사는 일단 8월 1일부터 사우디아라비아 리야드(RUH)에 주1편 화물노선을 재개한다. 하지만 여객기 운항은 9월 1일부터 두바이(DXB)노선을 매일, 리야드노선은 주4편 운항을 재개한다는 방침이다.\n\n이 항공사는 중동사태의 추이를 지켜보면서 중동노선 운항을 점차 확대한다는 계획이다. 하지만 두바이 여객노선 재개에 대해선 아직"
+  },
+  {
+    "url": "https://www.flexport.com/global-logistics-update/july-02-2026-GLU-Newsletter/",
+    "category": "GLOBAL LOGISTICS UPDATE",
+    "title": "U.S.-EU Trade Agreement Eliminates Duties on Most U.S. Goods Starting July 1; TPEB Rates Rise as July Capacity Hits Three-Year High",
+    "date": "July 2, 2026",
+    "content": "Trends to Watch\nTalking Tariffs\nU.S.-EU Trade Agreement Took Effect July 1: The European Commission published implementing regulations on June 30, 2026, bringing the U.S.-EU Trade Agreement into force on July 1. The deal eliminates customs duties on the large majority of U.S.-origin industrial goods entering the EU and creates 20 tariff-rate quotas (TRQs) for selected U.S. agricultural and seafood products.\nTwo EU regulations govern implementation: Regulation 2026/1455 establishes duty eliminations and TRQs across industrial and agricultural product categories; Regulation 2026/1422 amends non-preferential origin rules to qualify goods for the agricultural and seafood TRQs.\nAnnex I to Regulation 2026/1455 provides immediate 0% duties on U.S.-origin chemicals, pharmaceuticals, plastics, metals, machinery, vehicles and parts, and other manufactured goods. Annex II offers partial relief for select fresh produce, eliminating the percentage-based duty component while leaving entry-price protections intact. Annex III covers 20 TRQs for non-sensitive agricultural goods, pork, bison, dairy, cheese, nuts, soybean oil, and seafood; standard most-favored-nation (MFN) rates apply once quota volumes are exhausted.\nThe agreement is set to remain in effect through December 31, 2029, with a formal review scheduled for June 2029 to determine whether it will be extended.\nBecause dedicated preferential rules of origin have not yet been adopted, importers must establish U.S. origin under the EU's standard non-preferential rules, either \"wholly obtained\" in the U.S. or subject to a qualifying \"last substantial transformation\" there, before claiming reduced rates on EU customs declarations.\nA safeguard mechanism allows the EU Commission to suspend tariff preferences if U.S. imports cause or threaten serious injury to EU industries, or if the U.S. fails to uphold its commitments under the joint statement.\nShippers should cross-reference active U.S.-origin product catalogs against Annexes I, II, and III to identify duty-free eligibility and TRQ applicability. Audit supplier origin documentation against Union Customs Code (UCC) \"wholly obtained\" and \"last substantial transformation\" standards before claiming preferences. Coordinate with customs brokers to ensure preferential codes are filed on entries and TRQ procedures are in place.\nRead more on the Flexport blog.\nCAPE Phase 2 Expands IEEPA Refund Eligibility to Reconciliation-Flagged Entries: U.S. Customs and Border Protection (CBP) launched Phase 2 of the Customs Automated Processing Engine (CAPE) in the ACE Secure Data Portal on June 29, extending IEEPA duty refund access to entries flagged for reconciliation.\nPhase 2 covers entry types 01, 02, and 06 that are reconciliation-flagged, but only where the associated reconciliation entry (type 09) has not yet been filed. Entries where a reconciliation entry is already on file are excluded from Phase 2 and will be addressed in a future CAPE phase.\nAs with Phase 1, entries must be unliquidated or liquidated within the past 80 days to qualify.\nOnce a reconciliation-flagged entry is accepted on a CAPE declaration, the importer may then file the associated reconciliation entry. CBP will remove IEEPA duties from the flagged entries before reconciliation calculations are applied, keeping the two processes separate.\nKey deadline: importers whose reconciliation filing deadline falls fewer than 30 days out should prioritize that filing before submitting a CAPE declaration.\nAll Phase 1 requirements remain in effect alongside Phase 2.\nImporters should identify any reconciliation-flagged entries (types 01, 02, 06) where no type 09 has been filed and evaluate IEEPA refund potential. Check reconciliation deadlines, those within 30 days require immediate attention. Use the Flexport Tariff Refund Calculator to estimate refund amounts by duty category before filing.\nCBP Updates Section 232 Duty Offset Guidance for Auto and MHDV Parts: CBP issued updated operational guidance via a Cargo Systems Messaging Service (CSMS) message clarifying how importers should apply import adjustment offset licenses against Section 232 duties on automobile and medium and heavy-duty vehicle (MHDV) parts.\nImporters should use the TR-015 report in ACE to monitor offset license usage. Amounts that exceed total offset license balances are subject to Section 232 duty liability and potential penalty action.\nWhen claiming the offset, importers filing automobile parts (HTSUS 9903.94.05 or 9903.94.07) or MHDV parts (9903.74.08 or 9903.74.09) should report zero duty on the Chapter 99 lines, file the Column 1 duty amount on the Chapter 1–97 line, and include the offset license number on the entry line.\nFor imports originating in Japan, the United Kingdom, the EU, South Korea, and Taiwan, only the Section 232 portion of the applicable duty may be offset, not the incremental rate reflecting the difference between the Column 1 rate and the Section 232 rate.\nWhen HTSUS subheadings 9802.00.40, .50, .60, or .80 appear on the same entry summary line as the automobile or MHDV Chapter 99 classification, importers should file zero duty on those Chapter 98 lines when claiming the offset.\nImporters who previously paid Section 232 duties without applying offset licenses may submit a post-summary correction (PSC) to retroactively credit those payments against available offset license balances.\nOcean\n\nTRANS-PACIFIC EASTBOUND (TPEB)\n\nCapacity and Demand:\nCarriers canceled 10.6% of total scheduled TPEB capacity in Week 25 (June 15), declining to 4.7% in Week 26 (June 22). Week 27 shows near-zero blank sailing activity across all carrier groups.\nJuly capacity (Weeks 28 to 30) shows cancellation rates below 1%, with a moderate uptick scheduled for Week 31. Total planned July capacity is at the highest level in at least three and a half years.\nSection 122 tariffs will expire on July 24, accelerating front-loading activity.\nU.S. wholesale inventories are at a 12-year low. The inventory-to-sales ratio has declined at the fastest pace in 34 years, excluding 2008 to 2009 and COVID, pointing to a sustained replenishment cycle.\nSpace is tight across all TPEB services. Shippers are advised to book 4 to 6 weeks in advance and confirm allocations before committing to delivery windows.\nFreight Rates:\nCarriers have announced rate increases across all TPEB lanes, effective July 1, driven by space constraints. The Shanghai Containerized Freight Index (SCFI) West Coast and East Coast indices both rose approximately 7% week over week in Week 27.\nPeak Season Surcharges (PSSs) are in effect through July 14.\nBunker Adjustment Factor (BAF) rates are set to increase for Q3 across all TPEB corridors.\nThe combination of tariff-driven front-loading and low blank sailing rates will sustain rate pressure.\n\nFAR EAST WESTBOUND (FEWB)\n\nCapacity and Demand:\nCarriers are maintaining Cape of Good Hope routing as the default for Far East Westbound trades, adding 10 to 14 days per voyage. Diversions are expected to continue through at least 2027.\nCarriers cancelled 9.7% of total scheduled FEWB capacity in Week 25, with elevated cancellation activity in Week 26. Week 27 shows no active blank sailings.\nA significant blank sailing program begins from mid-July, with cancellation rates rising toward 25-35% of scheduled capacity by late July into early August, concentrated on Asia-North Europe services.\nApproximately 5,600 TEU of weekly capacity has been shifted from Asia-North Europe services to Asia-Mediterranean loops, tightening the North Europe supply picture.\nPeak season is in full effect. End-of-June cargo rollovers are compressing first-half July space further.\nThe Strait of Hormuz closure is driving Gulf-bound cargo to reroute via Mediterranean-Suez, adding demand on Asia-Mediterranean lanes.\nSpace on North Europe lanes is expected to remain tight through the first half of July and into August. Shippers with routing flexibility should evaluate all discharge port options, and are advised to book at least 4 to 5 weeks in advance.\nFreight Rates:\nThe Shanghai Containerized Freight Index (SCFI) North Europe index rose approximately 6% week over week in Week 27; the Mediterranean index rose approximately 10%.\nPeak Season Surcharges (PSSs) and rate increases are in effect July 1 to 14.\nBunker Adjustment Factor (BAF) rates are set to increase for Q3.\nAsia-Mediterranean spot rates now carry a premium over Asia-North Europe at record levels not seen outside the Russia-Ukraine period. This premium is structural and will persist until the Strait of Hormuz closure resolves.\n\nTRANS-ATLANTIC WESTBOUND (TAWB)\n\nCapacity and Demand:\nThe current week shows approximately 10-15% of total scheduled TAWB capacity cancelled, with one carrier group cancelling more than 50% of its scheduled sailings.\nFrom Week 28 (July 6), a second carrier group begins significant blank sailings, accounting for approximately 25% of their scheduled capacity. Weeks 30 to 31 reflect continued near-full blanking from the first group.\nEffective supply has declined from the record deployment seen at the start of 2026.\nDemand from Europe to North America remains healthy. Carrier shifts at origin in the second half of June indicate demand is outpacing allocation on select carrier networks.\nShippers are advised to confirm space availability before committing to July to August programs, particularly on services with elevated blank sailing activity, and to book at least 4 to 5 weeks in advance.\nFreight Rates:\nJuly rate levels from Northern Europe to the U.S. East Coast are unchanged; rates from Northern Europe to the U.S. Gulf increased for July.\nBunker Adjustment Factor (BAF) rates increased approximately 50% versus Q2 for Northern Europe corridors due to the rising fuel cost.\n\nINDIAN SUBCONTINENT TO NORTH AMERICA\n\nCapacity and Demand:\nThe Indian Subcontinent to the U.S. and Canada market is in peak season.\nDemand increased sharply beginning in May, and the trend has continued through June and into July.\nCluster of structural blanks in the second half of June and MSC's suspension of Indus Express service string constraining capacity.\nCombination of increasing demand and constrained capacity have created a space crunch on the trade.\nIndian subcontinent demand is strong. Nhava Sheva handled approximately 755,000 TEU in May, up 13% year over year.\nFreight Rates:\nRate increases were implemented July 1.\nPeak Season Surcharges (PSSs) are in effect July 1 to 14.\nBunker Adjustment Factor (BAF) rates are set to increase for Q3.\nAir\nFind the latest updates on global air freight operations on our Middle East escalation blog.\nNorth China:\nEcommerce and general cargo demand are weakening together, with no recovery catalyst visible at any U.S. gateway.\nAirlines are adding capacity on China-U.S. lanes, with the heaviest additions on West Coast routes, putting rates there under the most pressure.\nFalling jet fuel costs into July are removing a structural floor under rates.\nOn Far East Westbound lanes, ecommerce volumes are set to decline as EU summer holidays through July add a second demand headwind.\nSouth China:\nTPEB demand eased over the weekend as the prior week's holidays and ad-hoc charter activity absorbed incremental volume, pulling both ecommerce and general cargo down and softening rates for both coasts.\nFEWB demand continues to soften and is expected to stabilize.\nTaiwan:\nDemand has softened modestly and rates are expected to ease slightly following a recent fuel surcharge decrease.\nAirlines are offering discounted pricing for dense carton shipments.\nShippers are advised to book 5 to 7 days in advance where possible.\nVietnam:\nDemand remains firm heading into next week, with capacity staying tight across export lanes amid quarter-end volumes and hub congestion.\nCambodia:\nDemand is expected to pick up next week.\nShippers are advised to book at least 7 working days in advance to secure space.\nSouth Korea:\nThe market remains tight overall, with available capacity varying by destination and the earliest openings from early to mid-July.\nRates continue to climb as space stays constrained.\nEurope is comparatively open with no notable capacity concerns.\nMalaysia:\nCongestion at U.S. ports continues to limit capacity on TPEB lanes.\nSpot rates are holding steady for now. Shippers are advised to book at least 10 days in advance to secure space and avoid volatility.\nThailand:\nDemand remains firm toward month end, with ocean-to-air conversions adding to volumes out of Bangkok.\nAirlines report very tight connecting space and ongoing terminal congestion, with no signs of rates easing.\nShippers are advised to book 7 to 10 days in advance.\nIndonesia:\nThe market is stable, with no notable space constraints and booking lead times of approximately 7 days.\nRates have settled flat to soft following the easing of the earlier Middle East conflict.\nA weaker Indonesian rupiah keeps Indonesian goods price-competitive abroad, though it is also raising local trucking and handling costs for carriers pricing capacity in USD.\nIndia:\nOcean container congestion and vessel backlogs at major U.S. ports are pushing shippers toward air, tightening capacity on India-to-U.S. lanes.\nShippers are advised to book approximately one week in advance.\nBangladesh and Sri Lanka:\nIn Bangladesh, the EU lane remains reliable, while the U.S. lane is tighter and less consistent.\nIn Sri Lanka, capacity is tight across most services, with reliable schedules apart from Middle East carriers facing space constraints from rising perishable volumes.\nPakistan:\nCapacity is fully committed, with airlines quoting rate validity of a day or two.\nTransatlantic:\nCapacity continues to return to Middle East and Gulf markets following the mid-June ceasefire and peace memorandum between Iran and the U.S., but the relief has done little to ease elevated rates on Middle East-to-Europe and Gulf-to-Europe routes, where pricing has stayed close to recent highs even as available capacity has grown faster than cargo volumes.\nU.S. exports:\nMultiple carriers have announced fuel surcharge decreases effective July 1 on the back of softer jet fuel pricing, a tailwind for outbound U.S. air costs even as broader market conditions stay mixed.\n\n(Source: Flexport)\n\nPlease reach out to your account representative for details on any impacts on your shipments.\n\nNorth America Vessel Dwell Times\n\nWebinars\n\nThe Capacity Squeeze Nobody Budgets For: Air Cargo 2026–2030\n\nWednesday, July 8 @ 8:00am PT / 11:00 am ET / 16:00 BST / 17:00 CEST\n\nNorth America Freight Market Update Live\n\nThursday, July 16 @ 9:00 am PT / 12:00 pm ET\n\nTrucking Market Outlook: Rates, Trends, & Regulatory Impact\n\nAvailable On-Demand\n\nPeak Season Prep: A CFO's Playbook for Cash Flow, Inventory, and Smarter Financing\n\nAvailable On-Demand\n\nOcean Timeliness Indicator\n\nTransit time remained stable from China to the U.S. West Coast, increased from China to the U.S. East Coast, and decreased from China to North Europe.\n\nWeek to June 29, 2026\n\nTransit time remained flat at 35.4 days from China to the U.S. West Coast; decreased from 56 days to 54.3 days from China to the U.S. East Coast; and increased slightly from 57.5 days to 58 days from China to North Europe.\n\nSee the full report and read about our methodology here.",
+    "images": [
+      "https://images.ctfassets.net/92fo1e671z6m/3rah04UckRzHnDWWSSKrIH/5762b4efbe1712e179b66dd15e3a330f/Vessel_Dwell_Chart_Crop__7_2_GLU_.png",
+      "https://images.ctfassets.net/92fo1e671z6m/5piEQdGJ3xLRBaG3zr153W/b4f17dbf8bdb356253bdf54172b2941f/Ocean_Timeliness_Indicator__Week_to_June_29__2026.png"
+    ],
+    "source": "flexport",
+    "crawled_at": "2026-07-03T18:54:23.859015",
+    "snippet": "Trends to Watch\nTalking Tariffs\nU.S.-EU Trade Agreement Took Effect July 1: The European Commission published implementing regulations on June 30, 2026, bringing the U.S.-EU Trade Agreement into force on July 1. The deal eliminates customs duties on the large majority of U.S.-origin industrial goods"
+  },
+  {
+    "url": "https://www.flexport.com/global-logistics-update/june-25-2026-GLU-Newsletter/",
+    "category": "GLOBAL LOGISTICS UPDATE",
+    "title": "CAPE Phase 2 Launches June 29 for Reconciliation-Flagged Entries; TPEB Rates Rise 10% for Sixth Consecutive Week",
+    "date": "June 25, 2026",
+    "content": "Trends to Watch\nTalking Tariffs\nCAPE Phase 2 Launches June 29 for Reconciliation-Flagged Entries: CBP announced the next phase of its Consolidated Administration and Processing of Entries (CAPE) IEEPA tariff refund system, effective June 29, expanding eligibility to a new category of entries.\nCAPE Phase 2 will accept entries flagged for reconciliation (entry types 01, 02, and 06) for which the reconciliation entry (type 09) has not yet been filed. Consistent with Phase 1, only unliquidated entries and entries within 80 days of liquidation are eligible.\nEntries flagged for reconciliation that already have a type 09 reconciliation entry on file are excluded from Phase 2 and will be addressed in a future CAPE development phase.\nOnce a flagged entry is accepted on a CAPE declaration, the importer may then file the reconciliation entry. CAPE removes IEEPA duties from flagged entries prior to reconciliation filing, separating refund calculations from the entry.\nCBP will treat acceptance of a CAPE declaration as confirmation that all associated CAPE declarations were filed and accepted once the reconciliation entry is submitted.\nImporters whose reconciliation filing deadlines expire within 30 days should prioritize filing the reconciliation before submitting to CAPE. All Phase 1 filing and processing requirements remain in effect.\nUse the Flexport Tariff Refund Calculator to estimate your refund amount across IEEPA duty categories, and consult Flexport's IEEPA refunds blog for guidance on the CAPE filing process.\nU.S. and Mexico Advance USMCA Renegotiation Talks: Following three days of bilateral discussions in Washington, the two countries issued a joint statement on June 18 indicating substantive progress ahead of the July 1 formal review trigger.\nNegotiators advanced discussions on rules of origin (ROO) for certain industrial goods and economic security provisions, and held preliminary talks on agriculture, labor, environment, and trade in steel, aluminum, and automobiles.\nThe parties agreed to establish a committee to review the implementation of Chapter 12 (Sectoral Annexes) of the U.S.-Mexico-Canada Agreement (USMCA) to enhance regulatory compatibility.\nMinister Ebrard stated that July 1 marks the formal start of revisions to the agreement, not its termination, and that a trilateral virtual meeting among Canada, Mexico, and the U.S. is planned for that date. Canada and Mexico have expressed support for a 16-year extension of the pact; the U.S. has not.\nIf the U.S. declines to agree to the 16-year extension, a 10-year revision window opens during which modifications could be negotiated. The next negotiating round is expected in late July in Mexico City, where the U.S. and Mexico plan to exchange draft texts with greater specificity.\nCBP Overhauls International Mail Entry Process, Codifies De Minimis Suspension: U.S. Customs and Border Protection (CBP) published two interim final rules on June 23 that fundamentally reshape how low-value international mail shipments enter the United States, with the new requirements taking effect July 24.\nBeginning July 24, only licensed customs brokers or parties with the legal right to make entry may file informal international mail entries for shipments valued under $2,500. Entries subject to Chapter 99 duties, including Section 232, Section 122, or Section 301 tariffs, are ineligible for this new informal process.\nA separate interim final rule formally amends CBP regulations to suspend de minimis treatment for shipments valued under $800, codifying the executive order that has been in effect since August 2025.\nThe new informal postal entry process requires filers to transmit an Excel spreadsheet to CBPDM@cbp.dhs.gov no later than the 7th of the month following a shipment's arrival, covering HTS classification, country of origin, duty rate, value, tracking number, and other data elements. Payment is due via Pay.gov by the same deadline. A basic importation and entry bond is required.\nCBP is simultaneously launching a voluntary pilot, Entry Type 13, beginning September 22 for international mail shipments ineligible for informal entry due to partner government agency (PGA) requirements or Chapter 98/99 classifications. Shipments subject to antidumping/countervailing duties (AD/CVD) or quota are not eligible for the pilot and require formal entry.\nCBP is providing a narrow 90-day compliance window through October 22 for merchandise subject to Chapter 98/99 duties, PGA requirements, or FTA duty-free claims to continue using the new informal process while businesses adjust.\nComments on both interim final rules are due July 24.\nImporters and customs brokers receiving international mail shipments should assess whether their current processes comply with the new entry, bonding, and spreadsheet-filing requirements before July 24. The Flexport Trade Advisory team can assist with navigating compliance obligations under the new rules.\nOcean\n\nTRANS-PACIFIC EASTBOUND (TPEB)\n\nCapacity and Demand:\nCarriers canceled approximately 7% of scheduled Trans-Pacific Eastbound (TPEB) capacity in Week 26, down from approximately 9% in Week 25. Space remains constrained across all gateways. U.S. East Coast and Gulf services are more restricted than West Coast lanes, with ongoing cargo rollings on multiple strings.\nPanama Canal draft limits for neopanamax vessels are set to tighten on July 3, which will reduce available load capacity on canal-routing services to U.S. East Coast and Gulf destinations. Several carriers have implemented weight restrictions on Panama strings in anticipation.\nGlobal container demand reached record levels in April 2026, with volumes above any prior April on record. On the Transpacific, shippers advanced bookings earlier than in prior seasons, moving cargo ahead of the June 15 rate increases. Space on U.S. East Coast and Gulf services is largely committed through the end of June.\nFreight Rates:\nThe Shanghai Containerized Freight Index (SCFI) rose approximately 10% week-on-week on U.S. West Coast lanes in Week 26, extending a run of consecutive weekly increases now spanning six weeks. U.S. East Coast lanes also rose approximately 10% in Week 26. Other market indices confirm the same directional trend. Carriers have implemented a rate increase on floating and increased Peak Season Surcharge (PSS) on fixed rates effective June 15, both of which are broadly holding across all gateways.\nRecommendation:\nBook 4-5 weeks ahead. Shippers with time-sensitive cargo or U.S. East Coast and Gulf destinations should consider premium service levels to reduce the risk of rolling.\n\nFAR EAST WESTBOUND (FEWB)\n\nCapacity and Demand:\nCarriers canceled approximately 8% of scheduled Far East Westbound (FEWB) capacity in Week 26, up from approximately 4% in Weeks 24 and 25.\nCape of Good Hope routing extends each voyage by 10 or more days compared to Suez Canal routing and reduces the effective number of vessel rotations available per year. Transshipment hubs along the Cape route are experiencing multi-day berthing delays, compounding the supply constraint and contributing to equipment shortages at Chinese and Southeast Asian origin ports.\nGlobal container volumes reached record levels in April 2026. Demand on Asia-Europe lanes remains strong, with vessel utilization near full capacity for June sailings. The recently announced U.S.-Iran framework agreement could give some relief to the situation as carriers could potentially start returning to Suez in the medium term but as of now too early to tell.\nFreight Rates:\nThe Shanghai Containerized Freight Index (SCFI) for North Europe rose approximately 20% in Week 25 and held broadly flat in Week 26, following seven consecutive weeks of increases. Mediterranean lanes saw similar movement in Week 25, with broadly stable rates in Week 26. Other market indices confirm rates are holding at elevated levels. Carriers have announced an increase to Peak Season Surcharges (PSS) effective July 1.\nRecommendation:\nBook 5-6 weeks ahead. For time-sensitive or high-value cargo, secured premium services are advisable through at least the end of July.\n\nTRANS-ATLANTIC WESTBOUND (TAWB)\n\nCapacity and Demand:\nCarriers canceled approximately 9% of scheduled Trans-Atlantic Westbound (TAWB) capacity in Week 26, up from approximately 4% in Week 25. Cancellations are concentrated on services to the U.S. West Coast and Gulf destinations; U.S. East Coast lanes have more available space. Equipment shortages persist across Northern European origins, particularly Germany, Benelux, and Central Europe. Major Northern European ports are operating at high utilization, with vessel wait times of two to three days at key hubs. Schedule reliability on westbound Atlantic services currently stands at approximately 44-55%, meaning a material share of sailings are arriving behind schedule.\nJune and July are expected to be the last strong demand months before traditional European summer warehouse closures reduce shipping volumes in August. Import volumes on TAWB declined year-over-year in April as the tariff-driven front-loading of Q1 faded. Underlying demand remains steady ahead of the seasonal slowdown.\nContainer and chassis shortages persist across all major TAWB export origins, including Germany, Benelux, Austria, Hungary, and Slovakia.\nFreight Rates:\nRates are broadly stable on North Europe to U.S. East Coast and Gulf lanes, with modest upward pressure on U.S. West Coast lanes. A Peak Season Surcharge (PSS) remains active across Northern European and Mediterranean origins. The Q3 Bunker Adjustment Factor (BAF) already reflects current fuel cost relative to Q2; as a result, carriers have removed the Emergency Fuel Surcharge/Emergency Bunker Surcharge effective July 1.\nRecommendation:\nBook 3-4 weeks ahead. Confirm space early for U.S. West Coast and Gulf destinations. July sailings are expected to fill quickly as shippers target the last major shipping window before the European Summer slowdown.\n\nINDIAN SUBCONTINENT TO NORTH AMERICA\n\nCapacity and Demand:\nCapacity on the Indian Subcontinent (ISC) to North America services remains constrained. Combined with MSC's removal of the Indus Express service string, multiple carriers have structural blank sailings on the Indian Subcontinent to U.S. East Coast services in Weeks 25 through 29.\nBooking demand on the Indian Subcontinent (ISC) to North America trade lane has increased heading into the summer peak. Shippers are advancing cargo ahead of announced rate increases, and booking lead times at major Indian Subcontinent origin ports are extending as backlogs grow. Origin lead times will increase into July due to the backlog of cargo moving through major Indian ports.\nFreight Rates:\nCarriers have implemented a rate increase and a Peak Season Surcharge (PSS) effective June 15 on Indian Subcontinent (ISC) to North America services. Further rate increases are expected through the peak season.\nRecommendation:\nBook 4-5 weeks ahead. Space is expected to remain constrained through July into August.\nAir\nFind the latest updates on global air freight operations on our Middle East escalation blog.\nNorth China:\nVolumes to Europe held roughly flat week on week, with spot rates ticking up modestly; the China-to-Europe corridor remains historically elevated versus the same period last year.\nSpace on premium lanes is competitive, with booking lead times of 5–7 days recommended for time-sensitive cargo.\nKey commodities include electronics, industrial goods, and e-commerce fulfillment ahead of anticipated mid-year inventory restocking.\nSouth China:\nSpot rates from Hong Kong increased for the third consecutive week on the Asia-to-U.S. corridor, reflecting sustained demand from electronics and consumer goods shippers.\nCapacity out of South China is manageable but tightening for the week of June 22–28; shippers with mid-July cargo should book now to secure competitive rates.\nConsolidation freight continues to face space pressure on ex-HKG widebody services.\nTaiwan:\nSpot rates from Taipei to the U.S. held flat week on week, with demand supported by semiconductor components and tech hardware.\nSpace is tight on direct TPE-U.S. services; carriers are holding firm on pricing as Taiwan demand stays above seasonal norms.\nVietnam:\nVolumes from Vietnam to the U.S. declined week on week, partly reversing a post-holiday rebound from the prior two weeks; rates were flat on both U.S. and Europe corridors.\nDemand remains driven by apparel, footwear, and furniture. Shippers are advised to confirm bookings 7–10 days in advance ahead of expected peak season volume builds.\nCambodia:\nNo material changes this cycle. Capacity is manageable. Key commodities remain garments and soft goods to U.S. and European buyers.\nKorea:\nKorea-to-U.S. volumes have been steady, driven by auto parts, consumer electronics, and pharmaceuticals. Monitor for capacity adjustments tied to carrier schedule changes.\nMalaysia:\nVolumes from Malaysia rebounded strongly this week after two consecutive weeks of declines, tightening space as a result.\nThe surge in chargeable weight reflects a combination of electronics manufacturing output and e-commerce fulfillment to U.S. and European destinations.\nRates moved higher on the demand rebound; book at least one week in advance for reliable capacity.\nThailand:\nSpot rates from Bangkok to Europe fell this week, continuing a softening trend on that corridor; Thailand-to-U.S. rates were comparatively stable.\nDemand is supported by automotive components, processed food, and hard goods. The rate softening on Europe lanes may reflect a temporary capacity overhang rather than a structural demand shift.\nIndonesia:\nVolumes from Indonesia to Europe slipped slightly week on week, though spot rates edged up modestly, in line with other Southeast Asian origins.\nElectronics and garments are the primary commodities. Capacity is manageable on most carrier services.\nIndia:\nVolumes from India declined to both Europe and the U.S. this week, with the drop more pronounced on Europe-bound lanes.\nPharma, textiles, and engineering goods continue to drive demand. Rate levels remain elevated year on year.\nThe post-Eid al-Adha demand recovery in the broader region has not yet translated into a volume rebound from India specifically; watch for pickup over the next 2–3 weeks.\nBroader ISC (Bangladesh, Sri Lanka, Pakistan):\nBangladesh posted a strong volume recovery this week, reversing steep declines over the prior two weeks; the rebound was driven by ready-made garments with June and July delivery windows.\nSri Lanka volumes fell on both U.S. and Europe corridors, continuing a correction after prior-period strength.\nPakistan data is limited this cycle; no material change reported.\n\n(Source: Flexport)\n\nPlease reach out to your account representative for details on any impacts on your shipments.\n\nNorth America Vessel Dwell Times\n\nWebinars\n\nTrucking Market Outlook: Rates, Trends, & Regulatory Impact\n\nWednesday, July 1 @ 9:00 am PT / 12:00 pm ET\n\nNorth America Freight Market Update Live\n\nThursday, July 16 @ 9:00 am PT / 12:00 pm ET\n\nTariff Trends 2026: Expert Insights on the Evolving U.S. Customs Landscape\n\nAvailable On-Demand\n\nOcean Timeliness Indicator\n\nWeek to June 22, 2026\n\nTransit time remained flat at 34 days from China to the U.S. West Coast; increased from 53 days to 56 days from China to the U.S. East Coast; and increased from 53 days to 54 days from China to North Europe.\n\nSee the full report and read about our methodology here.",
+    "images": [
+      "https://images.ctfassets.net/92fo1e671z6m/6r7haQJRSOKtwnzBJCxBYW/449feb340b0410176e4026e52b5cdf64/Vessel_Dwell_Chart_Crop__June_25_GLU_.png",
+      "https://images.ctfassets.net/92fo1e671z6m/4VjZh8midWQ50CX6jecqI8/be1e5a602b3d6b3421c76b15a8896e6f/Ocean_Timeliness_Indicator__Week_to_June_22__2026.png"
+    ],
+    "source": "flexport",
+    "crawled_at": "2026-07-03T18:54:23.859030",
+    "snippet": "Trends to Watch\nTalking Tariffs\nCAPE Phase 2 Launches June 29 for Reconciliation-Flagged Entries: CBP announced the next phase of its Consolidated Administration and Processing of Entries (CAPE) IEEPA tariff refund system, effective June 29, expanding eligibility to a new category of entries.\nCAPE P"
+  },
+  {
+    "url": "https://www.flexport.com/global-logistics-update/june-18-2026-GLU-Newsletter/",
+    "category": "GLOBAL LOGISTICS UPDATE",
+    "title": "CPSC Mandatory eFiling Takes Effect July 8; TPEB Rates Surge ~10% as Peak Season Demand Outpaces Capacity",
+    "date": "June 18, 2026",
+    "content": "Trends to Watch\nTalking Tariffs\nCBP Releases Consolidated Forced Labor Guidance for Importers: U.S. Customs and Border Protection (CBP) has published updated operational guidance consolidating its enforcement frameworks under three statutes: 19 U.S.C. 1307, the Uyghur Forced Labor Prevention Act (UFLPA), and the Countering America's Adversaries Through Sanctions Act (CAATSA).\nThe updated guidance includes enforcement process maps for UFLPA, CAATSA, and Withhold Release Order (WRO) and Finding actions, giving importers a clearer view of how each enforcement pathway operates.\nEach section provides step-by-step guidance on what importers can expect when shipments are detained or excluded, and how to respond. Importers with supply chain exposure to forced labor risk areas should review the guidance and ensure internal compliance procedures align with CBP's outlined processes.\nCPSC eFiling Becomes Mandatory July 8: Importers Must Act Now: The Consumer Product Safety Commission's (CPSC) mandatory eFiling requirement takes effect July 8, 2026, requiring importers of regulated consumer products to submit certificate data electronically through CBP at time of entry clearance. There are three filing types, and choosing the right one depends on how your products are registered.\nDisclaim: Used when an HTS code flags for CPSC review but the specific product is not subject to CPSC regulations. Importers may either submit a disclaim that includes an intended use code, or forgo the filing entirely. CPSC has stated that disclaim PGA message sets are not required but may improve an importer's risk score. However, CBP has not yet confirmed that ACE will support the disclaim feature at go-live, so importers should not assume this option will be available on July 8. As long as ACE allows it, the decision to file or forgo the disclaim remains at the importer's sole discretion.\nFiling of reference set: Used when a product has been pre-registered in the CPSC Product Registry ahead of entry. Requires submission of only four data elements at time of entry, including a reference number linking to the registered product. This is the fastest and least burdensome filing method and is strongly recommended for importers with significant CPSC exposure.\nFull PGA message set: Used when a product has not been pre-registered in the CPSC Product Registry. Requires submission of 20 to 30 data elements at time of entry, drawn primarily from the product's Children's Product Certificate (CPC) or General Certificate of Conformity (GCC). This method is more time-consuming and costly, and increases the risk of clearance delays.\nThe underlying regulatory scope of CPSC oversight is not changing. If you are unsure whether a specific product falls under CPSC's jurisdiction, consult CPSC's Business Guidance Library. For more information, see Flexport's recent webinars, Preparing for the CPSC's eFiling Deadline and CPSC eFiling Is Almost Here. Are You Ready?, or Flexport's CPSC eFiling Overview.\nOcean\n\nTRANS-PACIFIC EASTBOUND (TPEB)\n\nCapacity and Demand:\nCapacity remains tight across the TPEB trade. Overall June space has dipped slightly to an average of 83%, down from 87% in the second half of May.\nThe U.S. West Coast is seeing marginally better availability due to service reinstatements and occasional extra loaders, though space remains constrained and rollings are occurring across most strings. The U.S East Coast and Gulf are more restricted, with little to no capacity relief in sight. Compounding this, Panama Canal draft allowances are tightening in July and several carriers have already begun enforcing weight restrictions on Panama strings.\nDemand remains strong, with volumes surging through June and continuing to build into July.\nFreight Rates:\nRates continue their upward trajectory. June 12's Shanghai Containerized Freight Index (SCFI) rose approximately 10% on West Coast lanes and approximately 10% on East Coast lanes.\nCurrent rates are expected to hold firm through the end of June with no signs of softening; with further increases to spot rates anticipated in the first half of July.\nRecommendation:\nBook 4–5 weeks in advance. Shippers with time-sensitive cargo should strongly consider premium service levels or alternative routings to secure space and minimize the risk of rolling.\n\nFAR EAST WESTBOUND (FEWB)\n\nCapacity and Demand:\nThe announcement of a U.S.-Iran framework peace agreement and the pending reopening of the Strait of Hormuz is a historic geopolitical breakthrough, but it will not provide immediate relief to container capacity. Major tanker operators and analysts project it will take months for maritime traffic and energy flows to fully normalize. For the FEWB container trade, shipping lines will maintain Cape of Good Hope diversions as the operational baseline until they can verify the Red Sea and Suez Canal are entirely safe from residual attacks.\nWhile scheduled blank sailings have dropped to roughly 5%, active tonnage remains committed, with Singapore berthing delays of up to 7 days, keeping active tonnage tied up and exacerbating equipment shortages at Chinese origin ports.\nCurrent demand remains high, with June sailings operating at maximum utilization and rolling risks still elevated.\nFreight Rates:\nThe spot market remains under peak-season momentum. As of June 12, the Shanghai Containerized Freight Index (SCFI) rose approximately 20% week-on-week on North Europe lanes marking a seventh consecutive week of gains. Because elevated rates are currently anchored by operational bottlenecks rather than organic demand, any meaningful rate correction will be a slow process, even as the geopolitical situation stabilizes.\nRecommendations:\nExtend Lead Times: Book 5–6 weeks in advance. Do not rely on historical transit times; build significant buffers into your supply chain to absorb port congestion delays.\nDo Not Wait for Rate Drops: The market will not self-correct quickly. Delaying bookings in hopes of a cheaper spot rate will likely result in rolled cargo and missed deadlines.\nPrioritize Premium: For mission-critical or time-sensitive freight, standard bookings carry too much risk. Transition these shipments to premium, guaranteed-space services to ensure equipment availability and avoid large roll pools at origin ports.\n\nTRANS-ATLANTIC WESTBOUND (TAWB)\n\nCapacity and Demand:\nCarriers are deploying additional capacity on North Europe (NEUR) to U.S. East Coast lanes heading into Q3 2026, with June deployment running above May levels. Selective blank sailings continue into weeks 25-26. Major North Europe origin ports are experiencing delays: congestion, barge backlogs, and inland rail disruptions are affecting cargo fluidity at multiple hubs. Mediterranean origin ports face similar conditions. Schedule reliability on the TAWB westbound trade has fallen below 50% in recent periods. Equipment shortages persist across German and Benelux origin locations and are expected to continue into early July.\nOperations: NEUR ports remain under pressure:\nRotterdam yard utilization is at 85–92% with barge waits of 72–75 hours amid labor disruptions.\nAntwerp/Zeebrugge at 75–88% with 3+ day berth delays.\nHamburg ~89% with 2-day vessel waits and deepening Rhine barge service cuts.\nBremerhaven ~90–93% with severe ongoing inland rail disruptions.\nMediterranean congestion is elevated at Valencia (3+ day berth delays absorbing rerouted volumes) and Genoa (1–2 days, with rail corridor maintenance June–September).\nSelective TAWB blank sailings persist into weeks 25–26 (~5% cancellation) and global schedule reliability stands at ~55–60%; book 3–4 weeks ahead.\nEquipment:\nCritical container/chassis shortages persist across TAWB origins (Germany, Benelux, Austria, Hungary, Slovakia) into week 27.\nFreight Rates:\nSpot rates on North Europe to U.S. East Coast lanes held firm into mid-June, up approximately 65% from late March lows.\nPeak Season Surcharges (PSS) remain active across NEUR and Mediterranean origins.\n\nINDIAN SUBCONTINENT TO NORTH AMERICA\n\nCapacity and Demand:\nThe Indian Subcontinent (ISC) to North America trade is experiencing a capacity squeeze in the second half of June. Multiple carriers have announced blank sailings in weeks 25-28, and one carrier has withdrawn a direct service string, reducing options for shippers at major origin ports. The Strait of Hormuz closure has constrained vessel deployment across the broader Middle East and Indian Subcontinent region, with total ISC capacity running approximately 8% below year-ago levels. Capacity is expected to remain tight through July.\nFreight Rates:\nRate increases and Peak Season Surcharges (PSS) are active across carriers and expected to rise into July.\nAir\nFind the latest updates on global air freight operations on our Middle East escalation blog.\nNorth China:\nRates to the U.S. West Coast accelerated again this week, driven by a surge in project cargo on top of already-constrained capacity, pushing prices to new near-term highs.\nU.S. East Coast demand held steady at the elevated levels established over recent weeks, with the rate floor remaining firmly above prior-month levels.\nChina-to-Europe momentum returned this week after a period of stability, with demand picking up notably on the AMS and LHR lanes; e-commerce is the primary driver of the uptick.\nAdvance booking lead times of 5–7 days are recommended across all destinations.\nSouth China:\nMarket rates continued to climb week-on-week. Flight cancellations on LAX and ORD routes June 14–17 due to AOG aircraft tightened available capacity and contributed to the rate increase.\nThe European market also saw an uptick, driven by a diversion of ocean freight to air as maritime constraints continue to affect sea freight options.\nSpace to the U.S. West Coast and East Coast is extremely limited; booking lead times of 7–10 days are strongly advised.\nTaiwan:\nMarket rates and demand remained stable week-on-week. Some airlines announced FSC reductions effective this week, though overall market pricing held.\nBooking lead times of 5–7 days in advance are recommended given continued hub tightness on connecting services.\nVietnam:\nRates held at elevated levels from the prior week. Carrier hubs continue to face tight flight connections, and capacity to the U.S. is constrained due to quarter-end demand.\nEU rates held stable. Some carriers were fully booked ex-origin through mid-June.\nBooking 5–7 days in advance is recommended.\nCambodia:\nMarket conditions were unchanged from the prior week with no new capacity developments.\nAdvance bookings of at least 5 working days are recommended to secure space.\nKorea:\nU.S. space is fully booked through the current week and remains heavily loaded for the week ahead. Space confirmation is required on a per-shipment basis.\nRates continued to trend upward. A pending FSC increase will add to overall costs.\nMinimum booking lead time of 5–7 days; early engagement on all shipments is critical.\nMalaysia:\nA surge in demand across all U.S. ports led to widespread airline congestion and severely tightened TPEB capacity, with space availability deteriorating to critical levels across multiple carriers.\nBooking lead times of at least 10 days in advance are strongly advised.\nThailand:\nDemand remained strong. Capacity ex-BKK and at connecting hubs is extremely tight, with airlines reporting a severe backlog to the U.S. East Coast in particular.\nTerminal congestion is ongoing, causing shipments to miss flights. The situation is expected to persist through end of June and into early July.\nAdvance booking lead times of 7–10 days are strongly recommended.\nIndonesia:\nMarket conditions held steady from the prior week with no meaningful rate movement.\nNo capacity issues at origin, though transit times to TPEB are slightly extended due to hub congestion. Booking 7 days prior to cargo ready date is advised.\nIndia:\nRates eased slightly week-on-week relative to prior weeks. Capacity is improving modestly ex-origin.\nTransit times remain around 6–8 days for both TC1 and TC2 destinations, unchanged from prior periods.\nBroader Indian Subcontinent (Bangladesh, Sri Lanka, Pakistan):\nConditions remained volatile and largely unchanged. Advance bookings of 5–7 days are still required, particularly for large shipments. Express options are recommended for urgent TC1 cargo to secure space.\n\n(Source: Flexport)\n\nPlease reach out to your account representative for details on any impacts on your shipments.\n\nNorth America Vessel Dwell Times\n\nWebinars\n\nPeak Season Prep: A CFO's Playbook for Cash Flow, Inventory, and Smarter Financing\n\nThursday, June 25 @ 9:00 am PT / 12:00 pm ET\n\nTariff Trends 2026: Expert Insights on the Evolving U.S. Customs Landscape\n\nAvailable On-Demand\n\nOcean Timeliness Indicator\n\nWeek to June 15, 2026\n\nTransit time remained flat at 34 days from China to the U.S. West Coast; increased from 50 days to 53 days from China to the U.S. East Coast; and increased from 52 days to 53 days from China to North Europe.\n\nSee the full report and read about our methodology here.",
+    "images": [
+      "https://images.ctfassets.net/92fo1e671z6m/63cR79dQTjz3oacXfD4O68/fa9f671b9263e9f3000ab8a6ac2bb16c/Vessel_Dwell_Chart_Crop_6-18-26.png",
+      "https://images.ctfassets.net/92fo1e671z6m/2TmJJNlpUhm5OeHRZFOFWo/c8d1467107c690c6557aa060444139cf/OTI_June_15_2026.jpg"
+    ],
+    "source": "flexport",
+    "crawled_at": "2026-07-03T18:54:23.859033",
+    "snippet": "Trends to Watch\nTalking Tariffs\nCBP Releases Consolidated Forced Labor Guidance for Importers: U.S. Customs and Border Protection (CBP) has published updated operational guidance consolidating its enforcement frameworks under three statutes: 19 U.S.C. 1307, the Uyghur Forced Labor Prevention Act (UF"
+  },
+  {
+    "url": "https://www.flexport.com/global-logistics-update/june-11-2026-GLU-Newsletter/",
+    "category": "GLOBAL LOGISTICS UPDATE",
+    "title": "DOJ Appeals CIT's IEEPA Refund Injunction as CAPE Phase 2 Targets June 29; TPEB Rates Surge 30% Into Peak",
+    "date": "June 11, 2026",
+    "content": "Trends to Watch\nTalking Tariffs\nCAPE Refund Timeline Clarified, But Finally Liquidated Entries Face Extended Wait: A June 9 Court of International Trade (CIT) hearing provided the clearest picture yet of how the Consolidated Administration and Processing of Entries (CAPE) refund process will unfold, while underscoring that importers with finally liquidated entries face a path measured in months at best.\nCAPE Phase 2, scoped specifically to reconciliation entries (a narrower category than many importers anticipated), is on track to launch June 29. Phase 3, which would address finally liquidated entries (those more than 90 days past liquidation), is in development with programming expected to be complete by late July.\nOn May 29, the Department of Justice filed a notice of appeal at the U.S. Court of Appeals for the Federal Circuit challenging CIT's universal injunction, which had directed CBP to issue International Emergency Economic Powers Act (IEEPA) refunds broadly. The government's position is that CBP lacks authority to refund finally liquidated entries without an importer-specific court order.\nCBP confirmed it will continue processing CAPE refunds for unliquidated and non-final entries while the appeal is pending. The Federal Circuit's timeline to resolve the appeal is uncertain, with legal analysts estimating weeks to months.\nThe government also argued at the June 9 hearing that Phase 3 relief for finally liquidated entries may require individual importers to file suit at CIT before refunds can be processed, effectively restricting access to those who pursue litigation.\nIf the Federal Circuit grants a stay or the government prevails on appeal, even the Phase 3 pathway could be delayed further. Judge Richard Eaton separately urged CBP to consider extending liquidation deadlines for entries that have continued to liquidate since the Supreme Court's IEEPA ruling.\nRecommendation: Importers with finally liquidated entries should not assume automatic relief through CAPE Phase 3. Evaluate whether filing suit at CIT is necessary to secure your position. Use the Flexport Tariff Refund Calculator to estimate your exposure, and consult Flexport's Trade Advisory team on protest filings and litigation strategy.\nUSMCA Review Drags Toward July 1 Deadline With No Renewal in Sight: Trade experts now expect the USMCA review to extend well beyond its July 1, 2026 trigger date, with a Mexico deal potentially achievable by fall but a Canada resolution possibly slipping to July 1, 2027.\nAt the first formal round in Mexico City, U.S. Trade Representative (USTR) negotiators shared draft text for the first time, including proposed rules of origin (ROO) changes covering automotive, electronics, and steel and aluminum. The U.S. is reported to be seeking 82% North American content in vehicles (up from 75%), plus a new 50% U.S.-specific content requirement.\nThe next negotiating round with Mexico is expected to address agriculture, environment, and labor provisions.\nNo formal negotiating process has been launched with Canada. Expert commentary suggests the administration is in no hurry to change that, preferring to finalize terms with Mexico first before pulling Canada back in, mirroring the sequencing used during the original NAFTA renegotiation.\nCanadian priorities include relief from the 50% steel and 25% aluminum tariffs, as well as the 25% auto tariffs, concessions experts do not expect to be offered until a deal is nearly closed.\nThe broader ROO agenda extends beyond autos: the administration is pursuing stricter origin rules across strategic supply chains (semiconductors, electronics, and other sectors) to reduce or eliminate Chinese content qualifying for preferential treatment via third-country transformation.\nUSMCA-qualifying goods remain carved out of the new Section 301 forced labor tariffs, which experts note signals the administration's reluctance to impose significantly heavier duties on Canadian and Mexican imports at this stage.\nSection 301 Excess Capacity Tariff Timeline Slips Past July 24: The July 24 deadline for country-specific reciprocal tariffs, including 20% on Vietnamese goods and 30% on South African goods, is unlikely to be met, given that USTR has indicated the Section 301 excess capacity report is still several weeks from completion.\nStandard procedure calls for roughly one month of public comment after the report's release, followed by an additional review period before tariffs are announced, making a July 24 implementation date effectively impossible.\nThe existing 10% baseline tariff on some trading partners and 12.5% on most others provides a de facto floor that at least matches the 10% Section 122 tariffs expiring in late July, reducing the urgency of hitting a specific deadline.\nTrade experts broadly expect the excess capacity tariff process to conclude \"over the summer,\" though the precise timing remains uncertain. The administration has signaled flexibility on the exact date.\nThe legal foundation of the Section 301 forced labor report, which the excess capacity report will likely build on, is already being questioned by some trade attorneys, with the possibility of court challenges flagged as a meaningful risk. Opinions among experts are sharply divided on whether the report's analytical basis is strong enough to withstand judicial review.\nOcean\n\nTRANS-PACIFIC EASTBOUND (TPEB)\n\nCapacity and Demand:\nPeak season is driving tight capacity management. Blank sailings are heavily concentrated, representing roughly half of all east-west cancellations over the next five weeks, though the broader east-west cancellation rate holds near 5% of total scheduled sailings.\nSpace is largely committed across Pacific Southwest (PSW), Pacific Northwest (PNW), and U.S. East Coast (USEC) gateways, with some cargo rollings as booking windows shorten. Notably, the Panama Canal Authority has revised the Neopanamax Locks draft allowance down to 49.5 feet from 50 feet, effective July 1, a change that will further constrain East Coast loading capacity on Panama Canal strings.\nShippers moved cargo earlier than usual this season. Anticipation of U.S. tariff adjustments in July, combined with incremental demand from the 2026 FIFA World Cup, pulled bookings forward and compressed lead times across all major gateways. June sailings are largely full on most services.\nFreight Rates:\nRates are increasing. The Shanghai Containerized Freight Index (SCFI) climbed approximately 30% week over week on West Coast lanes and 20% on East Coast lanes during Week 23 (ending June 7), with other market indices pointing in the same direction. Effective June 1, carriers implemented a general rate increase across all gateways, alongside a Peak Season Surcharge (PSS) and an emergency bunker surcharge (EBS) adjustment. Forward data for Week 24 shows the SCFI adding a further approximately 10% on both coasts, indicating the June 1 actions are broadly holding.\nRecommendation:\nBook 3 to 4 weeks ahead. Shippers with time-sensitive cargo should consider premium service levels to protect space and minimize rolling risk.\n\nFAR EAST WESTBOUND (FEWB)\n\nCapacity and Demand:\nCarriers continue to route cargo via the Cape of Good Hope rather than through the Suez Canal, driven by the ongoing Red Sea disruption from Houthi attacks. Cape of Good Hope routing extends voyage cycles and reduces the effective weekly capacity available to the market. A very small number of services have resumed Suez transits, but this remains the exception. Blank sailings on Asia-Europe and Mediterranean services account for approximately one-third of all scheduled cancellations across major east-west trades over the next five weeks.\nWith peak season demand now in full swing, the supply-demand imbalance has become increasingly acute. Carriers are taking more bookings than they can load, and June vessels are effectively full. Rolling risk is elevated and rising. Equipment shortages are beginning to surface at major China origin ports.\nDemand is running well ahead of where it normally sits at this point in the year. Asia-to-Europe volumes were up approximately 15% year over year in the first quarter of 2026, and that momentum has carried into June. The combination of Red Sea disruption, an early start to the summer restocking cycle, and shippers front-loading ahead of July rate increases has compressed the booking window significantly. The market is firmly in the early peak season.\nFreight Rates:\nRates are rising. The Shanghai Containerized Freight Index (SCFI) has now recovered for six consecutive weeks, though the pace of increase is moderating: Week 23 saw a single-week jump of +$570 on Northern European lanes, while Week 24 added a further +$130. Mediterranean lanes rose approximately 20% in Week 23, with forward data suggesting rates are essentially flat in Week 24, an early indication that Mediterranean rates may be stabilizing near current levels. Other market indices confirm the same direction. Carriers have filed additional surcharge actions on Asia-Europe services effective mid-June. The rate environment is firmly in carriers' favor. With July Bunker Adjustment Factor (BAF) resets and ongoing capacity discipline, rates are expected to remain elevated.\nRecommendation:\nBook 4 to 5 weeks ahead. Build extra lead time into any time-sensitive shipments and consider upgrading to a premium service level.\n\nTRANS-ATLANTIC WESTBOUND (TAWB)\n\nSupply / Capacity:\nSpace from Northern Europe tightened in recent weeks. Certain services are fully committed on U.S. West Coast gateways through early July, with U.S. East Coast availability opening only in the latter part of June on some strings. Cargo from some Northern European origins is being redirected to alternative services as a result. Mediterranean sub-lanes, including Italy, Spain, and Turkey, show somewhat more flexibility than Northern European ports.\nDemand:\nDemand is steady. Seasonal patterns are holding without notable acceleration beyond typical pre-summer levels. The new U.S. customs enforcement restrictions on Foreign Importers of Record may affect demand structure on this trade if shippers shift from Delivered Duty Paid (DDP) to Free On Board (FOB) terms, altering booking responsibilities and timing over the coming months.\nRate Developments:\nRates were broadly stable in June, with carriers rolling over May levels across all corridors: Northern Europe, West Mediterranean, and East Mediterranean to the U.S. East Coast and Gulf. CMA CGM announced a Peak Season Surcharge (PSS) from Northern Europe effective mid-June. MSC also announced a PSS from the East Mediterranean to the U.S. East Coast for the same period, though application is not yet confirmed. Looking ahead, most carriers are expected to attempt PSS implementations across all corridors in July.\nEquipment:\nCritical container and chassis shortages persist across Germany, Benelux, Austria, Hungary, and Slovakia into Week 25, with conditions amplified by ongoing German rail disruption adding 2 to 5 days to inland transit times.\nRecommendation:\nBook 3 to 4 weeks in advance, especially for inland origins and Mediterranean ports, to secure space and equipment and avoid rollings.\n\nINDIAN SUBCONTINENT TO NORTH AMERICA\n\nCapacity and Demand:\nThe Indian subcontinent to North America trade operates against the backdrop of the Strait of Hormuz closure, now in its fourth month. The broader regional disruption has created equipment availability pressures at some origin ports, as vessel cycles in the Middle East remain disrupted. Carriers adjusted surcharge structures effective June 1 to reflect higher regional operating costs.\nDemand is increasing, tracking with the broader peak season pattern across Asia-origin trades. A Peak Season Surcharge (PSS) took effect June 1 on Indian subcontinent to West Coast services, consistent with seasonal norms and aligned with surcharge actions across the Trans-Pacific trade on the same date. A PSS on the U.S. West Coast is expected to carry over into the second half of June with potential of a future PSS on EC lanes.\nFreight Rates:\nRates are rising. A PSS and an emergency bunker surcharge (EBS) adjustment both took effect June 1, increasing the total cost of shipment from subcontinent origins. Rate direction aligns with the broader upward trend across Asia-origin trades. Rates to the West Coast have risen faster on the heels of the early Trans-Pacific Eastbound (TPEB) peak season, with East Coast rates expected to follow.\nRecommendation:\nAccount for June 1 surcharge changes in your cost planning. Book ahead and confirm equipment availability, particularly on lanes touching Middle East Gulf ports where the Strait of Hormuz closure continues to create operational uncertainty.\nAir\nFind the latest updates on global air freight operations on our Middle East escalation blog.\nNorth China:\nRates on U.S. West Coast lanes rose week over week, driven by a surge in project cargo volumes and cargo from other Asia-Pacific origins routing through PVG as a connecting hub.\nEast Coast rates held at elevated levels, with demand steady and no near-term capacity additions in sight.\nEurope-bound rates remained stable, continuing at levels set in recent weeks.\nShippers are advised to book at least 5 to 7 days in advance for both Trans-Pacific and Europe-bound lanes.\nSouth China:\nRates rose week over week on both U.S. West Coast and East Coast lanes, driven by a backlog from major tech shippers, continued ecommerce volumes, and FIFA World Cup pre-tournament cargo flows.\nDespite a fuel surcharge reduction, the floating market rate increased, keeping all-in rates in line with late-May levels.\nEurope-bound rates ticked up as maritime disruptions pushed a portion of ocean freight to air.\nSpace is tight. Shippers are advised to book at least 5 to 7 days in advance.\nTaiwan:\nRates and demand are tracking close to last week's levels, holding at the high end of the current range.\nLast-minute bookings face longer transit times due to constrained space at origin.\nShippers are advised to book at least 5 to 7 days in advance.\nVietnam:\nDemand continued to rise on both Trans-Pacific and Europe-bound lanes through early June.\nSome carriers were fully booked out of origin through June 13, with hub connections running tight at intermediate stops.\nU.S.-bound rates increased week over week; Europe-bound rates held steady.\nShippers are advised to book at least 5 to 7 days in advance.\nCambodia:\nRates climbed week over week as demand picked up from late-May levels. Carrier hubs are experiencing tight flight connections.\nShippers are advised to book at least 5 working days in advance.\nKorea:\nDemand picked up week over week after recent softening. Space tightened as a result.\nShippers are advised to book at least 4 to 6 working days in advance.\nMalaysia:\nPost-holiday demand surged across U.S. air freight lanes, tightening capacity on Trans-Pacific routes.\nRates are holding steady for now, with conditions expected to tighten further in the coming days.\nShippers are advised to book at least 5 to 7 days in advance.\nThailand:\nCapacity is at full stretch out of Bangkok, with both cargo terminals congested and several carriers suspending new booking acceptance this week to work through existing backlogs.\nDemand is driven by large tech and ecommerce accounts. Rates remain at the high end of the current range.\nShippers are advised to book at least 7 to 10 days in advance.\nIndonesia:\nExport activity picked up, driven partly by a weakening Indonesian rupiah against the U.S. dollar, which has improved the price competitiveness of Indonesian goods relative to other Southeast Asian origins.\nSpace availability is stable for cargo confirmed well in advance.\nIndia:\nRates edged slightly lower compared to recent weeks. Capacity at origin improved.\nTransit times remain at 6 to 8 days for both Americas and Europe, Middle East, and Africa lanes.\nShippers are advised to book at least 5 to 7 days in advance.\nBroader Indian Subcontinent (Bangladesh, Sri Lanka, Pakistan):\nRates and space remain volatile.\nRoute urgent shipments as express to secure space on Americas and Europe, Middle East, and Africa lanes.\nShippers are advised to book at least 5 to 7 days in advance.\nTransatlantic (Europe to U.S.):\nAir Canada Cargo announced a fuel surcharge update effective June 15, the latest in a series of carrier surcharge adjustments as jet fuel costs continue to move.\nSummer passenger belly capacity from European hubs is putting downward pressure on all-in rates compared to the same period last year.\nNo capacity disruptions were reported at CDG, FRA, or LHR heading into the week of June 9.\nU.S. Exports:\nSWISS WorldCargo announced a reduction in its U.S.-origin air freight surcharge effective June 22, continuing a pattern of surcharge normalization on U.S. export lanes as jet fuel costs ease from recent peaks.\n\n(Source: Flexport)\n\nPlease reach out to your account representative for details on any impacts on your shipments.\n\nNorth America Vessel Dwell Times\n\nWebinars\n\nNorth America Freight Market Update Live\n\nThursday, June 18 @ 9:00 am PT / 12:00 pm ET\n\nTariff Trends 2026: Expert Insights on the Evolving U.S. Tariff Landscape\n\nWednesday, June 17 @ 9:00 am PT / 12:00 pm ET\n\nCAPE Explained: Refunds, Common Issues & Next Steps for Importers\n\nAvailable On-Demand\n\nFlexport Customs Webinar: CPSC eFiling Is Almost Here. Are You Ready?\n\nAvailable On-Demand\n\nBreaking Down Trump's Executive Order on Foreign Importers of Record\n\nAvailable On-Demand\n\nOcean Timeliness Indicator\n\nTransit time increased from 33 days to 34 days from China to the U.S. West Coast; increased from 49 days to 50 days from China to the U.S. East Coast; and remained flat at 52 days from China to North Europe.\n\nWeek to June 8, 2026\n\nTransit time increased from 33 days to 34 days from China to the U.S. West Coast; increased from 49 days to 50 days from China to the U.S. East Coast; and remained flat at 52 days from China to North Europe.\n\n\nSee the full report and read about our methodology here.",
+    "images": [
+      "https://images.ctfassets.net/92fo1e671z6m/6oHQxWCCBpfrlCfetYz7gv/179744546e1182488189903d66477730/Vessel_Dwell_Chart_Crop__2_.png",
+      "https://images.ctfassets.net/92fo1e671z6m/4hr0S1Ge1qpf8486ZmXRic/f564d09c5e6f0d5778aad1d083b9b14d/OTI_June_8_2026.jpg"
+    ],
+    "source": "flexport",
+    "crawled_at": "2026-07-03T18:54:23.859041",
+    "snippet": "Trends to Watch\nTalking Tariffs\nCAPE Refund Timeline Clarified, But Finally Liquidated Entries Face Extended Wait: A June 9 Court of International Trade (CIT) hearing provided the clearest picture yet of how the Consolidated Administration and Processing of Entries (CAPE) refund process will unfold,"
+  },
+  {
+    "url": "https://www.flexport.com/global-logistics-update/june-3-2026-GLU-Newsletter/",
+    "category": "GLOBAL LOGISTICS UPDATE",
+    "title": "U.S. Appeals CIT's IEEPA Refund Order to Federal Circuit; TPEB Rates Rise as Peak Season Demand Tightens Capacity",
+    "date": "June 4, 2026",
+    "content": "Trends to Watch\nTalking Tariffs\nTrump Signs Executive Order Overhauling Customs Enforcement: President Trump signed an executive order on June 3 directing a sweeping reform of U.S. customs enforcement, with a focus on tightening importer of record (IOR) requirements, expanding disclosure obligations, and increasing penalties for noncompliance.\nWithin 180 days, the Department of Homeland Security (DHS) must revise IOR eligibility rules to require minimum domestic asset or bonding levels, mandate beneficial ownership and business affiliation disclosures, and update the IOR registry to remove inactive registrants and establish risk-based compliance tiers.\nForeign IORs face significantly heightened requirements: they will be prohibited from filing informal entries and, for formal entries, will no longer be permitted to rely on continuous bonds unless CBP determines revenue protection is assured. Foreign IORs filing formal entries must also be validated under the Customs Trade Partnership Against Terrorism (CTPAT) program or use a CTPAT-validated licensed customs broker.\nWithin 90 days, CBP must establish new import disclosure and certification requirements, including supply chain and production method disclosures, foreign tax and business identifier reporting, and submission of any documentation the foreign exporter provided to its own customs authority prior to export.\nThe order also directs DHS to establish a minimum penalty floor of at least 50% of the assessed penalty for customs violations (absent exceptional national security circumstances), eliminate mitigation for repeat offenders, increase audits, and impose maximum penalties on customs brokers who fail due diligence obligations or repeatedly represent noncompliant clients.\nWithin 45 days, DHS must submit legislative recommendations to strengthen customs enforcement further. A full report on the order's effectiveness is due to the President within one year. Importers, customs brokers, and freight forwarders should assess their IOR structures and bonding arrangements now in anticipation of new regulatory requirements. Read our blog for a full breakdown, and join our webinar on June 5 to learn more.\nU.S. Appeals CIT's IEEPA Refund Order, Moves to Block CBP Commissioner Testimony: On June 2, the Department of Justice formally appealed the Court of International Trade's (CIT) April 17 order directing U.S. Customs and Border Protection (CBP) to refund duties collected under the International Emergency Economic Powers Act (IEEPA), escalating the legal battle to the U.S. Court of Appeals for the Federal Circuit.\nThe government argues the CIT's universal injunction, which covers all importers including those who never filed suit, is unlawful under the Supreme Court's recent ruling in Trump v. CASA, which limits courts' authority to issue such broad injunctive relief.\nSimultaneously, the DOJ filed a mandamus petition seeking to block Judge Richard Eaton's order compelling CBP Commissioner Rodney Scott to appear in person at a June 9 hearing. The government contends this order violates established precedent requiring \"extraordinary circumstances\" before a high-ranking executive official can be compelled to testify.\nThe government offered CBP Executive Assistant Commissioner Susan Thomas and Executive Director Brandon Lord as substitutes; Judge Eaton denied the request without explanation.\nThe DOJ acknowledged that CBP has refunded approximately $85 billion of the roughly $166 billion collected under IEEPA, and that a programmatic enhancement to the CAPE (Customs Automated Processing Engine) system is underway to handle remaining entries, though the bulk of refunds processed to date have gone to large importers.\nUpcoming deadlines: Briefs in response to the court's show-cause order are due June 4 (VOS Selections); the government's deadline to appeal the refund order in Euro-Notions is June 8; Commissioner Scott's directed hearing is June 9; a CBP progress report to the court is due June 10 (Euro-Notions). Importers with entries nearing their protest deadline should continue filing to preserve refund rights; the two-year statute of limitations means there is no urgency to file at the CIT, but doing so preserves maximum optionality.\nSection 232 Tariff Relief Extended to Agricultural, HVAC, and Mobile Industrial Equipment: President Trump signed a proclamation on June 1 amending Section 232 tariffs on select steel, aluminum, and copper derivative products, with changes taking effect at 12:01 a.m. ET on June 8 and running through December 31, 2027.\nAgricultural equipment (e.g., combines, harvesters) and residential HVAC equipment will move from the standard 25% Section 232 derivative tariff to a temporary 15% rate under Annex III.\nMobile industrial equipment and machinery (e.g., bulldozers, forklifts) will be eligible for a 15% all-in rate, inclusive of most-favored-nation (MFN) duties, when imported from countries that have signed trade agreements with the U.S. (including Japan, South Korea, Taiwan, the U.K., and the EU, among others).\nMobile industrial equipment qualifying for USMCA treatment will have the 25% tariff applied only to non-U.S. content, with a 15% floor on the total Section 232 rate.\nThe threshold for goods considered to be made \"entirely\" of U.S. steel, aluminum, or copper, and thus eligible for the 10% rate, has been lowered from 95% to 85% domestic metal content.\nTwo new product categories are being added at the standard 25% derivative rate: steel racks and aluminum lithographic plates, also effective June 8. Importers of all affected equipment categories should confirm HTS classification against the proclamation's Annex lists before that date to determine which rate applies.\nUSTR Proposes 25% Section 301 Tariffs on Brazilian Imports: The Office of the U.S. Trade Representative (USTR) released its Section 301 investigation report on Brazil late June 1, recommending 25% tariffs on a broad swath of Brazilian goods, though the proposal includes more than 1,600 HTS exemptions spanning dozens of chapters.\nUSTR found Brazil engaged in unfair trade practices across six areas: digital trade and electronic payments, preferential tariff treatment for third countries, anti-corruption enforcement, intellectual property protection, ethanol market access, and illegal deforestation.\nMany of Brazil's largest U.S. export categories are excluded from the proposed tariffs, including petroleum and coal products, coffee, beef, orange juice, nuts, aircraft and parts, chemical wood pulp, iron and steel (covered by Section 232), and heavy construction equipment.\nThe proposed rate of 25% is half the 50% combined IEEPA rate previously applied to Brazil, and analysts note the broad exemption list suggests the administration is weighing inflation and U.S. manufacturing input cost concerns.\nBrazil's President Lula da Silva issued a formal statement rejecting the findings, citing the U.S. goods trade surplus with Brazil of $14.46 billion in 2025 (rising to $40.5 billion including services), and warning of potential retaliatory measures if tariffs are imposed.\nThe proposed tariffs are not yet in effect. A public comment period is open through July 1; a public hearing is scheduled for July 6; Brazil has until July 15 to take \"responsive action\" before the administration can proceed. Importers sourcing from Brazil should review the USTR's exempt HTS list against their product portfolios now, and those with non-exempt goods should consider submitting comments by the July 1 deadline.\nUSTR Proposes Section 301 Tariffs on 85+ Countries Over Forced Labor Practices: The Office of the U.S. Trade Representative (USTR) released a new Section 301 investigation proposing tariffs on imports from 46 trading partners that either lack a ban on forced labor or fail to enforce one, with a tiered rate structure based on each country's trade relationship with the U.S.\nCountries without an enforceable forced labor ban, including China, India, Vietnam, Brazil, Japan, South Korea, and dozens of others, would face a proposed 12.5% Section 301 tariff. Countries that have a forced labor ban or an existing trade agreement with the U.S., including Canada, Mexico, the EU, the U.K., Taiwan, and Malaysia, among others, would face a lower proposed rate of 10%.\nThe proposal includes significant carveouts: USMCA goods, DR-CAFTA goods, critical minerals, Section 232-covered goods, semiconductors, chemicals, civil aircraft parts, beef, and goods categorized as \"naturally unavailable resources\" would all be exempt.\nUSTR is also proposing a textile and apparel quota mechanism under which a set volume of textile imports from certain partners could enter at the reduced Section 301 rate, tied to the volume of U.S.-produced fiber and cotton inputs that partner exports back to the U.S. Imports above that threshold would be subject to the full 10% or 12.5% rate.\nThese tariffs are not yet in effect. Analysts expect they could go into effect around July 24, which is also when the current Section 122 tariff (10%) is set to expire, suggesting the administration may use the Section 301 rates as a replacement mechanism.\nUpcoming deadlines: Requests to testify at the USTR hearing must be submitted by June 22 via docket USTR-2026-0266 at comments.ustr.gov; written comments are due July 6 via docket USTR-2026-0265; in-person hearings are scheduled for July 7. Importers across a wide range of supply chains should assess exposure now given the breadth of countries covered.\nOcean\n\nTRANS-PACIFIC EASTBOUND (TPEB)\n\nCapacity and Demand:\nCapacity has stabilized heading into June, but strong demand is driving higher utilization across the trade lane, with some strings experiencing rollovers.\nAdditional capacity, including the return of select services such as MSC Pearl and extra loaders, is being deployed into Pacific Southwest (PSW) gateways. While this provides some relief, all gateways continue to fill rapidly and are expected to remain fully committed through June.\nShippers are advised to book 3 to 4 weeks in advance and consider premium service options to secure space for time-sensitive cargo.\nFreight Rates:\nThe June 1 rate increase is holding firm. Carriers are signaling a further increase on June 15, driven by sustained high vessel utilization through June and potentially into July.\nEmergency bunker surcharges (EBSs) remain in effect for June, with additional increases likely.\nAll carriers have implemented Peak Season Surcharges (PSSs) on fixed contract levels effective June 1, with a further PSS adjustment on June 15 considered likely given continued capacity tightening and rising spot market rates.\n\nFAR EAST WESTBOUND (FEWB)\n\nCapacity and Demand:\nThe current cargo rush is being driven by shippers pulling forward bookings ahead of mid-June Peak Season Surcharge (PSS) implementations and an expected July 1 bunker fuel adjustment, not just standard summer restocking.\nWhile the number of announced blank sailings for June has decreased, making baseline capacity appear stable on paper, active vessels remain heavily oversubscribed due to front-loaded demand.\nCape of Good Hope diversions continue to absorb approximately 5.3-6% of total global capacity. Combined with longer transit times, this has reduced empty container availability at Asian origin ports and increased cargo rollover risk, even on non-blanked sailings.\nFreight Rates:\nAs a result of the peak conditions, spot rates have surged, with a sharp single-week increase. Major carriers are pushing base rates even higher for the second half of June.\nCarriers are implementing a PSS effective early to mid-June. Overall shipping costs are expected to remain at elevated levels throughout the month as carriers maintain strict capacity discipline.\n\nTRANS-ATLANTIC WESTBOUND (TAWB)\n\nCapacity and Demand:\nNorthern European vessel utilization remains above 94%, despite April imports falling 11% year over year. Carriers are blanking approximately 17% of trans-Atlantic capacity, concentrated in Weeks 22 to 23, and ongoing port congestion is slowing vessel turnarounds.\nWest Mediterranean utilization sits near 93%, with selective blank sailings. Some loops are already fully booked through June.\nCapacity on Far East–Mediterranean lanes has tightened approximately 5% on a four-week rolling basis, though underlying overcapacity continues to limit upside.\nCurrently, June schedules are suggesting more capacity will be available compared to May, which is anticipated to soften the conditions.\nNorthern European ports remain congested; this includes extended waiting times at key hubs like Rotterdam, Hamburg, Bremerhaven and Antwerp/Zeebrugge.\nMediterranean ports are under similar pressure. Genoa is seeing berth delays of approximately 4 days, and Valencia is absorbing diverted volumes.\nEquipment:\nCritical container and chassis shortages persist across Germany, Benelux, Austria, Hungary, and Slovakia, and are expected to continue through peak season Weeks 24 to 25.\nFreight Rates:\nSpot rates from Northern Europe to the U.S. East Coast have plateaued following a significant Q2 increase. Rates could soften in June as returning capacity outpaces demand, with bunker costs continuing to support a rate floor.\nCarriers on West Mediterranean and East Mediterranean origins have active surcharges in place, including Peak Season Surcharges (PSSs), General Rate Increases (GRIs), and Rate Revision Increases (RRIs).\nAn Equipment Freight Surcharge on dry containers from West Mediterranean and East Mediterranean origins has been in effect since March 16 and remains in place until further notice.\n\nINDIAN SUBCONTINENT TO NORTH AMERICA\n\nCapacity and Demand:\nTo the U.S. East Coast: Demand is increasing and vessel utilization is rising, raising the likelihood that carriers will implement rate increases and Peak Season Surcharges (PSS). Blank sailings are removing capacity in Weeks 24 and 25, and MSC has canceled its INDUS EXPRESS service string, which is expected to further constrain capacity in the coming weeks ahead of a potential Indian subcontinent peak season.\nTo the U.S. West Coast: Demand is increasing and vessel utilization is rising, raising the likelihood that carriers will implement rate increases and PSS.\nFreight Rates:\nTo the U.S. East Coast: Space has become less available, and market rates are expected to increase.\nTo the U.S. West Coast: Rates are increasing. All Indian subcontinent cargo moving to the U.S. West Coast transits on mainline Trans-Pacific Eastbound (TPEB) service strings, which are seeing high utilization as the TPEB market enters peak season.\nAir\nFind the latest updates on global air freight operations on our Middle East escalation blog.\nIndia:\nRates edged slightly lower compared to recent weeks, and capacity availability at origin has improved.\nTransit times remain at 6 to 8 days for both the Americas and Europe, Middle East, and Africa lanes.\nBook 5 to 7 days in advance.\nIndian subcontinent (Bangladesh, Sri Lanka, and Pakistan):\nRates and space remain volatile. Book 5 to 7 days in advance.\nRoute urgent shipments as express to secure space on the Americas and Europe, Middle East, and Africa lanes.\nNorth China:\nU.S. West Coast demand eased this week following last week's month-end surge, with ecommerce and project cargo flows normalizing. Rates are softening on the West Coast as a result.\nU.S. East Coast demand held firm, with rates remaining elevated heading into the first full week of June.\nEurope-bound rates pulled back at the start of June following last week's volume push, as ocean-to-air conversion flows partially unwound.\nBook 5 to 7 days in advance for both Trans-Pacific and Europe-bound lanes.\nSouth China:\nA cargo backlog, ongoing ecommerce demand, and FIFA World Cup 2026 pre-tournament cargo flows are pushing rates higher week over week on both U.S. West Coast and U.S. East Coast lanes.\nDespite a fuel surcharge reduction, the floating market rate rose, keeping the overall rate in line with end-of-May levels.\nEurope-bound rates ticked up as maritime disruptions continue to drive ocean-to-air conversions.\nSpace is tight. Book 5 to 7 days in advance.\nTaiwan:\nRates and demand are tracking close to last week's levels and remain at the high end of the current market range.\nLast-minute bookings face longer transit times due to constrained space.\nBook 5 to 7 days in advance.\nVietnam and Cambodia:\nDemand continued to rise in the first week of June on both Trans-Pacific and Europe-bound lanes.\nCapacity is tight at origin and at connection hubs.\nBook 5 to 7 days in advance.\nSouth Korea:\nDemand and rates softened week over week, offering some relief compared to recent weeks.\nBook 4 to 6 working days in advance.\nMalaysia:\nA post-holiday demand pickup is underway, with capacity expected to tighten in the coming days.\nRates are holding steady. Book 5 to 7 days in advance to secure space before conditions tighten.\nThailand:\nDemand held strong through the month-end. Several carriers suspended new bookings this week to work through existing backlogs.\nBangkok airport terminals are congested, with some delays at cargo acceptance.\nRates remain at the high end of the range. Book 7 to 10 days in advance.\nIndonesia:\nDemand is stable.\nSpace is limited but manageable for shipments confirmed 7 to 10 days before the cargo-ready date.\nTransatlantic (Europe to U.S.):\nLufthansa Cargo, SWISS WorldCargo, and SAS Cargo each reduced fuel surcharges effective June 1, continuing a pattern of declining surcharges on European carriers over the past couple of weeks.\nKLM Cargo is relocating its operations within Amsterdam Schiphol Airport. No disruptions have been reported, but customers should monitor for updates during the transition period.\nNo capacity disruptions are reported at CDG, FRA, or LHR heading into the week of June 5.\n\n(Source: Flexport)\n\nPlease reach out to your account representative for details on any impacts on your shipments.\n\nNorth America Vessel Dwell Times\n\nWebinars\n\nBreaking Down Trump's Executive Order on Foreign Importers of Record\n\nFriday, June 5 @ 9:00 am PT / 12:00 pm ET\n\nNorth America Freight Market Update Live\n\nThursday, June 18 @ 9:00 am PT / 12:00 pm ET\n\nCAPE Explained: Refunds, Common Issues & Next Steps for Importers\n\nAvailable On-Demand\n\nOcean Timeliness Indicator\n\nTransit time remained stable from China to the U.S. West Coast, increased from China to the U.S. East Coast, and decreased from China to North Europe.\n\nWeek to June 1, 2026\n\nTransit time increased from 31.5 days to 32.9 days from China to the U.S. West Coast; decreased from 50.2 days to 49 days from China to the U.S. East Coast; and decreased from 52.1 days to 52.7 days from China to North Europe.\n\nSee the full report and read about our methodology here.",
+    "images": [
+      "https://images.ctfassets.net/92fo1e671z6m/2uujVYl5j0DBnZ4PMpjMdU/545cb6fa0f0311a314022422dc295fe4/vessel_dwell_6_4_26.png",
+      "https://images.ctfassets.net/92fo1e671z6m/eojPz0QSrgTMGNUOXdcHv/289823e0d8d035aee8ff9cf7553d0457/Ocean_Timeliness_Indicator__Week_to_June_1__2026.png"
+    ],
+    "source": "flexport",
+    "crawled_at": "2026-07-03T18:54:23.859043",
+    "snippet": "Trends to Watch\nTalking Tariffs\nTrump Signs Executive Order Overhauling Customs Enforcement: President Trump signed an executive order on June 3 directing a sweeping reform of U.S. customs enforcement, with a focus on tightening importer of record (IOR) requirements, expanding disclosure obligations"
   },
   {
     "url": "https://www.iata.org/en/pressroom/2026-releases/06-30-air-passenger-demand-falls-may/",
@@ -23,7 +93,7 @@
       "https://www.iata.org/contentassets/2020b9ce4b414c288e7b6850348c19bd/pax-may.jpg?width=330&height=216&rmode=crop&v=20260629135353"
     ],
     "source": "iata",
-    "crawled_at": "2026-07-03T08:59:09.860398",
+    "crawled_at": "2026-07-03T18:54:46.849847",
     "snippet": "Translations: La demanda de los viajes aéreos cae 2,2% en mayo (pdf)\n\n国际航协：5月航空客运需求下降2.2% (pdf)\n\nGeneva – The International Air Transport Association (IATA) released data for May 2026 global passenger demand:\n\nTotal demand, measured in revenue passenger kilometers (RPK), was down 2.2% compared to Ma"
   },
   {
@@ -36,7 +106,7 @@
       "https://www.iata.org/contentassets/1d86e4c03203497fb1229010ecd0faeb/cargo-may.jpg?width=330&height=216&rmode=crop&v=20260629095359"
     ],
     "source": "iata",
-    "crawled_at": "2026-07-03T08:59:09.860421",
+    "crawled_at": "2026-07-03T18:54:46.849860",
     "snippet": "Translations: La industria de la carga aérea aumenta 6,0% en mayo (pdf)\n\n国际航协：5月航空货运需求增长6.0% (pdf)\n\nGeneva – The International Air Transport Association (IATA) released data for May 2026 global air cargo markets showing:\n\nTotal demand, measured in cargo tonne-kilometers (CTK), increased by 6.0% comp"
   },
   {
@@ -52,7 +122,7 @@
       "https://www.iata.org/contentassets/04f2562223294aadb0209df432d19393/iatp-signing.jpg"
     ],
     "source": "iata",
-    "crawled_at": "2026-07-03T08:59:09.860425",
+    "crawled_at": "2026-07-03T18:54:46.849863",
     "snippet": "Madrid – The International Air Transport Association (IATA) and the International Airlines Technical Pool (IATP) have agreed to cooperate in helping airlines to improve their visibility of, and access to, aircraft parts. This is timely given the constraints and costs of current failures in the aeros"
   },
   {
@@ -65,7 +135,7 @@
       "https://www.iata.org/contentassets/08a6c3862837484f981096dc431d4e98/engine.jpg?width=330&height=216&rmode=crop&v=20260624094007"
     ],
     "source": "iata",
-    "crawled_at": "2026-07-03T08:59:09.860427",
+    "crawled_at": "2026-07-03T18:54:46.849865",
     "snippet": "Translations: 国际航协：亟需紧急行动 缓解发动机MRO瓶颈 (pdf)\n\nSe requiere acción urgente para aliviar los cuellos de botella en el mantenimiento, reparación y revisión (MRO) de motores (pdf)\n\nAção urgente é necessária para aliviar os gargalos de MRO de motores de aeronaves (pdf)\n\nIl faut agir d’urgence pour réduire l"
   },
   {
@@ -78,62 +148,69 @@
       "https://www.iata.org/contentassets/c460c589141943da9442a9d5d47eb9b1/maintenance.jpg?width=330&height=216&rmode=crop&v=20260624074850"
     ],
     "source": "iata",
-    "crawled_at": "2026-07-03T08:59:09.860429",
+    "crawled_at": "2026-07-03T18:54:46.849867",
     "snippet": "Translations:\n\n国际航协：四大优先事项加强航空供应链 (pdf)\n\nIATA destaca cuatro prioridades para reforzar la cadena de suministro de la aviación (pdf)\n\nIATA aponta quatro prioridades para fortalecer a cadeia de suprimentos da aviação (pdf)\n\nMadrid - The International Air Transport Association (IATA) identified four pr"
   },
   {
-    "url": "https://www.kita.net/shippers/board/newsView.do?morgueCode=2&dataCls=B&dataSeq=8147",
+    "url": "https://www.kita.net/shippers/board/newsView.do?morgueCode=2&dataCls=B&dataSeq=8149",
     "category": "해운",
-    "title": "호르무즈에서 컨선 '좌초'…이란, \"항로 이탈이 원인\"",
-    "date": "2026.07.02",
-    "content": "출처: https://www.oceanpress.co.kr/news/article.html?no=30498\n \n\n[주요 내용 : 호르무즈 해협 라락섬 인근 수역에서 항로를 이탈한 컨테이너선이 좌초하여 운항 지연 및 변수로 작용함.]",
+    "title": "\"올 상반기 韓 선주들이 중고 유조선 매입 1위\"",
+    "date": "2026.07.03",
+    "content": "출처: https://www.oceanpress.co.kr/news/article.html?no=30510\n \n\n[주요 내용 : 상반기 유조선 및 벌크선 신조 및 중고 거래가 크게 증가한 가운데 한국 선주들이 중고 유조선 인수 1위를 기록함.]",
     "images": [
-      "https://kita.net/editordata/20260702/1BD334471F964D99B204A8758B06D4A9"
+      "https://kita.net/editordata/20260703/0FE42195C66544FF809B9D7941DC77F5"
     ],
     "source": "kita",
-    "crawled_at": "2026-07-03T09:00:03.946972",
-    "snippet": "출처: https://www.oceanpress.co.kr/news/article.html?no=30498\n \n\n[주요 내용 : 호르무즈 해협 라락섬 인근 수역에서 항로를 이탈한 컨테이너선이 좌초하여 운항 지연 및 변수로 작용함.]"
+    "crawled_at": "2026-07-03T18:55:22.161481",
+    "snippet": "출처: https://www.oceanpress.co.kr/news/article.html?no=30510\n \n\n[주요 내용 : 상반기 유조선 및 벌크선 신조 및 중고 거래가 크게 증가한 가운데 한국 선주들이 중고 유조선 인수 1위를 기록함.]"
   },
   {
-    "url": "https://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=70&CONTENTS_NO=1&pNttSn=242454",
-    "category": "경제·무역",
-    "title": "영국 5월 선거 이후 달라진 지방정치 지형과 우리 기업 대응 방향",
-    "date": "2026-07-02",
-    "content": "2026년 5월 영국 선거, 양당 구도 약화 및 정치 지형 다변화\n\n\n\n\n2026년 5월 7일 영국에서는 잉글랜드 지방정부의 시·구의회 의원(Councillor) 및 일부 지역의 직선시장(Mayor), 스코틀랜드 의회(Scottish Parliament), 웨일스 의회(Senedd Cymru)를 뽑는 지방정부·의회 선거가 함께 치러졌다. 이번 선거 결과는 기존 노동당·보수당 중심의 양당 구도가 약화되고, 영국개혁당과 녹색당의 영향력이 확대되는 양상이 두드러졌다.\n\n\n\n\n잉글랜드 지방선거에서는 노동당이 28개 의회를 확보해 가장 많은 의회 운영권을 유지했으나 선거 직전 운영권 대비 38개 감소했다. 보수당 역시 9개 의회에서 운영권을 확보했지만 직전 대비 6개 감소했다. 반면 이전에 운영권이 없던 영국개혁당은 14개 의회, 녹색당은 5개 의회 운영권을 새로 확보했으며, 단독 과반 정당이 없는 No Overall Control(NOC) 의회도 64개로 늘어났다. 지방의원 의석 수 기준으로도 영국개혁당과 녹색당은 직전 대비 증가해 각각 1,454석, 587석을 확보한 반면, 노동당과 보수당은 직전 대비 감소해 각각 1,068석, 801석에 그쳤다.\n\n\n\n\n\n<2026년 잉글랜드 지방선거 주요 결과>\n\n정당 구분\n\n\t\n\n지방의회 운영권 확보 수\n\n\t\n\n지방의원 의석 수\n\n\n\n\n2026년 선거 결과\n\n\t\n\n직전 대비 변화*\n\n\t\n\n2026년 선거 결과\n\n\t\n\n직전 대비 변화**\n\n\n\n\n노동당(Labour)\n\n\t\n\n28개\n\n\t\n\n-38\n\n\t\n\n1,068석\n\n\t\n\n-1,498\n\n\n\n\n자유민주당\n(Liberal Democrats)\n\n\t\n\n15개\n\n\t\n\n+1\n\n\t\n\n844석\n\n\t\n\n+155\n\n\n\n\n영국개혁당\n(Reform UK)\n\n\t\n\n14개\n\n\t\n\n+14\n\n\t\n\n1,454석\n\n\t\n\n+1,452\n\n\n\n\n보수당(Conservative)\n\n\t\n\n9개\n\n\t\n\n-6\n\n\t\n\n801석\n\n\t\n\n-563\n\n\n\n\n녹색당(Green Party)\n\n\t\n\n5개\n\n\t\n\n+5\n\n\t\n\n587석\n\n\t\n\n+441\n\n\n\n\nNo Overall Control\n\n\t\n\n64개\n\n\t\n\n+23\n\n\t\n\n-\n\n\t\n\n-\n\n\n\n\n무소속 및 기타\n\n\t\n\n-\n\n\t\n\n-\n\n\t\n\n213석\n\n\t\n\n+35\n\n[자료: BBC News 집계(각 지방정부 공식 선거 결과 기반)]\n\n*주1: 지방의회 운영권 변화는 선거 직전 각 지방의회의 운영권 상태와 선거 이후 결과를 비교해 어느 정당이 과반을 확보했는지를 집계한 수치. 특정 정당이 과반을 확보하지 못한 경우 No Overall Control(NOC)로 분류됨\n\n**주2: 지방의원 수 변화는 2026년에 선거가 치러진 각 의석의 직전 선거 결과와 비교한 수치. 대부분은 2022년 선거가 기준이나, 일부 선거 연기 지역은 2021년 선거가 기준임\n\n\n\n\n런던, 노동당 약화 속 녹색당·영국개혁당 운영권 확보 및 NOC 확대\n\n \n\n광역 런던(Greater London)은 영국의 핵심 비즈니스 거점으로, 다수의 한국 기업이 법인·매장 거점을 운영하는 지역이다. 런던 자치구(London borough)는 인허가, 지역 인프라, 환경·조달 등 기업 운영과 밀접한 행정 권한을 가진다. 따라서 자치구별 정치 구성 변화는 기업이 체감하는 행정·규제·조달 환경에도 영향을 줄 수 있다.\n\n\n\n\n기존 노동당 강세 지역이었던 해크니(Hackney)와 월섬 포레스트(Waltham Forest)에서는 녹색당이 과반 의석을 확보했고, 특히 루이셤(Lewisham)에서는 최초로 녹색당 후보가 시장에 당선됐을 뿐만 아니라 자치구 의회에서도 다수 의석을 확보했다. 녹색당이 운영권을 확보한 지역에서는 기후 대응, 주거, 친환경 조달 등이 주요 정책 의제로 부상할 가능성이 있다. 해크니 자치구 최초의 녹색당 시장인 조이 가벳(Zoë Garbett) 역시 기후 대응과 주거 문제를 주요 과제로 언급한 바 있다.\n\n\n\n\n노동당 약화 흐름은 NOC 지역 확대에서도 확인된다. 바넷(Barnet), 브렌트(Brent), 램버스(Lambeth) 등 노동당이 기존 운영권을 보유했던 다수 자치구가 NOC로 전환됐다. 이는 런던 내 노동당 중심 지방정치 구도가 약화되고, 녹색당, 자유민주당, 지역정당, 무소속 등 다양한 정치 세력의 영향력이 확대되고 있음을 보여준다. 이러한 지역에서는 정책 결정이 정당 간 협상과 지역 여론에 따라 조정될 가능성이 있어 정책 추진 지연으로 이어질 수 있지만, 동시에 지역 기업, 상공회의소, 투자자 및 주민단체가 정책 논의에 참여할 여지가 넓어질 수도 있다. 이에 따라 기업은 인허가 일정, 개발계획, 공공조달 기준 변화 등을 사전에 점검할 필요가 있다.\n\n\n\n\n다만, 런던 전체의 흐름을 녹색당 부상이나 노동당 약화만으로 대표하기는 어렵다. 헤이버링(Havering)에서는 영국개혁당이 런던 내 첫 자치구 운영권을 확보했고, 웨스트민스터(Westminster)는 노동당에서 보수당으로 운영권이 전환됐으며, 타워햄릿(Tower Hamlets)에서는 지역정당인 Aspire가 운영권을 확보했다. 이처럼 기존 노동당 강세 지역뿐 아니라 자치구별 정치 구도 전반에서 변화가 나타나면서, 지역별 주요 정책 의제도 보다 세분화될 가능성이 커졌다.\n\n\n\n\n<2026년 5월 선거 전후 광역 런던 주요 자치구 운영권 변화와 기업 점검 사항>\n\n\n자치구 구분\n\n\t\n\n주요 변화\n\n\t\n\n지역별 변화의 의미\n\n\n\t\n\n기업 점검 사항\n\n\n\n\n해크니(Hackney),\n루이셤(Lewisham),\n월섬 포레스트(Waltham Forest)\n\n\n\t\n\n노동당 → 녹색당\n\n\n\t\n\n기존 노동당 강세 지역에서 기후·주거·지역사회 의제가 강화될 가능성\n\n\t\n폐기물·재활용 기준 확인\nESG* 및 지역사회 기여 요소 점검\n매장·물류 운영비 변화 점검\n\n\n\n헤이버링(Havering)\n\n\n\t\n\nNOC → 영국개혁당\n\n\t\n\n런던 외곽 지역에서 비용 부담, 공공서비스 효율성, 지역 주민 여론이 주요 쟁점으로 부상할 가능성\n\n\n\t\n가격 경쟁력 및 비용 절감 효과 제시\n지역 고용 창출 효과 강조\n공공서비스 개선 성과 제시\n\n\n\n벡슬리(Bexley),\n브롬리(Bromley),\n힐링던(Hilingdon),\n해로우(Harrow),\n켄싱턴앤첼시(Kensington and Chelsea)\n\n\n\t\n\n보수당 유지\n\n\t\n\n외곽·서부 런던 일부 지역에서 세금 부담, 치안 등이 주요 고려 요소로 유지 또는 강화될 가능성\n\n\n\t\n주차·교통 영향 사전 점검\n주민 민원 가능성 확인\n기개발지 활용 및 인허가 조건 검토\n\n\n\n시티오브웨스트민스터\n(City of Westminster)\n\n\n\t\n\n노동당 → 보수당\n\n\n\n\n바넷(Barnet), \n브렌트(Brent), \n엔필드(Enfield), \n해링게이(Haringey), \n램버스(Lambeth), \n뉴엄(Newham)**, \n서더크(Southwark), \n원즈워스(Wandsworth)\n\n\t\n\n노동당 → NOC\n\n\t\n\n단독 과반 정당이 없어 정책 결정이 정당 간 협상과 지역 여론에 따라 조정될 가능성\n\n\n\t\n인허가 일정 변동 가능성 반영\n개발계획·조달 기준 변화 모니터링\n지방의회·지역 이해관계자와 소통 강화\n\n[자료: 런던 지방정부협의체(London Councils), The Standard, BBC News 자료 기반 정리]\n\n\n\n\n*주1: ESG는 환경(Environment), 사회(Social), 지배구조(Governance)의 약자로, 기업의 친환경 활동, 사회적 책임, 지배구조 투명성 등 비재무적 경영 요소를 의미함\n\n**주2: 뉴엄은 시장 선거에서는 노동당 후보가 당선됐으나, 자치구 의회 의석 기준으로는 단독 과반 정당이 없어 NOC로 분류함(노동당 26석, 지역정당인 뉴엄 인디펜던츠(Newham Independents Party) 24석, 녹색당 16석)\n\n\n\n\n런던 외 잉글랜드와 분권정부 지역, 정책 환경 차이 확대\n\n \n\n런던 외 잉글랜드 지역에서는 대도시·광역권과 지방 중소도시·카운티(county*) 지역의 흐름이 다르게 나타났다. 대도시와 광역권에서는 노동당의 전통적 도시 기반이 약화되며 버밍엄(Birmingham), 리즈(Leeds) 등 기존 노동당 강세 지역이 NOC로 전환됐다. 지방 중소도시와 카운티 지역에서는 영국개혁당이 반즐리(Barnsley), 선덜랜드(Sunderland), 게이츠헤드(Gateshead) 등 전통적으로 노동당 기반의 지역뿐 아니라 에식스(Essex), 서퍽(Suffolk) 등 기존 보수당 기반이 강했던 지역에서도 지방정부 운영권을 확보했다.\n\n\n\n\n스코틀랜드 의회 선거에서는 스코틀랜드국민당(SNP, Scottish National Party)이 58석으로 제1당을 유지했으나 단독 과반에는 미치지 못했고, 스코틀랜드 노동당(Scottish Labour)과 영국개혁당이 각각 17석으로 공동 2위를 형성했다. 또한 스코틀랜드 녹색당(Scottish Greens)은 15석을 확보했다. 웨일스 의회(Senedd Cymru) 선거에서는 웨일스 민족당(Plaid Cymru)이 제1당이 됐고, 웨일스 영국개혁당(Reform UK Wales)이 2위를 기록했다. 반면 웨일스 노동당(Welsh Labour)은 1999년 웨일스 분권 이후 처음으로 최다 의석 정당 지위를 잃었다.**\n\n\n\n\n스코틀랜드와 웨일스는 교육, 보건, 교통, 주거, 환경, 지역경제 등 일부 분야에서 영국 중앙정부와 별도의 정책 권한을 가진 분권정부가 운영되는 지역이다. 따라서 기업은 영국 중앙정부 정책뿐 아니라 각 분권정부의 산업·에너지 정책, 인프라 투자, 공공조달 변화도 함께 점검해야 한다. 특히 스코틀랜드는 재생에너지·해상풍력·생명과학, 웨일스는 제조업·반도체·항만 분야와의 연계성이 있어, 관련 기업은 차기 정부 구성과 예산 우선순위, 투자유치 정책 변화를 지속적으로 모니터링할 필요가 있다.\n\n \n\n*주1: 카운티(county)는 영국의 광역 행정구역 단위로, 지역에 따라 카운티 의회가 교통·교육·사회복지 등 광역 행정 기능을 담당함\n\n**주2: 웨일스의 2026년 선거는 의석 수 확대와 선거제도 개편 이후 처음 치러진 선거인 만큼, 직전 2021년 선거와 의석 변화를 단순 비교하기에는 한계가 있음\n\n\n\n\n주요 정당별 정책 방향과 기업 운영 환경에 미치는 영향\n\n \n\n이번 선거 이후 기업은 지역별 정치 구도와 함께 정당별 지방정부 정책 방향을 구분해 볼 필요가 있다. 다만 정당별 정책이 모든 지역에서 동일하게 적용되는 것은 아니며, 중앙정부, 지방정부, 분권정부가 가진 권한 범위에 따라 실제 기업 환경에 미치는 영향은 달라질 수 있다. 주요 정당 및 지방의회 구도별 정책 방향과 기업 영향은 다음과 같이 정리할 수 있다.\n\n\n\n\n<주요 정당·구도별 지방정부 정책 방향과 기업 영향>\n\n정당/구도\n\n\t\n\n주요 정책 의제 및 특징\n\n\t\n\n기업 영향 및 점검 사항\n\n\n\n\n노동당(Labour)\n\n\t\n\n#주택공급 #인프라투자 \n#청정전력\n\n\t\n주택·인프라·에너지 관련 사업 기회 확대 가능\nNOC 지역은 의회 협상에 따라 일정 변동 가능성\n인허가 및 주민 여론 사전 점검 필요\n\n\n\n녹색당(Green Party)\n\n\t\n\n#기후대응 #친환경조달 \n#주거\n\n\t\n폐기물·포장재·에너지 효율 기준 강화 가능\n저탄소 배송 및 건물 에너지 성능 점검 필요\n친환경 기술·재생에너지 기업에는 협력 기회 확대 가능\n\n\n\n\n영국개혁당(Reform UK)\n\n\t\n\n#비용절감 #행정효율 \n#공공서비스\n\n\t\n가격 경쟁력 및 비용 절감 효과 제시 필요\n지역 고용과 공공서비스 기여도 강조 필요\n이민·국경정책은 중앙정부 권한으로 구분해 검토\n\n\n\n보수당(Conservative)\n\n\t\n\n#세금부담완화 \n#교통·주차 #주민의견\n\n\t\n비용·규제 부담 완화 기대 가능\n개발사업은 주민 의견과 교통 영향이 주요 변수\n그린벨트·기개발지 활용 기준 확인 필요\n\n\n\nNo Overall Control\n(NOC)\n\n\t\n\n#정당간협상 #정책조정 \n#일정변동\n\n\t\n인허가·개발계획 일정 변동 가능\n조달 기준 및 예산 우선순위 모니터링 필요\n상공회의소·지역단체를 통한 정책 논의 참여 가능\n\n[자료: 영국 정부(GOV.UK), 영국 법령정보 홈페이지(Legislation.gov.uk), 영국 지방정부협회(Local Government Association), 영국 중앙정부 공공조달 정책자료, 영국 노동당·녹색당·보수당·영국개혁당 정책자료 및 런던정경대학교 그랜섬 연구소(LSE Grantham Research Institute) 자료 기반 KOTRA 런던무역관 정리]\n\n\n\n\n\n현재 영국 중앙정부의 정책 방향이 지방정부 단위의 인허가와 투자 환경에 어떻게 반영되는지도 함께 살펴볼 필요가 있다. 2024년 총선 이후 출범한 노동당 중앙정부는 「계획·인프라법 2025(Planning and Infrastructure Act 2025)」을 통해 주택 공급 및 청정전력 인프라 구축을 지원하고 있다. 이에 따라 주택·인프라·에너지 등 관련 사업에서는 중앙정부의 정책 방향이 기회 요인으로 작용할 수 있으나, 실제 사업 추진 속도와 인허가 조건은 해당 지방정부의 개발계획이나 주민 여론, 의회 내 협상 구도 등에 따라 달라질 수 있다.\n\n\n\n\n정당별 지방정부 운영 방향도 기업 환경에 서로 다른 영향을 미칠 수 있다. 녹색당이 약진한 지역에서는 기후 대응과 친환경 조달이 주요 고려 요소로 부상할 가능성이 있다. 반면 영국개혁당이나 보수당이 강세를 보이는 지역에서는 비용 절감과 행정 효율성이 상대적으로 강조될 수 있다. NOC 지역에서는 단독 과반 정당이 없는 만큼 정책 결정이 정당 간 협상과 지역 여론에 따라 조정될 가능성이 크며, 인허가·개발계획·조달 기준의 추진 일정에도 변동성이 생길 수 있다.\n\n\n\n\n따라서 한국 기업은 특정 정당의 전국 단위 공약만 보기보다는 사업장이 위치한 지방정부의 의회 구성, 지역 개발계획, 예산안 등을 함께 확인할 필요가 있다. 특히 매장·물류 등 현지 거점을 운영하거나 검토하는 기업은 인허가, 폐기물 처리, 지역 고용 요건을 사전에 점검해야 한다.\n\n\n\n\n영국 내 기업에 미치는 영향: 인허가·조달·ESG·지역 고용 변수 확대\n\n \n\n이번 선거 결과가 영국 내 기업에 중요한 이유는 지방정부가 기업 활동과 직접 연결되는 실무 권한을 갖고 있기 때문이다. 잉글랜드 지방정부는 지역별 구조에 따라 개발계획·인허가, 폐기물·재활용, 주민세(council tax), 라이선스, 지역 교통 등을 담당한다. 따라서 지방정부 구성이 바뀌면 기업이 체감하는 행정 환경도 달라질 수 있다.\n\n\n\n\n첫째, 인허가와 입지 전략에 영향이 있을 수 있다. 신규 매장이나 업무시설, 물류·생산 거점을 설치하려는 기업은 의회별 계획 제도와 위원회 성향을 확인해야 한다. 녹색당 강세 지역에서는 개발사업이 주거, 기후, 교통, 지역사회 영향 측면에서 더 엄격하게 검토될 수 있고, 보수당 또는 영국개혁당 강세 지역에서는 세금·비용·주민 불만·행정 효율성이 더 큰 쟁점이 될 수 있다. NOC 지역에서는 의사결정이 지연될 수 있으므로, 기업은 인허가 일정에 여유를 두고 지방정부의 사전 인허가 상담을 활용하거나 지역 상공회의소·주민단체와의 면담을 통해 주요 이해관계자와 미리 소통할 필요가 있다.\n\n\n\n\n둘째, 공공조달 및 공공부문 거래 전략도 달라질 수 있다. 지방정부 조달에서는 가격뿐 아니라 사회적 가치와 환경 성과가 평가될 수 있다. 이에 따라 기업은 입찰 단계에서 지역 고용, 지역 파트너십, 탄소 감축 효과 등을 구체적으로 제시할 필요가 있다. 영국 중앙정부 공공조달에서도 사회적 가치 모델(Social Value Model)을 통해 일자리 창출과 기후 대응 등 실질적인 기여 요소를 평가에 반영하고 있으며, 지방정부 역시 이를 조달 평가에 활용할 수 있다.\n\n\n\n\n셋째, ESG와 소비자 대상 메시지 관리가 중요해질 수 있다. 녹색당이 부상한 지역에서는 기업의 친환경 활동과 지역사회 기여 성과에 관한 관심이 커질 수 있고, 영국개혁당이 강세인 지역에서는 비용 부담과 실질적 효과가 더 중요한 평가 기준이 될 수 있다. 따라서 기업은 지역별 소비자 반응을 고려하되, 과장된 친환경 주장은 피하고 객관적 인증과 수치에 기반한 ESG 메시지를 유지해야 한다.\n\n\n\n\n넷째, 지역 고용과 인력 확보 이슈도 주요 변수가 될 수 있다. 비자 및 이민정책은 중앙정부 권한이지만, 지방정부와 지역사회 차원에서는 현지 고용, 기술훈련, 견습·직업훈련 제도(apprenticeships), 지역 공급망 활용에 대한 기대가 커질 수 있다. 따라서 외국계 기업은 영국 내 인력 채용 계획, 현지 교육기관 및 훈련기관과의 협력, 지역 고용 창출 효과를 보다 명확하게 제시해야 할 가능성이 커지고 있다.\n\n\n\n\n한국 기업에 대한 시사점: 중앙정부 정책과 지방정부 변화를 함께 점검해야\n\n \n\n이번 선거 결과는 영국 시장이 중앙정부 정책만으로 설명하기 어려워졌음을 보여준다. 노동당 중앙정부의 주택 공급, 계획제도 개편, 인프라 투자, 청정전력 정책은 영국 전역의 큰 정책 방향을 형성하지만, 실제 기업 활동은 사업장이 위치한 지방정부의 정치 구성과 정책 우선순위에 따라 달라질 수 있다. 따라서 한국 기업은 영국 진출 및 운영 전략을 수립할 때 런던 자치구, 잉글랜드 지방정부, 스코틀랜드·웨일스 등 분권정부의 정책 변화까지 함께 고려해야 한다.\n\n\n\n\n\n다만 지방정부 변화의 영향은 기업의 진출 형태에 따라 다르게 나타날 수 있다. 영국 내 법인이나 물류·마케팅 거점을 운영하는 한국 기업은 인허가, 교통·주차, 폐기물·재활용, 지역 조달 정책 변화에 직접적인 영향을 받을 수 있다. 반면 현지 유통사나 에이전트를 통해 제품을 공급하는 기업은 직접 규제 부담은 제한적일 수 있으나, 현지 유통사 및 공공기관의 구매 기준을 통해 간접적인 영향을 받을 수 있다. 예를 들어, 친환경 조달이나 폐기물 감축을 중시하는 지역에서는 포장재와 탄소 배출 관리가, 비용 절감과 행정 효율성을 중시하는 지역에서는 가격 경쟁력과 유지보수 비용 절감 효과가 더 중요한 구매 요인이 될 수 있다.\n\n\n\n\n이에 따라 한국 기업은 진출 형태와 거래 방식에 따라 인허가, 조달, ESG, 지역 고용 관련 영향을 구분해 점검할 필요가 있다. 다음 네 가지 사항을 우선적으로 확인할 수 있다.\n\n\n\n\n첫째, 입지 선정 단계에서는 지방정부의 정치 구성과 지역 개발계획을 함께 확인해야 한다. 런던을 기반으로 진출하려는 기업은 사업장이 위치할 자치구의 인허가 방향과 폐기물 기준을 살펴볼 필요가 있으며, 런던 외 지역에 거점을 검토하는 기업도 해당 지방정부의 산업지원 정책과 인력 확보 가능성을 함께 점검해야 한다.\n\n\n\n\n둘째, 업종별로 지방정부 정책 변화가 영업비용과 고객 접점에 미치는 영향을 따져봐야 한다. 리테일·소비재 기업은 매장 입지, 배송·하역, 폐기물 처리 기준을 점검해야 하며, 사후관리 서비스가 중요한 전자제품·의료기기 등의 업종은 서비스센터 입지와 차량 이동 관련 규정을 확인해야 한다. 건설·인프라·에너지 기업은 중앙정부 정책을 기회로 활용하되, 실제 사업 추진 시에는 지방정부 인허가와 지역 여론을 함께 고려해야 한다.\n\n\n\n\n셋째, 공공조달과 지방정부 협력 사업을 고려하는 기업은 사회적 가치와 지역 기여 요소를 사전에 준비해야 한다. 입찰 제안서에는 현지 고용, 지역 공급망 활용, 친환경 운영 방안을 구체적으로 반영할 필요가 있다. 특히 소수집행부가 운영되는 NOC 지역에서는 조달 기준과 예산 우선순위가 조정될 수 있으므로, 입찰 공고뿐 아니라 지방정부의 예산안과 위원회 논의 동향도 함께 확인해야 한다.\n\n\n\n\n넷째, ESG 대응은 지역별 정책 온도 차를 고려하되 일관된 기준을 유지해야 한다. 일부 지역에서 탄소중립 정책에 대한 회의론이 커지더라도, 영국 전체의 공공조달과 대기업 공급망에서는 탄소 감축과 ESG 요구가 계속 유효할 가능성이 크다. 따라서 한국 기업은 탄소 감축 수치, 인증, 공급망 관리 등 객관적 근거에 기반한 ESG 대응 체계를 유지해야 한다.\n\n \n\n종합하면, 우리 기업들은 영국을 단일 시장으로 보기보다 지역별로 세분화된 시장으로 인식하고 인허가, 운영비용, 조달 기준, ESG 요구를 사전에 점검해야 한다. 또한 현지 파트너와 지역 상공회의소 등과의 접점을 확보해 정책 변화에 따른 불확실성을 줄이는 것이 중요하다.\n\n\n\n\n<한국 기업을 위한 체크리스트>\n\n점검 항목\n\n\t\n\n주요 확인 내용\n\n\n\n\n지역 정치 변화\n\n\t\n런던 자치구 및 잉글랜드 지방정부별 정당 구성 확인\n영국개혁당·녹색당 운영권 확보 지역 및 NOC 여부 점검\n지역별 정책 우선순위 변화 확인\n\n\n\n\n\n\n인허가·입지 및 일정 리스크\n\n\n\n\n\t\n개발 인허가 기준 확인 및 지역 개발계획 검토\n주민 공청회 및 계획위원회 일정 확인\nNOC 지역의 정책 결정 지연 가능성 및 일정 완충 기간 반영\n\n\n\n\n\n\nESG·환경정책 및 대외 메시지\n\n\n\n\n\t\n폐기물·재활용, 포장재, 저탄소 물류 기준 점검\n에너지 효율 요구사항 확인\n친환경 주장에 대한 인증·수치 기반 근거 확보\n\n\n\n\n\n\n공공조달 및 현지 협력\n\n\n\n\n\t\n사회적 가치 평가 기준 확인\n지역 고용·탄소 감축 요소 반영\n지역 상공회의소, 조달기관, 현지 파트너 네트워크 구축\n\n\n\n\n\n\n인력 확보 및 비자 리스크\n\n\n\n\n\t\n중앙정부 비자·이민 규정 변화 확인\n현지 채용 계획 점검\n견습·직업훈련 제도 활용 검토\n\n\n\n\n\n\n분권정부\n\n\n\n\n\t\n스코틀랜드·웨일스 산업·에너지 정책 확인\n투자유치 프로그램 점검\n분권정부별 예산 우선순위 모니터링\n\n\n\n\n\n\n\n\n\n\n자료: 영국 정부(GOV.UK), 영국 법령정보 홈페이지(Legislation.gov.uk), 영국 선거관리위원회(Electoral Commission), 영국 지방정부협회(Local Government Association), 런던 지방정부협의체(London Councils), 스코틀랜드 의회 정보센터(SPICe), 웨일스 선거 공식 홈페이지(Vote.Wales), 웨일스 의회 조사서비스(Senedd Research), 런던정경대학교 그랜섬 연구소(LSE Grantham Research Institute), BBC News, The Standard 종합\n\n\n<저작권자 : ⓒ KOTRA ＆ KOTRA 해외시장뉴스>",
-    "images": [],
-    "attachments": [],
-    "source": "kotra",
-    "crawled_at": "2026-07-03T09:01:31.318705",
-    "snippet": "2026년 5월 영국 선거, 양당 구도 약화 및 정치 지형 다변화\n\n\n\n\n2026년 5월 7일 영국에서는 잉글랜드 지방정부의 시·구의회 의원(Councillor) 및 일부 지역의 직선시장(Mayor), 스코틀랜드 의회(Scottish Parliament), 웨일스 의회(Senedd Cymru)를 뽑는 지방정부·의회 선거가 함께 치러졌다. 이번 선거 결과는 기존 노동당·보수당 중심의 양당 구도가 약화되고, 영국개혁당과 녹색당의 영향력이 확대되는 양상이 두드러졌다.\n\n\n\n\n잉글랜드 지방선거에서는 노동당이 28개 의회를 확보해 가장 많은"
-  },
-  {
-    "url": "https://www.ksg.co.kr/news/main_newsView.jsp?pNum=147508",
-    "category": "해운",
-    "date": "2026-07-03 09:00",
-    "title": "日 이스턴카라이너, 신조선 앞세워 美 중량물운송 경쟁력 강화",
-    "subtitle": "500t 취급가능 헤비크레인 탑재…신조선 마산항 첫 취항",
-    "content": "일본 선사 이스턴카라이너(ECL)가 최대 500t의 화물을 운송할 수 있는 재화중량톤수(DWT) 1만8000t급 신조 다목적선을 앞세워 미주행 중량물 운송 경쟁력을 더욱 강화한다. \n\nECL은 지난 5월28일 일본 혼다조선소에서 인도받은 다목적선 <기가트랜스>(사진·GIGA TRANS)호를 마산항에 투입하면서 첫 항해를 성공적으로 시작했다고 밝혔다.\n\n<기가트랜스>호는 250t 헤비크레인 2기를 탑재해 최대 500t의 중량물을 처리할 수 있다. 최신 기술 및 가변형 트리플갑판(Triple-Deck)을 적용해 발전 설비 등의 초중량물부터 일반 잡화와 철재까지 효율적인 선적이 가능하다. \n\n내년에 창립 50주년을 맞이하는 ECL은 아시아 역내·중동·호주·미주 노선을 중심으로 자동차전용선(PCTC)·다목적선(MPP) 서비스를 제공하고 있다. 현재 45여 척의 자동차전용선 및 다목적선을 운항하면서 지속적으로 선대를 확충하고 있다. \n\n최근 북미 지역은 전력 인프라 투자 확대로 중량물 수요가 지속적으로 증가하고 있는 가운데 ECL은 우리나라 마산과 롱비치, 에버렛, 밴쿠버를 연결하는 노선에 <기가트랜스>호를 추가 투입함으로써 북미 서비스 영업 경쟁력을 더욱 강화할 계획이다. \n\n \n\n\nECL코리아 김성환 지사장(위사진)은 “신조선의 첫 기항지로 한국 중량물 선적의 주요 거점인 마산항을 선택한 것은 한국 시장에 대한 당사의 높은 관심과 신뢰를 보여주는 것”이라며, “마산항에서의 성공적인 첫 하역 작업을 시작으로 본선은 본격적인 운항 궤도에 올랐다”고 전했다. \n\n이어 “ECL은 강력한 선대 경쟁력을 통해 대미 수출 화주들에게 한층 더 안정적이고 차별화된 서비스를 제공할 것이며 앞으로 미주 벌크 서비스시장에서의 영향력을 견고히 확대해 나가겠다”고 포부를 밝혔다.  \n\n< 최성훈 기자 shchoi@ksg.co.kr >",
+    "url": "https://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=70&CONTENTS_NO=1&pNttSn=242596",
+    "category": "글로벌 이슈 모니터링",
+    "title": "[2026.7.3.] 중동 주간 정세 및 유가·물류 동향",
+    "date": "2026-07-03",
+    "content": "<저작권자 : ⓒ KOTRA ＆ KOTRA 해외시장뉴스>",
     "images": [
-      "https://www.ksg.co.kr/upload/bbs/2026/IMG20260629162711913314.jpeg",
-      "https://www.ksg.co.kr/upload/bbs/2026/IMG20260629162732727017.jpg"
+      "https://dream.kotra.or.kr/attach/namo/images/001528/20260703171150975_3CEURHVN.jpg",
+      "https://dream.kotra.or.kr/attach/namo/images/001528/20260703171234810_KS10VIKB.jpg",
+      "https://dream.kotra.or.kr/attach/namo/images/001528/20260703171245786_U4S1QYSH.jpg",
+      "https://dream.kotra.or.kr/attach/namo/images/001528/20260703171256308_I0MGC0OA.jpg",
+      "https://dream.kotra.or.kr/attach/namo/images/001528/20260703171310584_I9XXIU0L.png"
+    ],
+    "attachments": [
+      "[[2026.7.3.] 중동 주간 정세 및 유가·물류 동향_F.pdf](https://dream.kotra.or.kr/ajaxa/fileCpnt/fileDown.do?gbn=n01&nttSn=242596&atFileSn=118495&pFrontYn=Y)"
+    ],
+    "source": "kotra",
+    "crawled_at": "2026-07-03T18:56:43.501639",
+    "snippet": "<저작권자 : ⓒ KOTRA ＆ KOTRA 해외시장뉴스>"
+  },
+  {
+    "url": "https://www.ksg.co.kr/news/main_newsView.jsp?pNum=147552",
+    "category": "해운\n조선\n인사/동정\nPhoto News",
+    "date": "2026-07-03 16:16",
+    "title": "한국선급, 신임 유럽委 의장에 빔코 아론 쇠렌센 선임",
+    "subtitle": "21차 유럽위원회 열어 LNG연료 현황 공유",
+    "content": "한국선급(KR)은 6월29일 영국 런던에서 제21차 KR 유럽위원회(KREC)를 성황리에 개최했다고 밝혔다.\n\nKR 유럽위원회는 매년 유럽 내 해사업계를 대표하는 인사들로 구성된 유럽위원회를 열어 KR의 국제 활동과 최신 기술 동향을 공유하고 있다. \n\nKR은 올해 회의에서 사업 추진 현황과 국제선급연합회(IACS) 활동 현황, AI 기반 탈탄소화, 디지털 전환 연구 개발 성과를 소개했다. \n\n이어진 기술 세션에선 ▲한국 조선업 최신 동향 및 KR의 국제해사기구(IMO) 기여 활동 ▲국제 해운의 지속가능한 LNG 활용과 규제 과제 ▲IMO 84차 해양환경보호위원회(MEPC) 회의에서 결정된 온실가스 규제 등을 설명했다. \n\n국제해운회의소(ICS)와 발트국제해사협의회(BIMCO)도 행사에 참석해 해양 탄소 포집·저장(OCCS) 기술과 규제 동향, 온실가스 회계·디지털 보고 관련 국제 실무그룹 논의 현황을 발표했다. \n\n또 이날 회의에선 지난 2004년부터 직무를 수행한 피터 스위프트(Peter M. Swift) KREC 의장이 물러나고 BIMCO 최고환경책임자인 아론 프랑크 쇠렌센(Aron Frank Sørensen, 사진 앞줄 왼쪽에서 5번째)이 신임 의장으로 취임했다. \n\n아울러 셸 임원인 칼 헨릭슨과 독일 베른하르트슐테 최고운영책임자(COO)인 헤겔 바르텔스가 KREC 신규 위원으로 합류했다.\n\nKR 이영석 회장은 22년간 KREC를 이끈 피터 스위프트에 감사 인사를 전하면서 “앞으로도 KREC를 통해 유럽 파트너들과 협력을 더욱 강화해 나가겠다”고 말했다. \n \n\n< 이경희 기자 khlee@ksg.co.kr >",
+    "images": [
+      "https://www.ksg.co.kr/upload/bbs/2026/IMG20260703161539211685.jpg"
     ],
     "source": "ksg",
-    "crawled_at": "2026-07-03T09:01:47.714094",
-    "snippet": "일본 선사 이스턴카라이너(ECL)가 최대 500t의 화물을 운송할 수 있는 재화중량톤수(DWT) 1만8000t급 신조 다목적선을 앞세워 미주행 중량물 운송 경쟁력을 더욱 강화한다. \n\nECL은 지난 5월28일 일본 혼다조선소에서 인도받은 다목적선 <기가트랜스>(사진·GIGA TRANS)호를 마산항에 투입하면서 첫 항해를 성공적으로 시작했다고 밝혔다.\n\n<기가트랜스>호는 250t 헤비크레인 2기를 탑재해 최대 500t의 중량물을 처리할 수 있다. 최신 기술 및 가변형 트리플갑판(Triple-Deck)을 적용해 발전 설비 등의 초중량물"
+    "crawled_at": "2026-07-03T18:57:01.407763",
+    "snippet": "한국선급(KR)은 6월29일 영국 런던에서 제21차 KR 유럽위원회(KREC)를 성황리에 개최했다고 밝혔다.\n\nKR 유럽위원회는 매년 유럽 내 해사업계를 대표하는 인사들로 구성된 유럽위원회를 열어 KR의 국제 활동과 최신 기술 동향을 공유하고 있다. \n\nKR은 올해 회의에서 사업 추진 현황과 국제선급연합회(IACS) 활동 현황, AI 기반 탈탄소화, 디지털 전환 연구 개발 성과를 소개했다. \n\n이어진 기술 세션에선 ▲한국 조선업 최신 동향 및 KR의 국제해사기구(IMO) 기여 활동 ▲국제 해운의 지속가능한 LNG 활용과 규제 과제"
   },
   {
-    "url": "https://www.oceanpress.co.kr/news/article.html?no=30513",
-    "category": "조선플랜트\n홈\n산업\n조선플랜트",
-    "title": "'레닌그라드호' 선미관 블록 설치…러 쇄빙선 건조 '순항'",
+    "url": "https://www.oceanpress.co.kr/news/article.html?no=30516",
+    "category": "정부 · 국회 · 공단\n홈\n정부 · 국회 · 공단",
+    "title": "BPA, 항만 내 불법드론 원천봉쇄를 위한 안티드론 시스템 본격 가동",
     "subtitle": "",
     "date": "",
-    "content": "▲ 레닌그라드호의 선미관 탑재 블록 설치작업 모습. 사진 : USC\n\n \n\n러시아 국영조선그룹 USC 산하 발틱조선소가 '프로젝트 22220'에 따른 원자력쇄빙선 '레닌그라드(Leningrad)호'의 선미관(Stern Tube) 장치가 포함된 대형 블록 설치를 완료했다.\n\n \n\nUSC는 이번에 설치된 선미관 블록의 무게가 215톤을 웃돈다고 밝혔다.\n\n \n\n이 구조물은 조립공장에서 제작된 뒤 부유식 크레인 '데막(Demag)'을 이용해 슬립웨이로 운반됐으며, 이후 4기의 갠트리크레인을 활용해 선체 후미의 지정 위치에 설치됐다.\n\n \n\n이번 공정에 앞서 발틱조선소는 선미관 구조를 지지하는 좌현과 우현 브래킷(Bracket) 설치를 완료했다. 선미 블록 장착이 마무리됨에 따라 앞으로는 선미관과 추진축, 관련 기계장비를 순차적으로 설치하는 작업이 진행될 예정이다.\n\n \n\n최종 단계에서는 추진축에 프로펠러를 장착하게 되며, '프로젝트 22220'에 따라 건조되는 원자력쇄빙선은 모두 3기의 대형 프로펠러를 탑재해 극지방 해역에서의 추진력과 기동성을 확보하도록 설계됐다.\n\n \n\n선미관 장치는 추진축이 선체를 관통하는 부분의 수밀성과 구조적 강도를 유지하는 핵심 설비다.\n\n \n\n특히 프로젝트 22220 쇄빙선은 두꺼운 해빙을 지속적으로 돌파해야 하는 만큼 일반 상선보다 훨씬 높은 하중을 견딜 수 있도록 설계된다. 극저온 환경에서도 장기간 안정적으로 운용될 수 있는 내구성과 신뢰성이 요구되는 핵심 구조물로 평가된다.\n\n \n\n현재 발틱조선소는 레닌그라드호의 선체 조립과 함께 주요 탑재 장비 설치 작업을 병행하고 있으며, 향후 기관·전기·배관 등 의장 공정을 순차적으로 진행할 계획이다.\n\n \n\n프로젝트 22220은 러시아 국영 원자력기업 로사톰(Rosatom)이 발주한 차세대 범용 핵추진 쇄빙선 시리즈로, 북극 항로의 연중 운항을 지원하기 위해 개발됐다. 길이 약 173m, 폭 34m 규모의 이들 선박은 세계 최대·최강급 핵쇄빙선으로 평가받는다.\n\n \n\n선도선 '아르크티카(Arktika)호'는 2016년 진수됐으며, 이후 '시비르(Sibir)호', '우랄(Ural)호', '야쿠티야(Yakutia)호'가 잇따라 건조됐다. 현재는 '추코트카(Chukotka)호'와 '레닌그라드호'가 건조 중이다.\n\n \n\n레닌그라드호는 프로젝트 22220의 6호선으로, 2024년 1월 26일 블라디미르 푸틴 러시아 대통령이 참석한 가운데 용골 거치식을 갖고 본격적인 건조에 들어갔다.",
+    "content": "▲ 안티드론 시연회 행사 참석자들. \n\n \n\n부산항만공사(BPA, 사장 송상근)는 국내 최대 무역항인 부산항을 불법 드론의 위협으로부터 보호하고 항만 운영의 연속성과 안전성을 확보하기 위해 구축한 ‘무역항 안티드론 시스템’이 7월 1일부터 본격 가동에 들어간다고 밝혔다.\n\n \n\n부산항 안티드론 시스템 구축사업은 2024년부터 BPA와 부산지방해양수산청이 사업비를 분담(50:50)하여 추진해 왔다.\n\n \n\n본 시스템을 통해 부산항은 고성능 레이더와 RF탐지기, 드론을 탐지하는 EO/IR 카메라를 통합하여 불법 드론의 접근을 24시간 감시하는 체제를 구축하게 됐다. EO/IR 카메라는 전기화상/적외선 장비를 탑재해 주야간 및 악천후에서도 드론을 탐지·식별·추적하는 장비다.\n\n \n\n미허가 드론의 항만보안구역 내 비행 시 전파 방해(Jamming) 기술을 통해 드론의 통신을 차단하고 지정된 안전 구역으로 드론을 강제 착륙시키거나 회항시켜 항만 시설 및 인명 피해를 원천적으로 방지하게 된다.\n\n\n또한 군·경·정보기관 등 유관 기관과의 공조 체계 구축 및 위험 단계별 세부 조치 사항을 포함한 운영 매뉴얼을 수립함으로써 안티드론 시스템의 성공적인 안착과 현장 대응력을 제고하기 위한 기반을 마련하였다.\n\n \n\n부산항만공사 송상근 사장은 “국내 최대 무역항인 부산항에 불법드론의 접근, 침입 등에 대한 대비를 위해 전국 항만 최초로 안티드론 시스템을 구축했다”라며, “앞으로도 관계기관과의 항만방호태세 유지를 위한 공조를 더욱 철저히 하여 고객들이 안심하고 이용가능한 항만 환경을 조성하도록 적극 노력하겠다”라고 말했다.",
     "images": [
-      "https://www.oceanpress.co.kr/data/photos/20260727/art_17830319215189_132c5b.jpg?iqs=0.5397147669841844"
+      "https://www.oceanpress.co.kr/data/photos/20260727/art_17830636501616_c07b12.jpg?iqs=0.4370112846671568"
     ],
     "source": "oceanpress",
-    "crawled_at": "2026-07-03T09:02:00.116012",
-    "snippet": "▲ 레닌그라드호의 선미관 탑재 블록 설치작업 모습. 사진 : USC\n\n \n\n러시아 국영조선그룹 USC 산하 발틱조선소가 '프로젝트 22220'에 따른 원자력쇄빙선 '레닌그라드(Leningrad)호'의 선미관(Stern Tube) 장치가 포함된 대형 블록 설치를 완료했다.\n\n \n\nUSC는 이번에 설치된 선미관 블록의 무게가 215톤을 웃돈다고 밝혔다.\n\n \n\n이 구조물은 조립공장에서 제작된 뒤 부유식 크레인 '데막(Demag)'을 이용해 슬립웨이로 운반됐으며, 이후 4기의 갠트리크레인을 활용해 선체 후미의 지정 위치에 설치됐다."
+    "crawled_at": "2026-07-03T18:57:11.546069",
+    "snippet": "▲ 안티드론 시연회 행사 참석자들. \n\n \n\n부산항만공사(BPA, 사장 송상근)는 국내 최대 무역항인 부산항을 불법 드론의 위협으로부터 보호하고 항만 운영의 연속성과 안전성을 확보하기 위해 구축한 ‘무역항 안티드론 시스템’이 7월 1일부터 본격 가동에 들어간다고 밝혔다.\n\n \n\n부산항 안티드론 시스템 구축사업은 2024년부터 BPA와 부산지방해양수산청이 사업비를 분담(50:50)하여 추진해 왔다.\n\n \n\n본 시스템을 통해 부산항은 고성능 레이더와 RF탐지기, 드론을 탐지하는 EO/IR 카메라를 통합하여 불법 드론의 접근을 24시간"
   },
   {
     "url": "https://www.sea-intelligence.com/press-room/396-plsci-data-indicates-mega-hub-retrenchment",
@@ -148,7 +225,7 @@
       "https://www.sea-intelligence.com/images/icons/excel_150.png"
     ],
     "source": "sea",
-    "crawled_at": "2026-07-03T09:02:12.336611",
+    "crawled_at": "2026-07-03T18:57:25.274361",
     "snippet": "PLSCI Data Indicates Mega-Hub Retrenchment\n02 JULY 2026\nPRESS ROOM\n\nAnalysis of the 2026‑Q2 Port Liner Shipping Connectivity Index (PLSCI), published by the United Nations Conference on Trade and Development (UNCTAD), indicates that recent network recalibrations have seemingly transitioned from reac"
   },
   {
@@ -165,7 +242,7 @@
       "https://www.sea-intelligence.com/images/icons/excel_150.png"
     ],
     "source": "sea",
-    "crawled_at": "2026-07-03T09:02:12.336627",
+    "crawled_at": "2026-07-03T18:57:25.274374",
     "snippet": "Global Schedule Reliability for May 2026 the Highest of the Year\n29 JUNE 2026\nPRESS ROOM\n\nSea-Intelligence has published issue 178 of the Global Liner Performance (GLP) report, with schedule reliability figures up to and including May 2026. As the 120-page report is quite comprehensive and covers sc"
   },
   {
@@ -181,7 +258,7 @@
       "https://www.sea-intelligence.com/images/icons/excel_150.png"
     ],
     "source": "sea",
-    "crawled_at": "2026-07-03T09:02:12.336630",
+    "crawled_at": "2026-07-03T18:57:25.274377",
     "snippet": "Tracking True Vessel Delay\n24 JUNE 2026\nPRESS ROOM\n\nIn issue 770 of the Sea‑Intelligence Sunday Spotlight, we analysed the relationship between structural schedule buffering and early vessel arrivals. \n\nShipping lines are increasingly relying on schedule buffers, which involve increasing transit tim"
   },
   {
@@ -197,7 +274,7 @@
       "https://www.sea-intelligence.com/images/icons/excel_150.png"
     ],
     "source": "sea",
-    "crawled_at": "2026-07-03T09:02:12.336633",
+    "crawled_at": "2026-07-03T18:57:25.274379",
     "snippet": "Transpacific: Ripe for new non-alliance services\n18 JUNE 2026\nPRESS ROOM\n\nIn issue 769 of the Sea‑Intelligence Sunday Spotlight, we analysed the relationship between container spot rates and the share of Asia-North America West Coast (NAWC) container vessel capacity operated by non‑alliance containe"
   },
   {
@@ -213,24 +290,22 @@
       "https://www.sea-intelligence.com/images/icons/excel_150.png"
     ],
     "source": "sea",
-    "crawled_at": "2026-07-03T09:02:12.336635",
+    "crawled_at": "2026-07-03T18:57:25.274382",
     "snippet": "Decoding Gemini’s Mediterranean Surge\n10 JUNE 2026\nPRESS ROOM\n\nIn issue 768 of the Sea-Intelligence Sunday Spotlight, we analysed East/West container vessel deployment, revealing how Gemini Cooperation is executing a reallocation of their fleet. While headline figures show a broad loss of market sha"
   },
   {
-    "url": "https://www.shippingnewsnet.com/news/articleView.html?idxno=71010",
-    "category": "홈 > 뉴스 > 해양",
-    "title": "1위 부산항만공사, 해양수산부 공공기관 브랜드 7월 빅데이터 분석결과...2위 인천항만공사, 3위 국립해양박물관",
+    "url": "https://www.shippingnewsnet.com/news/articleView.html?idxno=71021",
+    "category": "홈 > 뉴스 > 조선",
+    "title": "KR, 제 21차 유럽위원회 성료",
     "subtitle": "",
-    "date": "입력 2026.07.03 07:29",
-    "content": "해양수산부 공공기관 브랜드평판 2026년 7월 빅데이터 분석결과, 1위 부산항만공사, 2위 인천항만공사, 3위 국립해양박물관 순으로 분석됐다. ​한국기업평판연구소는 해양수산부 공공기관 19개 브랜드에 대해서 빅데이터 분석을 활용한 브랜드 평판조사를 실시했다. 2026년 6월 3일부터 2026년 7월 3일까지의 해양수산부 공공기관 브랜드 빅데이터 27,904,512개를 분석해 소비자들의 브랜드 평판을 분석했다. 지난 6월 해양수산부 공공기관 브랜드 빅데이터 27,160,528개와 비교하면 2.74% 증가했다.\n\n​브랜드에 대한 평판은 브랜드에 대한 소비자들의 활동 빅데이터를 참여가치, 소통가치, 소셜가치, 시장가치, 재무가치로 나누게 된다. 브랜드평판지수는 소비자들의 온라인 습관이 브랜드 소비에 큰 영향을 끼친다는 것을 찾아내서 브랜드 빅데이터 분석을 통해 만들어진 지표이다. 브랜드에 대한 긍부정 평가, 미디어 관심도, 소비자끼리 소통량, 소셜에서의 대화량, 커뮤니티 점유율을 측정하여 분석했다.\n\n​해양수산부 공공기관 브랜드평판 분석은 참여지수, 미디어지수, 소통지수, 커뮤니티지수, 사회공헌지수로 구분하여 브랜드평판지수를 산출했다.\n\n​2026년 7월 해양수산부 공공기관 브랜드평판 순위는 부산항만공사, 인천항만공사, 국립해양박물관, 해양환경공단, 한국어촌어항공단, 한국해양과학기술원, 한국수산자원공단, 한국해양수산연수원, 한국해양진흥공사, 울산항만공사, 한국해양교통안전공단, 여수광양항만공사, 국립해양생물자원관, 한국항로표지기술원, 극지연구소, 국립울진해양과학관, 해양수산과학기술진흥원, 선박해양플랜트연구소, 한국해양조사협회 순이었다.\n\n​1위, 부산항만공사 브랜드는 참여지수 2,118,121 미디어지수 963,019 소통지수 1,201,555 커뮤니티지수 329,944 사회공헌지수 215,823이 되면서 브랜드평판지수 4,828,462로 분석됐다. 지난 6월 브랜드평판지수 4,965,473과 비교해 보면 2.76% 하락했다.\n\n​2위, 인천항만공사 브랜드는 참여지수 1,282,685 미디어지수 792,771 소통지수 1,176,981 커뮤니티지수 265,345 사회공헌지수 154,356이 되면서 브랜드평판지수 3,672,138로 분석됐다. 지난 6월 브랜드평판지수 4,661,934와 비교해 보면 21.23% 하락했다.\n\n​3위, 국립해양박물관 브랜드는 참여지수 841,893 미디어지수 673,618 소통지수 1,541,081 커뮤니티지수 250,480 사회공헌지수 57,801이 되면서 브랜드평판지수 3,364,872로 분석됐다. 지난 6월 브랜드평판지수 2,198,519와 비교해 보면 53.05% 상승했다.\n\n​4위, 해양환경공단 브랜드는 참여지수 238,786 미디어지수 486,045 소통지수 1,192,165 커뮤니티지수 304,874 사회공헌지수 63,250이 되면서 브랜드평판지수 2,285,121로 분석됐다. 지난 6월 브랜드평판지수 1,136,586과 비교해 보면 101.05% 상승했다.\n\n​5위, 한국어촌어항공단 브랜드는 참여지수 717,168 미디어지수 425,189 소통지수 321,222 커뮤니티지수 89,195 사회공헌지수 50,314가 되면서 브랜드평판지수 1,603,087로 분석됐다. 지난 6월 브랜드평판지수 1,399,660과 비교해 보면 14.53% 상승했다.\n\n​한국기업평판연구소 구창환 소장은 \"2026년 7월 해양수산부 공공기관 브랜드평판 결과, 부산항만공사 브랜드가 1위로 분석됐다. 해양수산부 공공기관 브랜드 카테고리를 분석해 보니 지난 6월 해양수산부 공공기관 브랜드 빅데이터 27,160,528개와 비교하면 2.74% 증가했다. 세부 분석을 보면 브랜드소비 8.75% 하락, 브랜드이슈 9.01% 하락, 브랜드소통 35.91% 상승, 브랜드확산 4.37% 하락, 브랜드공헌 19.90% 상승했다\"고 평판 분석했다.\n\n​한국기업평판연구소는 국내 브랜드의 평판지수를 매달 측정하여 브랜드 평판지수의 변화량을 발표하고 있다. 2026년 7월 해양수산부 공공기관 브랜드평판지수는 2026년 6월 3일부터 2026년 7월 3일까지의 19개 해양수산부 공공기관 상장기업 브랜드에 대한 빅데이터 분석 결과이다.\n\n \n\n \n\n 쉬핑뉴스넷 webmaster@shippingnewsnet.com\n 다른기사 보기\n저작권자 © 쉬핑뉴스넷 무단전재 및 재배포 금지",
+    "date": "입력 2026.07.03 16:07",
+    "content": "유럽 해사업계와 기술 교류 강화, 위원회 신임 의장 선임\n영국 런던에서 개최된 제21차 KR 유럽위원회에서 KR 이영석 회장(사진 첫줄 왼쪽에서 6번째)과 유럽위원회 회원들이 기념사진을 촬영하고 있다.\n\nKR(한국선급, 회장 이영석)은 6월 29일 영국 런던에서 「제21차 KR 유럽위원회(KREC)」를 성황리에 개최했다고 밝혔다.\n\nKR 유럽위원회는 유럽의 해사업계를 대표하는 영향력 있는 인사들로 구성되어, KR의 국제 활동과 최신 기술 동향을 공유하고 정기적인 교류를 통해 우호적인 네트워크를 강화하는 자리로 2004년부터 매년 개최되고 있다.\n\n이번 회의에서는 KR의 사업 추진 현황 및 국제선급연합회(IACS, International Association of Classification Societies) 활동 현황과 함께, AI 기반 탈탄소화 및 디지털 전환 연구개발 성과가 소개됐다.\n\n이어진 기술 세션에서는 △한국 조선업 최신 동향 및 KR의 국제해사기구(IMO, International Maritime Organization) 기여 활동 △국제 해운의 지속가능한 LNG 활용과 규제 과제 △IMO 해양환경보호위원회(MEPC, Marine Environment Protection Committee) 84차 회의 결과에 따른 온실가스 영향 분석 등이 발표됐다.\n\n이후 국제해운회의소(ICS, International Chamber of Shipping)와 발틱국제해사협의회(BIMCO, Baltic International Maritime Conference)의 발표를 통해 해양 탄소 포집·저장(OCCS) 기술 및 규제 동향과 온실가스 회계·디지털 보고 관련 국제 실무그룹 논의 현황도 공유됐다.\n\n이날 회의에서는 지난 22년간 KREC 의장직을 성실히 수행해 온 Dr. Peter M. Swift의 퇴임 소식도 전해졌다. 후임 KREC 의장으로는 BIMCO의 Chief Environmental Officer(최고환경책임자)인 Aron Frank Sørensen이 선임됐다.\n\n또한 이번 회의를 통해 Shell International Trading & Shipping Co., Ltd의 Vice President인 Carl Henrickson과 Bernhard Schulte GmbH & Co. KG의 COO인 Helge Bartels이 신규 위원으로 합류했다.\n\nKR 이영석 회장은 \"2004년부터 22년간 KREC를 이끌어 주신 Dr. Peter M. Swift께 깊은 감사의 말씀을 드린다\"며, \"그의 헌신 덕분에 KR은 유럽 해사업계와 신뢰를 쌓으며 성장할 수 있었고, 이는 한국 조선산업 전반의 성장에도 크게 기여했다\"고 밝혔다. 이어 \"앞으로도 KREC를 통해 유럽 파트너들과의 협력을 더욱 강화해 나가겠다\"고 말했다.\n\n 쉬핑뉴스넷 webmaster@shippingnewsnet.com\n 다른기사 보기\n저작권자 © 쉬핑뉴스넷 무단전재 및 재배포 금지",
     "images": [
-      "https://cdn.shippingnewsnet.com/news/photo/202607/71010_54232_3157.png",
-      "https://cdn.shippingnewsnet.com/news/photo/202607/71010_54230_3138.png",
-      "https://cdn.shippingnewsnet.com/news/photo/202607/71010_54231_3146.png"
+      "https://cdn.shippingnewsnet.com/news/photo/202607/71021_54248_721.jpg"
     ],
     "source": "shippingnews",
-    "crawled_at": "2026-07-03T09:02:37.539151",
-    "snippet": "해양수산부 공공기관 브랜드평판 2026년 7월 빅데이터 분석결과, 1위 부산항만공사, 2위 인천항만공사, 3위 국립해양박물관 순으로 분석됐다. ​한국기업평판연구소는 해양수산부 공공기관 19개 브랜드에 대해서 빅데이터 분석을 활용한 브랜드 평판조사를 실시했다. 2026년 6월 3일부터 2026년 7월 3일까지의 해양수산부 공공기관 브랜드 빅데이터 27,904,512개를 분석해 소비자들의 브랜드 평판을 분석했다. 지난 6월 해양수산부 공공기관 브랜드 빅데이터 27,160,528개와 비교하면 2.74% 증가했다.\n\n​브랜드에 대한 평판은"
+    "crawled_at": "2026-07-03T18:57:41.442922",
+    "snippet": "유럽 해사업계와 기술 교류 강화, 위원회 신임 의장 선임\n영국 런던에서 개최된 제21차 KR 유럽위원회에서 KR 이영석 회장(사진 첫줄 왼쪽에서 6번째)과 유럽위원회 회원들이 기념사진을 촬영하고 있다.\n\nKR(한국선급, 회장 이영석)은 6월 29일 영국 런던에서 「제21차 KR 유럽위원회(KREC)」를 성황리에 개최했다고 밝혔다.\n\nKR 유럽위원회는 유럽의 해사업계를 대표하는 영향력 있는 인사들로 구성되어, KR의 국제 활동과 최신 기술 동향을 공유하고 정기적인 교류를 통해 우호적인 네트워크를 강화하는 자리로 2004년부터 매년 개"
   },
   {
     "url": "https://surff.kr/ko/blog/detail/20260703-경제물류-주요뉴스",
@@ -242,7 +317,7 @@
       "https://cms.surff.kr/uploadFile/boardThumnail/0k2uS7Wq.png"
     ],
     "source": "surff",
-    "crawled_at": "2026-07-03T09:03:24.885569",
+    "crawled_at": "2026-07-03T18:58:27.548099",
     "snippet": "20260703 경제·물류 주요뉴스\n\n1. 호르무즈 해협 통행 수수료…오만, 이란과 공동징수 추진\n\n- 호르무즈 해협 통항 수수료 부과가 추진되며 해운 운임 상승 국면에서 물류비 부담이 추가로 커질 수 있다는 우려가 제기됐다.\n\n\n\n\n2. 마스오토 \"부산항까지 트레일러 자율주행…2028년 화물 완전 무인화\"\n\n- 마스오토가 부산항 물동량을 기반으로 트레일러 자율주행 상용화를 추진하며 2028년 화물 운송의 완전 무인화를 목표로 제시했다.\n\n\n\n\n3. ‘호르무즈 통행료’, 세계 경제 새 부담…물류비 쇼크 오나\n\n- 호르무즈 해협에 통"
   },
   {
@@ -255,8 +330,21 @@
       "https://cms.surff.kr/uploadFile/boardThumnail/0k2uS7Wq.png"
     ],
     "source": "surff",
-    "crawled_at": "2026-07-03T09:03:24.885583",
+    "crawled_at": "2026-07-03T18:58:27.548113",
     "snippet": "20260702 경제·물류 주요뉴스\n\n1. 미·이란, 카타르 중재 간접 종전 협상…호르무즈 해협 통제권 쟁점\n\n- 중동전쟁 이후 호르무즈 해협에 갇혀 있던 한국 선박 중 HMM 초대형 원유운반선이 처음으로 해협을 빠져나왔다는 소식이다.\n\n\n\n\n2. [현장] '미국서 인증된 자율주행' 마스오토, 물류 혁신 승부수\n\n- 마스오토는 승인을 바탕으로 부산항을 거점으로 물류 혁신을 추진하겠다는 구상을 밝혔다.\n\n\n\n\n3. 인천항 1만6000TEU급 시대 열었다\n\n- 인천항 미주 정기항로에 초대형 컨테이너선이 처음 투입되며 대형선 시대가 본격"
+  },
+  {
+    "url": "https://surff.kr/ko/blog/detail/vol130-주간-선사별-동향-week-27-2026",
+    "category": "주간 선사 동향",
+    "title": "Vol130. 주간 선사별 동향 (Week 27, 2026)",
+    "date": "2026-07-02\n\n2분",
+    "content": "[MAERSK]\n\n1. 머스크, 브라질 북동부 수아페항 투자 확대…남미 물류 거점 육성\n\n- 머스크는 수아페·페셈항을 중심으로 브라질 북동부 항만 클러스터 구축과 복합물류망 확충에 나서며, 남미 공급망의 전략 거점 확보를 추진하고 있다.\n\n\n\n\n2. 머스크, 운임·물동량 급등에 2026년 실적 가이던스 대폭 상향\n\n- 머스크는 극동발 수요 강세와 스팟운임 급등을 반영해 2026년 연간 EBITDA와 EBIT 전망치를 큰 폭으로 올리며 실적 기대치를 상향 조정했다.\n\n\n\n\n3. 머스크, 중동 운항 신중 기조 유지…유럽 항만 지연 대응 강화\n\n- 머스크는 중동 해협 통항 재개를 신중히 검토하는 한편, 유럽 주요 항만의 혼잡과 지연 가능성에 대비해 고객들의 추가 리드타임 확보를 권고했다.\n\n\n\n\n[MSC]\n\n1. MSC, 헝리중공업에 LNG 이중연료 2만TEU급 최대 20척 발주 추진\n\n- MSC는 중국 헝리중공업에 LNG 이중연료 추진 초대형 컨테이너선 최대 20척 발주를 추진하며, 친환경 선대 확대와 글로벌 1위 선복 경쟁력 강화에 속도를 내고 있다.\n\n\n\n\n2. MSC, 상반기 세계 최대 컨테이너선사 지위 유지…톱10 선사 선대 확장 지속\n\n- MSC는 2026년 상반기 선복량 733만TEU로 세계 1위를 유지했고, 글로벌 톱10 컨테이너선사들도 대규모 발주와 친환경 선대 투자를 이어가며 시장 지배력을 강화하고 있다.\n\n\n\n\n[CMA CGM]\n\n1. CMA CGM, 페덱스 서플라이체인 14억달러 인수…북미 물류사업 확대\n\n- CMA CGM은 페덱스 서플라이체인을 14억달러에 인수해 북미 계약물류 사업을 대폭 확대하고, 해상·항공 물류 협력도 함께 강화한다. \n\n\n\n\n2. CMA CGM, 호르무즈 해협서 대형 컨테이너선 1척 추가 이탈\n\n- CMA CGM은 호르무즈 해협에 고립됐던 1만5,254TEU급 대형 컨테이너선 ‘CMA CGM Galapagos’호를 안전하게 이탈시키며, 걸프 내 잔류 선박의 단계적 철수 가능성을 보여줬다.\n\n\n\n\n3. CMA CGM, 오만 소하르항에 4억달러 물류터미널 투자…걸프 우회 거점 확보\n\nCMA CGM은 오만 아시야드그룹과 소하르항 복합물류터미널 개발에 나서며, 호르무즈 해협 차질에 대응한 중동 우회 물류 거점을 강화하고 있다.\n\n\n\n\n\n\n\n[COSCO]\n\n1. COSCO, 8월부터 아시아~미국 항로 GRI 인상\n\n- COSCO는 8월 1일부터 한국을 포함한 아시아 주요 국가발 미국행 일반 드라이 및 냉동·냉장화물에 대해 최대 53피트당 2,940달러의 일반운임인상(GRI)을 적용한다.\n\n\n\n\n2. COSCO쉬핑디벨롭먼트, 벌크선 24척 발주…그룹 내 장기용선 확대\n\n- COSCO쉬핑디벨롭먼트는 곡물선·뉴캐슬막스 등 벌크선 24척을 발주하고 그룹 계열사에 장기용선하는 구조로 선박 리스 사업과 벌크 운송 역량을 함께 강화하고 있다.\n\n\n\n\n\n\n\n[Hapag-Lloyd]\n\n1. 제미니, 4~5월 정시성 91.4% 기록…글로벌 최고 수준 운영 안정성 입증\n\n- 머스크와 하팍로이드의 제미니 협력체는 4~5월 정시성 91.4%를 기록하며 주요 경쟁 얼라이언스를 큰 폭으로 앞서는 운영 신뢰성을 보여줬다.\n\n\n\n\n2. 하팍로이드, 함부르크 터미널 지분 확대 추진…항만 인프라 내재화 강화\n\n- 하팍로이드의 터미널 자회사 HGT는 유로게이트 함부르크 터미널 지분 20% 인수와 탕헤르 TC3 지분 확대를 추진하며 핵심 항만 거점에 대한 영향력 강화에 나섰다.\n\n\n\n\n\n\n\n[EVERGREEN]\n\n1. 에버그린 선박, 오만 인근서 미상 물체 피격…호르무즈 해협은 안전 통과\n\n- 에버그린은 자사 선박 ‘Ever Lovely’호가 오만 인근에서 미상 물체에 맞아 선교 우현 일부가 손상됐지만, 선원·화물은 모두 안전하며 선박은 정상 운항을 이어갔다.\n\n\n\n\n\n\n\n[HMM]\n\n1. HMM, 머큐리아와 VLGC 2척 장기계약 확보…가스운송 포트폴리오 확대\n\n- HMM은 HD현대삼호에 발주한 VLGC 2척을 기반으로 머큐리아와 장기 용선계약을 체결하며, 컨테이너 중심 구조를 넘어 에너지 해운 사업 다각화에 나섰다.\n\n\n\n\n2. HMM, 글로벌 ESG 평가서 3년 연속 최고 등급 유지\n\n- HMM은 에코바디스 플래티넘과 서스테이널리틱스 Low Risk를 3년 연속 유지하며 글로벌 최고 수준의 ESG 경영 역량을 입증했다.\n\n\n\n\n\n\n\n[팬오션]\n\n1. 팬오션, 부패방지·준법경영 국제인증 획득\n\n- 팬오션은 ISO37001과 ISO37301 인증을 획득하며 윤리경영과 준법경영 체계를 대외적으로 인정받고 내부통제 및 컴플라이언스 강화에 나섰다.\n\n\n\n\n2. 팬오션, VLCC 신조 2척 추가 추진…탱커 선대 확장 가속\n\n- 팬오션은 초대형 원유운반선(VLCC) 2척을 추가로 확보해 원유 탱커 선대를 더욱 확대하며, 장기계약 기반의 에너지 운송 포트폴리오 강화에 속도를 내고 있다.\n\n\n\n\n해시태그\n#MAERSK\n#MSC\n#CMACGM\n#팬오션\n#COSCO\n#주간선사동향\n공유하기\n\n해당 게시물은 서프컴퍼니가 직접 제작한 콘텐츠로 사용 시 ´서프컴퍼니 뉴스레터´ 출처 표기를 부탁드립니다.\n\n마켓 플레이스 바로가기\n\n글로벌 선사와 물류업체가 제공하는 실시간 운임을 비교하고, 원하는 조건에 맞춰 부킹까지 손쉽게 진행할 수 있습니다.\n\n해운 데이터 맵 바로가기\n\n어떤 기업이 특정 경로를 통해 몇 개의 컨테이너를 선적했는지, 어느 선사가 어떤 경로에서 활동하고 있는지 등의 컨테이너기반 데이터를 매주 업데이트된 정보로 제공합니다.\n\n해상운임 조회하기\n\n과거와 미래의 항로별 운임 추이를 조회할 수 확인할 수 있습니다.\n\n서프컴퍼니 카카오 친구 추가하기\n\n매주 업데이트되는 프로모션 선복과 챗봇 기능을 통해 다양한 데이터를 간편하게 확인하세요.\n\n인기 콘텐츠\n\n가장 인기 있는 콘텐츠들을 모아봤어요\n전체글 보기\n\n1\n글로벌 주요 항만 소개 - 아시아 · 미주 (Week15, 2025)\n물류101\n2025-04-11\n2\n선적지와 도착지에서 발생하는 부대비용\n물류101\n2025-03-04\n3\nSURFF는 백화점이다\n인사이드 서프\n2026-06-22\n4\nVol129. 주간 선사별 동향 (Week 26, 2026)\n주간 선사 동향\n2026-06-25\n5\n20260630 경제·물류 주요뉴스\n데일리스크랩\n2026-06-30\n목록으로",
+    "images": [
+      "https://cms.surff.kr/uploadFile/boardThumnail/yRrA-Ywm.jpg"
+    ],
+    "source": "surff",
+    "crawled_at": "2026-07-03T18:58:27.548116",
+    "snippet": "[MAERSK]\n\n1. 머스크, 브라질 북동부 수아페항 투자 확대…남미 물류 거점 육성\n\n- 머스크는 수아페·페셈항을 중심으로 브라질 북동부 항만 클러스터 구축과 복합물류망 확충에 나서며, 남미 공급망의 전략 거점 확보를 추진하고 있다.\n\n\n\n\n2. 머스크, 운임·물동량 급등에 2026년 실적 가이던스 대폭 상향\n\n- 머스크는 극동발 수요 강세와 스팟운임 급등을 반영해 2026년 연간 EBITDA와 EBIT 전망치를 큰 폭으로 올리며 실적 기대치를 상향 조정했다.\n\n\n\n\n3. 머스크, 중동 운항 신중 기조 유지…유럽 항만 지연 대응"
   },
   {
     "url": "https://surff.kr/ko/blog/detail/20260701-경제물류-주요뉴스",
@@ -268,7 +356,7 @@
       "https://cms.surff.kr/uploadFile/boardThumnail/0k2uS7Wq.png"
     ],
     "source": "surff",
-    "crawled_at": "2026-07-03T09:03:24.885587",
+    "crawled_at": "2026-07-03T18:58:27.548118",
     "snippet": "20260701 경제·물류 주요뉴스\n\n1. 7월 LPG 판매가격 '소폭 인상'... kg당 50원\n\n- E1이 국제 LPG 가격·운임·환율 상승 요인을 반영해 7월 LPG 판매가격을 kg당 50원 수준으로 소폭 인상했다.\n\n\n\n\n2. 55GW 규모 해상풍력 건설 로드맵 나왔다\n\n- 향후 10년간 매년 4GW 이상 입찰을 추진하는 55GW급 해상풍력 로드맵이 제시되며 하부구조물·케이블·항만·설치선박 등 공급망 투자 필요성이 부각됐다.\n\n\n\n\n3. 美, USMCA 연장 거부 방침… 북미 자유무역체제 ‘중대 분수령’\n\n- 미국이 USMC"
   },
   {
@@ -281,21 +369,8 @@
       "https://cms.surff.kr/uploadFile/boardThumnail/0k2uS7Wq.png"
     ],
     "source": "surff",
-    "crawled_at": "2026-07-03T09:03:24.885590",
+    "crawled_at": "2026-07-03T18:58:27.548120",
     "snippet": "20260630 경제·물류 주요뉴스\n\n1. 미래산업, 아산 신공장 145억에 인수…생산능력 2.8배 ↑\n\n- 미래산업이 아산 신공장을 인수해 기존 생산체계와의 통합을 바탕으로 생산능력 확대를 추진한다.\n\n\n\n\n2. 우회덤핑 차단 공조…관세청·무역위 공동 대응\n\n- 관세청과 무역위가 협의체를 통해 우회덤핑 감시 정보를 공유하고 무역구제 조치의 실효성 강화를 논의했다.\n\n\n\n\n3. 국제유가, 주말 호르무즈 무력공방에 상승…WTI 2%↑\n\n- 호르무즈 인근 무력 공방 등 지정학적 긴장으로 국제유가가 상승 압력을 받았다.\n\n\n\n\n4. “美"
-  },
-  {
-    "url": "https://surff.kr/ko/blog/detail/20260629-경제물류-주요뉴스",
-    "category": "데일리스크랩",
-    "title": "20260629 경제·물류 주요뉴스",
-    "date": "2026-06-29\n\n1분",
-    "content": "20260629 경제·물류 주요뉴스\n\n1. 호르무즈 내 한국 선박 2척 추가 탈출...3척만 남아\n\n- 종전 합의 이후 호르무즈 해협을 빠져나온 한국 선박이 늘었지만 아직 3척이 남아 물류 불확실성이 이어지고 있다.\n\n\n\n\n2. 중동전쟁 장기화에 중소기업 피해 '962건'\n\n- 중동전쟁 장기화로 해상운임 증가와 우회 운송이 겹치며 중소기업 피해 사례가 누적되고 있다.\n\n\n\n\n3. 글로벌 해운운임, 9주 연속 상승…3200대 돌파\n\n- 상하이컨테이너운임지수(SCFI)가 9주 연속 상승해 3200선을 넘으며 해상물류 비용 부담이 커지고 있다.\n\n\n\n\n4. 계란 수입에 올해 재정 1212억 투입…산란계업계 \"규제가 가격 급등 원인\"\n\n- 계란 수입 확대 과정에서 항공 운송을 활용하면 해상운송 대비 비용이 급증해 수급 대책의 재정 부담이 커질 수 있다.\n\n\n\n\n5. 휴전 흔들리자 다시 긴장…중동 리스크 재고조에 떠는 해운·항공업계\n\n- 지정학적 리스크가 지속될 경우 전시위험보험료와 연료비 상승 등으로 해운·항공 업계의 비용 부담이 이어질 전망이다.\n\n\n\n\n6. 부산진해경자청, 글로벌 물류기업 대상 투자설명회… ‘트라이포트’ 비전 소개\n\n- 부산진해경제자유구역이 복합물류기업을 대상으로 투자환경과 트라이포트 비전을 홍보하며 투자 유치에 나섰다.\n\n\n\n\n7. 부산형 급행철도 등 ‘2차 도시철도망 계획’ 국토부 승인\n\n- 부산항선 등을 포함한 도시철도망 확충 계획이 승인되며 항만 연계 교통 인프라 개선 기대가 커지고 있다.\n\n\n\n\n8. 미·이란, 공격 중단 합의…도하서 호르무즈 통행 담판\n\n- 호르무즈 통행을 둘러싼 긴장 완화를 위해 미·이란이 공격 중단에 합의하며 해상 물류 리스크가 변곡점을 맞고 있다.\n\n\n\n\n9. 해수부 \"호르무즈 해협에 한국 선박 3척 남아\"\n\n- 호르무즈 해협에 남은 한국 선박이 3척으로 줄었지만 상황 변화에 따라 운항 차질 가능성은 남아 있다.\n\n\n\n\n10. 9주 연속 오른 컨테이너 운임에도…웃지 못하는 해운사\n\n- 컨테이너 운임은 상승세지만 비용 증가와 불확실성으로 해운사의 수익 개선이 제한될 수 있다는 분석이 나온다.\n\n\n\n\n해시태그\n#경제뉴스\n#뉴스요약\n#뉴스브리핑\n공유하기\n\n해당 게시물은 서프컴퍼니가 직접 제작한 콘텐츠로 사용 시 ´서프컴퍼니 뉴스레터´ 출처 표기를 부탁드립니다.\n\n마켓 플레이스 바로가기\n\n글로벌 선사와 물류업체가 제공하는 실시간 운임을 비교하고, 원하는 조건에 맞춰 부킹까지 손쉽게 진행할 수 있습니다.\n\n해운 데이터 맵 바로가기\n\n어떤 기업이 특정 경로를 통해 몇 개의 컨테이너를 선적했는지, 어느 선사가 어떤 경로에서 활동하고 있는지 등의 컨테이너기반 데이터를 매주 업데이트된 정보로 제공합니다.\n\n해상운임 조회하기\n\n과거와 미래의 항로별 운임 추이를 조회할 수 확인할 수 있습니다.\n\n서프컴퍼니 카카오 친구 추가하기\n\n매주 업데이트되는 프로모션 선복과 챗봇 기능을 통해 다양한 데이터를 간편하게 확인하세요.\n\n인기 콘텐츠\n\n가장 인기 있는 콘텐츠들을 모아봤어요\n전체글 보기\n\n1\n글로벌 주요 항만 소개 - 아시아 · 미주 (Week15, 2025)\n물류101\n2025-04-11\n2\n선적지와 도착지에서 발생하는 부대비용\n물류101\n2025-03-04\n3\nSURFF는 백화점이다\n인사이드 서프\n2026-06-22\n4\nVol129. 주간 선사별 동향 (Week 26, 2026)\n주간 선사 동향\n2026-06-25\n5\n20260630 경제·물류 주요뉴스\n데일리스크랩\n2026-06-30\n목록으로",
-    "images": [
-      "https://cms.surff.kr/uploadFile/boardThumnail/0k2uS7Wq.png"
-    ],
-    "source": "surff",
-    "crawled_at": "2026-07-03T09:03:24.885591",
-    "snippet": "20260629 경제·물류 주요뉴스\n\n1. 호르무즈 내 한국 선박 2척 추가 탈출...3척만 남아\n\n- 종전 합의 이후 호르무즈 해협을 빠져나온 한국 선박이 늘었지만 아직 3척이 남아 물류 불확실성이 이어지고 있다.\n\n\n\n\n2. 중동전쟁 장기화에 중소기업 피해 '962건'\n\n- 중동전쟁 장기화로 해상운임 증가와 우회 운송이 겹치며 중소기업 피해 사례가 누적되고 있다.\n\n\n\n\n3. 글로벌 해운운임, 9주 연속 상승…3200대 돌파\n\n- 상하이컨테이너운임지수(SCFI)가 9주 연속 상승해 3200선을 넘으며 해상물류 비용 부담이 커지고"
   },
   {
     "url": "http://www.ulogistics.co.kr/test/board.php?board=all2&command=body&no=5202",
@@ -308,261 +383,228 @@
       "http://www.ulogistics.co.kr/test/data/board/all2/file_in_body/10/2__1nasfew3b.jpg"
     ],
     "source": "ulogistics",
-    "crawled_at": "2026-07-03T09:03:55.411185",
+    "crawled_at": "2026-07-03T18:58:52.460780",
     "snippet": "‘물류·제조 대형 수주 잇달아’ 피지컬 AI 기반 로봇 자동화 사업 가속 \n‘1분기 매출 전년대비 562% 증가’ 사상 최대 분기 매출 달성\n\n\n\n\n씨메스로보틱스가 물류와 제조 현장에서 잇따른 대형 프로젝트를 확보하며 피지컬 AI 기반 로봇 자동화 사업 확대에 속도를 내고 있다. 물류 자동화와 소비재 제조 자동화 분야에서 고난도 프로젝트를 연이어 수주하며 적용 산업 범위를 넓히고 있으며, 이러한 성과는 올해 1분기 사상 최대 분기 매출 기록으로 이어졌다.\n씨메스로보틱스는 최근 쿠팡풀필먼트서비스와 69억원 규모의 물류 자동화 솔루션"
+  },
+  {
+    "title": "중동 전쟁 '베팅' 적중…WSJ \"장금상선 2세 정가현, 유조선 시장 최대 수혜자\"",
+    "url": "https://www.newspim.com/news/view/20260703000171",
+    "snippet": "[시드니=뉴스핌] 권지언 특파원 = 한국의 해운 재벌 2세가 미국과 이스라엘의 이란 공습, 그리고 뒤이은 호르무즈 해협 봉쇄 국면에서 세계 최대 유조선 선단을 구축해 막대한 수익을 거둔 것으로 전해지면서 월스트리트저...",
+    "date": "10 hours ago",
+    "search_engine": "brave",
+    "source": "search_운송지연_항만적체",
+    "search_keyword": "글로벌 해운 지연",
+    "theme": "운송지연_항만적체",
+    "crawled_at": "2026-07-03T18:59:04.709786"
   },
   {
     "title": "삼성중공업, 쿠옥그룹과 조선·해양·디지털 인프라 협력",
     "url": "https://www.newspim.com/news/view/20260702001026",
     "snippet": "[서울=뉴스핌] 이찬우 기자 = 삼성중공업이 싱가포르 쿠옥그룹과 조선·해양 분야를 넘어 해상 물류, 에너지, 디지털 인프라까지 사업 협력을 확대한다. 글로벌 파트너와의 장기 협력을 통해 유연한 생산 체계와 미래 사업 ...",
-    "date": "17 hours ago",
+    "date": "1 day ago",
     "search_engine": "brave",
     "source": "search_운송지연_항만적체",
     "search_keyword": "글로벌 해운 지연",
     "theme": "운송지연_항만적체",
-    "crawled_at": "2026-07-03T09:04:09.661100"
+    "crawled_at": "2026-07-03T18:59:04.709802"
   },
   {
     "title": "[현장] 폴스타코리아, ‘폴스타 3’ 글로벌 대비 2년 지연 출시에 숨은 ‘소비자 신뢰’의 가치 < 헤드라인 < 가치소비현장 < 가치소비뉴스 < 기사본문 - 가치소비뉴스 컨슈머와이드",
     "url": "https://www.consumerwide.com/news/articleView.html?idxno=66441",
     "snippet": "[컨슈머와이드-전휴성 기자] 2일 폴스타가 브랜드의 정체성을 견인할 플래그십 SUV ‘폴스타 3’를 국내 시장에 공식 출시했다. 이는 글로벌 시장 판매 시점보다 약 2년가량 늦어진 국내 출시다. 단기적인 실적에 급급하기보다 ...",
-    "date": "13 hours ago",
-    "search_engine": "brave",
-    "source": "search_운송지연_항만적체",
-    "search_keyword": "글로벌 해운 지연",
-    "theme": "운송지연_항만적체",
-    "crawled_at": "2026-07-03T09:04:09.661114"
-  },
-  {
-    "title": "어느 회사 다니며 본 것들",
-    "url": "https://bbs.ruliweb.com/community/board/300143/read/75793329",
-    "snippet": "회사 때려치우고 싶었는데 어찌저찌 다닌지 몇 년 길다면 길고 짧다면 짧은데 별의별 꼴을 다 본 것 같음 어느 날 화장실에 붙은 안내문 뱀이 서식하는 친환경적인 근무지 심심할까 봐 종종 음악 틀어주는 친절한 이웃들 ...",
     "date": "1 day ago",
     "search_engine": "brave",
     "source": "search_운송지연_항만적체",
     "search_keyword": "글로벌 해운 지연",
     "theme": "운송지연_항만적체",
-    "crawled_at": "2026-07-03T09:04:09.661116"
+    "crawled_at": "2026-07-03T18:59:04.709804"
   },
   {
-    "title": "[기고]②핵잠수함 시대, 핵연료 공급망이 국가 경쟁력 좌우",
-    "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02161526645510912",
-    "snippet": "최근 우리 사회에서 핵추진잠수함 확보 논의가 다시 활발해지고 있다. 북한의 핵·미사일 능력이 고도화되고 미·중 전략경쟁이 심화되면서 장기간 은밀한 작전이 가능한 핵추진잠수함의 전략적 가치가 커지고 있기 때문이다.",
+    "title": "[해양통신] 북극항로 시험운항 선박 '확보'…\"8월 말 출항 유력\"",
+    "url": "https://oceanpress.co.kr/news/article.html?no=30501",
+    "snippet": "북극항로 시험 운항을 위한 준비작업이 급박하게 진행되고 있다. 해양수산부와 국회, 그리고 해운업계에 따르면 난항을 거듭하던 내빙 컨테이너선 확보는 국내 선주 보유선박이 확인돼 이 선박을 용선하는 것으로 사실상 ...",
+    "date": "1 day ago",
+    "search_engine": "brave",
+    "source": "search_운송지연_항만적체",
+    "search_keyword": "항만 적체 컨테이너",
+    "theme": "운송지연_항만적체",
+    "crawled_at": "2026-07-03T18:59:05.063025"
+  },
+  {
+    "title": "\"300만원에서 65만원 떨어졌는데\"...애널들은 주가 420만원 간다는 SK하이닉스 - 파이낸셜뉴스",
+    "url": "https://fnnews.com/news/202607031303205463",
+    "snippet": "주가가 회복 중이지만 여전히 갈길은 멀다.김동원 KB증권 연구원은 3일 \"하이퍼스케일러의 유휴 컴퓨팅 파워 판매는 인공지능 투자의 대표적인 수익화 사례\"라며 \"컴퓨팅 파워 판매가 AI 투자를 꺾는 게 아니라 더 가속화할 ...",
+    "date": "6 hours ago",
+    "search_engine": "brave",
+    "source": "search_운송지연_항만적체",
+    "search_keyword": "항만 적체 컨테이너",
+    "theme": "운송지연_항만적체",
+    "crawled_at": "2026-07-03T18:59:05.063042"
+  },
+  {
+    "title": "Korea Zinc Moves to Cut Ore Dependence and Build an Independent Critical Materials Supply Chain < Insight Global News < 일반 < 기사본문 - 인사이트코리아",
+    "url": "https://www.insightkorea.co.kr/news/articleView.html?idxno=249515",
+    "snippet": "[Insight Korea = Kim Ho-jin] Korea Zinc is moving to reduce its dependence on ore and secure supply chain independence by extracting key materials from waste.",
     "date": "3 hours ago",
     "search_engine": "brave",
     "source": "search_운송지연_항만적체",
-    "search_keyword": "항만 적체 컨테이너",
+    "search_keyword": "supply chain disruption logistics",
     "theme": "운송지연_항만적체",
-    "crawled_at": "2026-07-03T09:04:10.081696"
+    "crawled_at": "2026-07-03T18:59:05.465982"
   },
   {
-    "title": "[AI 토큰 청구서②] \"사람보다 더 쓰는 에이전트\"… SW업계, 토큰 폭탄에 해결책 고심 - 디지털데일리",
-    "url": "https://ddaily.co.kr/page/view/2026070116440230533",
-    "snippet": "생성형 AI는 국내 SW기업의 개발 방식뿐 아니라 원가 구조와 인재 기준까지 바꾸고 있다. <디지털데일리>는 국내 주요 SW기업 답변을 바탕으로 AI 토큰 지출 규모,...",
-    "date": "18 hours ago",
+    "title": "America at 250: How US Logistics Reinvented the Supply Chain",
+    "url": "https://wwd.com/sourcing-journal/logistics/america-at-250-us-logistics-3pl-fulfillment-last-mile-delivery-returns-1239051063/",
+    "snippet": "Rather than relying on a single breakthrough technology, logistics providers have spent the past several years redesigning where inventory sits, how it moves and how quickly they can respond to disruptions. “The untold story in the economy has been the ability of supply chain managers to ...",
+    "date": "16 hours ago",
     "search_engine": "brave",
     "source": "search_운송지연_항만적체",
-    "search_keyword": "항만 적체 컨테이너",
+    "search_keyword": "supply chain disruption logistics",
     "theme": "운송지연_항만적체",
-    "crawled_at": "2026-07-03T09:04:10.081711"
+    "crawled_at": "2026-07-03T18:59:05.465998"
   },
   {
-    "title": "\"완제품 만들기 전 실패해보는 곳\"… 외국인 몰려드는 중국 창업 실험실-국제ㅣ한국일보",
-    "url": "https://hankookilbo.com/news/article/A2026062115140001425",
-    "snippet": "(2026 차이나 리포트 ) 중국 선전시 화창베이의 트러블메이커는 외국인 하드웨어 창업자를 위한 인큐베이터로, 제조 생태계 연결과 시제품 개발, 부품 조달 등 혁신 창업 지원에 앞장선다. |",
-    "date": "1 day ago",
+    "title": "Asia Pacific Logistics Markets Diverge Despite 47% Tenant-Favourable Conditions as Supply Constraints Begin to Shift Balance | The Manila Times",
+    "url": "https://manilatimes.net/2026/07/03/tmt-newswire/media-outreach-newswire/asia-pacific-logistics-markets-diverge-despite-47-tenant-favourable-conditions-as-supply-constraints-begin-to-shift-balance/2377953",
+    "snippet": "Demand across APAC continues to ... ongoing supply chain diversification, with Southeast Asia emerging as a key growth hub. Markets such as Vietnam, Indonesia and Thailand are seeing strengthening occupier activity driven by production shifts and regionalization strategies, while high‑tech and automotive sectors remain important sources of demand across North Asia. This is reinforcing the importance of modern, well‑located and future‑ready logistics facilities ...",
+    "date": "3 hours ago",
     "search_engine": "brave",
     "source": "search_운송지연_항만적체",
-    "search_keyword": "항만 적체 컨테이너",
+    "search_keyword": "supply chain disruption logistics",
     "theme": "운송지연_항만적체",
-    "crawled_at": "2026-07-03T09:04:10.081713"
+    "crawled_at": "2026-07-03T18:59:05.466000"
   },
   {
-    "title": "Forced Labor Is Becoming a Geopolitical Risk for Global Supply Chains",
-    "url": "https://wwd.com/sourcing-journal/sustainability/forced-labor-supply-chains-verisk-maplecroft-1239050394",
-    "snippet": "At the same time, sourcing teams are failing to treat the risk as a priority, according to a new report from Verisk Maplecroft.",
+    "title": "\"새벽 4시부터 줄섰다\" 폭염 예보에 '31만원' 에어컨 사려고 몰려든 프랑스 - 파이낸셜뉴스",
+    "url": "https://fnnews.com/news/202607030733567529",
+    "snippet": "최근 유럽 전역이 기록적인 폭염에 시달리고 있는 가운데, 프랑스 한 대형 할인마트가 저렴한 가격에 에어컨과 선풍기를 대량으로 판매한다는 소식이 알려지면서 곳곳에서 사람들이 몰리는 상황이 발생했다.2일 AFP 통신, ...",
     "date": "11 hours ago",
     "search_engine": "brave",
-    "source": "search_운송지연_항만적체",
-    "search_keyword": "supply chain disruption logistics",
-    "theme": "운송지연_항만적체",
-    "crawled_at": "2026-07-03T09:04:10.566060"
+    "source": "search_SHE_규제_위험물",
+    "search_keyword": "배터리 화재 물류 규정",
+    "theme": "SHE_규제_위험물",
+    "crawled_at": "2026-07-03T18:59:05.827859"
   },
   {
-    "title": "Ivalua: New Research Reveals the Rise of Skimpflation | Supply Chain Outlook",
-    "url": "https://www.supplychain-outlook.com/supply-chain-technology/ivalua-the-rise-of-skimpflation",
-    "snippet": "New Ivalua research reveals businesses are quietly cutting quality to manage rising costs, while AI is emerging as the key to building more resilient, transparent, and future-ready supply chains.",
-    "date": "16 hours ago",
-    "search_engine": "brave",
-    "source": "search_운송지연_항만적체",
-    "search_keyword": "supply chain disruption logistics",
-    "theme": "운송지연_항만적체",
-    "crawled_at": "2026-07-03T09:04:10.566075"
-  },
-  {
-    "title": "Chinese Companies Prioritise Supply Chain Resilience, AI and New Markets for Growth | The Manila Times",
-    "url": "https://www.manilatimes.net/2026/07/02/tmt-newswire/media-outreach-newswire/chinese-companies-prioritise-supply-chain-resilience-ai-and-new-markets-for-growth/2377234",
-    "snippet": "Growth priorities are led by technology ... recent disruption and uncertainty across global trade, Chinese companies are focused on long-term growth strategies centred on supply chain resilience, AI adoption and access to new markets, according to DP World's Global Trade Observatory. The international survey, which included 292 supply chain and logistics executives ...",
-    "date": "20 hours ago",
-    "search_engine": "brave",
-    "source": "search_운송지연_항만적체",
-    "search_keyword": "supply chain disruption logistics",
-    "theme": "운송지연_항만적체",
-    "crawled_at": "2026-07-03T09:04:10.566077"
-  },
-  {
-    "title": "'공포체험 명소' 찾은 중학생들, 폐모텔에서 실제 사건현장 목격 : 미성년자 위협하는 유튜브 '사각지대'",
-    "url": "https://huffingtonpost.kr/article/258420",
-    "snippet": "충남 아산의 한 폐모텔에서 남성 2명이 숨지고 여성 1명이 의식을 잃은 채 발견되는 사건이 발생했다. 단순 변사 사건으로 치부할 수도 있지만, 이들을 최초로 발견한 이들이 공포 체험을 위해 폐모텔을 찾은 미성년자들이...",
-    "date": "16 hours ago",
+    "title": "작고 힘센 韓 배터리, 전기차선 中에 밀렸지만 로봇은 압도 | 한국경제",
+    "url": "https://hankyung.com/article/2026070227441",
+    "snippet": "[단독] 작고 힘센 韓 배터리, 전기차선 中에 밀렸지만 로봇은 압도, 진격의 K로봇 부품 (2) LG엔솔, 피규어AI·보스턴다이내믹스에 납품 승인 설치공간 좁고 전력소비 큰 로봇 싸지만 무거운 中 LFP 매력없어 초경량·고출력 ...",
+    "date": "1 day ago",
     "search_engine": "brave",
     "source": "search_SHE_규제_위험물",
     "search_keyword": "배터리 화재 물류 규정",
     "theme": "SHE_규제_위험물",
-    "crawled_at": "2026-07-03T09:04:10.983330"
+    "crawled_at": "2026-07-03T18:59:05.827874"
   },
   {
-    "title": "[속보]국조특위 핸드볼경기장 진입 … 경찰, 입구막던 집회 참가자 끌어내 | 뉴데일리",
-    "url": "https://newdaily.co.kr/site/data/html/2026/07/02/2026070200180.html",
-    "snippet": "경기 평택 아파트 신축 공사장서 화재 … 소방 대응 1단계 발령 · 증거 남기려 녹음했는데 … 내가 처벌받을 수도 있다",
-    "date": "20 hours ago",
+    "title": "더구루(the guru)",
+    "url": "https://theguru.co.kr/news/article.html?no=103934",
+    "snippet": "[더구루=정예린 기자] 한화그룹이 일본 재생에너지 사업 구조를 기존 하드웨어 판매 중심에서 고객 맞춤형 전력 자산 관리 플랫폼으로 전면 개편한다. 현지 가정을 소규모 발전소로 묶어 다가오는 가상발전소(VPP) 시대를 ...",
+    "date": "8 hours ago",
     "search_engine": "brave",
     "source": "search_SHE_규제_위험물",
     "search_keyword": "배터리 화재 물류 규정",
     "theme": "SHE_규제_위험물",
-    "crawled_at": "2026-07-03T09:04:10.983345"
-  },
-  {
-    "title": "\"주유소 직원이 퇴사하며 밝혔습니다..\" 기름 싸게 넣는 법 3가지 | 당인모",
-    "url": "https://view.mk.co.kr/life/article/246236",
-    "snippet": "같은 기름도 언제 어떻게 넣느냐에 따라 비용이 달라지는 경우가 많습니다. 오래 일한 주유소 직원들은 알뜰하게 주유하는 요령이 따로 있다고 말합니다. 알아 두면 도움이 되는 주유 요령을 정리했습니다.",
-    "date": "19 hours ago",
-    "search_engine": "brave",
-    "source": "search_SHE_규제_위험물",
-    "search_keyword": "배터리 화재 물류 규정",
-    "theme": "SHE_규제_위험물",
-    "crawled_at": "2026-07-03T09:04:10.983347"
+    "crawled_at": "2026-07-03T18:59:05.827876"
   },
   {
     "title": "연합뉴스TV",
-    "url": "https://yonhapnewstv.co.kr/news/AKR20260702112529WFk",
-    "snippet": "오늘(2일) 오전 9시 괌 동쪽 약 1690㎞ 부근에서 9호 태풍 ’바비’가 발생했습니다. 태풍 ’바비’는 4일 괌 동쪽 800㎞ 해상까지 접근한 뒤, 오는 6일쯤 사이판 부근을 통과할 것으로 예상됩니다. 특히 30도 안팎의 고수온 해역을 ...",
-    "date": "1 day ago",
+    "url": "https://yonhapnewstv.co.kr/news/AKR20260703143002jTc",
+    "snippet": "문화체육관광부가 대한민국 축구의 구조적 문제를 수술대에 올리고 미래 경쟁력을 강화하기 위한 ’K-축구 혁신위원회’를 오는 6일 전격 출범합니다. 이번 혁신위는 최휘영 문체부 장관과 박지성 국제축구연맹(FIFA) ...",
+    "date": "4 hours ago",
     "search_engine": "brave",
     "source": "search_SHE_규제_위험물",
     "search_keyword": "위험물 운송 규정 변경",
     "theme": "SHE_규제_위험물",
-    "crawled_at": "2026-07-03T09:04:11.387747"
+    "crawled_at": "2026-07-03T18:59:06.167399"
   },
   {
-    "title": "2025년도 다단계 판매업자 주요정보 공개 < 경제 | 서울특별시",
-    "url": "https://news.seoul.go.kr/economy/archives/573421",
-    "snippet": "공정거래위원회(위원장 주병기, 이하 ‘공정위’)는 112개* 다단계판매업자의 2025년도 주요정보를 공개하였다.",
-    "date": "1 day ago",
+    "title": "오토바이 주정차 과태료 부과 논란…日 '5분 예외'·中 '전용존'과 대조",
+    "url": "https://newspim.com/news/view/20260703000515",
+    "snippet": "[서울=뉴스핌] 조준경 기자 = 경찰이 오토바이 등 이륜차 불법 주정차에 대한 과태료 부과를 추진하면서 배달업계가 반발하는 가운데 해외에서는 관련 제도를 정교하게 운영하고 있어 대조를 이룬다.해외에서는 배달 등 ...",
+    "date": "4 hours ago",
     "search_engine": "brave",
     "source": "search_SHE_규제_위험물",
     "search_keyword": "위험물 운송 규정 변경",
     "theme": "SHE_규제_위험물",
-    "crawled_at": "2026-07-03T09:04:11.387762"
+    "crawled_at": "2026-07-03T18:59:06.167414"
   },
   {
-    "title": "선도함이 곧 표준…후속함·수출 주도권 갈린다 [표류 끝난 KDDX] - 이투데이",
-    "url": "https://etoday.co.kr/news/view/2599681",
-    "snippet": "KDDX 선도함, 1척 이상의 가치후속함·MRO·수출까지 영향 미쳐한화오션…함정산업 주도권 기대▲KDDX 조감도. (사진제공=한화오션)한화오션이 한국형 차",
-    "date": "18 hours ago",
+    "title": "\"옵션 하나 넣었더니 4개월\"... 7월, 가장 빨리 출고되는 현대차는? < 업계소식 < 뉴스 < 기사본문 - 오토트리뷴",
+    "url": "https://autotribune.co.kr/news/articleView.html?idxno=44094",
+    "snippet": "[오토트리뷴=김예준 기자] 현대자동차가 2026년 7월 국내 승용 전 차종 납기 정보를 공개했다. 8월 3~8일 공장 하기휴무 일정을 반영한 납기표로 기존 납기",
+    "date": "5 hours ago",
     "search_engine": "brave",
     "source": "search_SHE_규제_위험물",
     "search_keyword": "위험물 운송 규정 변경",
     "theme": "SHE_규제_위험물",
-    "crawled_at": "2026-07-03T09:04:11.387764"
+    "crawled_at": "2026-07-03T18:59:06.167416"
   },
   {
     "title": "EU, 2026~2028년 에너지 저장 45GW 로드맵 확정…한국 배터리·ESS 산업 수혜 기대 - 아이티인사이트",
     "url": "https://www.itinsight.kr/news/477698",
     "snippet": "2026년 6월 발표된 2026-2028 목표와 핵심 수치 유럽연합(EU)이 2026년부터 2028년까지 약 45기가와트(GW)의 에너지 저장 용량을 추가하겠다는 첫 공식 로드맵을 발표했다(Enlit World, 2026년). 2025년 연간 설치 규모 12GW를 기준점으로 삼아 ...",
-    "date": "2 hours ago",
+    "date": "12 hours ago",
     "search_engine": "brave",
     "source": "search_SHE_규제_위험물",
     "search_keyword": "리튬배터리 보관 인허가",
     "theme": "SHE_규제_위험물",
-    "crawled_at": "2026-07-03T09:04:11.797709"
+    "crawled_at": "2026-07-03T18:59:06.516485"
   },
   {
-    "title": "내년부터 오토바이 불법 주·정차 과태료…울산 배달업계 “주차공간부터” < 사회일반 < 사회 < 뉴스 < 기사본문 - 울산매일 - 울산최초, 최고의 조간신문",
-    "url": "https://iusm.co.kr/news/articleView.html?idxno=1064867",
-    "snippet": "오토바이 불법 주·정차도 이르면 내년부터 승용차처럼 과태료를 물게 된다. 그동안 운전자가 현장에 있어야 범칙금을 부과할 수 있어 사실상 단속이 어려웠던 사각지대를 해소하기 위한 조치다. 다만 배달업 종사자들은 단속 ...",
-    "date": "14 hours ago",
-    "search_engine": "brave",
-    "source": "search_SHE_규제_위험물",
-    "search_keyword": "리튬배터리 보관 인허가",
-    "theme": "SHE_규제_위험물",
-    "crawled_at": "2026-07-03T09:04:11.797725"
-  },
-  {
-    "title": "[전국]장윤기가 쓰던 '리얼돌·구형 휴대전화' 경찰 친부가 폐기 | YTN",
-    "url": "https://ytn.co.kr/_ln/0115_202607021224582411",
-    "snippet": "[기자] 지난 5월 5일, 광주에서 장윤기가 얼굴도 모르는 여고생을 흉기로 살해한 사건이 있었죠.그런데 장윤기의 성범죄 목적 살인 혐의를 뒷받침할 핵심 증거 일부가 폐...",
-    "date": "1 day ago",
-    "search_engine": "brave",
-    "source": "search_SHE_규제_위험물",
-    "search_keyword": "리튬배터리 보관 인허가",
-    "theme": "SHE_규제_위험물",
-    "crawled_at": "2026-07-03T09:04:11.797727"
-  },
-  {
-    "title": "수도권대기환경청, 진로발효 현장점검… \"오존 원인물질 질소산화물 관리 강화\" < 신재생.환경 < 기사본문 - 에너지데일리",
-    "url": "https://energydaily.co.kr/news/articleView.html?idxno=201068",
-    "snippet": "[에너지데일리 윤호철 기자] 여름철 고농도 오존 발생이 빈번해지는 가운데 수도권대기환경청이 통합환경관리사업장을 찾아 질소산화물(NOx) 저감 실태를 점검하며 산업",
-    "date": "16 hours ago",
-    "search_engine": "brave",
-    "source": "search_SHE_규제_위험물",
-    "search_keyword": "위험물 취급 관리규정 강화",
-    "theme": "SHE_규제_위험물",
-    "crawled_at": "2026-07-03T09:04:12.212890"
-  },
-  {
-    "title": "지구 온난화에 일상 된 해충 방역…국내 방제 시장 ‘쑥쑥’ < 경제일반 < ECONOMICS < 기사본문 - 더퍼블릭",
-    "url": "https://thepublic.kr/news/articleView.html?idxno=309837",
-    "snippet": "[더퍼블릭=김미희 기자]지구 온난화에 따른 기온 상승과 집중호우로 해충의 번식 환경이 확대되면서, 과거 여름철에 집중되던 해충 방역이 점차 사계절 일상으로 자리 잡고 있다.이에 따라 관련 산업도 가파른 성장세를 ...",
-    "date": "20 hours ago",
-    "search_engine": "brave",
-    "source": "search_SHE_규제_위험물",
-    "search_keyword": "위험물 취급 관리규정 강화",
-    "theme": "SHE_규제_위험물",
-    "crawled_at": "2026-07-03T09:04:12.212906"
-  },
-  {
-    "title": "홍명보/논란 및 사건 사고 - 나무위키",
-    "url": "https://namu.wiki/w/%ED%99%8D%EB%AA%85%EB%B3%B4/%EB%85%BC%EB%9E%80%20%EB%B0%8F%20%EC%82%AC%EA%B1%B4%20%EC%82%AC%EA%B3%A0",
-    "snippet": "대한민국 의 축구인 홍명보 의 논란 및 사건, 사고를 정리한 문서. K리그 드래프트 파동 홍명보는 이미 고려대",
+    "title": "[한국세정신문] 산업안전 위협하는 불법 반입·유통물품 대거 적발",
+    "url": "https://taxtimes.co.kr/news/article.html?no=275827",
+    "snippet": "관세청, 원산지 위반 35건·1천220억원 적발 선별검사 강화·유통조직 철저 수사 등 발본색원 관세청이 산업안전 물품의 불법반입과 원산지 둔갑행위에 대한 집중단속을 전개한 결과, 총 35건·1천220억원 상당의 위해물품을 ...",
     "date": "10 hours ago",
     "search_engine": "brave",
     "source": "search_SHE_규제_위험물",
     "search_keyword": "위험물 취급 관리규정 강화",
     "theme": "SHE_규제_위험물",
-    "crawled_at": "2026-07-03T09:04:12.212908"
+    "crawled_at": "2026-07-03T18:59:06.846102"
   },
   {
-    "title": "미신고 숙박업소 중개한 온라인 플랫폼에 과태료 500만원 - 파이낸셜뉴스",
-    "url": "https://fnnews.com/news/202607030611274772",
-    "snippet": "미신고 숙박업소 중개한 온라인 플랫폼에 과태료 500만원 (서울=연합뉴스) 서한기 기자 = 정부가 온라인 플랫폼을 통한 불법 미신고 숙박업소의 영업 확산을 막고 소비자의 안전을 지키기 위해 본격적인 규제에 나선다.",
-    "date": "3 hours ago",
+    "title": "[무진장인터넷뉴스] 진안소방서, '제3회 위험물 안전관리 우수사례 경진대회’ 홍보",
+    "url": "https://www.mjjnews.net/news/article.html?no=57632",
+    "snippet": "진안소방서는 소방청이 주관하는‘제3회 위험물 안전관리 우수사례 경진대회’에 대한 관내 기업ㆍ기관ㆍ학교ㆍ시민의 적극적인 참여를 당부한다고 밝혔다. 위험물 안전관리 우수사례 경진대회는 위험물 현장 안전관리에 ...",
+    "date": "1 day ago",
+    "search_engine": "brave",
+    "source": "search_SHE_규제_위험물",
+    "search_keyword": "위험물 취급 관리규정 강화",
+    "theme": "SHE_규제_위험물",
+    "crawled_at": "2026-07-03T18:59:06.846117"
+  },
+  {
+    "title": "우체국물류지원단, 전국 작업장 대상 집중안전점검 실시...위험요인 개선",
+    "url": "https://idsn.co.kr/news/view/1065572839637120",
+    "snippet": "우체국물류지원단이 산업재해 예방과 안전한 작업환경 조성을 위해 전국 주요 사업장을 대상으로 집중안전점검을 실시하고 시설·설비 전반의 위험요인을 개선하며 중대재해 예방에 나서고 있다.",
+    "date": "5 hours ago",
     "search_engine": "brave",
     "source": "search_SHE_규제_위험물",
     "search_keyword": "물류센터 화재 안전 규제",
     "theme": "SHE_규제_위험물",
-    "crawled_at": "2026-07-03T09:04:12.617538"
+    "crawled_at": "2026-07-03T18:59:07.193611"
+  },
+  {
+    "title": "118억 피해 키운 인천 공장 화재…“해법은 불연 단열재”[중기+] - 헤럴드경제",
+    "url": "https://biz.heraldcorp.com/article/10795421",
+    "snippet": "[헤럴드경제=부애리 기자] 인천 서구 원창동 공장 화재에 이어 최근 김포 물류창고에서도 큰불이 나면서 관련 업계에서는 샌드위치 패널 내부 ‘단열재(심재)’를 불연재로",
+    "date": "1 day ago",
+    "search_engine": "brave",
+    "source": "search_SHE_규제_위험물",
+    "search_keyword": "물류센터 화재 안전 규제",
+    "theme": "SHE_규제_위험물",
+    "crawled_at": "2026-07-03T18:59:07.193626"
   },
   {
     "title": "미국, 멕시코·캐나다와 북미무역협정 연장 거부...매년 재검토 방침 [종합] - 이투데이",
     "url": "https://etoday.co.kr/news/view/2599620",
     "snippet": "캐나다의 16년 연장 제안 거부합의 무산 시 2036년 협정 종료USTR 대표 “바이든 시절 무역적자 급증 뒤 해결 안 돼”캐·멕 “협정 당장 끝난 거 아냐”",
-    "date": "19 hours ago",
+    "date": "1 day ago",
     "search_engine": "brave",
     "source": "search_지정학_리스크",
     "search_keyword": "미중 관세 물류 영향",
     "theme": "지정학_리스크",
-    "crawled_at": "2026-07-03T09:04:13.036016"
+    "crawled_at": "2026-07-03T18:59:07.590446"
   },
   {
     "title": "6월 소비자물가 3.2%↑…석유류 급등에 30개월 만에 최대폭 상승 [종합] - 이투데이",
@@ -573,62 +615,62 @@
     "source": "search_지정학_리스크",
     "search_keyword": "미중 관세 물류 영향",
     "theme": "지정학_리스크",
-    "crawled_at": "2026-07-03T09:04:13.036032"
+    "crawled_at": "2026-07-03T18:59:07.590460"
   },
   {
     "title": "[AI로 읽는 경제] 미·이란 종전 국면…한국 산업 대응 방향은?",
     "url": "https://newspim.com/news/view/20260702000418",
     "snippet": "* [AI로 읽는 경제]는 AI 어시스턴트가 분석한 내용을 바탕으로 기자가 정리한 내용입니다. ChatGPT AI 모델이 적용됐습니다. 상단의 'AI MY 뉴스' 로그인을 통해 뉴스핌의 차세대 AI 콘텐츠 서비스를 활용해 보기 바랍니다.[세종...",
-    "date": "19 hours ago",
+    "date": "1 day ago",
     "search_engine": "brave",
     "source": "search_지정학_리스크",
     "search_keyword": "미중 관세 물류 영향",
     "theme": "지정학_리스크",
-    "crawled_at": "2026-07-03T09:04:13.036034"
+    "crawled_at": "2026-07-03T18:59:07.590462"
+  },
+  {
+    "title": "삼성·SK하닉, 충청권에 240조 투자…HBM·첨단소재 거점 키운다",
+    "url": "https://www.getnews.co.kr/news/articleView.html?idxno=873948",
+    "snippet": "삼성과 SK하이닉스가 충청권에 총 240조원을 투자해 반도체와 디스플레이, 배터리, 첨단 패키징 등 미래 산업 생산기지를 확대한다. 정부도 재정과 금융, 규제 개",
+    "date": "1 day ago",
+    "search_engine": "brave",
+    "source": "search_지정학_리스크",
+    "search_keyword": "수출 규제 반도체 배터리",
+    "theme": "지정학_리스크",
+    "crawled_at": "2026-07-03T18:59:07.963902"
+  },
+  {
+    "title": "반도체 수출 사상 최대에도…삼성전자·SK하이닉스 덮친 해외발 경고 < 증권 < FINANCE < 기사본문 - 더퍼블릭",
+    "url": "https://thepublic.kr/news/articleView.html?idxno=309848",
+    "snippet": "[더퍼블릭=안은혜 기자]지난달 반도체 수출이 사상 최고치를 경신한 가운데 국내 증시 반도체 '투 톱'인 삼성전자와 SK하이닉스 주가가 흔들리고 있다. 증권가에서는 최근 해외 발 한국 반도체에 대한 부정적인 평가가 영향을 ...",
+    "date": "1 day ago",
+    "search_engine": "brave",
+    "source": "search_지정학_리스크",
+    "search_keyword": "수출 규제 반도체 배터리",
+    "theme": "지정학_리스크",
+    "crawled_at": "2026-07-03T18:59:07.963917"
   },
   {
     "title": "“애플, 메모리 부족 사태에 중국산 구매 협상 중” - 이투데이",
     "url": "https://etoday.co.kr/news/view/2599675",
     "snippet": "CXMT, YMTC와 협상 중미국 정부에 관련 로비도▲2021년 9월 8일 중국 베이징 애플 스토어에서 고객들이 제품들을 살피고 있다. 베이징/AP뉴시스전 세계",
-    "date": "18 hours ago",
-    "search_engine": "brave",
-    "source": "search_지정학_리스크",
-    "search_keyword": "수출 규제 반도체 배터리",
-    "theme": "지정학_리스크",
-    "crawled_at": "2026-07-03T09:04:17.671131"
-  },
-  {
-    "title": "이 대통령 \"기업 압박해 투자 유치 못해…최적 환경 만드는 게 정부 역할\" - 이투데이",
-    "url": "https://etoday.co.kr/news/view/2599576",
-    "snippet": "▲이재명 대통령이 2일 충남 아산시에서 열린 충청권 첨단산업 발전비전 국민보고회에서 축사를 하고 있다. (연합뉴스)이재명 대통령이 2일 삼성전자와",
     "date": "1 day ago",
     "search_engine": "brave",
     "source": "search_지정학_리스크",
     "search_keyword": "수출 규제 반도체 배터리",
     "theme": "지정학_리스크",
-    "crawled_at": "2026-07-03T09:04:17.671146"
+    "crawled_at": "2026-07-03T18:59:07.963918"
   },
   {
-    "title": "대한상의 “하반기 산업기상도 ‘ABCD’ 맑음”…반도체 ‘최고’, 석화는 ‘비’ - 이투데이",
-    "url": "https://etoday.co.kr/news/view/2599383",
-    "snippet": "AI·친환경차·OLED 수요에 반도체·배터리·디스플레이 ‘맑음’기계·철강·건설은 통상장벽·내수 부진…석유화학 ‘최악’▲서울 중구 상의회관 전경. (사진=대",
-    "date": "1 day ago",
-    "search_engine": "brave",
-    "source": "search_지정학_리스크",
-    "search_keyword": "수출 규제 반도체 배터리",
-    "theme": "지정학_리스크",
-    "crawled_at": "2026-07-03T09:04:17.671148"
-  },
-  {
-    "title": "더구루(the guru)",
-    "url": "https://theguru.co.kr/news/article.html?no=103870",
-    "snippet": "[더구루=홍성환 기자] 제조업용 피지컬 AI 기업 카본식스가 600억원 규모 투자금을 유치했다. 제조 현장에 실제 적용 가능한 로봇 AI 제품 고도화와 글로벌 시장 진출에 속도를 낼 계획이다. 카본식스는 1일(현지시간) 4000만 ...",
+    "title": "글로벌 공급망 파고드는 ‘K-방산’ - 아시아투데이",
+    "url": "https://asiatoday.co.kr/kn/view.php?key=20260702010000915",
+    "snippet": "K-방산의 영토가 대기업 중심의 완제품 수출을 넘어 글로벌 최고 무대(Top-tier)의 밸류체인(Value Chain) 중심으로 빠르게 재편되고 있다. 해외에서 대형 무기체계를 도입할 때 국산 부품 수출이나 기술 이전을 요구하는 ...",
     "date": "1 day ago",
     "search_engine": "brave",
     "source": "search_지정학_리스크",
     "search_keyword": "글로벌 무역 분쟁 공급망",
     "theme": "지정학_리스크",
-    "crawled_at": "2026-07-03T09:04:18.179403"
+    "crawled_at": "2026-07-03T18:59:08.322304"
   },
   {
     "title": "연합뉴스TV",
@@ -639,72 +681,61 @@
     "source": "search_운임_유가",
     "search_keyword": "해상운임 동향",
     "theme": "운임_유가",
-    "crawled_at": "2026-07-03T09:04:18.551740"
-  },
-  {
-    "title": "[해양통신] 북극항로 시험운항 선박 '확보'…\"8월 말 출항 유력\"",
-    "url": "https://oceanpress.co.kr/news/article.html?no=30501",
-    "snippet": "북극항로 시험 운항을 위한 준비작업이 급박하게 진행되고 있다. 해양수산부와 국회, 그리고 해운업계에 따르면 난항을 거듭하던 내빙 컨테이너선 확보는 국내 선주 보유선박이 확인돼 이 선박을 용선하는 것으로 사실상 ...",
-    "date": "1 day ago",
-    "search_engine": "brave",
-    "source": "search_운임_유가",
-    "search_keyword": "해상운임 동향",
-    "theme": "운임_유가",
-    "crawled_at": "2026-07-03T09:04:18.551755"
-  },
-  {
-    "title": "고객 목소리로 혁신, 안전으로 신뢰 더해…크루즈 운항하며 소방공무원 상생 실천 - 매일경제",
-    "url": "https://mk.co.kr/news/special-edition/12088896",
-    "snippet": "시장 동향 · 분양·경매 · 투자 상품 · 정책·산업 · 테크·과학 홈 · 테크 · 인공지능 · 제약·바이오 · 과학 · 우주 · 건강 · 오피니언 홈 · 사설 · 기명칼럼 · 매경포럼 · 매경데스크 · 객원칼럼 ·",
-    "date": "9 hours ago",
-    "search_engine": "brave",
-    "source": "search_운임_유가",
-    "search_keyword": "해상운임 동향",
-    "theme": "운임_유가",
-    "crawled_at": "2026-07-03T09:04:18.551757"
+    "crawled_at": "2026-07-03T18:59:08.668943"
   },
   {
     "title": "유류할증료 인하… 여름철 해외여행 수요 살아날까",
     "url": "https://kyeongin.com/article/1766688",
     "snippet": "수원에 거주하는 김모(33)씨는 국내로 한정지었던 여름휴가 계획을 전면 수정하고 있다. 중동전쟁 영향으로 천정부지로 뛰었던 유류할증료가 차츰 내림세를 보이고 있어서다. 김씨는 “8월쯤이면 유류할증료가 올해 4월 ...",
-    "date": "13 hours ago",
+    "date": "1 day ago",
     "search_engine": "brave",
     "source": "search_운임_유가",
     "search_keyword": "항공운임 변동 물류",
     "theme": "운임_유가",
-    "crawled_at": "2026-07-03T09:04:18.934687"
+    "crawled_at": "2026-07-03T18:59:09.000637"
   },
   {
-    "title": "통신3사 5G·LTE 통합요금제, 뭐가 다른지 비교해보니 - ZDNet korea",
-    "url": "https://zdnet.co.kr/view/?no=20260702165757",
-    "snippet": "이동통신 3사가 5G와 LTE 통합요금제 출시를 완료했다. 복잡한 요금 체계를 단순하게 줄이고 모든 요금제에 데이터 안심옵션(QoS)을 도입한 게 주요 특징이다. 이에 따라 데이터 제공량과 QoS 속도만 고려해 이용 패턴에 맞는 ...",
-    "date": "16 hours ago",
+    "title": "종전 합의에도 안 꺾이는 '운임 폭탄'… 수출 중소기업 숨 막힌다",
+    "url": "https://betanews.net/article/view/beta202607020069",
+    "snippet": "호르무즈 해협에 묶였던 선박들이 순차적으로 빠져나오기 시작했지만, 급등한 해상 운임은 좀처럼 내려올 기미를 보이지 않고 있다. 고정 운임을 확보",
+    "date": "11 hours ago",
     "search_engine": "brave",
     "source": "search_운임_유가",
     "search_keyword": "항공운임 변동 물류",
     "theme": "운임_유가",
-    "crawled_at": "2026-07-03T09:04:18.934702"
+    "crawled_at": "2026-07-03T18:59:09.000651"
   },
   {
-    "title": "환율·물가·경기 얽힌 통화정책 '고차방정식' … 한은, 해법은 있나 | 뉴데일리",
-    "url": "https://biz.newdaily.co.kr/site/data/html/2026/07/02/2026070200227.html",
-    "snippet": "6월 소비자물가가 30개월 만에 최고치를 기록했지만 물가를 둘러싼 셈법은 오히려 더 복잡해졌다. 유가는 내리는데 환율은 오르고, 경기는 살아나는데 가계부채는 불어나면서 한국은행의 통화정책도 풀기 어려운 고차방정식이 ...",
-    "date": "18 hours ago",
+    "title": "[단독] 장금마리타임-MSC 합병 두고… 공정위, 정유·해운사 의견조회 - 매일경제",
+    "url": "https://mk.co.kr/news/business/12089119",
+    "snippet": "장금, 전세계VLCC 20% 통제유조선시장 독과점 여부 조사",
+    "date": "1 day ago",
+    "search_engine": "brave",
+    "source": "search_운임_유가",
+    "search_keyword": "항공운임 변동 물류",
+    "theme": "운임_유가",
+    "crawled_at": "2026-07-03T18:59:09.000653"
+  },
+  {
+    "title": "국제유가, 미·이란 종전협상 답보 속 강보합 | 한국경제",
+    "url": "https://www.hankyung.com/article/2026070331437",
+    "snippet": "국제유가, 미·이란 종전협상 답보 속 강보합, 벤치마크 브렌트유 0.3%↑",
+    "date": "12 hours ago",
     "search_engine": "brave",
     "source": "search_운임_유가",
     "search_keyword": "국제유가 물류비 영향",
     "theme": "운임_유가",
-    "crawled_at": "2026-07-03T09:04:19.340654"
+    "crawled_at": "2026-07-03T18:59:09.357573"
   },
   {
-    "title": "6월 물가상승률 3.2%, 30개월 만에 최고⋯한은 \"당분간 고물가 지속\" [종합] - 이투데이",
-    "url": "https://etoday.co.kr/news/view/2599568",
-    "snippet": "▲서울 시내 한 대형마트에서 시민들이 장을 보고 있다. (연합뉴스)소비자물가 상승률이 두 달 연속 3%대로 고공행진하고 있다. 특히 이날 발표된 6월",
-    "date": "18 hours ago",
+    "title": "소비자물가 2년 6개월 만에 최대폭 상승···중동 전쟁 여파로 석유류 물가 상승 원인 < 경제 < 기사본문 - 한국NGO신문",
+    "url": "https://ngonews.kr/news/articleView.html?idxno=232095",
+    "snippet": "중동 전쟁 여파에 따라 국제 유가가 오르면서 석유류 물가가 거의 4년 만에 최대 폭 으로 상승하며 소비자물가도 2년 6개월 만에 가장 큰 폭으로 올랐다.국가데이터",
+    "date": "1 day ago",
     "search_engine": "brave",
     "source": "search_운임_유가",
     "search_keyword": "국제유가 물류비 영향",
     "theme": "운임_유가",
-    "crawled_at": "2026-07-03T09:04:19.340672"
+    "crawled_at": "2026-07-03T18:59:09.357588"
   }
 ]
