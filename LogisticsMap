@@ -1,0 +1,483 @@
+<script setup lang="ts">
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+import maplibregl from 'maplibre-gl'
+import 'maplibre-gl/dist/maplibre-gl.css'
+
+const mapContainer = ref<HTMLDivElement | null>(null)
+
+let map: maplibregl.Map | null = null
+
+const routes = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: {
+        routeId: 'FG_KR_KOPER',
+        name: 'Busan → Koper',
+        impact: 'DIRECT',
+        shipmentCount: 8,
+      },
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [129.03, 35.1], // Busan
+          [121.47, 31.23], // Shanghai 인근
+          [103.84, 1.26], // Singapore
+          [80.0, 6.0], // Indian Ocean
+          [43.33, 12.58], // Bab-el-Mandeb
+          [32.35, 30.46], // Suez
+          [18.0, 35.5], // Mediterranean
+          [13.73, 45.55], // Koper
+        ],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {
+        routeId: 'RAW_CN_USW',
+        name: 'Shanghai → Los Angeles',
+        impact: 'MONITORING',
+        shipmentCount: 5,
+      },
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [121.47, 31.23],
+          [150.0, 32.0],
+          [180.0, 35.0],
+          [-150.0, 36.0],
+          [-118.26, 33.74],
+        ],
+      },
+    },
+  ],
+} as const
+
+const riskEvents = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: {
+        eventId: 'EVT-001',
+        title: '홍해·수에즈 항로 위험 확대',
+        severity: 'CRITICAL',
+        affectedShipments: 8,
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [38.5, 20.0],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {
+        eventId: 'EVT-002',
+        title: 'Shanghai 항만 적체',
+        severity: 'HIGH',
+        affectedShipments: 12,
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [121.47, 31.23],
+      },
+    },
+  ],
+} as const
+
+const vessels = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      properties: {
+        vesselName: 'SKON DEMO 01',
+        hbl: 'HBL-2026-001',
+        status: 'RISK',
+        eta: '2026-07-18',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [51.0, 13.0],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {
+        vesselName: 'SKON DEMO 02',
+        hbl: 'HBL-2026-002',
+        status: 'NORMAL',
+        eta: '2026-07-22',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [106.0, 3.0],
+      },
+    },
+  ],
+} as const
+
+function openPopup(
+  event: maplibregl.MapMouseEvent & {
+    features?: maplibregl.MapGeoJSONFeature[]
+  },
+) {
+  const feature = event.features?.[0]
+
+  if (!feature || feature.geometry.type !== 'Point') {
+    return
+  }
+
+  const coordinates = feature.geometry.coordinates as [number, number]
+  const properties = feature.properties ?? {}
+
+  const title =
+    properties.title ??
+    properties.vesselName ??
+    properties.name ??
+    '상세정보'
+
+  const detail = properties.affectedShipments
+    ? `영향 선적: ${properties.affectedShipments}건`
+    : `HBL: ${properties.hbl ?? '-'}<br>ETA: ${properties.eta ?? '-'}`
+
+  new maplibregl.Popup({
+    closeButton: true,
+    closeOnClick: true,
+  })
+    .setLngLat(coordinates)
+    .setHTML(`
+      <div class="map-popup">
+        <strong>${title}</strong>
+        <div>${detail}</div>
+      </div>
+    `)
+    .addTo(map!)
+}
+
+onMounted(() => {
+  if (!mapContainer.value) {
+    return
+  }
+
+  map = new maplibregl.Map({
+    container: mapContainer.value,
+
+    // OSM Raster Tile을 사용하는 2D MapLibre Style
+    style: {
+      version: 8,
+      sources: {
+        osm: {
+          type: 'raster',
+          tiles: [
+            'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+          ],
+          tileSize: 256,
+          maxzoom: 19,
+          attribution: '© OpenStreetMap contributors',
+        },
+      },
+      layers: [
+        {
+          id: 'osm-background',
+          type: 'raster',
+          source: 'osm',
+        },
+      ],
+    },
+
+    center: [103, 23],
+    zoom: 2.2,
+    minZoom: 1.2,
+    maxZoom: 12,
+    pitch: 0,
+    bearing: 0,
+    renderWorldCopies: true,
+    attributionControl: true,
+  })
+
+  map.addControl(
+    new maplibregl.NavigationControl({
+      showCompass: false,
+      showZoom: true,
+    }),
+    'bottom-left',
+  )
+
+  map.on('load', () => {
+    if (!map) return
+
+    // 항로
+    map.addSource('routes', {
+      type: 'geojson',
+      data: routes as any,
+    })
+
+    // 항로 Glow
+    map.addLayer({
+      id: 'route-glow',
+      type: 'line',
+      source: 'routes',
+      paint: {
+        'line-color': [
+          'match',
+          ['get', 'impact'],
+          'DIRECT',
+          '#ff4d6d',
+          'INDIRECT',
+          '#ff9f1c',
+          '#24c8ff',
+        ],
+        'line-width': 10,
+        'line-opacity': 0.16,
+      },
+    })
+
+    // 실제 항로선
+    map.addLayer({
+      id: 'route-line',
+      type: 'line',
+      source: 'routes',
+      paint: {
+        'line-color': [
+          'match',
+          ['get', 'impact'],
+          'DIRECT',
+          '#ff4d6d',
+          'INDIRECT',
+          '#ff9f1c',
+          '#24c8ff',
+        ],
+        'line-width': 3,
+        'line-opacity': 0.9,
+      },
+    })
+
+    // 리스크 이벤트
+    map.addSource('risk-events', {
+      type: 'geojson',
+      data: riskEvents as any,
+    })
+
+    map.addLayer({
+      id: 'risk-event-halo',
+      type: 'circle',
+      source: 'risk-events',
+      paint: {
+        'circle-radius': [
+          'match',
+          ['get', 'severity'],
+          'CRITICAL',
+          28,
+          'HIGH',
+          22,
+          16,
+        ],
+        'circle-color': [
+          'match',
+          ['get', 'severity'],
+          'CRITICAL',
+          '#ff1744',
+          'HIGH',
+          '#ff9100',
+          '#ffca28',
+        ],
+        'circle-opacity': 0.18,
+        'circle-stroke-width': 1,
+        'circle-stroke-color': '#ffffff',
+        'circle-stroke-opacity': 0.5,
+      },
+    })
+
+    map.addLayer({
+      id: 'risk-event-core',
+      type: 'circle',
+      source: 'risk-events',
+      paint: {
+        'circle-radius': 6,
+        'circle-color': [
+          'match',
+          ['get', 'severity'],
+          'CRITICAL',
+          '#ff1744',
+          'HIGH',
+          '#ff9100',
+          '#ffca28',
+        ],
+        'circle-stroke-width': 2,
+        'circle-stroke-color': '#ffffff',
+      },
+    })
+
+    // 선박
+    map.addSource('vessels', {
+      type: 'geojson',
+      data: vessels as any,
+    })
+
+    map.addLayer({
+      id: 'vessels',
+      type: 'circle',
+      source: 'vessels',
+      paint: {
+        'circle-radius': 7,
+        'circle-color': [
+          'match',
+          ['get', 'status'],
+          'RISK',
+          '#ff4d6d',
+          '#00e5ff',
+        ],
+        'circle-stroke-width': 2,
+        'circle-stroke-color': '#061425',
+      },
+    })
+
+    map.on('click', 'risk-event-core', openPopup)
+    map.on('click', 'vessels', openPopup)
+
+    for (const layer of ['risk-event-core', 'vessels']) {
+      map.on('mouseenter', layer, () => {
+        if (map) map.getCanvas().style.cursor = 'pointer'
+      })
+
+      map.on('mouseleave', layer, () => {
+        if (map) map.getCanvas().style.cursor = ''
+      })
+    }
+  })
+})
+
+onBeforeUnmount(() => {
+  map?.remove()
+  map = null
+})
+</script>
+
+<template>
+  <div class="map-wrapper">
+    <div ref="mapContainer" class="map-container"></div>
+
+    <div class="map-title">
+      <span class="status-dot"></span>
+      Global Logistics Risk Map
+    </div>
+
+    <div class="map-legend">
+      <div><span class="legend-line direct"></span>DIRECT</div>
+      <div><span class="legend-line monitoring"></span>MONITORING</div>
+      <div><span class="legend-circle critical"></span>Critical Risk</div>
+      <div><span class="legend-circle vessel"></span>Vessel</div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #06111e;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.map-title {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 14px;
+  border: 1px solid rgba(93, 201, 255, 0.34);
+  border-radius: 8px;
+  background: rgba(4, 17, 32, 0.86);
+  color: #dff6ff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(10px);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #29f0a8;
+  box-shadow: 0 0 10px #29f0a8;
+}
+
+.map-legend {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 9px 18px;
+  padding: 11px 14px;
+  border: 1px solid rgba(93, 201, 255, 0.25);
+  border-radius: 8px;
+  background: rgba(4, 17, 32, 0.88);
+  color: #bcd2e4;
+  font-size: 11px;
+  backdrop-filter: blur(10px);
+}
+
+.map-legend > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.legend-line {
+  display: inline-block;
+  width: 22px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.legend-line.direct {
+  background: #ff4d6d;
+}
+
+.legend-line.monitoring {
+  background: #24c8ff;
+}
+
+.legend-circle {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.legend-circle.critical {
+  background: #ff1744;
+  box-shadow: 0 0 8px #ff1744;
+}
+
+.legend-circle.vessel {
+  background: #00e5ff;
+  box-shadow: 0 0 8px #00e5ff;
+}
+
+:global(.maplibregl-popup-content) {
+  border: 1px solid rgba(68, 187, 255, 0.45);
+  border-radius: 8px;
+  background: rgba(5, 18, 34, 0.96);
+  color: #eaf7ff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+:global(.map-popup strong) {
+  display: block;
+  margin-bottom: 6px;
+  color: #5ed7ff;
+}
+</style>
