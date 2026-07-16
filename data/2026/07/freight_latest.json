@@ -5,7 +5,7 @@
     "current_date": "2026-07-10",
     "previous_value": 3326.87,
     "previous_date": "2026-07-03",
-    "crawled_at": "2026-07-16T08:55:38.337368"
+    "crawled_at": "2026-07-17T08:54:44.034703"
   },
   "kcci": {
     "index": "KCCI",
@@ -13,7 +13,7 @@
     "current_date": "2026-07-13",
     "previous_value": 4330.0,
     "previous_date": "2026-07-06",
-    "crawled_at": "2026-07-16T08:55:39.362261"
+    "crawled_at": "2026-07-17T08:54:45.118406"
   },
-  "updated_at": "2026-07-16T08:55:39.364334"
+  "updated_at": "2026-07-17T08:54:45.120338"
 }
