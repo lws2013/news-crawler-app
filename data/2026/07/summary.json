@@ -1,336 +1,226 @@
 {
-  "generated_at": "2026-07-20T08:56:40.652809",
-  "total_articles": 64,
-  "total_summaries": 40,
+  "generated_at": "2026-07-21T08:57:16.391413",
+  "total_articles": 56,
+  "total_summaries": 27,
   "summaries": [
     {
-      "title": "Section 301 Tariffs on Brazil Take Effect July 22, Stacking with Section 122 Duties; Strait of Hormuz Closure Restricts 200K TEU of Ocean Capacity",
-      "url": "https://www.flexport.com/global-logistics-update/july-16-2026-GLU-Newsletter/",
-      "source": "flexport",
+      "title": "수요공급으로 설명되던 컨시장은 끝났다",
+      "url": "https://www.kita.net/shippers/board/newsView.do?morgueCode=2&dataCls=B&dataSeq=8169",
+      "source": "kita",
       "theme": "지정학_리스크",
-      "summary": "미국의 브라질에 대한 Section 301 관세가 7월 22일 발효되며, 호르무즈 해협 폐쇄로 인해 20만 TEU의 해상 운송 용량이 제한됩니다.",
+      "summary": "지정학적 리스크 장기화로 글로벌 컨테이너선 시장이 비용 절감 중심에서 안정성과 회복탄력성을 중시하는 방향으로 전환되고 있다.",
       "impact": "🔴높음",
-      "impact_reason": "호르무즈 해협 폐쇄는 주요 해상 운송 경로의 용량을 크게 제한하여 운송 지연 및 비용 상승을 유발할 수 있으며, 새로운 관세는 원자재 및 부품 조달 비용에 직접적인 영향을 미칠 수 있습니다.",
-      "action_needed": "호르무즈 해협 경유 노선 확인 및 대체 경로/운송 계획 수립, 브라질 및 러시아 관련 공급망 내 관세 영향 분석 및 대응 전략 마련."
+      "impact_reason": "글로벌 컨테이너 시장의 전략적 전환은 우리 회사의 해상 운송 전략 및 공급망 회복탄력성 구축에 직접적인 영향을 미친다.",
+      "action_needed": "해상 운송 파트너십 재검토, 다중 운송 경로 및 운송사 확보 전략 수립, 재고 수준 및 안전 재고 정책 재평가."
     },
     {
-      "title": "CBP Rejects Warehouse Entries on CAPE Declarations, Risking IEEPA Refunds; TPEB Rates Climb as Panama Canal Restrictions Tighten Capacity",
-      "url": "https://www.flexport.com/global-logistics-update/july-09-2026-GLU-Newsletter/",
-      "source": "flexport",
-      "theme": "운송지연_항만적체",
-      "summary": "CBP가 CAPE 선언에 대한 창고 입고를 거부하여 IEEPA 환급에 위험을 초래하고 있으며, 파나마 운하 제한으로 용량이 줄어들면서 TPEB(태평양 횡단 동향) 운임이 상승하고 있습니다.",
-      "impact": "🔴높음",
-      "impact_reason": "파나마 운하의 용량 제한은 아시아-미주 노선의 운송 지연과 운임 상승을 직접적으로 유발하며, CBP의 창고 입고 거부는 통관 및 환급 절차에 혼란을 줄 수 있습니다.",
-      "action_needed": "파나마 운하 경유 노선에 대한 운송 계획 재검토 및 대체 경로/운송 수단 고려, CBP의 CAPE 선언 관련 지침 확인 및 통관 절차 준수 강화."
-    },
-    {
-      "title": "CPSC Mandatory eFiling Takes Effect July 8; TPEB Rates Surge ~10% as Peak Season Demand Outpaces Capacity",
-      "url": "https://www.flexport.com/global-logistics-update/june-18-2026-GLU-Newsletter/",
-      "source": "flexport",
-      "theme": "SHE_규제_위험물",
-      "summary": "CPSC의 의무 전자 신고가 7월 8일 발효되어 특정 제품에 대한 규정 준수가 필요하며, 성수기 수요가 용량을 초과하면서 TPEB 운임이 약 10% 급등했습니다.",
-      "impact": "🔴높음",
-      "impact_reason": "CPSC의 의무 전자 신고는 우리 제품의 미국 수출 시 필수적인 규제 준수 사항이며, TPEB 운임의 급등은 주요 운송 비용에 직접적인 영향을 미칩니다.",
-      "action_needed": "CPSC eFiling 요건 확인 및 시스템 구축/준비, TPEB 운임 상승에 대비한 운송 계획 및 예산 재조정, 운송사와의 협상 강화."
-    },
-    {
-      "title": "호르무즈 이어 홍해 봉쇄 위기... 다시 희망봉 돌아야 하나",
+      "title": "호르무즈 이어 홍해 봉쇄 위기... 다시 희망봉 돌아야 하나 - surff",
       "url": "https://surff.kr/ko/blog/detail/20260720-경제물류-주요뉴스",
-      "source": "surff",
-      "theme": "지정학_리스크",
-      "summary": "홍해 봉쇄 우려가 커지면서 아시아-유럽 항로가 희망봉 우회로 전환될 가능성이 제기되며, 이는 운송기간, 연료비, 운임 상승 및 선복 부족을 야기할 수 있다.",
+      "source": "surff.kr",
+      "theme": "운송지연_항만적체",
+      "summary": "홍해 봉쇄 우려가 커지면서 아시아-유럽 항로가 희망봉 우회로 전환될 경우 운송기간과 연료비가 증가하고 선복 부족 및 운임 상승이 재현될 수 있다는 분석이 나왔다.",
       "impact": "🔴높음",
-      "impact_reason": "홍해 봉쇄 및 희망봉 우회는 아시아-유럽 주요 항로의 운송 지연, 운임 급등, 선복 부족을 초래하여 우리 물류 운영에 즉각적이고 심각한 영향을 미칠 수 있다.",
-      "action_needed": "아시아-유럽 항로의 운송 계획 재검토, 대체 경로 및 운송 수단 옵션 분석, 선사와의 긴밀한 소통을 통한 선복 확보 노력."
+      "impact_reason": "주요 해상 운송로 봉쇄는 아시아-유럽 항로의 운송 지연 및 비용 급증으로 이어져 우리 회사의 물류 운영 및 생산 계획에 직접적인 영향을 미칠 수 있다.",
+      "action_needed": "비상 운송 계획 수립, 대체 항로 및 운송 수단 검토, 주요 선사와의 긴밀한 소통을 통한 상황 변화 모니터링."
     },
     {
-      "title": "머스크, 극동아시아-북유럽·지중해 노선 성수기할증료 인상",
-      "url": "https://surff.kr/ko/blog/detail/vol132-주간-선사별-동향-week-29-2026",
-      "source": "surff",
-      "theme": "운임_유가",
-      "summary": "머스크가 극동아시아발 북유럽·지중해 노선에 성수기 할증료(PSS)를 인상한다고 발표했다.",
-      "impact": "🔴높음",
-      "impact_reason": "주요 선사의 성수기 할증료 인상은 해당 노선을 이용하는 우리 물류의 운송 비용에 직접적인 영향을 미치므로 즉시 대응이 필요하다.",
-      "action_needed": "해당 노선 운송 계획 및 예산 재검토, 선사와의 운임 협상 또는 대체 운송 방안 모색."
-    },
-    {
-      "title": "끝나지 않은 중동 사태…'호르무즈 없는 시나리오' 짜는 산업계",
-      "url": "https://surff.kr/ko/blog/detail/20260717-경제물류-주요뉴스",
-      "source": "surff",
-      "theme": "지정학_리스크",
-      "summary": "중동 사태 장기화에 대비하여 산업계가 운임 상승과 물류 지연에 대비한 비상 시나리오를 마련하고 있다.",
-      "impact": "🔴높음",
-      "impact_reason": "중동 사태는 주요 해상 운송 경로에 지속적인 불확실성을 제공하며, 운임 상승 및 물류 지연 가능성이 높아 우리 물류 운영에 직접적인 영향을 미친다.",
-      "action_needed": "중동 경유 항로의 잠재적 위험 평가 및 대체 운송 방안 검토, 운임 변동성 대비 예산 계획 수립, 비상 시나리오 구체화."
-    },
-    {
-      "title": "쿠팡, 아직도 불 못껐다…급기야 굴삭기로 ‘건물 파괴’ 초강수",
-      "url": "https://joongang.co.kr/article/25446240",
-      "source": "중앙일보",
+      "title": "쿠팡 화재 사흘째…‘전기차 20대분’ 로봇 배터리 불길 방어 총력 - ZDNet korea",
+      "url": "https://zdnet.co.kr/view/?no=20260720152826",
+      "source": "ZDNet korea",
       "theme": "SHE_규제_위험물",
-      "summary": "인천 쿠팡 물류센터 화재가 이틀째 지속되자 소방당국이 굴삭기를 동원한 건물 파괴 작업으로 진화에 총력을 기울이고 있다.",
+      "summary": "인천 쿠팡 물류센터 화재가 사흘째 이어지는 가운데, 소방당국이 전기차 20대 분량의 리튬 배터리가 탑재된 물류 로봇이 있는 5층으로의 불길 확산을 막는 데 총력을 기울이고 있다.",
       "impact": "🔴높음",
-      "impact_reason": "대형 물류센터 화재는 창고 안전 규제 강화 논의로 이어질 수 있으며, 유사 시설을 이용하는 우리 물류 운영 및 위험물 보관 규정에 직접적인 영향을 미칠 수 있다.",
-      "action_needed": "국내 물류센터 안전 관리 현황 점검 및 비상 계획 재검토, 위험물 보관 시설의 안전 규정 준수 여부 확인."
+      "impact_reason": "배터리 제조기업으로서 물류센터 내 배터리 보관 및 취급 안전에 대한 경각심을 높이고, 유사 사고 발생 시 심각한 물류 운영 중단 및 인명 피해로 이어질 수 있음을 보여주는 사례이다.",
+      "action_needed": "자사 물류센터 및 협력사 물류센터의 배터리 보관 규정 및 화재 안전 시스템(소화 설비, 방화 구획 등) 점검, 위험물 취급 교육 강화, 비상 대응 계획 재검토."
     },
     {
-      "title": "국가소방동원령에도 쿠팡물류센터 불길 이틀째 안 잡힌 이유는",
-      "url": "https://yna.co.kr/view/AKR20260719034200065",
-      "source": "연합뉴스",
-      "theme": "SHE_규제_위험물",
-      "summary": "인천 쿠팡 물류센터에서 이틀째 대형 화재가 진압되지 않고 있으며, 이는 물류센터의 구조적 문제와 보관 물품의 특성 때문으로 분석된다.",
-      "impact": "🔴높음",
-      "impact_reason": "대형 물류센터 화재는 물류 네트워크 전반의 안전 점검 및 비상 계획의 중요성을 부각시키며, 우리 회사의 창고 운영 및 재고 관리에 대한 잠재적 위험을 시사한다.",
-      "action_needed": "자체 물류센터 및 협력사 창고의 화재 안전 점검 강화, 위험물 보관 규정 준수 여부 재확인, 비상 재고 확보 및 대체 물류 경로 검토."
-    },
-    {
-      "title": "이란 혁명수비대 \"호르무즈 배 2척 멈춰…美에 속아 진입하면 사고\"",
-      "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02007366645516160",
-      "source": "이데일리",
-      "theme": "지정학_리스크",
-      "summary": "이란 혁명수비대가 호르무즈 해협에서 선박 2척을 멈춰 세우고 허가 없는 통과 시 사고를 경고하며 해협 통행에 대한 긴장을 고조시켰다.",
-      "impact": "🔴높음",
-      "impact_reason": "호르무즈 해협은 주요 해상 운송 경로로, 이곳의 통행 제한이나 분쟁은 유가 상승 및 해상 운임 변동, 운송 지연 등 우리 회사의 물류 비용과 공급망 안정성에 직접적인 영향을 미칠 수 있다.",
-      "action_needed": "중동 항로를 이용하는 선박의 운항 상황 실시간 모니터링, 대체 항로 및 운송 수단 검토, 유가 및 운임 변동에 대한 헤징 전략 고려."
-    },
-    {
-      "title": "창고 가득한 생활용품이 ‘땔감’ 역할… 불 났다하면 대형 화재",
-      "url": "https://kmib.co.kr/article/view.asp?arcid=1784452963&code=11131100&sid1=soc",
-      "source": "국민일보",
-      "theme": "SHE_규제_위험물",
-      "summary": "인천 쿠팡 물류센터 화재는 물류창고의 구조적 문제와 보관 물품의 가연성으로 인해 대형 화재로 번졌으며, 이는 물류창고의 안전 관리 중요성을 부각시킨다.",
-      "impact": "🔴높음",
-      "impact_reason": "물류센터의 구조적 문제와 보관 물품의 특성이 대형 화재로 이어질 수 있음을 보여주며, 우리 회사의 물류센터 및 협력사 창고의 화재 안전 규정 및 위험물 보관 기준 준수 여부를 재점검할 필요가 있다.",
-      "action_needed": "자체 물류센터 및 협력사 창고의 화재 안전 점검 강화, 위험물 보관 규정 준수 여부 재확인, 비상 재고 확보 및 대체 물류 경로 검토."
-    },
-    {
-      "title": "24시간 넘게 불타는 쿠팡 물류센터…“피해 수천억원 될 수도”",
-      "url": "https://joongang.co.kr/article/25446154",
-      "source": "중앙일보",
-      "theme": "SHE_규제_위험물",
-      "summary": "인천 쿠팡 물류센터 화재가 24시간 넘게 지속되며 수천억 원에 달하는 막대한 피해가 예상되어, 대형 물류센터 화재의 경제적 파급력을 보여준다.",
-      "impact": "🔴높음",
-      "impact_reason": "대형 물류센터 화재로 인한 막대한 재산 및 영업 손실은 우리 회사의 물류 운영 중단 시 발생할 수 있는 잠재적 피해 규모를 가늠하게 하며, 비상 계획의 중요성을 강조한다.",
-      "action_needed": "자체 물류센터 및 협력사 창고의 화재 안전 점검 강화, 위험물 보관 규정 준수 여부 재확인, 비상 재고 확보 및 대체 물류 경로 검토, 물류 보험 커버리지 재검토."
-    },
-    {
-      "title": "[기획] 세계경제 흔드는 ‘호르무즈’… 유가 넘어 글로벌 공급망 재충격",
-      "url": "https://m-i.kr/news/articleView.html?idxno=1392251",
+      "title": "[기획]관세發 K-수출 하반기 불확실성 더 커진다 - 매일일보",
+      "url": "https://m-i.kr/news/articleView.html?idxno=1392969",
       "source": "매일일보",
       "theme": "지정학_리스크",
-      "summary": "중동 지역의 군사적 긴장이 고조되면서 호르무즈 해협 리스크가 다시 부각되고 있으며, 이는 유가 상승을 넘어 글로벌 공급망 전반에 재충격을 줄 수 있다.",
+      "summary": "미국 무역대표부(USTR)가 한국산 제품에 12.5%의 추가 관세 부과 방안을 제안하면서 국내 수출기업의 하반기 경영 불확실성이 커지고 있다.",
       "impact": "🔴높음",
-      "impact_reason": "호르무즈 해협은 주요 원유 및 가스 운송 경로이자 글로벌 해상 운송의 핵심 길목으로, 긴장 고조는 유가 및 해상 운임 급등, 운송 지연 등 우리 회사의 물류 운영에 직접적인 영향을 미칠 수 있다.",
-      "action_needed": "중동 항로를 이용하는 선박의 운항 상황 및 유가, 해상 운임 변동 추이 실시간 모니터링, 비상 운송 계획 및 재고 수준 점검"
+      "impact_reason": "한국산 제품에 대한 추가 관세 부과는 배터리/전자부품 제조기업의 수출 물류 비용 및 전략에 직접적이고 즉각적인 영향을 미칠 수 있다.",
+      "action_needed": "관세 부과 동향 면밀히 모니터링, 관세 부과 시나리오별 수출 가격 및 물류 비용 영향 분석, 대체 운송 경로 또는 생산지 다변화 등 대응 전략 검토."
     },
     {
-      "title": "연기 가득, 진화 난항…쿠팡 물류센터 화재 국가소방동원령 4차 발령",
-      "url": "https://www.mt.co.kr/society/2026/07/18/2026071820405851539",
-      "source": "머니투데이",
-      "theme": "SHE_규제_위험물",
-      "summary": "인천 쿠팡 물류센터에서 대형 화재가 발생하여 15시간째 진압에 난항을 겪고 있으며, 소방청이 국가소방동원령을 4차까지 발령했다.",
-      "impact": "🔴높음",
-      "impact_reason": "대형 물류센터 화재는 창고 안전 규제 강화 및 물류 운영 안정성 점검의 필요성을 높이며, 우리 회사의 창고 운영 및 재고 전략에 직접적인 영향을 미칠 수 있습니다.",
-      "action_needed": "우리 회사 물류센터 및 협력사 창고의 화재 안전 점검 강화, 배터리/전자부품 등 위험물 보관 규정 준수 여부 재확인, 비상 계획 수립 및 훈련."
-    },
-    {
-      "title": "올 세계 항공시장 ‘에상보다 더 낙관적’",
-      "url": "https://www.cargonews.co.kr/news/articleView.html?idxno=60543",
-      "source": "cargonews",
-      "theme": "운임_유가",
-      "summary": "글로벌 항공화물 운임이 중동 전쟁으로 인한 공급망 혼란과 긴급 수요 확대로 인해 2026년 5~15% 상승할 것으로 전망됩니다.",
-      "impact": "🟡모니터링",
-      "impact_reason": "항공 운임 상승은 배터리/전자부품과 같은 고부가가치 제품의 운송 비용에 직접적인 영향을 미치므로 지속적인 모니터링이 필요합니다.",
-      "action_needed": "항공 운송 계약 조건 재검토, 대체 운송 수단(해상 등) 활용 가능성 검토, 운송비 예산 재조정."
-    },
-    {
-      "title": "U.S.-EU Trade Agreement Eliminates Duties on Most U.S. Goods Starting July 1; TPEB Rates Rise as July Capacity Hits Three-Year High",
-      "url": "https://www.flexport.com/global-logistics-update/july-02-2026-GLU-Newsletter/",
-      "source": "flexport",
+      "title": "글로벌 10% 관세 만료 눈앞…트럼프 무역장벽 더 높이나 | 한국경제",
+      "url": "https://hankyung.com/article/2026071928891",
+      "source": "한국경제",
       "theme": "지정학_리스크",
-      "summary": "미국-EU 무역 협정이 7월 1일부터 대부분의 미국산 공산품에 대한 관세를 철폐했으며, 7월 용량이 3년 만에 최고치를 기록했음에도 불구하고 TPEB 운임은 상승하고 있습니다.",
-      "impact": "🟡모니터링",
-      "impact_reason": "미-EU 무역 협정은 해당 지역으로의 수출입 비용을 절감할 잠재력이 있으나, TPEB 운임 상승은 주요 운송 비용 증가 추세를 나타내므로 지속적인 모니터링이 필요합니다.",
-      "action_needed": "미-EU 무역 협정의 세부 내용 검토 및 해당 제품에 대한 관세 혜택 활용 방안 모색, TPEB 운임 추이 모니터링 및 운송 계약 조건 재검토."
+      "summary": "미국이 무역법 122조에 따른 글로벌 10% 관세 만료를 앞두고 무역법 301조를 근거로 한국, 중국 등 60개국에 대한 관세 부과를 준비하고 있어 무역장벽이 더 높아질 수 있다.",
+      "impact": "🔴높음",
+      "impact_reason": "미국발 관세 정책 변화는 배터리/전자부품 제조기업의 글로벌 수출 전략 및 물류 비용에 직접적인 영향을 미치므로 즉각적인 대응이 필요하다.",
+      "action_needed": "미국 관세 정책 변화 동향 면밀히 모니터링, 잠재적 관세 부과 대상 품목 및 세율 확인, 수출 시장 다변화 및 공급망 재편 가능성 검토."
     },
     {
-      "title": "CAPE Phase 2 Launches June 29 for Reconciliation-Flagged Entries; TPEB Rates Rise 10% for Sixth Consecutive Week",
-      "url": "https://www.flexport.com/global-logistics-update/june-25-2026-GLU-Newsletter/",
-      "source": "flexport",
+      "title": "이란 원전 건설현장 때린 美 … 국제유가 90弗 재돌파",
+      "url": "https://mk.co.kr/news/world/12102616",
+      "source": "매일경제",
       "theme": "운임_유가",
-      "summary": "CBP의 CAPE Phase 2가 6월 29일 조정 대상 항목에 대해 시작되었으며, TPEB 운임은 6주 연속 10% 상승했습니다.",
-      "impact": "🟡모니터링",
-      "impact_reason": "TPEB 운임의 지속적인 상승은 주요 운송 비용 증가를 의미하며, CAPE Phase 2는 통관 절차에 영향을 줄 수 있으므로 모니터링이 필요합니다.",
-      "action_needed": "TPEB 운임 상승 추이 모니터링 및 운송 계약 조건 재검토, CAPE Phase 2 관련 CBP 지침 확인 및 통관 절차에 미치는 영향 분석."
+      "summary": "미국이 이란 원전 건설 현장을 공격하면서 국제유가가 배럴당 90달러를 재돌파했으며, 이는 중동 긴장 고조로 인한 공급망 불안과 인플레이션 압력 가중으로 이어질 수 있습니다.",
+      "impact": "🔴높음",
+      "impact_reason": "국제유가 상승은 해상 및 항공 운임의 유류할증료 인상으로 직결되어 우리 회사의 물류비용에 즉각적인 영향을 미치며, 중동 리스크는 주요 해상 운송로의 불안정성을 높일 수 있습니다.",
+      "action_needed": "유가 변동에 따른 운임 인상 가능성을 예측하고, 운송 계약 조건 재검토 및 대체 운송 경로/방안을 사전에 검토하며, 재고 수준 및 운송 스케줄 조정 가능성을 평가합니다."
+    },
+    {
+      "title": "대한항공 2분기 매출 늘었지만 유가·환율 탓 이익 급감, 조원태 글로벌 불확실성 '통제'와 아시아나항공 안정적 '통합' 이중 과제",
+      "url": "https://huffingtonpost.kr/article/258847",
+      "source": "허프포스트코리아",
+      "theme": "운임_유가",
+      "summary": "대한항공의 2분기 매출은 여객 및 화물 수요 증가로 늘었으나, 크게 오른 유가와 환율 영향으로 영업이익이 급감하며 수익성이 악화되었습니다.",
+      "impact": "🔴높음",
+      "impact_reason": "항공사의 수익성 악화는 유가 및 환율 변동이 항공 운임에 직접적으로 반영될 가능성을 높이며, 이는 우리 회사의 항공 운송 비용 증가로 이어질 수 있습니다.",
+      "action_needed": "유가 및 환율 변동 추이를 면밀히 모니터링하고, 항공 운임 인상 가능성에 대비하여 운송 계약 조건을 재검토하며, 필요시 해상 운송 등 대체 운송 수단 활용을 고려합니다."
     },
     {
       "title": "Statement on EU Commission Revision of the EU Emissions Trading System",
       "url": "https://www.iata.org/en/pressroom/2026-releases/07-17-statement-eu-commission-revision-emissions-trading-system/",
       "source": "iata",
-      "theme": "SHE_규제_위험물",
-      "summary": "IATA는 EU 배출권 거래 시스템(ETS)의 유럽 외 지역 확장 제안에 대해 깊은 불만을 표하며 부정적인 결과를 경고했습니다.",
+      "theme": "운임_유가",
+      "summary": "IATA는 EU ETS(배출권 거래 시스템)의 유럽 국경 외 확장 제안에 대해 깊은 불만을 표명하며, 이는 항공 운송 비용 증가로 이어질 수 있다고 경고했다.",
       "impact": "🟡모니터링",
-      "impact_reason": "EU ETS의 확장 논의는 항공 운송 비용 증가 및 규제 준수 부담으로 이어질 수 있으므로, 향후 우리 항공 물류 운영에 미칠 영향을 모니터링해야 합니다.",
-      "action_needed": "EU ETS 확장 논의 진행 상황 주시, 항공 운송 비용에 미칠 잠재적 영향 분석, 탄소 배출량 관리 및 저감 방안 검토."
+      "impact_reason": "EU ETS의 유럽 국경 외 확장은 항공 운송 비용 증가로 이어져 항공 화물 운임 상승 압력으로 작용할 수 있다.",
+      "action_needed": "항공 운송 비용 변화 추이 모니터링 및 잠재적 운임 인상에 대비한 예산 검토."
     },
     {
       "title": "Air Cargo Demand Up 6.0% in May",
       "url": "https://www.iata.org/en/pressroom/2026-releases/06-29-air-cargo-demand-up-may/",
       "source": "iata",
       "theme": "운임_유가",
-      "summary": "2026년 5월 글로벌 항공 화물 수요가 전년 대비 6.0% 증가하여 시장의 강세를 나타냈습니다.",
+      "summary": "2026년 5월 전 세계 항공 화물 수요가 전년 대비 6.0% 증가하여 항공 운송 시장의 활황세를 보였다.",
       "impact": "🟡모니터링",
-      "impact_reason": "항공 화물 수요 증가는 운임 상승 압력으로 작용할 수 있으며, 이는 우리 제품의 항공 운송 비용에 영향을 미칠 수 있으므로 모니터링이 필요합니다.",
-      "action_needed": "항공 운임 추이와 항공사 용량 확보 상황 지속 모니터링."
-    },
-    {
-      "title": "Structural Contraction of Global Liner Networks",
-      "url": "https://www.sea-intelligence.com/press-room/398-structural-contraction-of-global-liner-network",
-      "source": "sea",
-      "theme": "운송지연_항만적체",
-      "summary": "IMF는 2026년 글로벌 무역량 성장률이 3.5%로 크게 둔화될 것으로 전망하며, 이는 글로벌 선사 네트워크의 구조적 축소로 이어질 것이라고 분석했습니다.",
-      "impact": "🟡모니터링",
-      "impact_reason": "글로벌 무역량 둔화와 선사 네트워크 축소는 해상 운송 용량 감소 및 서비스 빈도 변화로 이어져 우리 제품의 해상 운송 계획에 영향을 미칠 수 있습니다.",
-      "action_needed": "주요 해상 운송 노선의 선사 서비스 변화 모니터링, 장기 운송 계약 조건 재검토, 운송 파트너와의 긴밀한 소통 유지."
+      "impact_reason": "항공 화물 수요 증가는 항공 운송 공간 확보 경쟁을 심화시키고 운임 상승으로 이어질 수 있어 물류 비용에 직접적인 영향을 미칠 수 있다.",
+      "action_needed": "항공 운임 추이 및 가용성 지속 모니터링, 필요시 운송 계획 조정 검토."
     },
     {
       "title": "Structural Contraction of Global Liner Networks",
       "url": "https://www.sea-intelligence.com/press-room/397-structural-contraction-of-global-liner-networks",
-      "source": "sea-intelligence",
+      "source": "sea",
       "theme": "운송지연_항만적체",
-      "summary": "글로벌 선사들이 네트워크를 구조적으로 축소하고 있으며, 지리적 범위는 유지하나 서비스 빈도가 감소하는 추세이다.",
+      "summary": "2012년 이후 글로벌 라이너 네트워크 데이터 분석 결과, 선사들이 지리적 범위는 유지하면서도 서비스 빈도를 줄이는 등 네트워크 관리 방식에 근본적인 변화가 있음을 보여준다.",
       "impact": "🟡모니터링",
-      "impact_reason": "선사들의 서비스 빈도 감소는 장기적으로 우리 물류의 운송 옵션 및 스케줄 유연성에 영향을 줄 수 있으므로 추이를 모니터링해야 한다.",
-      "action_needed": null
+      "impact_reason": "해상 운송 네트워크의 서비스 빈도 감소는 운송 리드타임 증가 및 스케줄 유연성 저하로 이어질 수 있다.",
+      "action_needed": "해상 운송 스케줄 및 서비스 빈도 변화 모니터링, 운송 리드타임 증가에 대비한 재고 및 생산 계획 조정 검토."
     },
     {
       "title": "PLSCI Data Indicates Mega-Hub Retrenchment",
       "url": "https://www.sea-intelligence.com/press-room/396-plsci-data-indicates-mega-hub-retrenchment",
-      "source": "sea-intelligence",
+      "source": "sea",
       "theme": "운송지연_항만적체",
-      "summary": "UNCTAD의 PLSCI 데이터에 따르면 메가 허브 항만의 연결성이 재조정되고 있으며, 이는 선사들의 네트워크 전략 변화를 반영한다.",
+      "summary": "2026년 2분기 PLSCI(항만 라이너 선박 연결성 지수) 분석 결과, 최근 네트워크 재조정이 반응적 대응에서 선제적 대응으로 전환되며 메가 허브 항만들이 축소되는 경향을 보인다.",
       "impact": "🟡모니터링",
-      "impact_reason": "주요 허브 항만의 연결성 변화는 향후 우리 물류의 주요 환적 경로 및 리드타임에 영향을 미칠 수 있어 모니터링이 필요하다.",
-      "action_needed": null
+      "impact_reason": "주요 메가 허브 항만의 연결성 변화는 우리 회사의 해상 운송 경로 및 환적 효율성에 영향을 미쳐 잠재적으로 운송 시간 증가나 비용 상승을 초래할 수 있다.",
+      "action_needed": "주요 항만 연결성 지표 및 운송 경로 변화 모니터링, 필요시 대체 항만 및 운송 경로 검토."
     },
     {
       "title": "Tracking True Vessel Delay",
       "url": "https://www.sea-intelligence.com/press-room/394-tracking-true-vessel-delay",
-      "source": "sea-intelligence",
+      "source": "sea",
       "theme": "운송지연_항만적체",
-      "summary": "선사들이 운송 시간을 늘리는 스케줄 버퍼링을 통해 선박 지연을 관리하고 있으며, 이는 실제 지연과 조기 도착 간의 관계를 분석한 결과이다.",
+      "summary": "선사들이 운송 시간을 늘리는 '스케줄 버퍼링'에 의존하면서 실제 선박 지연과 스케줄 버퍼링 간의 관계를 분석하여 운송 리드타임 예측의 중요성을 강조했다.",
       "impact": "🟡모니터링",
-      "impact_reason": "선사들의 스케줄 버퍼링은 명목상 운송 시간 증가로 이어져 우리 물류의 리드타임 예측에 영향을 줄 수 있으므로 추이를 모니터링해야 한다.",
-      "action_needed": null
+      "impact_reason": "선사들이 스케줄 버퍼링을 통해 운송 시간을 늘리는 경향은 우리 회사의 운송 리드타임 예측 및 재고 계획에 영향을 미칠 수 있다.",
+      "action_needed": "운송사별 실제 운송 리드타임과 공시된 스케줄 간의 차이 분석, 재고 및 생산 계획에 반영."
     },
     {
-      "title": "해진공 \"중동불안 장기화 속 국제물류 구조 재편...효율성→안정성·유...\"",
-      "url": "https://surff.kr/ko/blog/detail/20260718-경제물류-주요뉴스",
-      "source": "surff",
-      "theme": "지정학_리스크",
-      "summary": "중동 불안이 장기화되면서 국제 물류 구조가 효율성보다는 안정성 및 유연성을 중시하는 방향으로 재편될 수 있다는 분석이다.",
-      "impact": "🟡모니터링",
-      "impact_reason": "중동 불안으로 인한 국제 물류 구조 재편은 장기적으로 우리 SCM 전략에 영향을 미칠 수 있으므로 추이를 모니터링해야 한다.",
-      "action_needed": null
-    },
-    {
-      "title": "머스크, 홍해 복귀 속도…WAF15도 수에즈 전환",
-      "url": "https://surff.kr/ko/blog/detail/vol132-주간-선사별-동향-week-29-2026",
-      "source": "surff",
-      "theme": "운송지연_항만적체",
-      "summary": "머스크가 서아프리카 지선 서비스 WAF15를 희망봉 우회에서 수에즈·홍해 항로로 전환하며 홍해 복귀에 속도를 내고 있다.",
-      "impact": "🟡모니터링",
-      "impact_reason": "주요 선사의 홍해/수에즈 운하 복귀는 해당 항로의 안정성 회복 가능성을 시사하나, 중동 리스크가 상존하므로 지속적인 모니터링이 필요하다.",
-      "action_needed": null
-    },
-    {
-      "title": "머스크, 인도·중동-미국 동안 항로 수에즈운하 복귀…동항 운송일수 14일 단축",
-      "url": "https://surff.kr/ko/blog/detail/vol132-주간-선사별-동향-week-29-2026",
-      "source": "surff",
-      "theme": "운송지연_항만적체",
-      "summary": "머스크가 인도·중동-미국 동안 서비스 MECL을 수에즈운하 경유로 전환하여 운송 일수를 14일 단축했다.",
-      "impact": "🟡모니터링",
-      "impact_reason": "주요 항로의 운송일수 단축은 긍정적인 신호이나, 중동 리스크로 인한 재우회 가능성이 있어 지속적인 모니터링이 필요하다.",
-      "action_needed": null
-    },
-    {
-      "title": "The GAFG Connectivity Doctrine: From Corridors to Governance Ecosystems",
-      "url": "https://www.moroccoworldnews.com/2026/07/330231/the-gafg-connectivity-doctrine-from-corridors-to-governance-ecosystems/",
-      "source": "Morocco World News",
-      "theme": "기타_물류",
-      "summary": "지정학적 불안정성과 공급망 혼란 속에서 북극 항로, 미들 코리더 등 다양한 대체 무역 경로의 중요성과 거버넌스 생태계 구축의 필요성을 강조한다.",
-      "impact": "🟡모니터링",
-      "impact_reason": "장기적인 관점에서 공급망 다변화 및 대체 운송 경로 개발의 중요성을 시사하며, 우리 회사의 미래 물류 전략 수립에 참고할 만한 정보이다.",
-      "action_needed": "없음"
-    },
-    {
-      "title": "Asia’s renewable energy expansion faces rising project risks",
-      "url": "https://asian-power.com/in-focus/asias-renewable-energy-expansion-faces-rising-project-risks",
-      "source": "Asian Power",
-      "theme": "지정학_리스크",
-      "summary": "아시아의 재생에너지 확장이 지정학적 긴장, 무역 정책 변화, 물류 혼란, 공급업체 집중 등으로 인해 공급망 회복력 측면에서 프로젝트 위험에 직면하고 있다.",
-      "impact": "🟡모니터링",
-      "impact_reason": "지정학적 긴장, 무역 정책 변화, 물류 혼란 등은 우리 회사의 공급망에도 유사한 위험을 초래할 수 있으므로, 아시아 지역의 공급망 리스크 추이를 지속적으로 모니터링해야 한다.",
-      "action_needed": "없음"
-    },
-    {
-      "title": "한번 터지면 장기화·대형화재···반복되는 ‘물류센터 화재’ 막을 방법 없나",
-      "url": "https://www.khan.co.kr/article/202607191506001/",
-      "source": "경향신문",
-      "theme": "SHE_규제_위험물",
-      "summary": "인천 쿠팡 물류센터에서 대형 화재가 발생하여 물류센터 안전 관리 문제가 다시 부각되었으며, 이는 대형화·장기화되는 물류센터 화재에 대한 근본적인 대책 마련의 필요성을 제기한다.",
-      "impact": "🟡모니터링",
-      "impact_reason": "물류센터 화재가 반복되면서 안전 규제 강화 논의가 시작될 수 있으며, 이는 향후 우리 회사의 물류센터 운영 및 보관 비용에 영향을 미칠 수 있다.",
-      "action_needed": "물류센터 안전 관리 현황 점검 및 관련 규제 동향 지속 모니터링"
-    },
-    {
-      "title": "\"中메모리칩 사지 말라\"...美공화당‧민주당,상무부에 CXMT·YMTC 구매 제한 촉구",
-      "url": "https://thepublic.kr/news/articleView.html?idxno=311695",
-      "source": "더퍼블릭",
-      "theme": "지정학_리스크",
-      "summary": "미국 공화당과 민주당이 상무부에 중국 D램 및 낸드플래시 제조업체인 CXMT와 YMTC에 대한 구매 제한을 촉구하며, 이는 미중 반도체 기술 경쟁 심화와 공급망 분리 압력을 보여준다.",
-      "impact": "🟡모니터링",
-      "impact_reason": "중국 메모리칩에 대한 미국의 추가 제재 가능성은 우리 회사의 부품 조달 및 공급망 전략에 간접적인 영향을 미칠 수 있으므로 추이를 모니터링해야 한다.",
-      "action_needed": "중국산 반도체 부품 사용 현황 점검 및 대체 공급처 확보 가능성 검토"
-    },
-    {
-      "title": "8월 국제선 유류할증료 또 내린다",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=71556",
-      "source": "트래블데일리",
+      "title": "VLCC 13.7% 하락한 118,483달러...8만4000cbm급 LPG운반선 운임 중 미주-동아시아 운임은 13.8% 상승",
+      "url": "https://www.shippingnewsnet.com/news/articleView.html?idxno=71245",
+      "source": "shippingnews",
       "theme": "운임_유가",
-      "summary": "국제유가 안정세가 이어지면서 대한항공의 국제선 유류할증료가 8월에도 큰 폭으로 인하되어 3개월 연속 하락한다.",
+      "summary": "VLCC 운임은 하락하고 LPG 운반선 운임은 상승하는 등 선종별 운임 변동이 있었으며, 컨테이너 정기선 운임은 성수기 강세 기조를 유지했다.",
       "impact": "🟡모니터링",
-      "impact_reason": "국제선 유류할증료 인하는 항공 운송 비용 절감에 긍정적이나, 유가 변동성에 따라 언제든 다시 상승할 수 있어 지속적인 추이 관찰이 필요합니다.",
-      "action_needed": "항공 운송 비용 절감 기회 모색 및 장기적인 운임 추이 모니터링."
+      "impact_reason": "우리 회사는 배터리/전자부품 제조기업이므로 컨테이너 운임이 가장 중요하며, 컨테이너 운임 강세 기조는 물류비 상승 압박으로 작용할 수 있어 지속적인 모니터링이 필요하다.",
+      "action_needed": "컨테이너 운임 추이 지속 모니터링 및 운송 계약 조건 검토."
     },
     {
-      "title": "뉴스스페이스",
-      "url": "https://newsspace.kr/news/article.html?no=14861",
-      "source": "뉴스스페이스",
-      "theme": "지정학_리스크",
-      "summary": "이란 고위 군사 고문이 미국 공습 지속 시 보복 작전을 경고하며 중동 지역의 지정학적 긴장이 고조되고 있다.",
+      "title": "진입 힘든 내부에 가연성 생활용품 빼곡 … 창문도 없어 진화 어려워 - 매일경제",
+      "url": "https://mk.co.kr/news/society/12102656",
+      "source": "매일경제",
+      "theme": "SHE_규제_위험물",
+      "summary": "인천 쿠팡 물류센터 화재가 장기화되는 가운데, 메자닌 복층 구조와 가연성 생활용품, 5층의 리튬 배터리 로봇이 진화를 어렵게 하고 있으며, 2024년 이전 허가 물류창고의 안전기준 미흡 문제가 제기되었다.",
       "impact": "🟡모니터링",
-      "impact_reason": "중동 지역의 지정학적 긴장은 국제 유가 및 주요 해상 운송로의 안정성에 영향을 미칠 수 있으므로, 에너지 비용 및 운송 리스크 관점에서 추이를 모니터링해야 합니다.",
-      "action_needed": "국제 유가 및 중동 지역 정세 변화 모니터링, 비상 운송 경로 및 재고 확보 전략 검토."
+      "impact_reason": "물류창고 화재 시 리튬 배터리의 위험성이 다시 부각되었고, 기존 물류창고의 안전 기준 미흡 문제가 제기되어 향후 배터리 보관 및 위험물 창고 규제 강화 논의로 이어질 수 있으므로 모니터링이 필요하다.",
+      "action_needed": "사내 위험물 보관 창고의 안전 점검 및 규제 동향 주시."
+    },
+    {
+      "title": "Vol132. 주간 선사별 동향 (Week 29, 2026) (주간 선사 동향)",
+      "url": "https://surff.kr/ko/blog/detail/vol132-주간-선사별-동향-week-29-2026",
+      "source": "surff.kr",
+      "theme": "운송지연_항만적체",
+      "summary": "머스크가 서아프리카 및 인도·중동-미국 동안 항로를 희망봉 우회에서 수에즈·홍해 항로로 전환하며 운송 일수를 단축하고 있으나, 극동아시아-북유럽·지중해 노선에 성수기 할증료를 인상했다.",
+      "impact": "🟡모니터링",
+      "impact_reason": "주요 선사의 홍해/수에즈 복귀는 긍정적이나, 여전히 성수기 할증료 인상이 발생하고 있어 운임 변동 가능성을 지속적으로 모니터링해야 한다.",
+      "action_needed": "주요 선사의 항로 운영 및 운임 정책 변화 지속 모니터링."
+    },
+    {
+      "title": "반복되는 물류센터 화재…강화된 기준에도 기존시설은 사각지대 - 파이낸셜뉴스",
+      "url": "https://fnnews.com/news/202607201229505639",
+      "source": "파이낸셜뉴스",
+      "theme": "SHE_규제_위험물",
+      "summary": "반복되는 물류센터 화재에도 불구하고 2024년부터 강화된 스프링클러 기준이 기존 시설에는 적용되지 않아 안전 사각지대가 발생하고 있으며, 전문가들은 기존 시설의 안전성 보완 대책 마련을 촉구하고 있다.",
+      "impact": "🟡모니터링",
+      "impact_reason": "현재는 기존 시설에 대한 규제 강화가 없지만, 쿠팡 화재와 같은 대형 사고가 반복되면 기존 물류센터에 대한 안전 규제 강화 논의가 시작될 수 있어 향후 물류 운영에 영향을 줄 수 있다.",
+      "action_needed": "물류센터 화재 관련 규제 동향 지속 모니터링, 자사 및 협력사 물류센터의 안전 기준 준수 여부 선제적 점검 및 개선 방안 검토."
+    },
+    {
+      "title": "中 자동차 부품기업 태국 인니 동남아 공장 진출 가속",
+      "url": "https://www.newspim.com/news/view/20260720000762",
+      "source": "뉴스핌",
+      "theme": "지정학_리스크",
+      "summary": "중국 자동차 부품 기업들이 글로벌 경쟁력 강화와 공급망 다변화를 위해 태국, 인도네시아 등 동남아시아로 공장 진출을 가속화하고 있습니다.",
+      "impact": "🟡모니터링",
+      "impact_reason": "동남아시아 지역의 물류 인프라 및 공급망 환경 변화 가능성을 시사하며, 장기적으로 우리 회사의 부품 조달 또는 생산 거점 전략에 영향을 줄 수 있습니다.",
+      "action_needed": "동남아시아 지역의 물류 인프라 개발 동향 및 잠재적 공급망 파트너 변화를 지속적으로 모니터링하고, 필요시 공급망 다변화 전략을 검토합니다."
+    },
+    {
+      "title": "코트라, 디트로이트서 韓자동차 부품사 포드·스텔란티스 공급망 연결",
+      "url": "https://www.sedaily.com/article/20069033",
+      "source": "서울경제",
+      "theme": "지정학_리스크",
+      "summary": "KOTRA가 미국발 관세와 전기차 전환, 현지화 확대에 대응하여 한국 자동차 부품사들이 포드, 스텔란티스 등 글로벌 완성차 공급망에 진입하도록 지원하고 있습니다.",
+      "impact": "🟡모니터링",
+      "impact_reason": "미국 시장의 현지화 및 관세 정책은 우리 회사의 북미 지역 공급망 전략 및 고객사와의 관계에 간접적인 영향을 미칠 수 있으며, 특히 EV 부품 공급 시 중요하게 고려해야 할 요소입니다.",
+      "action_needed": "북미 시장의 무역 정책 및 현지화 동향을 지속적으로 모니터링하고, 주요 고객사의 공급망 현지화 전략 변화에 대한 정보를 수집하여 잠재적 기회 또는 리스크를 평가합니다."
+    },
+    {
+      "title": "삼영물류-SF익스프레스, 크로스보더 물류 협력",
+      "url": "https://www.ksg.co.kr/news/main_newsView.jsp?pNum=147654",
+      "source": "ksg",
+      "theme": "기타_물류",
+      "summary": "삼영물류와 SF익스프레스코리아가 크로스보더 이커머스 물류사업을 공동 추진하기 위해 협력하여 국내외 물류 인프라와 운송 네트워크를 결합한 엔드투엔드 서비스를 제공한다.",
+      "impact": "🟢낮음",
+      "impact_reason": "국내외 물류 기업 간 협력은 시장 경쟁을 촉진할 수 있으나, 우리 회사의 B2B 중심 물류 운영에 직접적인 영향은 미미하다.",
+      "action_needed": null
     },
     {
       "title": "Global Schedule Reliability for May 2026 the Highest of the Year",
       "url": "https://www.sea-intelligence.com/press-room/395-global-schedule-reliability-for-may-2026-the-highest-of-the-year",
-      "source": "sea-intelligence",
+      "source": "sea",
       "theme": "운송지연_항만적체",
-      "summary": "2026년 5월 글로벌 선박 스케줄 신뢰도가 올해 최고치를 기록하여 전반적인 해운 서비스의 정시성이 개선되었다.",
+      "summary": "2026년 5월 글로벌 선박 스케줄 신뢰도가 올해 최고치를 기록하여 해상 운송의 정시성이 개선되었다.",
       "impact": "🟢낮음",
-      "impact_reason": "스케줄 신뢰도 개선은 긍정적이나, 단기적인 수치이며 우리 물류 운영에 즉각적인 변화를 요구하지는 않는다.",
+      "impact_reason": "해상 운송 스케줄 신뢰도 개선은 운송 계획 수립에 긍정적이나, 이는 단기적인 지표일 수 있으며 지속적인 개선 여부를 모니터링해야 한다.",
+      "action_needed": "해상 운송 스케줄 신뢰도 추이 지속 모니터링."
+    },
+    {
+      "title": "러시아, 우크라 오데사 항구 화물선에 미사일 공격, 10명 사망 - surff",
+      "url": "https://surff.kr/ko/blog/detail/20260721-경제물류-주요뉴스",
+      "source": "surff.kr",
+      "theme": "지정학_리스크",
+      "summary": "러시아가 우크라이나 오데사 항구의 화물선을 미사일로 공격하여 10명이 사망하는 사건이 발생했다.",
+      "impact": "🟢낮음",
+      "impact_reason": "우크라이나 항구 공격은 해당 지역의 물류에 직접적인 영향을 미치지만, 우리 회사의 주요 운송 경로와는 거리가 있어 당장 직접적인 영향은 낮다.",
       "action_needed": null
     },
     {
-      "title": "\"한화 필리조선소, 신규 수주로 MASGA 투자 과실 증명\"...골든 디펜더급 MRIV 수주로 미 골든 돔 정책 참여",
-      "url": "https://www.shippingnewsnet.com/news/articleView.html?idxno=71225",
-      "source": "shippingnewsnet",
+      "title": "중동 불안에 닻 올린 중국 조선…전 세계 주문 싹쓸이 - surff",
+      "url": "https://surff.kr/ko/blog/detail/20260720-경제물류-주요뉴스",
+      "source": "surff.kr",
       "theme": "기타_물류",
-      "summary": "한화 필리조선소가 미사일 방어 프로젝트 관련 신규 수주를 확보하며 미국 현지 조선 투자 성과를 입증했다.",
+      "summary": "중동 불안으로 운송 거리가 늘어나면서 선복 부족 우려가 커지자 중국 조선업이 전 세계 선박 주문을 싹쓸이하며 선복 공급 확대에 기여할 것으로 예상된다.",
       "impact": "🟢낮음",
-      "impact_reason": "조선업 관련 뉴스이나, 우리 회사의 배터리/전자부품 물류 운영에 직접적인 영향은 없으며 참고 수준이다.",
+      "impact_reason": "장기적으로 선복 공급 확대에 긍정적일 수 있으나, 단기적인 우리 물류 운영에는 직접적인 영향이 낮다.",
       "action_needed": null
     },
     {
@@ -338,70 +228,50 @@
       "url": "http://www.ulogistics.co.kr/test/board.php?board=all2&command=body&no=5212",
       "source": "ulogistics",
       "theme": "기타_물류",
-      "summary": "이베코코리아가 연비, 안전, 주행 편의성을 향상시킨 대형 트랙터 '올 뉴 S-Way'를 국내에 출시하여 운송 사업자의 운영 효율을 높일 것으로 기대된다.",
+      "summary": "이베코코리아가 연비, 안전, 주행 편의성을 향상시킨 대형 트랙터 '올 뉴 S-Way'를 출시하여 운송 사업자의 운영 효율을 높이고 운전자에게 안전하고 편안한 환경을 제공할 것으로 기대된다.",
       "impact": "🟢낮음",
-      "impact_reason": "신형 트랙터 출시는 육상 운송 효율성 개선에 기여할 수 있으나, 우리 물류 운영에 직접적인 영향은 없으며 참고 수준이다.",
+      "impact_reason": "신형 트랙터 출시는 장기적으로 육상 운송 효율 개선에 기여할 수 있으나, 당장 우리 회사의 물류 운영에 직접적인 영향은 낮다.",
       "action_needed": null
     },
     {
-      "title": "[해양통신] LNGBV 시장 급성장… \"중국 가세, 대형화가 특징\"",
-      "url": "https://oceanpress.co.kr/news/article.html?no=30653",
-      "source": "oceanpress.co.kr",
+      "title": "Hyperlocal Supply Chains Are Emerging As Hospitality’s Next Big Asset",
+      "url": "https://forbes.com/sites/indrabatilahiri/2026/07/19/hyperlocal-supply-chains-are-emerging-as-hospitalitys-next-big-asset",
+      "source": "Forbes",
       "theme": "기타_물류",
-      "summary": "LNG 벙커링 시장이 급성장하며 전 세계 LNG 벙커링선 선단이 확대될 전망이며, 중국 기업의 투자와 대형화가 특징이다.",
+      "summary": "기후 변화로 인한 공급망 교란에 대응하기 위해 호텔 산업에서 효율성보다는 회복탄력성을 강조하는 하이퍼로컬 공급망이 부상하고 있다.",
       "impact": "🟢낮음",
-      "impact_reason": "LNG 벙커링 시장 성장은 장기적인 해운 연료 동향에 영향을 줄 수 있으나, 우리 물류 운영에 당장 직접적인 영향은 없다.",
-      "action_needed": null
+      "impact_reason": "호텔 산업의 공급망 변화에 대한 내용으로, 배터리/전자부품 제조기업의 직접적인 물류 운영에 당장 영향을 미치지는 않는다.",
+      "action_needed": ""
     },
     {
-      "title": "의사 원격진료 없이도 일반의약품 투여 가능…선내 안전보건 기준 손질",
-      "url": "https://ajunews.com/view/20260719143613531",
-      "source": "아주경제",
+      "title": "화물차·지게차·작업자 동선 색으로 구분…CJ제일제당 안전 강화 | 한국경제",
+      "url": "https://hankyung.com/article/202607203490g",
+      "source": "한국경제",
+      "theme": "SHE_규제_위험물",
+      "summary": "CJ제일제당이 식품업계 최초로 CUD(Color Universal Design)를 적용하여 화물차, 지게차, 작업자 동선을 색으로 구분하는 등 물류센터 안전을 강화하고 있다.",
+      "impact": "🟢낮음",
+      "impact_reason": "물류센터 안전 강화 노력의 일환으로 참고할 만한 사례이나, 배터리/전자부품 제조기업의 물류 운영에 직접적인 영향을 미치는 규제나 위험물 관련 이슈는 아니다.",
+      "action_needed": ""
+    },
+    {
+      "title": "재활용업계 \"정부 자원순환정책 사각지대 해소해야\" < 신재생.환경 < 기사본문 - 에너지데일리",
+      "url": "https://energydaily.co.kr/news/articleView.html?idxno=201524",
+      "source": "에너지데일리",
       "theme": "기타_물류",
-      "summary": "선박 건강담당자의 일반의약품 투여 절차가 간소화되고 안전대표자 선정 방식에 임명제가 포함되는 등 선박 내 안전·보건 기준이 개선된다.",
+      "summary": "재활용업계가 탄소중립 및 순환경제 전환 정책 속에서 미신고 사업장 난립 등 정부 자원순환정책의 사각지대 해소를 요구하고 있다.",
       "impact": "🟢낮음",
-      "impact_reason": "선박 내 의료 및 안전보건 기준에 대한 내용으로, 우리 회사의 배터리/전자부품 물류 운영에 직접적인 영향은 없다.",
-      "action_needed": "없음"
+      "impact_reason": "재활용 산업의 정책적 이슈로, 배터리/전자부품 제조기업의 물류 운영에 직접적인 영향을 미치는 위험물 규제나 안전 문제와는 거리가 있다.",
+      "action_needed": ""
     },
     {
-      "title": "정부, 석유 매점매석 금지 9월까지 연장…최고가격제와 '동반 유지'",
-      "url": "https://news1.kr/economy/trend/6230794",
-      "source": "뉴스1",
-      "theme": "운임_유가",
-      "summary": "정부가 석유제품 매점매석 금지 조치를 9월 12일까지 연장하여 유가 상승 압력 속에서 국내 석유 공급 가격을 안정화하려 한다.",
-      "impact": "🟢낮음",
-      "impact_reason": "국내 석유제품 가격 안정화 조치로, 우리 회사의 직접적인 물류 운임이나 유가 변동에 미치는 영향은 제한적이다.",
-      "action_needed": null
-    },
-    {
-      "title": "“러, 침대 밑에 돈 쌓아둬”…군시설 대신 물류센터 때린 우크라",
-      "url": "https://joongang.co.kr/article/25446189",
-      "source": "중앙일보",
-      "theme": "지정학_리스크",
-      "summary": "우크라이나가 러시아의 주요 전자상거래 물류센터를 타격하여 8명의 사망자를 발생시켰으며, 이는 러시아 국민의 일상에 전쟁의 대가를 실감케 하는 전략의 일환이다.",
-      "impact": "🟢낮음",
-      "impact_reason": "러시아-우크라이나 전쟁 관련 소식으로, 우리 회사의 주요 물류 경로 및 공급망에 직접적인 영향은 현재로서는 낮다.",
-      "action_needed": null
-    },
-    {
-      "title": "에베레스트 오른 DJI, 허가 막힌 美… 세계 최고봉서 맞붙은 미중 드론 경쟁-국제ㅣ한국일보",
-      "url": "https://www.hankookilbo.com/news/article/A2026070910250000193",
-      "source": "한국일보",
+      "title": "\"고맙다, 외국인 환승특수\"…항공사 실적 버팀목으로",
+      "url": "https://mk.co.kr/news/business/12102636",
+      "source": "매일경제",
       "theme": "기타_물류",
-      "summary": "중국 드론 기업 DJI가 에베레스트에서 화물 드론 시험 비행에 성공하며 미래 드론 산업의 가능성을 입증했으나, 미국에서는 허가 문제로 미중 드론 경쟁이 심화되고 있다.",
+      "summary": "중동전 여파로 두바이공항 대체 수요가 인천공항으로 몰리면서 외국인 환승객이 증가하여 항공사 실적에 긍정적인 영향을 미치고 있습니다.",
       "impact": "🟢낮음",
-      "impact_reason": "드론 기술 발전 및 미중 경쟁에 대한 소식으로, 우리 회사의 현재 물류 운영에 직접적인 영향은 없으며 장기적인 기술 동향 참고 수준이다.",
-      "action_needed": null
-    },
-    {
-      "title": "통합 대한항공, 제대로 비상할 수 있을까&hellip;마일리지&middot;계열사 '난제' 수두룩",
-      "url": "https://ddaily.co.kr/page/view/2026071517053448483",
-      "source": "디지털데일리",
-      "theme": "기타_물류",
-      "summary": "대한항공과 아시아나항공의 통합 항공사 출범이 12월로 예정되어 있으나, 마일리지 및 계열사 문제 등 해결해야 할 난제가 많다.",
-      "impact": "🟢낮음",
-      "impact_reason": "국내 주요 항공사의 통합 소식으로, 장기적으로 항공 화물 운임 구조에 영향을 줄 수 있으나 당장 우리 회사의 물류 운영에 미치는 직접적인 영향은 낮다.",
-      "action_needed": null
+      "impact_reason": "주로 여객 환승 특수에 대한 내용으로, 우리 회사의 항공 화물 운송에 직접적인 영향은 미미하며, 오히려 항공사 실적 개선은 장기적으로 항공 화물 서비스 안정화에 기여할 수 있습니다.",
+      "action_needed": ""
     }
   ]
 }
