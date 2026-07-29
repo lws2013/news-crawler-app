@@ -1,15 +1,14 @@
 """
 SCFI & KCCI 운임지수 크롤링 + 이력 관리
 ─────────────────────────────────────────────────
-[SCFI] Shanghai Containerized Freight Index - 매주 금요일 갱신
-  소스: https://en.sse.net.cn/indices/scfinew.jsp
-  방식: Playwright (JS 동적 로딩)
+[SCFI] Shanghai Containerized Freight Index (Playwright)
+[KCCI] KOBC Container Composite Index (requests + BeautifulSoup)
+  - Comprehensive Index (KCCI)
+  - USEC 북미동안 (KUEI, $/FEU)
+  - Mediterranean 지중해 (KMDI, $/FEU)
 
-[KCCI] KOBC Container Composite Index - 매주 월요일 갱신
-  소스: https://www.kobc.or.kr/ebz/shippinginfo/kcci/gridList.do
-  방식: requests + BeautifulSoup (정적 HTML)
-
-[데이터 저장] data/freight_indices.json (GitHub repo에 커밋)
+[저장] data/freight_indices.json
+  키: scfi / kcci / kcci_usec / kcci_med
 """
 
 import json
@@ -24,12 +23,19 @@ OUTPUT_DIR = Path("pipeline/output")
 DATA_DIR = Path("data")
 INDICES_FILE = DATA_DIR / "freight_indices.json"
 
+# KCCI에서 수집할 항목: (저장키, Code값, 표시명)
+KCCI_TARGETS = [
+    ("kcci",      "KCCI", "KCCI Comprehensive Index"),
+    ("kcci_usec", "KUEI", "KCCI 북미 동안 항로 (USD/40')"),
+    ("kcci_med",  "KMDI", "KCCI 지중해 항로 (USD/40')"),
+]
+
 
 def load_indices() -> dict:
     if INDICES_FILE.exists():
         with open(INDICES_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
-    return {"scfi": [], "kcci": []}
+    return {}
 
 
 def save_indices(data: dict):
@@ -39,138 +45,104 @@ def save_indices(data: dict):
     print(f"💾 지수 이력 저장 → {INDICES_FILE}")
 
 
-def normalize_date(value):
-    """허용 포맷:
-    - YYYY-MM-DD
-    - YYYYMMDD -> YYYY-MM-DD 변환
-    그 외는 None
-    """
-    if value is None:
+def _to_float(text: str):
+    """'8,758' → 8758.0, 실패 시 None"""
+    if not text:
         return None
-
-    value = str(value).strip()
-    if not value:
-        return None
-
-    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
-        return value
-
-    if re.fullmatch(r"\d{8}", value):
-        return f"{value[:4]}-{value[4:6]}-{value[6:8]}"
-
-    return None
-
-
-def parse_float(text: str):
-    """문자열에서 첫 번째 숫자(float) 추출"""
-    if text is None:
-        return None
-
-    cleaned = str(text).replace(",", "").strip()
-    match = re.search(r"-?\d+(?:\.\d+)?", cleaned)
-    if not match:
-        return None
-
+    cleaned = text.strip().replace(",", "")
     try:
-        return float(match.group())
+        return float(cleaned)
     except ValueError:
         return None
 
 
-def crawl_kcci() -> dict | None:
-    """KCCI 크롤링 (requests + BeautifulSoup)"""
+def crawl_kcci_all() -> dict:
+    """
+    KCCI 페이지에서 Comprehensive + 지정 노선을 한 번에 수집
+    반환: {저장키: {current_value, current_date, previous_value, previous_date, ...}}
+    """
     print("\n🔎 KCCI 크롤링 중...")
     url = "https://www.kobc.or.kr/ebz/shippinginfo/kcci/gridList.do?mId=0304000000"
+    results = {}
 
     try:
-        resp = requests.get(
-            url,
-            timeout=15,
-            headers={
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-            },
-        )
+        resp = requests.get(url, timeout=15, headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+        })
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
 
         table = soup.find("table")
         if not table:
             print("  ❌ KCCI 테이블을 찾을 수 없습니다.")
-            return None
+            return results
 
-        headers = [th.get_text(strip=True) for th in table.find_all("th")]
+        # 헤더에서 기준일 추출
         current_date = None
         previous_date = None
-        current_col = None
-        previous_col = None
+        for th in table.find_all("th"):
+            text = th.get_text(" ", strip=True)
+            m = re.search(r"(\d{4}-\d{2}-\d{2})", text)
+            if not m:
+                continue
+            if "Current" in text:
+                current_date = m.group(1)
+            elif "Previous" in text:
+                previous_date = m.group(1)
 
-        for i, h in enumerate(headers):
-            compact = " ".join(h.split())
-
-            if "Current Index" in compact or "CurrentIndex" in compact:
-                match = re.search(r"(\d{4}-\d{2}-\d{2}|\d{8})", compact)
-                if match:
-                    current_date = normalize_date(match.group(1))
-                current_col = i
-
-            elif "Previous Index" in compact or "PreviousIndex" in compact:
-                match = re.search(r"(\d{4}-\d{2}-\d{2}|\d{8})", compact)
-                if match:
-                    previous_date = normalize_date(match.group(1))
-                previous_col = i
-
+        # 행별로 Code 기준 파싱
+        # 컬럼: Group | Code | Route | Weight | Current | Previous | Weekly Change
+        # (하위 노선 행은 Group 셀이 없으므로 Code 위치를 기준으로 오프셋 계산)
         rows = table.find_all("tr")
         for row in rows:
-            cells = row.find_all(["td", "th"])
-            cell_texts = [c.get_text(strip=True) for c in cells]
+            cells = [c.get_text(" ", strip=True) for c in row.find_all(["td", "th"])]
+            if not cells:
+                continue
 
-            if "KCCI" in cell_texts:
-                current_val = None
-                previous_val = None
+            for key, code, label in KCCI_TARGETS:
+                if key in results:
+                    continue
+                if code not in cells:
+                    continue
 
-                if current_col is not None and current_col < len(cell_texts):
-                    current_val = parse_float(cell_texts[current_col])
+                idx = cells.index(code)
+                # Code 기준 오프셋: Route(+1), Weight(+2), Current(+3), Previous(+4)
+                current_val = _to_float(cells[idx + 3]) if idx + 3 < len(cells) else None
+                previous_val = _to_float(cells[idx + 4]) if idx + 4 < len(cells) else None
 
-                if previous_col is not None and previous_col < len(cell_texts):
-                    previous_val = parse_float(cell_texts[previous_col])
-
-                # fallback: 숫자 2개 추출
+                # 오프셋이 어긋난 경우 폴백: 뒤쪽 숫자 2개 사용
                 if current_val is None:
-                    numeric_vals = []
-                    for c in cell_texts:
-                        val = parse_float(c)
-                        if val is not None and val > 100:
-                            numeric_vals.append(val)
-
-                    if len(numeric_vals) >= 1:
-                        current_val = numeric_vals[0]
-                    if len(numeric_vals) >= 2:
-                        previous_val = numeric_vals[1]
+                    nums = [v for v in (_to_float(c) for c in cells[idx + 1:]) if v is not None]
+                    # Weight(%)는 문자열이라 float 변환 실패 → 자연스럽게 제외됨
+                    if nums:
+                        current_val = nums[0]
+                        previous_val = nums[1] if len(nums) > 1 else None
 
                 if current_val is not None:
-                    result = {
-                        "index": "KCCI",
+                    results[key] = {
+                        "index": label,
+                        "code": code,
                         "current_value": current_val,
                         "current_date": current_date,
                         "previous_value": previous_val,
                         "previous_date": previous_date,
                         "crawled_at": datetime.now().isoformat(),
                     }
-                    print(
-                        f"  ✅ KCCI: {current_val} ({current_date}), 이전: {previous_val} ({previous_date})"
-                    )
-                    return result
+                    print(f"  ✅ {label}: {current_val:,.0f} ({current_date}), 이전 {previous_val}")
 
-        print("  ❌ KCCI 데이터를 찾을 수 없습니다.")
-        return None
+        missing = [label for key, _, label in KCCI_TARGETS if key not in results]
+        for label in missing:
+            print(f"  ⚠️ {label} 수집 실패")
+
+        return results
 
     except Exception as e:
         print(f"  ❌ KCCI 크롤링 실패: {e}")
-        return None
+        return results
 
 
 def crawl_scfi() -> dict | None:
-    """SCFI 크롤링 (Playwright - 헤더명 기반 컬럼 매핑)"""
+    """SCFI 크롤링 (Playwright - JS 동적 로딩 대응)"""
     print("\n🔎 SCFI 크롤링 중 (Playwright)...")
 
     try:
@@ -188,173 +160,72 @@ def crawl_scfi() -> dict | None:
             page.wait_for_load_state("networkidle")
             page.wait_for_timeout(3000)
 
-            tables = page.locator("table").all()
-            target_table = None
+            current_date = None
+            previous_date = None
+            for cell in page.locator("th").all():
+                text = cell.inner_text().strip()
+                m = re.search(r"(\d{4}-\d{2}-\d{2})", text)
+                if not m:
+                    continue
+                if "Current Index" in text:
+                    current_date = m.group(1)
+                elif "Previous Index" in text:
+                    previous_date = m.group(1)
 
-            for table in tables:
-                try:
-                    text = table.inner_text()
-                except Exception:
+            for row in page.locator("tr").all():
+                text = row.inner_text().strip()
+                if "Comprehensive" not in text:
                     continue
 
-                if (
-                    "Comprehensive Index" in text
-                    and "Current Index" in text
-                    and "Previous Index" in text
-                ):
-                    target_table = table
-                    break
+                numbers = []
+                for cell in row.locator("td").all():
+                    val = _to_float(cell.inner_text())
+                    if val is not None and val > 100:
+                        numbers.append(val)
 
-            if target_table is None:
-                browser.close()
-                print("  ❌ SCFI 대상 테이블을 찾을 수 없습니다.")
-                return None
-
-            rows = target_table.locator("tr").all()
-            if not rows:
-                browser.close()
-                print("  ❌ SCFI 테이블 행을 찾을 수 없습니다.")
-                return None
-
-            # 1) 헤더 행 찾기
-            header_cells = None
-            for row in rows:
-                cells = row.locator("th, td").all()
-                texts = [c.inner_text().strip() for c in cells]
-                row_text = " ".join(texts)
-
-                if "Previous Index" in row_text and "Current Index" in row_text:
-                    header_cells = texts
-                    break
-
-            if not header_cells:
-                browser.close()
-                print("  ❌ SCFI 헤더 행을 찾을 수 없습니다.")
-                return None
-
-            previous_col = None
-            current_col = None
-            previous_date = None
-            current_date = None
-
-            for i, text in enumerate(header_cells):
-                compact = " ".join(text.split())
-
-                if "Previous Index" in compact:
-                    previous_col = i
-                    match = re.search(r"(\d{4}-\d{2}-\d{2}|\d{8})", compact)
-                    if match:
-                        previous_date = normalize_date(match.group(1))
-
-                elif "Current Index" in compact:
-                    current_col = i
-                    match = re.search(r"(\d{4}-\d{2}-\d{2}|\d{8})", compact)
-                    if match:
-                        current_date = normalize_date(match.group(1))
-
-            if previous_col is None or current_col is None:
-                browser.close()
-                print(
-                    f"  ❌ SCFI 컬럼 인덱스 확인 실패. prev={previous_col}, curr={current_col}"
-                )
-                return None
-
-            # 2) Comprehensive Index 행 찾기
-            target_row_cells = None
-            for row in rows:
-                cells = row.locator("th, td").all()
-                texts = [c.inner_text().strip() for c in cells]
-
-                if texts and any("Comprehensive Index" in t for t in texts):
-                    target_row_cells = texts
-                    break
-
-            if not target_row_cells:
-                browser.close()
-                print("  ❌ Comprehensive Index 행을 찾을 수 없습니다.")
-                return None
-
-            previous_val = None
-            current_val = None
-
-            if previous_col < len(target_row_cells):
-                previous_val = parse_float(target_row_cells[previous_col])
-
-            if current_col < len(target_row_cells):
-                current_val = parse_float(target_row_cells[current_col])
+                if numbers:
+                    browser.close()
+                    result = {
+                        "index": "SCFI",
+                        "current_value": numbers[0],
+                        "current_date": current_date,
+                        "previous_value": numbers[1] if len(numbers) > 1 else None,
+                        "previous_date": previous_date,
+                        "crawled_at": datetime.now().isoformat(),
+                    }
+                    print(f"  ✅ SCFI: {numbers[0]} ({current_date})")
+                    return result
 
             browser.close()
-
-            if current_val is None:
-                print("  ❌ SCFI current value 파싱 실패")
-                return None
-
-            result = {
-                "index": "SCFI",
-                "current_value": current_val,
-                "current_date": current_date,
-                "previous_value": previous_val,
-                "previous_date": previous_date,
-                "crawled_at": datetime.now().isoformat(),
-            }
-
-            print(
-                f"  ✅ SCFI: {current_val} ({current_date}), 이전: {previous_val} ({previous_date})"
-            )
-            return result
+            print("  ❌ SCFI Comprehensive Index를 찾을 수 없습니다.")
+            return None
 
     except Exception as e:
         print(f"  ❌ SCFI 크롤링 실패: {e}")
         return None
 
 
-def update_history(indices_data: dict, new_data: dict | None, index_name: str):
-    """이력 추가 + 기존 잘못된 날짜 자동 정리"""
-    if new_data is None:
+def update_history(indices_data: dict, new_data: dict | None, key: str):
+    """이력에 새 데이터 추가 (같은 기준일이면 스킵)"""
+    if not new_data or not new_data.get("current_value"):
         return
 
-    key = index_name.lower()
     history = indices_data.get(key, [])
-    current_date = normalize_date(new_data.get("current_date"))
-
-    if not current_date:
-        print(f"  ⚠️ {index_name} current_date가 없어 이력 저장 스킵")
-        return
-
-    cleaned_history = []
-    removed_count = 0
+    current_date = new_data.get("current_date")
 
     for entry in history:
-        entry_date = normalize_date(entry.get("date"))
-        if not entry_date:
-            removed_count += 1
-            print(f"  ⚠️ {index_name} 잘못된 기존 date 제거: {entry.get('date')}")
-            continue
-
-        cleaned_entry = dict(entry)
-        cleaned_entry["date"] = entry_date
-        cleaned_history.append(cleaned_entry)
-
-    if removed_count:
-        print(f"  🧹 {index_name} 잘못된 기존 레코드 {removed_count}건 정리")
-
-    for entry in cleaned_history:
         if entry.get("date") == current_date:
-            print(f"  ℹ️ {index_name} {current_date} 데이터 이미 존재. 스킵.")
-            indices_data[key] = cleaned_history
+            print(f"  ℹ️ {key} {current_date} 이미 존재. 스킵.")
             return
 
-    cleaned_history.append(
-        {
-            "date": current_date,
-            "value": new_data["current_value"],
-            "crawled_at": new_data["crawled_at"],
-        }
-    )
-
-    cleaned_history.sort(key=lambda x: x["date"])
-    indices_data[key] = cleaned_history
-    print(f"  ✅ {index_name} 이력 추가: {current_date} = {new_data['current_value']}")
+    history.append({
+        "date": current_date,
+        "value": new_data["current_value"],
+        "crawled_at": new_data["crawled_at"],
+    })
+    history.sort(key=lambda x: x.get("date", ""))
+    indices_data[key] = history
+    print(f"  ✅ {key} 이력 추가: {current_date} = {new_data['current_value']:,.0f}")
 
 
 def main():
@@ -366,24 +237,27 @@ def main():
     indices_data = load_indices()
 
     scfi_data = crawl_scfi()
-    kcci_data = crawl_kcci()
+    kcci_results = crawl_kcci_all()
 
-    update_history(indices_data, scfi_data, "SCFI")
-    update_history(indices_data, kcci_data, "KCCI")
+    # 이력 업데이트
+    update_history(indices_data, scfi_data, "scfi")
+    for key, _, _ in KCCI_TARGETS:
+        update_history(indices_data, kcci_results.get(key), key)
 
     save_indices(indices_data)
 
+    # 최신 데이터 (텔레그램/이메일용)
     latest = {
         "scfi": scfi_data,
-        "kcci": kcci_data,
+        "kcci": kcci_results.get("kcci"),
+        "kcci_usec": kcci_results.get("kcci_usec"),
+        "kcci_med": kcci_results.get("kcci_med"),
         "updated_at": datetime.now().isoformat(),
     }
-
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     latest_path = OUTPUT_DIR / "freight_latest.json"
     with open(latest_path, "w", encoding="utf-8") as f:
         json.dump(latest, f, ensure_ascii=False, indent=2)
-
     print(f"📦 최신 지수 → {latest_path}")
 
 
