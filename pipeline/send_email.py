@@ -3,7 +3,7 @@ Gmail SMTP로 물류 뉴스 브리핑 메일 발송
 ─────────────────────────────────────────────────
 - 뉴스 요약 (🔴🟡🟢)
 - 운임지수 차트 (PNG 인라인 CID - Outlook 호환)
-- SCM_물류_브리핑.xlsx 첨부 (SharePoint 업로드용)
+- 첨부: freight_indices.json (운임지수 이력), all_news.txt (뉴스 원본)
 """
 
 import json
@@ -33,6 +33,7 @@ GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "")
 NOTIFY_EMAIL_TO = os.environ.get("NOTIFY_EMAIL_TO", "")
 
 OUTPUT_DIR = Path("pipeline/output")
+DATA_DIR = Path("data")
 
 THEME_EMOJI = {
     "운송지연_항만적체": "🚢",
@@ -138,9 +139,9 @@ def build_html(summary_data: dict, chart_cids: list[str] = None) -> str:
     # ── 첨부 안내 ──
     html += """
     <div class="attach-note">
-        📎 첨부파일: <b>SCM_물류_브리핑.xlsx</b><br>
-        뉴스브리핑 · 운임지수 · 리스크대장이 시트별로 누적됩니다.<br>
-        SharePoint에 업로드하여 팀 공유 및 이력 관리에 활용하세요.
+        📎 <b>첨부파일</b><br>
+        · freight_indices.json — 운임지수 주간 이력 (SCFI, KCCI 종합/북미동안/지중해)<br>
+        · scm_news_YYYYMMDD.txt — 금일 수집 뉴스 원본
     </div>
     """
 
@@ -157,7 +158,10 @@ def build_html(summary_data: dict, chart_cids: list[str] = None) -> str:
 
 
 def send_email(subject: str, html_body: str, chart_paths: list[str] = None,
-               chart_cids: list[str] = None, attachment_paths: list[str] = None):
+               chart_cids: list[str] = None, attachments: list[tuple] = None):
+    """
+    attachments: [(파일경로, 첨부파일명), ...]
+    """
     if not GMAIL_USER or not GMAIL_APP_PASSWORD or not NOTIFY_EMAIL_TO:
         print("❌ Gmail 설정이 없습니다.")
         return
@@ -173,7 +177,6 @@ def send_email(subject: str, html_body: str, chart_paths: list[str] = None,
     msg_related = MIMEMultipart("related")
     msg_related.attach(MIMEText(html_body, "html", "utf-8"))
 
-    # 차트 PNG 인라인 첨부
     if chart_paths and chart_cids:
         for path, cid in zip(chart_paths, chart_cids):
             try:
@@ -189,18 +192,19 @@ def send_email(subject: str, html_body: str, chart_paths: list[str] = None,
     msg.attach(msg_related)
 
     # 파일 첨부
-    if attachment_paths:
-        for att_path in attachment_paths:
-            if Path(att_path).exists():
-                with open(att_path, "rb") as f:
-                    part = MIMEBase("application", "octet-stream")
-                    part.set_payload(f.read())
-                encoders.encode_base64(part)
-                filename = Path(att_path).name
-                part.add_header("Content-Disposition", "attachment",
-                                filename=("utf-8", "", filename))
-                msg.attach(part)
-                print(f"  📎 첨부: {filename}")
+    if attachments:
+        for att_path, att_name in attachments:
+            if not Path(att_path).exists():
+                print(f"  ⚠️ 첨부 대상 없음: {att_path}")
+                continue
+            with open(att_path, "rb") as f:
+                part = MIMEBase("application", "octet-stream")
+                part.set_payload(f.read())
+            encoders.encode_base64(part)
+            part.add_header("Content-Disposition", "attachment",
+                            filename=("utf-8", "", att_name))
+            msg.attach(part)
+            print(f"  📎 첨부: {att_name}")
 
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
@@ -250,31 +254,30 @@ def main():
         except Exception as e:
             print(f"⚠️ 차트 생성 실패: {e}")
 
-    # HTML 생성
     html = build_html(summary_data, chart_cids)
 
-    # 첨부파일 목록
+    # ── 첨부파일 목록 ──
     attachments = []
 
-    # Excel 브리핑 파일
-    excel_path = OUTPUT_DIR / "SCM_물류_브리핑.xlsx"
-    if excel_path.exists():
-        attachments.append(str(excel_path))
+    # 1) 운임지수 이력
+    freight_json = DATA_DIR / "freight_indices.json"
+    if freight_json.exists():
+        attachments.append((str(freight_json), "freight_indices.json"))
 
-    # all_news.txt (기존 유지)
+    # 2) 뉴스 원본 (json → txt)
     all_news_path = OUTPUT_DIR / "all_news.json"
     attach_txt = OUTPUT_DIR / "all_news.txt"
     if all_news_path.exists():
         shutil.copy(all_news_path, attach_txt)
-        attachments.append(str(attach_txt))
+        today_compact = datetime.now().strftime("%Y%m%d")
+        attachments.append((str(attach_txt), f"scm_news_{today_compact}.txt"))
 
-    # 메일 발송
     send_email(
         subject,
         html,
         chart_paths=chart_paths,
         chart_cids=chart_cids,
-        attachment_paths=attachments if attachments else None,
+        attachments=attachments if attachments else None,
     )
 
 
