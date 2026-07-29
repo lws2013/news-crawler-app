@@ -74,12 +74,6 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
-      # ── 5-b. Excel 브리핑 파일 생성 ──
-      - name: Generate briefing Excel
-        run: python pipeline/generate_briefing_excel.py
-        env:
-          PYTHONPATH: ${{ github.workspace }}
-
       # ── 6. 텔레그램 푸시 ──
       - name: Push to Telegram
         run: python pipeline/send_telegram.py
