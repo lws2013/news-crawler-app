@@ -13,7 +13,7 @@ SCFI & KCCI 운임지수 크롤링 + 이력 관리
 
 import json
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 import requests
@@ -22,6 +22,8 @@ from bs4 import BeautifulSoup
 OUTPUT_DIR = Path("pipeline/output")
 DATA_DIR = Path("data")
 INDICES_FILE = DATA_DIR / "freight_indices.json"
+
+DATE_RE = re.compile(r"(\d{4}-\d{2}-\d{2})")
 
 # KCCI에서 수집할 항목: (저장키, Code값, 표시명)
 KCCI_TARGETS = [
@@ -56,11 +58,17 @@ def _to_float(text: str):
         return None
 
 
+def last_friday(ref: datetime = None) -> str:
+    """SCFI 기준일을 못 읽었을 때 사용할 대체값 (직전 금요일)"""
+    ref = ref or datetime.now()
+    offset = (ref.weekday() - 4) % 7   # 금요일=4
+    if offset == 0 and ref.hour < 18:  # 금요일 오전이면 지난주 금요일
+        offset = 7
+    return (ref - timedelta(days=offset)).strftime("%Y-%m-%d")
+
+
 def crawl_kcci_all() -> dict:
-    """
-    KCCI 페이지에서 Comprehensive + 지정 노선을 한 번에 수집
-    반환: {저장키: {current_value, current_date, previous_value, previous_date, ...}}
-    """
+    """KCCI 페이지에서 Comprehensive + 지정 노선을 한 번에 수집"""
     print("\n🔎 KCCI 크롤링 중...")
     url = "https://www.kobc.or.kr/ebz/shippinginfo/kcci/gridList.do?mId=0304000000"
     results = {}
@@ -77,12 +85,11 @@ def crawl_kcci_all() -> dict:
             print("  ❌ KCCI 테이블을 찾을 수 없습니다.")
             return results
 
-        # 헤더에서 기준일 추출
         current_date = None
         previous_date = None
         for th in table.find_all("th"):
             text = th.get_text(" ", strip=True)
-            m = re.search(r"(\d{4}-\d{2}-\d{2})", text)
+            m = DATE_RE.search(text)
             if not m:
                 continue
             if "Current" in text:
@@ -90,9 +97,6 @@ def crawl_kcci_all() -> dict:
             elif "Previous" in text:
                 previous_date = m.group(1)
 
-        # 행별로 Code 기준 파싱
-        # 컬럼: Group | Code | Route | Weight | Current | Previous | Weekly Change
-        # (하위 노선 행은 Group 셀이 없으므로 Code 위치를 기준으로 오프셋 계산)
         rows = table.find_all("tr")
         for row in rows:
             cells = [c.get_text(" ", strip=True) for c in row.find_all(["td", "th"])]
@@ -100,20 +104,15 @@ def crawl_kcci_all() -> dict:
                 continue
 
             for key, code, label in KCCI_TARGETS:
-                if key in results:
-                    continue
-                if code not in cells:
+                if key in results or code not in cells:
                     continue
 
                 idx = cells.index(code)
-                # Code 기준 오프셋: Route(+1), Weight(+2), Current(+3), Previous(+4)
                 current_val = _to_float(cells[idx + 3]) if idx + 3 < len(cells) else None
                 previous_val = _to_float(cells[idx + 4]) if idx + 4 < len(cells) else None
 
-                # 오프셋이 어긋난 경우 폴백: 뒤쪽 숫자 2개 사용
                 if current_val is None:
                     nums = [v for v in (_to_float(c) for c in cells[idx + 1:]) if v is not None]
-                    # Weight(%)는 문자열이라 float 변환 실패 → 자연스럽게 제외됨
                     if nums:
                         current_val = nums[0]
                         previous_val = nums[1] if len(nums) > 1 else None
@@ -130,9 +129,9 @@ def crawl_kcci_all() -> dict:
                     }
                     print(f"  ✅ {label}: {current_val:,.0f} ({current_date}), 이전 {previous_val}")
 
-        missing = [label for key, _, label in KCCI_TARGETS if key not in results]
-        for label in missing:
-            print(f"  ⚠️ {label} 수집 실패")
+        for key, _, label in KCCI_TARGETS:
+            if key not in results:
+                print(f"  ⚠️ {label} 수집 실패")
 
         return results
 
@@ -160,20 +159,43 @@ def crawl_scfi() -> dict | None:
             page.wait_for_load_state("networkidle")
             page.wait_for_timeout(3000)
 
+            # 1차: 헤더 셀에서 Current/Previous 기준일 탐색
             current_date = None
             previous_date = None
-            for cell in page.locator("th").all():
-                text = cell.inner_text().strip()
-                m = re.search(r"(\d{4}-\d{2}-\d{2})", text)
+            for cell in page.locator("th, td").all():
+                try:
+                    text = cell.inner_text().strip()
+                except Exception:
+                    continue
+                if not text or len(text) > 60:
+                    continue
+                m = DATE_RE.search(text)
                 if not m:
                     continue
-                if "Current Index" in text:
+                if "Current" in text and not current_date:
                     current_date = m.group(1)
-                elif "Previous Index" in text:
+                elif "Previous" in text and not previous_date:
                     previous_date = m.group(1)
 
+            # 2차: 페이지 전체 텍스트에서 날짜 수집 (헤더 매칭 실패 시)
+            if not current_date:
+                body_text = page.inner_text("body")
+                dates = sorted(set(DATE_RE.findall(body_text)), reverse=True)
+                if dates:
+                    current_date = dates[0]
+                    previous_date = previous_date or (dates[1] if len(dates) > 1 else None)
+                    print(f"  ℹ️ 헤더에서 기준일을 못 읽어 본문에서 추출: {current_date}")
+
+            # 3차: 그래도 없으면 직전 금요일로 대체
+            if not current_date:
+                current_date = last_friday()
+                print(f"  ⚠️ 기준일 추출 실패 → 직전 금요일({current_date})로 대체")
+
             for row in page.locator("tr").all():
-                text = row.inner_text().strip()
+                try:
+                    text = row.inner_text().strip()
+                except Exception:
+                    continue
                 if "Comprehensive" not in text:
                     continue
 
@@ -206,12 +228,16 @@ def crawl_scfi() -> dict | None:
 
 
 def update_history(indices_data: dict, new_data: dict | None, key: str):
-    """이력에 새 데이터 추가 (같은 기준일이면 스킵)"""
+    """이력에 새 데이터 추가 (같은 기준일이면 스킵, 날짜 없으면 건너뜀)"""
     if not new_data or not new_data.get("current_value"):
         return
 
-    history = indices_data.get(key, [])
     current_date = new_data.get("current_date")
+    if not current_date:
+        print(f"  ⚠️ {key} 기준일 없음 → 이력 추가 생략 (차트는 기존 이력 사용)")
+        return
+
+    history = indices_data.get(key, [])
 
     for entry in history:
         if entry.get("date") == current_date:
@@ -223,7 +249,10 @@ def update_history(indices_data: dict, new_data: dict | None, key: str):
         "value": new_data["current_value"],
         "crawled_at": new_data["crawled_at"],
     })
-    history.sort(key=lambda x: x.get("date", ""))
+    # 날짜 없는 잔여 항목 제거 후 정렬 (None 비교 오류 방지)
+    history = [e for e in history if e.get("date")]
+    history.sort(key=lambda x: x["date"])
+
     indices_data[key] = history
     print(f"  ✅ {key} 이력 추가: {current_date} = {new_data['current_value']:,.0f}")
 
@@ -239,14 +268,12 @@ def main():
     scfi_data = crawl_scfi()
     kcci_results = crawl_kcci_all()
 
-    # 이력 업데이트
     update_history(indices_data, scfi_data, "scfi")
     for key, _, _ in KCCI_TARGETS:
         update_history(indices_data, kcci_results.get(key), key)
 
     save_indices(indices_data)
 
-    # 최신 데이터 (텔레그램/이메일용)
     latest = {
         "scfi": scfi_data,
         "kcci": kcci_results.get("kcci"),
