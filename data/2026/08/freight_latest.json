@@ -1,0 +1,38 @@
+{
+  "scfi": {
+    "index": "SCFI",
+    "current_value": 3062.95,
+    "current_date": "2026-07-31",
+    "previous_value": 3205.97,
+    "previous_date": "2026-07-24",
+    "crawled_at": "2026-08-06T08:53:52.854246"
+  },
+  "kcci": {
+    "index": "KCCI Comprehensive Index",
+    "code": "KCCI",
+    "current_value": 4138.0,
+    "current_date": "2026-08-03",
+    "previous_value": 4123.0,
+    "previous_date": "2026-07-27",
+    "crawled_at": "2026-08-06T08:53:54.053253"
+  },
+  "kcci_usec": {
+    "index": "KCCI 북미 동안 항로 (USD/40')",
+    "code": "KUEI",
+    "current_value": 8986.0,
+    "current_date": "2026-08-03",
+    "previous_value": 8758.0,
+    "previous_date": "2026-07-27",
+    "crawled_at": "2026-08-06T08:53:54.053390"
+  },
+  "kcci_med": {
+    "index": "KCCI 지중해 항로 (USD/40')",
+    "code": "KMDI",
+    "current_value": 5933.0,
+    "current_date": "2026-08-03",
+    "previous_value": 6107.0,
+    "previous_date": "2026-07-27",
+    "crawled_at": "2026-08-06T08:53:54.053501"
+  },
+  "updated_at": "2026-08-06T08:53:54.056954"
+}
