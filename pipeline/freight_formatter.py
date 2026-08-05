@@ -5,16 +5,18 @@
 - 이메일: matplotlib PNG 차트 (Outlook 호환)
   당해년도 초록 실선, 전년도 파란 실선
   좌상단: 현재값, 전년동기값, YoY 변동폭
+
+※ 크롤링이 실패해도 저장된 이력(freight_indices.json)으로 차트를 그립니다.
 """
 
 import json
-import subprocess
 from datetime import datetime
 from pathlib import Path
 
 OUTPUT_DIR = Path("pipeline/output")
 DATA_DIR = Path("data")
 INDICES_FILE = DATA_DIR / "freight_indices.json"
+
 
 def load_latest() -> dict | None:
     latest_path = OUTPUT_DIR / "freight_latest.json"
@@ -23,11 +25,13 @@ def load_latest() -> dict | None:
             return json.load(f)
     return None
 
+
 def load_history() -> dict:
     if INDICES_FILE.exists():
         with open(INDICES_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
-    return {"scfi": [], "kcci": []}
+    return {}
+
 
 def format_change(current: float, previous: float) -> str:
     if previous is None or previous == 0:
@@ -38,16 +42,18 @@ def format_change(current: float, previous: float) -> str:
         return f"▲ {diff:,.0f} (+{pct:.1f}%)"
     elif diff < 0:
         return f"▼ {abs(diff):,.0f} ({pct:.1f}%)"
-    else:
-        return "- (0.0%)"
+    return "- (0.0%)"
+
 
 def has_new_data(latest: dict) -> bool:
     if not latest:
         return False
-    scfi = latest.get("scfi")
-    kcci = latest.get("kcci")
-    return (scfi is not None and scfi.get("current_value")) or \
-           (kcci is not None and kcci.get("current_value"))
+    for key in ("scfi", "kcci"):
+        item = latest.get(key)
+        if item and item.get("current_value"):
+            return True
+    return False
+
 
 def build_simple_telegram_table(latest: dict) -> str | None:
     if not has_new_data(latest):
@@ -59,21 +65,24 @@ def build_simple_telegram_table(latest: dict) -> str | None:
     lines = ["\n📊 <b>주간 운임지수</b>\n"]
 
     if scfi.get("current_value"):
-        s_chg = format_change(scfi["current_value"], scfi.get("previous_value"))
-        lines.append(f"🚢 <b>SCFI</b>  {scfi['current_value']:,.0f}  (전주 {scfi.get('previous_value', 0):,.0f})  {s_chg}")
+        chg = format_change(scfi["current_value"], scfi.get("previous_value"))
+        prev = scfi.get("previous_value") or 0
+        lines.append(f"🚢 <b>SCFI</b>  {scfi['current_value']:,.0f}  (전주 {prev:,.0f})  {chg}")
         if scfi.get("current_date"):
             lines.append(f"    <i>{scfi['current_date']} 기준</i>")
 
     if kcci.get("current_value"):
-        k_chg = format_change(kcci["current_value"], kcci.get("previous_value"))
-        lines.append(f"🇰🇷 <b>KCCI</b>  {kcci['current_value']:,.0f}  (전주 {kcci.get('previous_value', 0):,.0f})  {k_chg}")
+        chg = format_change(kcci["current_value"], kcci.get("previous_value"))
+        prev = kcci.get("previous_value") or 0
+        lines.append(f"🇰🇷 <b>KCCI</b>  {kcci['current_value']:,.0f}  (전주 {prev:,.0f})  {chg}")
         if kcci.get("current_date"):
             lines.append(f"    <i>{kcci['current_date']} 기준</i>")
 
     return "\n".join(lines)
 
+
 def chart_week(date_str: str) -> int:
-    """차트용 주차 계산 (12월말 ISO week 1 보정)"""
+    """차트용 주차 (12월말 ISO week 1 보정)"""
     try:
         dt = datetime.strptime(date_str, "%Y-%m-%d")
         wk = dt.isocalendar()[1]
@@ -85,104 +94,78 @@ def chart_week(date_str: str) -> int:
     except Exception:
         return 0
 
+
 def find_yoy_value(current_date: str, last_year_data: list) -> float | None:
-    """전년 동기 값 찾기"""
     if not current_date or not last_year_data:
         return None
     try:
         cur_week = chart_week(current_date)
-        best_match = None
-        best_diff = 999
+        best_match, best_diff = None, 999
         for date_str, val in last_year_data:
-            wk = chart_week(date_str)
-            diff = abs(wk - cur_week)
+            diff = abs(chart_week(date_str) - cur_week)
             if diff < best_diff:
-                best_diff = diff
-                best_match = val
+                best_diff, best_match = diff, val
         if best_match is not None and best_diff <= 2:
             return best_match
     except Exception:
         pass
     return None
 
-def _prepare_korean_font():
+
+def resolve_series(latest_item: dict | None, history: list) -> dict:
     """
-    GitHub Actions / Ubuntu 환경에서 한글 폰트를 최대한 안정적으로 적용.
-    반환:
-      (plt, ticker, fm, font_prop, font_name)
+    차트에 쓸 현재값/전주값/기준일을 결정.
+    크롤링 결과(latest)가 있으면 우선, 없으면 이력의 마지막 2건으로 대체.
     """
-    import matplotlib
-    matplotlib.use("Agg")
-    import matplotlib.pyplot as plt
-    import matplotlib.ticker as ticker
-    import matplotlib.font_manager as fm
+    if latest_item and latest_item.get("current_value"):
+        return {
+            "current_value": latest_item.get("current_value"),
+            "previous_value": latest_item.get("previous_value"),
+            "current_date": latest_item.get("current_date")
+                            or (history[-1]["date"] if history else None),
+        }
 
-    # 폰트 캐시 재빌드 시도
-    try:
-        subprocess.run(
-            ["fc-cache", "-f", "-v"],
-            check=False,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )
-    except Exception:
-        pass
+    if history:
+        cur = history[-1]
+        prev = history[-2] if len(history) > 1 else None
+        return {
+            "current_value": cur.get("value"),
+            "previous_value": prev.get("value") if prev else None,
+            "current_date": cur.get("date"),
+        }
 
-    font_candidates = [
-        "/usr/share/fonts/truetype/nanum/NanumGothic.ttf",
-        "/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf",
-        "/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf",
-        "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
-        "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
-        "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
-        "/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc",
-    ]
+    return {"current_value": None, "previous_value": None, "current_date": None}
 
-    font_path = next((p for p in font_candidates if Path(p).exists()), None)
-    font_prop = None
-    font_name = None
-
-    if font_path:
-        font_prop = fm.FontProperties(fname=font_path)
-        font_name = font_prop.get_name()
-        plt.rcParams["font.family"] = [
-            font_name,
-            "NanumGothic",
-            "NanumBarunGothic",
-            "Noto Sans CJK KR",
-            "Noto Sans CJK JP",
-            "DejaVu Sans",
-        ]
-        print(f"  ✅ matplotlib 한글 폰트 적용: {font_name} ({font_path})")
-    else:
-        plt.rcParams["font.family"] = [
-            "NanumGothic",
-            "NanumBarunGothic",
-            "Noto Sans CJK KR",
-            "Noto Sans CJK JP",
-            "DejaVu Sans",
-        ]
-        print("  ⚠️ 폰트 파일 직접 탐지 실패. fallback 폰트 사용")
-
-    plt.rcParams["axes.unicode_minus"] = False
-    return plt, ticker, fm, font_prop, font_name
 
 def build_png_chart(index_name: str, history: list, current_val: float = None,
                     previous_val: float = None, current_date: str = None,
                     output_path: str = None) -> str | None:
-    """
-    matplotlib로 PNG 차트 생성 (Outlook 호환)
-    - 당해년도: 초록색 실선
-    - 전년도: 파란색 실선
-    - 좌상단: 현재값, 전년동기값, YoY 변동폭
-    반환: 생성된 PNG 파일 경로
-    """
+    """matplotlib PNG 차트 생성 (Outlook 호환)"""
     if not history or len(history) < 2:
         print(f"  ⚠️ {index_name} 이력 부족, 차트 생략")
         return None
 
     try:
-        plt, ticker, fm, font_prop, font_name = _prepare_korean_font()
+        import matplotlib
+        matplotlib.use("Agg")
+        import matplotlib.pyplot as plt
+        import matplotlib.ticker as ticker
+        import matplotlib.font_manager as fm
+
+        font_path = None
+        for candidate in [
+            "/usr/share/fonts/truetype/nanum/NanumGothic.ttf",
+            "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+        ]:
+            if Path(candidate).exists():
+                font_path = candidate
+                break
+
+        if font_path:
+            plt.rcParams["font.family"] = fm.FontProperties(fname=font_path).get_name()
+        else:
+            plt.rcParams["font.family"] = "DejaVu Sans"
+        plt.rcParams["axes.unicode_minus"] = False
     except ImportError:
         print("  ❌ matplotlib가 설치되지 않았습니다.")
         return None
@@ -198,125 +181,63 @@ def build_png_chart(index_name: str, history: list, current_val: float = None,
     if not this_year_data and not last_year_data:
         return None
 
-    # 주차 기준으로 변환
-    this_year_weeks = sorted([(chart_week(d), v) for d, v in this_year_data], key=lambda x: x[0])
-    last_year_weeks = sorted([(chart_week(d), v) for d, v in last_year_data], key=lambda x: x[0])
+    this_year_weeks = sorted([(chart_week(d), v) for d, v in this_year_data])
+    last_year_weeks = sorted([(chart_week(d), v) for d, v in last_year_data])
 
-    # 전년 동기 값
     yoy_val = find_yoy_value(current_date, last_year_data)
 
-    # 차트 생성
     fig, ax = plt.subplots(figsize=(7, 3.5), dpi=130)
     fig.patch.set_facecolor("white")
     ax.set_facecolor("white")
 
-    # 전년도 (파란색)
     if last_year_weeks:
-        weeks_l = [w for w, _ in last_year_weeks]
-        vals_l = [v for _, v in last_year_weeks]
-        ax.plot(weeks_l, vals_l, color="#1a53a8", linewidth=2, label=str(prev_year), zorder=2)
-
-    # 당해년도 (초록색)
+        ax.plot([w for w, _ in last_year_weeks], [v for _, v in last_year_weeks],
+                color="#1a53a8", linewidth=2, label=str(prev_year), zorder=2)
     if this_year_weeks:
-        weeks_t = [w for w, _ in this_year_weeks]
-        vals_t = [v for _, v in this_year_weeks]
-        ax.plot(weeks_t, vals_t, color="#0a8f3f", linewidth=2.5, label=str(current_year), zorder=3)
+        ax.plot([w for w, _ in this_year_weeks], [v for _, v in this_year_weeks],
+                color="#0a8f3f", linewidth=2.5, label=str(current_year), zorder=3)
 
-    # 그리드
     ax.grid(True, axis="y", color="#eeeeee", linewidth=0.8)
     ax.set_axisbelow(True)
-
-    # X축
     ax.set_xlim(1, 53)
-    ax.set_xlabel("")
-    
-    month_ticks = [1, 5, 9, 14, 18, 22, 27, 31, 35, 40, 44, 48]
-    month_labels = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
-    
-    ax.set_xticks(month_ticks)
-    
-    if font_prop:
-        tick_font = fm.FontProperties(fname=font_prop.get_file(), size=8)
-        ax.set_xticklabels(month_labels, color="#888888", fontproperties=tick_font)
-    else:
-        ax.set_xticklabels(month_labels, fontsize=8, color="#888888")
-
-    # Y축 포맷
+    ax.set_xticks([1, 5, 9, 14, 18, 22, 27, 31, 35, 40, 44, 48])
+    ax.set_xticklabels(["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                       fontsize=8, color="#888888")
     ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda x, p: f"{x:,.0f}"))
     ax.tick_params(axis="y", labelsize=9, colors="#888888")
 
-    # 테두리 제거
     for spine in ["top", "right"]:
         ax.spines[spine].set_visible(False)
     for spine in ["bottom", "left"]:
         ax.spines[spine].set_color("#dddddd")
 
-    # 범례
-    legend_prop = fm.FontProperties(fname=font_prop.get_file(), size=9) if font_prop else None
-    legend = ax.legend(
-        loc="upper right",
-        fontsize=9,
-        prop=legend_prop,
-        frameon=True,
-        fancybox=True,
-        shadow=False,
-        edgecolor="#dddddd"
-    )
+    legend = ax.legend(loc="upper right", fontsize=9, frameon=True,
+                       fancybox=True, edgecolor="#dddddd")
     legend.get_frame().set_facecolor("white")
 
-    # 좌상단 텍스트
     info_lines = []
     if current_val is not None:
         info_lines.append(f"● 현재  {current_val:,.0f}")
     if yoy_val is not None:
         info_lines.append(f"● 전년동기  {yoy_val:,.0f}")
     if current_val is not None and yoy_val is not None:
-        chg = format_change(current_val, yoy_val)
-        info_lines.append(f"  YoY  {chg}")
+        info_lines.append(f"  YoY  {format_change(current_val, yoy_val)}")
 
-    info_text = "\n".join(info_lines)
-    if info_text:
-        text_kwargs = dict(
-            transform=ax.transAxes,
-            fontsize=9,
-            verticalalignment="top",
-            bbox=dict(
-                boxstyle="round,pad=0.4",
-                facecolor="white",
-                edgecolor="#dddddd",
-                alpha=0.9
-            )
-        )
-        if font_prop:
-            text_kwargs["fontproperties"] = fm.FontProperties(fname=font_prop.get_file(), size=9)
+    if info_lines:
+        ax.text(0.02, 0.97, "\n".join(info_lines), transform=ax.transAxes,
+                fontsize=9, verticalalignment="top",
+                bbox=dict(boxstyle="round,pad=0.4", facecolor="white",
+                          edgecolor="#dddddd", alpha=0.9))
 
-        ax.text(0.02, 0.97, info_text, **text_kwargs)
-
-    # 제목
     title_date = f" ({current_date})" if current_date else ""
-    title_kwargs = dict(
-        color="#333333",
-        loc="left",
-        pad=10
-    )
-    if font_prop:
-        title_kwargs["fontproperties"] = fm.FontProperties(
-            fname=font_prop.get_file(),
-            size=11,
-            weight="bold"
-        )
-    else:
-        title_kwargs["fontsize"] = 11
-        title_kwargs["fontweight"] = "bold"
+    ax.set_title(f"{index_name}{title_date}", fontsize=11, fontweight="bold",
+                 color="#333333", loc="left", pad=10)
 
-    ax.set_title(f"{index_name}{title_date}", **title_kwargs)
-
-    # 저장
     if output_path is None:
-        safe_name = index_name.lower().replace(" ", "_").replace("(", "").replace(")", "")
-        output_path = str(OUTPUT_DIR / f"chart_{safe_name}.png")
+        safe = index_name.lower().replace(" ", "_")
+        output_path = str(OUTPUT_DIR / f"chart_{safe}.png")
 
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     plt.tight_layout()
     fig.savefig(output_path, dpi=130, bbox_inches="tight", facecolor="white")
     plt.close(fig)
@@ -324,36 +245,39 @@ def build_png_chart(index_name: str, history: list, current_val: float = None,
     print(f"  📊 차트 저장: {output_path}")
     return output_path
 
+
 def build_email_charts(latest: dict, history: dict) -> list[str]:
     """
-    이메일용 PNG 차트 생성
-    반환: 생성된 PNG 파일 경로 리스트
+    이메일용 PNG 차트 생성 (SCFI, KCCI)
+    latest가 비어 있어도 history로 폴백하여 차트를 그립니다.
     """
+    latest = latest or {}
+    history = history or {}
     chart_paths = []
 
-    scfi = latest.get("scfi") or {}
-    kcci = latest.get("kcci") or {}
+    targets = [
+        ("scfi", "SCFI", "chart_scfi.png"),
+        ("kcci", "KCCI", "chart_kcci.png"),
+    ]
 
-    if scfi.get("current_value"):
-        path = build_png_chart(
-            "SCFI",
-            history.get("scfi", []),
-            scfi.get("current_value"),
-            scfi.get("previous_value"),
-            scfi.get("current_date"),
-            str(OUTPUT_DIR / "chart_scfi.png"),
-        )
-        if path:
-            chart_paths.append(path)
+    for key, label, filename in targets:
+        hist = history.get(key, [])
+        if not hist:
+            print(f"  ⚠️ {label} 이력 없음, 차트 생략")
+            continue
 
-    if kcci.get("current_value"):
+        series = resolve_series(latest.get(key), hist)
+        if series["current_value"] is None:
+            print(f"  ⚠️ {label} 현재값 없음, 차트 생략")
+            continue
+
         path = build_png_chart(
-            "KCCI",
-            history.get("kcci", []),
-            kcci.get("current_value"),
-            kcci.get("previous_value"),
-            kcci.get("current_date"),
-            str(OUTPUT_DIR / "chart_kcci.png"),
+            label,
+            hist,
+            series["current_value"],
+            series["previous_value"],
+            series["current_date"],
+            str(OUTPUT_DIR / filename),
         )
         if path:
             chart_paths.append(path)
